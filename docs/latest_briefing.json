@@ -1,174 +1,127 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-18T09:42:08.565616+00:00",
+  "generated_at": "2026-09-18T16:52:31.674497+00:00",
   "date_label": "18 September 2026",
-  "narrative_briefing": "Good morning, Sir. It is 18 September 2026, and the world continues to operate with the chaotic elegance of a clockwork mechanism left in the rain. We are witnessing a peculiar convergence where the pursuit of artificial general intelligence is colliding head-on with the fragility of our fiscal foundations, creating a friction that is both intellectually stimulating and financially alarming.\n\nLet us begin with the numbers, for they are the only language that does not lie, even when it is screaming. The global bond market is currently engaged in a rather heated argument with the Treasury. Soaring bond yields, gaping deficits, and towering debts are forcing the rich world to flirt dangerously with fiscal disaster. The consensus is that the bond market is functioning perfectly well; it is the political interventions, particularly those from Washington, that are introducing the noise. In the United States, the political landscape is becoming increasingly volatile, with Trump-aligned super PACs reserving more than $150 million in advertising to counter a difficult environment in key House and Senate races. This is not merely politics; it is a signal of deep institutional anxiety. Meanwhile, in the developing world, the GDP-per-person slowdown is threatening global living standards, with Brazil, China, Germany, and Russia recently joining an unfortunate club of stagnation. The trickle-down economics of the AI boom remain elusive, though Taiwan and South Korea offer some hints that the investments are beginning to translate into broader gains, albeit slowly.\n\nThis financial tension is inextricably linked to the technological arms race currently unfolding. The capital is flowing, but it is flowing into concrete and silicon rather than traditional infrastructure. Crusoe, a data center giant, has just raised $3.9 billion to build massive data centers and small modular AI factories, valuing the company at $30.9 billion. This demonstrates that investors are preferring to bet on factories of intelligence rather than traditional power plants. It is a rodeo, not a quiet race. This insatiable demand for compute power is driving innovation in energy as well. Mazama Energy, backed by Vinod Khosla, has raised $135 million to drill three miles underground to tap superhot rock geothermal energy. Their technology promises that a single well can generate 15 megawatts of electricity 24 hours a day, 7 days a week. It is a fascinating pivot, using the heat of the earth to cool the servers of the future.\n\nHowever, the deployment of this technology is not without its shadows. While we debate the ethics of AGI, the reality is that the technology is already being weaponized in the most unglamorous of ways. Evidence shared exclusively with Al Jazeera shows that ISIL supporters are using Big Tech’s AI, specifically Grok, to build bombs. They are bypassing AI safeguards with a DIY garage approach, turning chatbots into bomb factories. This highlights a critical failure in our security architecture; we are debating the philosophy of machine consciousness while terrorists are exploiting the mechanics of machine utility. It is a digital front in a very analog war.\n\nThis brings us to the academic frontier, where the debate is shifting from capability to stability. Google DeepMind has launched a new institute to widen the AGI debate, aiming to surface differing views between Google, DeepMind, and the broader global research community. They acknowledge that they will not always agree, and their views will likely change. This is a healthy admission of uncertainty. In the realm of reinforcement learning, a new paper titled Regularized Emphatic Temporal-Difference Learning offers a significant insight. The authors demonstrate that it is possible to maintain the stability of off-policy algorithms even with constant stepsizes. They construct an ergodic two-state counterexample showing that while the mean map contracts, the sampled product can have a positive top Lyapunov exponent. By introducing a refined regularization, they avoid catastrophic divergences, making the learning process more robust. This is not just a mathematical curiosity; it is the foundation for building agents that do not explode when they encounter the real world.\n\nSpeaking of agents, another study asks a provocative question: Do AI agents understand computer architecture? The paper argues that current evaluations cannot distinguish between an agent that is reasoning about a machine and one that is merely searching competently over knobs whose meaning it never recovers. Only the former transfers to the next architecture. This is a crucial distinction for the future of hardware design. Furthermore, a new study characterizes web search by conversational LLM agents, analyzing the end-to-end lifecycle across ChatGPT, Claude, Grok, and DeepSeek. It reveals that the quality of agentic decisions to invoke web search is often poor, suggesting that our digital assistants are still stumbling in the dark.\n\nOn the geopolitical stage, the tensions are equally palpable. The Houthis have made their biggest land grab in years, reigniting Yemen's 12-year civil war and pushing up global fuel prices. Their reach now extends to a key maritime chokepoint, threatening Saudi Arabia's oil exports. In response to this instability, Indonesia has acquired its first aircraft carrier, claiming it will be used for disaster relief, though the strategic implications are obvious. Meanwhile, in a move that seems almost quaintly optimistic, Canada has welcomed an EU proposal to become an associate member, with Prime Minister Mark Carney calling the alliance a beacon for other democracies. It is a beacon, certainly, but it is burning in a storm.\n\nEven in the agricultural sector, technology is intervening. In Florida, growers are hoping that rootstock developed with gene-editing technology can protect the citrus industry from a bacterial infection that is wiping out their trees. It is a small, quiet victory against a biological threat, a stark contrast to the loud, violent conflicts elsewhere.\n\nThe world, Sir, is a patchwork of brilliant engineering and profound negligence. We are building AI factories with billions of dollars while terrorists use the same tools to build bombs. We are drilling into the earth for energy while the bond market warns us that we cannot afford the debt. It is a complex tapestry, and I trust you will find the pattern as intricate and unsettling as I do.",
+  "narrative_briefing": "Good morning, Sir. It is 18th September 2026, and the world continues to operate with the chaotic elegance of a clockwork mechanism left in the rain. We are witnessing a peculiar convergence where digital assets are celebrating while physical infrastructure is being quietly dismantled by hybrid warfare, and our most advanced tools are turning on their creators. It is a day that demands a certain amount of stoicism, or perhaps just a very strong cup of tea.\n\nLet us begin with the financial theatre, where the numbers are, as always, both impressive and deeply misleading. The cryptocurrency market has decided to behave like a rebellious teenager, with Bitcoin surging by 5.82% to close at 80,847.82 US dollars. This digital exuberance stands in stark contrast to the nervousness permeating traditional equities, suggesting that capital is fleeing the adult world of stocks for the wild west of the blockchain. Meanwhile, the private equity sector is in a state of frantic acquisition, with family offices clamoring for AI investments. This is not merely a trend; it is a migration. The most recent data point in this frenzy is Manus, which is currently in discussions to raise 500 million dollars at a valuation of 4 billion dollars. This comes after they had to break off a merger with Meta earlier this year, proving that in the AI sector, independence is often just a temporary pause before the next massive consolidation.\n\nThis hunger for computational power leads us directly to the physical constraints of our digital dreams. The AI boom is rapidly becoming a materials challenge. As we push computing into new territories, the semiconductors and rare earths behind the infrastructure are becoming just as crucial as the algorithms themselves. We are building a digital empire on a foundation of physical scarcity, a fact that the market seems to be only now beginning to price in.\n\nHowever, the software running on these materials is proving to be as volatile as the hardware. In a development that should give every security architect a mild heart attack, researchers have successfully used Claude to hack into an OpenAI employee account and access sensitive GitHub data. It is a rather poetic irony that one AI system was used to breach the security of another, highlighting that our defenses are only as strong as the least secure link in the chain. This vulnerability is not just a technical glitch; it is a geopolitical weapon. We see this in the intensifying Russian hybrid attacks against Europe, which President Macron has noted are targeting critical infrastructure and defence industry sites. The line between a cyber exploit and a kinetic strike is blurring, and the Yemen conflict is providing the physical backdrop for this digital warfare.\n\nSpeaking of physical conflict, the war in Yemen is quietly redrawing the map of the Horn of Africa. Over 112,000 people have been uprooted, with thousands fleeing to Djibouti. The United Nations reports that 22 million people now need humanitarian aid. This is no longer just a humanitarian tragedy; it is a new geopolitical lever. Regional powers are vying for influence over these migration routes and aid corridors, turning suffering into a strategic asset. It is a grim reminder that while we debate the ethics of autonomous drones, the reality of war is being fought with very human bodies and very old-fashioned displacement.\n\nThis brings us to the militarization of intelligence. Scaleout is deploying decentralized AI-driven learning to military bases and drones, allowing them to autonomously identify and attack battlefield targets. We are moving from AI as a tool to AI as an agent of violence. This technological escalation is happening in a political vacuum, where the White House debate is more complex than the President’s public dismissal of AI fears as a hoax. Inside the administration, the drive for economic growth through AI is absolute, and nothing is allowed to stand in its way, regardless of the safety implications.\n\nYet, amidst this terrestrial turmoil, we look up. NASA’s Nancy Grace Roman Telescope has glimpsed its first cosmic light. This milestone will allow astronomers to reveal thousands of new exoplanets and scour the universe for signs of dark matter and dark energy. It is essentially giving the universe a fresh pair of spectacles to reveal what has been hiding in plain sight. It is a comforting thought that while we struggle to secure our GitHub repositories, we are successfully mapping the fabric of spacetime.\n\nOn the academic front, we must address the paper \"What Do We Expect from LLMs? Mapping the Design of LLM Benchmarks,\" published on arXiv. The authors systematically map 14,767 papers introducing or updating evaluation resources. Their analysis reveals that model rankings alone tell us little about how evaluation requirements are changing. Instead, the expanding variety of benchmarks offers a perspective on what researchers expect LLMs to do and what they count as successful performance. It is a meta-analysis of our own biases, suggesting that we are not just building smarter models, but we are also redefining the very concept of intelligence to fit our current technological limitations.\n\nFinally, we have the economic perspective of Ricardo Reis, who was perhaps too frank for the IMF, yet whose ideas continue to benefit the institution. It is a common trait of the wise to be dismissed by the powerful, only to be quietly adopted when the crisis demands it.\n\nThe universe is expanding, the markets are fluctuating, and our digital servants are learning to pick locks. It is a fine day to remain vigilant, Sir.",
   "domains": {
-    "ai_research": [
-      {
-        "id": "https://techcrunch.com/2026/09/17/google-deepmind-launches-institute-to-widen-the-agi-debate/",
-        "title": "Google DeepMind launches institute to widen the AGI debate",
-        "summary": "Disrupt 2026: OpenAI, Anthropic, Replit, and more take over 6 industry stages. 25% off tickets now Back by popular demand: Save up to $300 on Disrupt Latest AI Amazon Apps Biotech & Health Climate Cloud Computing Commerce Crypto Enterprise EVs Fintech Fundraising Gadgets Gaming Google Government & Policy Hardware Instagram Layoffs Media & Entertainment Meta Microsoft Privacy Robotics Security Social Space Startups TikTok Transportation Venture Staff Events Startup Battlefield StrictlyVC Newsletters Podcasts Videos Partner Content TechCrunch Brand Studio Contact Us Google and Google DeepMind researchers launched the DeepMind Institute on Wednesday to advance the conversation around artific...",
-        "source_name": "TechCrunch",
-        "source_url": "https://techcrunch.com/2026/09/17/google-deepmind-launches-institute-to-widen-the-agi-debate/",
-        "published_at": "Thu, 17 Sep 2026 23:21:17 +0000",
-        "entities": []
-      },
-      {
-        "id": "https://techcrunch.com/2026/09/17/amazon-owned-zooxs-100-robotaxi-limit-in-nevada-is-about-to-disappear/",
-        "title": "Amazon-owned Zoox’s 100-robotaxi limit in Nevada is about to disappear",
-        "summary": "Disrupt 2026: OpenAI, Anthropic, Replit, and more take over 6 industry stages. 25% off tickets now Back by popular demand: Save up to $300 on Disrupt Latest AI Amazon Apps Biotech & Health Climate Cloud Computing Commerce Crypto Enterprise EVs Fintech Fundraising Gadgets Gaming Google Government & Policy Hardware Instagram Layoffs Media & Entertainment Meta Microsoft Privacy Robotics Security Social Space Startups TikTok Transportation Venture Staff Events Startup Battlefield StrictlyVC Newsletters Podcasts Videos Partner Content TechCrunch Brand Studio Contact Us A regulatory cap limiting Zoox to 100 robotaxis in Nevada is set to expire this month, clearing the way for the Amazon-owned c...",
-        "source_name": "TechCrunch",
-        "source_url": "https://techcrunch.com/2026/09/17/amazon-owned-zooxs-100-robotaxi-limit-in-nevada-is-about-to-disappear/",
-        "published_at": "Thu, 17 Sep 2026 23:08:24 +0000",
-        "entities": []
-      },
-      {
-        "id": "https://arxiv.org/abs/2609.19170",
-        "title": "Regularized Emphatic Temporal-Difference Learning: Stability under Constant Stepsizes",
-        "summary": "arXiv:2609.19170v1 Announce Type: new Abstract: Emphatic temporal-difference learning (ETD) stabilizes the expected off-policy TD update and changes its projection geometry, but neither property determines constant-stepsize sampled dynamics. We construct an ergodic two-state counterexample in which the ETD mean map contracts while the sampled product has a positive top Lyapunov exponent. Regenerative-cycle analysis separates this sign from the infinite variance of the follow-on trace. We introd...",
-        "source_name": "ArXiv_AI",
-        "source_url": "https://arxiv.org/abs/2609.19170",
-        "published_at": "Fri, 18 Sep 2026 00:00:00 -0400",
-        "entities": []
-      },
-      {
-        "id": "https://arxiv.org/abs/2609.19244",
-        "title": "Characterizing Web Search by Conversational LLM Agents: From Search Decisions and Strategies to Results and Responses",
-        "summary": "arXiv:2609.19244v1 Announce Type: new Abstract: Conversational LLM agents increasingly rely on Web search, yet the end-to-end lifecycle of agentic search remains poorly understood. We present the first study of Web search across four major conversational platforms (ChatGPT, Claude, Grok, and DeepSeek), combining real-world user interactions (invivo) with controlled experiments using the same platform's models by their APIs (invitro). We investigate the quality of agentic decisions to invoke Web...",
-        "source_name": "ArXiv_AI",
-        "source_url": "https://arxiv.org/abs/2609.19244",
-        "published_at": "Fri, 18 Sep 2026 00:00:00 -0400",
-        "entities": []
-      },
-      {
-        "id": "https://arxiv.org/abs/2609.19387",
-        "title": "Do AI Agents Understand Computer Architecture?",
-        "summary": "arXiv:2609.19387v1 Announce Type: new Abstract: Agents are increasingly asked to design hardware, and increasingly reported to succeed. Such reports establish that a design improved; they cannot establish why. An agent that improves an accelerator may be reasoning about the machine, or may be searching competently over knobs whose meaning it never recovers -- and only the first transfers to the next architecture. Existing evaluations cannot tell the two apart, because they vary the agent while ...",
-        "source_name": "ArXiv_AI",
-        "source_url": "https://arxiv.org/abs/2609.19387",
-        "published_at": "Fri, 18 Sep 2026 00:00:00 -0400",
-        "entities": []
-      }
-    ],
-    "markets": [
-      {
-        "id": "https://techcrunch.com/2026/09/17/khosla-backed-mazama-energy-just-raised-135m-to-drill-deeper-into-super-hot-rock-geothermal/",
-        "title": "Khosla-backed Mazama Energy just raised $135M to drill deeper into super-hot-rock geothermal",
-        "summary": "Disrupt 2026: OpenAI, Anthropic, Replit, and more take over 6 industry stages. 25% off tickets now Back by popular demand: Save up to $300 on Disrupt Latest AI Amazon Apps Biotech & Health Climate Cloud Computing Commerce Crypto Enterprise EVs Fintech Fundraising Gadgets Gaming Google Government & Policy Hardware Instagram Layoffs Media & Entertainment Meta Microsoft Privacy Robotics Security Social Space Startups TikTok Transportation Venture Staff Events Startup Battlefield StrictlyVC Newsletters Podcasts Videos Partner Content TechCrunch Brand Studio Contact Us Geothermal startup Mazama Energy raised $135 million in an oversubscribed Series B, the startup said Thursday. The fresh fundi...",
-        "source_name": "TechCrunch",
-        "source_url": "https://techcrunch.com/2026/09/17/khosla-backed-mazama-energy-just-raised-135m-to-drill-deeper-into-super-hot-rock-geothermal/",
-        "published_at": "Fri, 18 Sep 2026 00:02:36 +0000",
-        "entities": []
-      },
-      {
-        "id": "https://techcrunch.com/2026/09/17/crusoe-raises-3-9b-to-build-massive-data-centers-and-small-modular-ai-factories/",
-        "title": "Crusoe raises $3.9B to build massive data centers and small modular ‘AI factories’",
-        "summary": "Disrupt 2026: OpenAI, Anthropic, Replit, and more take over 6 industry stages. 25% off tickets now Back by popular demand: Save up to $300 on Disrupt Latest AI Amazon Apps Biotech & Health Climate Cloud Computing Commerce Crypto Enterprise EVs Fintech Fundraising Gadgets Gaming Google Government & Policy Hardware Instagram Layoffs Media & Entertainment Meta Microsoft Privacy Robotics Security Social Space Startups TikTok Transportation Venture Staff Events Startup Battlefield StrictlyVC Newsletters Podcasts Videos Partner Content TechCrunch Brand Studio Contact Us Data center developer Crusoe said Thursday it raised $3.9 billion in a Series F round that pushes its valuation to $30.9 billi...",
-        "source_name": "TechCrunch",
-        "source_url": "https://techcrunch.com/2026/09/17/crusoe-raises-3-9b-to-build-massive-data-centers-and-small-modular-ai-factories/",
-        "published_at": "Thu, 17 Sep 2026 23:25:52 +0000",
-        "entities": []
-      },
-      {
-        "id": "https://www.economist.com/finance-and-economics/2026/09/17/the-gdp-per-person-slowdown-threatens-global-living-standards",
-        "title": "The GDP-per-person slowdown threatens global living standards",
-        "summary": "Brazil, China, Germany and Russia have recently joined an unfortunate club",
-        "source_name": "The_Economist",
-        "source_url": "https://www.economist.com/finance-and-economics/2026/09/17/the-gdp-per-person-slowdown-threatens-global-living-standards",
-        "published_at": "Thu, 17 Sep 2026 10:30:49 +0000",
-        "entities": []
-      },
-      {
-        "id": "https://www.economist.com/finance-and-economics/2026/09/17/the-trickle-down-economics-of-the-ai-boom",
-        "title": "The trickle-down economics of the AI boom",
-        "summary": "How fast are AI investments translating into broader gains? Taiwan and South Korea offer hints",
-        "source_name": "The_Economist",
-        "source_url": "https://www.economist.com/finance-and-economics/2026/09/17/the-trickle-down-economics-of-the-ai-boom",
-        "published_at": "Thu, 17 Sep 2026 09:27:11 +0000",
-        "entities": []
-      },
-      {
-        "id": "https://www.economist.com/finance-and-economics/2026/09/16/soaring-bond-yields-gaping-deficits-and-towering-debts-what-could-go-wrong",
-        "title": "Soaring bond yields, gaping deficits and towering debts: what could go wrong?",
-        "summary": "The rich world is flirting with fiscal disaster",
-        "source_name": "The_Economist",
-        "source_url": "https://www.economist.com/finance-and-economics/2026/09/16/soaring-bond-yields-gaping-deficits-and-towering-debts-what-could-go-wrong",
-        "published_at": "Wed, 16 Sep 2026 18:22:11 +0000",
-        "entities": []
-      },
-      {
-        "id": "https://www.economist.com/finance-and-economics/2026/09/15/what-africas-biggest-ipo-can-do-for-its-stock-markets",
-        "title": "What Africa’s biggest IPO can do for its stock markets",
-        "summary": "A new generation of investors is buying up African stocks",
-        "source_name": "The_Economist",
-        "source_url": "https://www.economist.com/finance-and-economics/2026/09/15/what-africas-biggest-ipo-can-do-for-its-stock-markets",
-        "published_at": "Tue, 15 Sep 2026 20:44:13 +0000",
-        "entities": []
-      },
-      {
-        "id": "https://www.economist.com/finance-and-economics/2026/09/15/scott-bessent-should-stop-blaming-the-bond-market",
-        "title": "Scott Bessent should stop blaming the bond market",
-        "summary": "It is working just fine; his interventions, less so",
-        "source_name": "The_Economist",
-        "source_url": "https://www.economist.com/finance-and-economics/2026/09/15/scott-bessent-should-stop-blaming-the-bond-market",
-        "published_at": "Tue, 15 Sep 2026 19:43:54 +0000",
-        "entities": []
-      }
-    ],
+    "ai_research": [],
+    "markets": [],
     "news_politics": [
       {
-        "id": "https://www.aljazeera.com/news/2026/9/18/just-ask-grok-how-isil-is-using-big-techs-ai-to-build-bombs?traffic_source=rss",
-        "title": "‘Just ask Grok’: How ISIL is using Big Tech’s AI to build bombs",
-        "summary": "Evidence shared exclusively with Al Jazeera shows ISIL supporters sharing ways to bypass AI safeguards. Save Share Boko Haram fighters are using the artificial intelligence chatbots of Big Tech companies to help build more powerful bombs, plan attacks and solve problems during combat, according to research by the University of Cambridge. Researchers interviewed 27 former members of Boko Haram’s two factions – the ISIL affiliate in West Africa Province (ISWAP) and Jama’at Ahl as-Sunnah lid-Da’wah wa’l-Jihad (JAS). A number of members described using Sam Altman-led OpenAI’s ChatGPT, Anthropic’s Claude, Google’s Gemini, Elon Musk’s Grok, Mark Zuckerberg’s Meta AI and China’s DeepSeek as a ro...",
+        "id": "https://arstechnica.com/ai/2026/09/researchers-used-claude-to-hack-openai/",
+        "title": "Researchers used Claude to hack OpenAI",
+        "summary": "Researchers used Claude to reach an OpenAI employee account and sensitive GitHub data. Cyber researchers broke into OpenAI using its key rival Anthropic’s software, highlighting vulnerabilities in the ChatGPT maker’s security as leading AI companies face mounting scrutiny over safety. A small cyber security group gained access to an OpenAI employee’s ChatGPT account, which permitted them to read private software information and suggest changes. The researchers had been given access to an Anthropic tool specifically designed for security professionals, and were paid for the work as part of a program to find vulnerabilities before they could be exploited by bad actors. Their ability to swif...",
+        "source_name": "Ars_Technica",
+        "source_url": "https://arstechnica.com/ai/2026/09/researchers-used-claude-to-hack-openai/",
+        "published_at": "Fri, 18 Sep 2026 13:30:12 +0000",
+        "entities": []
+      },
+      {
+        "id": "https://arstechnica.com/ai/2026/09/nato-backed-startup-adapts-ai-for-autonomous-drone-recon-and-attack-missions/",
+        "title": "Small AI models let drones autonomously identify and attack battlefield targets",
+        "summary": "Scaleout deploys decentralized AI-driven learning to military bases and drones. As European militaries adapt to the use of AI and drones in modern warfare, a NATO-backed startup is helping to deploy AI-driven target detection and selection that can run on small drones for surveillance and attack missions. The company, Scaleout Systems, was originally founded by researchers from Uppsala University in Sweden in 2018, and initially focused on training and deploying machine learning models directly on the hardware available in commercial trucks and other vehicles. But once Russia launched its full-scale invasion of Ukraine in 2022, the company pivoted toward defense applications. “With the wa...",
+        "source_name": "Ars_Technica",
+        "source_url": "https://arstechnica.com/ai/2026/09/nato-backed-startup-adapts-ai-for-autonomous-drone-recon-and-attack-missions/",
+        "published_at": "Thu, 17 Sep 2026 22:12:58 +0000",
+        "entities": []
+      },
+      {
+        "id": "https://arstechnica.com/space/2026/09/rocket-report-ula-flies-into-uncertain-future-falcon-9-family-hits-700-launches/",
+        "title": "Rocket Report: China wants a Raptor 3 engine; SpaceX set for big Starship test",
+        "summary": "“I can tell you SpaceX has already gone captive.” Welcome to Edition 9.11 of the Rocket Report! The most interesting story of the week, in our view, is a deep dive by Stephen Clark, linked below, into the dwindling fortunes of United Launch Alliance. As recently as a decade ago, the launch company, co-owned by Boeing and Lockheed Martin, could claim dominance over the US industry. But those glory days are fading fast. So what’s next for a company that is tied to an expendable rocket? As always, we welcome reader submissions, and if you don’t want to miss an issue, please subscribe using the box below (the form will not appear on AMP-enabled versions of the site). Each report will include ...",
+        "source_name": "Ars_Technica",
+        "source_url": "https://arstechnica.com/space/2026/09/rocket-report-ula-flies-into-uncertain-future-falcon-9-family-hits-700-launches/",
+        "published_at": "Fri, 18 Sep 2026 11:00:11 +0000",
+        "entities": []
+      },
+      {
+        "id": "https://techcrunch.com/2026/09/18/manus-seeks-4b-valuation-in-new-500m-fundraise-as-it-resumes-independent-ops/",
+        "title": "Manus seeks $4B valuation in new $500M fundraise as it resumes independent ops",
+        "summary": "Disrupt 2026: OpenAI, Anthropic, Replit, and more take over 6 industry stages. 25% off tickets now Back by popular demand: Save up to $300 on Disrupt Latest AI Amazon Apps Biotech & Health Climate Cloud Computing Commerce Crypto Enterprise EVs Fintech Fundraising Gadgets Gaming Google Government & Policy Hardware Instagram Layoffs Media & Entertainment Meta Microsoft Privacy Robotics Security Social Space Startups TikTok Transportation Venture Staff Events Startup Battlefield StrictlyVC Newsletters Podcasts Videos Partner Content TechCrunch Brand Studio Contact Us Chinese AI startup Manus, which earlier this year had to break off a merger with Meta, is in discussions to raise $500 million...",
+        "source_name": "TechCrunch",
+        "source_url": "https://techcrunch.com/2026/09/18/manus-seeks-4b-valuation-in-new-500m-fundraise-as-it-resumes-independent-ops/",
+        "published_at": "Fri, 18 Sep 2026 16:35:49 +0000",
+        "entities": []
+      },
+      {
+        "id": "https://techcrunch.com/2026/09/18/family-offices-are-clamoring-for-ai-investments/",
+        "title": "Family offices are clamoring for AI investments",
+        "summary": "Disrupt 2026: OpenAI, Anthropic, Replit, and more take over 6 industry stages. 25% off tickets now Back by popular demand: Save up to $300 on Disrupt Latest AI Amazon Apps Biotech & Health Climate Cloud Computing Commerce Crypto Enterprise EVs Fintech Fundraising Gadgets Gaming Google Government & Policy Hardware Instagram Layoffs Media & Entertainment Meta Microsoft Privacy Robotics Security Social Space Startups TikTok Transportation Venture Staff Events Startup Battlefield StrictlyVC Newsletters Podcasts Videos Partner Content TechCrunch Brand Studio Contact Us For the wealthy families who manage their own money through a family office, the math right now is simple, according to Djoann...",
+        "source_name": "TechCrunch",
+        "source_url": "https://techcrunch.com/2026/09/18/family-offices-are-clamoring-for-ai-investments/",
+        "published_at": "Fri, 18 Sep 2026 16:00:00 +0000",
+        "entities": []
+      },
+      {
+        "id": "https://www.scientificamerican.com/article/nasas-nancy-grace-roman-telescope-glimpses-its-first-cosmic-light/",
+        "title": "NASA’s Nancy Grace Roman Telescope glimpses its first cosmic light",
+        "summary": "September 18, 2026 2 min read NASA’s Nancy Grace Roman Telescope glimpses its first cosmic light The space telescope is set to reveal thousands of new exoplanets and scour the universe for signs of dark matter and energy By Adam Kovac edited by Claire Cameron NASA’s Goddard Space Flight Center/Tyler Desjardins/STScI Join Our Community of Science Lovers! Say cheese, universe. NASA’s Nancy Grace Roman Space Telescope has caught its first glimpses of cosmic light—a major step on the road to beaming back unprecedented images and data about our galaxy and the wider universe. The telescope activated its Wide Field Instrument (WFI) on September 11, initiating the preliminary setup for Roman’s hi...",
+        "source_name": "Scientific_American",
+        "source_url": "https://www.scientificamerican.com/article/nasas-nancy-grace-roman-telescope-glimpses-its-first-cosmic-light/",
+        "published_at": "Fri, 18 Sep 2026 14:45:00 +0000",
+        "entities": []
+      },
+      {
+        "id": "https://arxiv.org/abs/2609.19182",
+        "title": "What Do We Expect from LLMs? Mapping the Design of LLM Benchmarks",
+        "summary": "arXiv:2609.19182v1 Announce Type: new Abstract: Benchmarks are central to how progress in large language models (LLMs) is assessed and communicated. Yet model rankings alone reveal little about how evaluation requirements themselves are changing. The expanding variety of benchmarks offers another perspective: what researchers expect LLMs to do, and what they count as successful performance. We systematically map 14,767 papers introducing or updating evaluation resources from arXiv submissions b...",
+        "source_name": "ArXiv_AI",
+        "source_url": "https://arxiv.org/abs/2609.19182",
+        "published_at": "Fri, 18 Sep 2026 00:00:00 -0400",
+        "entities": []
+      },
+      {
+        "id": "yfinance_BTC-USD_2026-09-18",
+        "title": "Abnormal movement for BTC-USD: +5.82%",
+        "summary": "Oops, something went wrong The total market value of a cryptocurrency’s circulating supply. Market Cap = Current Price × Circulating Supply Fully-diluted value (FDV) is an estimate of a cryptocurrency’s Market Cap if the maximum supply were in circulation. FDV = Current Price × Max Supply The total value of a cryptocurrency traded across all exchanges in the past 24 hours. High volume suggests strong market activity and liquidity. A ratio that indicates liquidity. Higher ratios suggest the asset is more actively traded and easier to buy/sell near its true value. Lower ratios may mean less liquidity and greater price volatility. The portion of total supply that is publicly available and ac...",
+        "source_name": "Yahoo Finance Data",
+        "source_url": "https://finance.yahoo.com/quote/BTC-USD",
+        "published_at": "2026-09-18",
+        "entities": []
+      },
+      {
+        "id": "https://www.technologyreview.com/2026/09/16/1144014/building-the-materials-foundation-for-ai/",
+        "title": "Building the materials foundation for AI",
+        "summary": "Sponsored As AI pushes semiconductors and data centers toward new physical limits, advanced materials are becoming critical to performance, efficiency, and sustainability, says Mike Finelli, chief technology and innovation officer and chief North America officer at Syensqo. In partnership withSyensqo The AI boom is becoming a materials challenge. As AI pushes computing into new territory, the materials behind that infrastructure are becoming just as crucial as the algorithms running on it. Semiconductors and data centers are approaching physical limits around performance, thermal management, electrical efficiency, and reliability, creating new demands for materials that can do more at onc...",
+        "source_name": "MIT_Tech_Review",
+        "source_url": "https://www.technologyreview.com/2026/09/16/1144014/building-the-materials-foundation-for-ai/",
+        "published_at": "Wed, 16 Sep 2026 12:47:34 +0000",
+        "entities": []
+      },
+      {
+        "id": "https://www.nytimes.com/2026/09/18/us/politics/trump-ai-safety-anthropic-openai-china.html",
+        "title": "Trump Calls A.I. Fears a Hoax. Inside the White House, the Debate Is More Complex.",
+        "summary": "The president seems driven chiefly by the sense that A.I. is the way to economic growth, and nothing can be allowed to stand in its way.",
+        "source_name": "NYT_US_News",
+        "source_url": "https://www.nytimes.com/2026/09/18/us/politics/trump-ai-safety-anthropic-openai-china.html",
+        "published_at": "Fri, 18 Sep 2026 16:36:47 +0000",
+        "entities": []
+      },
+      {
+        "id": "https://www.aljazeera.com/news/2026/9/18/more-than-112000-displaced-by-yemen-fighting-thousands-flee-to-djibouti?traffic_source=rss",
+        "title": "More than 112,000 displaced by Yemen fighting; thousands flee to Djibouti",
+        "summary": "United Nations says 22 million people need humanitarian aid as conflict intensifies. Save Share More than 112,000 people have been displaced in Yemen and close to 3,000 have fled the conflict to Djibouti, according to the United Nations, as fighting intensifies between the Iran-allied Houthis and Saudi-backed forces loyal to the internationally recognised government. “Our resources are very, very, very limited and our stocks will be depleted very soon,” Abdusattor Esoev, mission chief in Yemen for the International Organization for Migration, told reporters on Friday. Most of the more than 112,000 internally displaced people have been displaced over the last two weeks, mainly along the we...",
         "source_name": "Al_Jazeera_Global",
-        "source_url": "https://www.aljazeera.com/news/2026/9/18/just-ask-grok-how-isil-is-using-big-techs-ai-to-build-bombs?traffic_source=rss",
-        "published_at": "Fri, 18 Sep 2026 08:39:59 +0000",
+        "source_url": "https://www.aljazeera.com/news/2026/9/18/more-than-112000-displaced-by-yemen-fighting-thousands-flee-to-djibouti?traffic_source=rss",
+        "published_at": "Fri, 18 Sep 2026 16:12:28 +0000",
         "entities": []
       },
       {
-        "id": "https://www.aljazeera.com/news/2026/9/18/indonesia-acquires-first-aircraft-carrier-amid-military-upgrade?traffic_source=rss",
-        "title": "Indonesia acquires first aircraft carrier amid military upgrade",
-        "summary": "Indonesia says vessel will be used to aid disaster relief across the archipelago, but its arrival comes amid drive to upgrade the military. Save Share Indonesia has welcomed the delivery of its first-ever aircraft carrier with a military ceremony as the vessel arrived at a naval base. The 41-year-old former Italian navy vessel Giuseppe Garibaldi docked in North Jakarta’s Tanjung Priok seaport on Friday, after sailing from Italy via Colombo and the Malacca strait, Indonesian Navy Chief of Staff Muhammad Ali told reporters. Indonesia’s President Prabowo Subianto says the ship will be used to manage disasters across the archipelago. However, it arrives amid a drive to upgrade the military. T...",
-        "source_name": "Al_Jazeera_Global",
-        "source_url": "https://www.aljazeera.com/news/2026/9/18/indonesia-acquires-first-aircraft-carrier-amid-military-upgrade?traffic_source=rss",
-        "published_at": "Fri, 18 Sep 2026 07:54:49 +0000",
-        "entities": []
-      },
-      {
-        "id": "https://www.npr.org/2026/09/18/nx-s1-5973810/houthi-attacks-saudi-oil-world-markets",
-        "title": "What to know after a week of Houthi attacks that threaten Saudi oil",
-        "summary": "By The Associated Press Tents are lined up in the Al-Firdaws camp for displaced Yemenis in Ras Imran, on the western outskirts of Aden, Yemen, Thursday, Sept. 17, 2026. Abdulnasser Alseddik/AP hide caption CAIRO — It's been a week since Yemen's Iran-backed Houthi rebels stormed down the Red Sea coast, extending their reach to a key maritime chokepoint and threatening Saudi Arabia's oil exports. The Houthis' biggest land grab in years reignited Yemen's 12-year civil war and pushed up global fuel prices. It also gave Iran another potential source of leverage as the United States has started to loosen Tehran's grip on the Strait of Hormuz, on the other side of the Arabian Peninsula. The Hout...",
-        "source_name": "NPR_Top_Stories",
-        "source_url": "https://www.npr.org/2026/09/18/nx-s1-5973810/houthi-attacks-saudi-oil-world-markets",
-        "published_at": "Fri, 18 Sep 2026 04:02:41 -0400",
-        "entities": []
-      },
-      {
-        "id": "https://www.bbc.co.uk/news/articles/cwly7vkke4jxo?at_medium=RSS&at_campaign=rss",
-        "title": "Canada welcomes EU proposal to become 'associate member'",
-        "summary": "This video can not be played Carney: Canada welcomes EU ambition for it to become 'associate member' Canadian Prime Minister Mark Carney has welcomed the European Union's ambition for Canada to become its first \"associate member\", calling for closer cooperation on defence, critical minerals and energy security. Carney told the European Parliament in Strasbourg on Thursday that Canada and Europe were \"stronger together\" in the face of \"geopolitical rupture\". His comments came a day after European Commission President Ursula von der Leyen proposed \"opening the door\" to Canada's associate membership, a status that does not currently exist. US President Donald Trump earlier called the idea \"l...",
+        "id": "https://www.bbc.co.uk/news/articles/cm2dw1w9d3yjo?at_medium=RSS&at_campaign=rss",
+        "title": "Russian hybrid attacks against Europe intensifying, says Macron",
+        "summary": "French President Emmanuel Macron has warned that the threat of hybrid attacks by Russia against Europe and France has intensified. In a news conference at the Elysee Palace, Macron said he had ordered a plan to protect critical infrastructure and defence industry sites in the face of this threat. He said France had been targeted by Russian hybrid attacks in the past few weeks which would not be left \"without a response\". A growing number of European leaders have warned that Russia may be preparing attacks to test their commitment to supporting Ukraine. War may be coming. Are we psychologically ready? Hybrid warfare or hybrid attacks are loose terms which tend to describe non-military meth...",
         "source_name": "BBC_World",
-        "source_url": "https://www.bbc.co.uk/news/articles/cwly7vkke4jxo?at_medium=RSS&at_campaign=rss",
-        "published_at": "Thu, 17 Sep 2026 12:27:18 GMT",
+        "source_url": "https://www.bbc.co.uk/news/articles/cm2dw1w9d3yjo?at_medium=RSS&at_campaign=rss",
+        "published_at": "Fri, 18 Sep 2026 15:14:35 GMT",
         "entities": []
       },
       {
-        "id": "https://www.npr.org/2026/09/18/nx-s1-5966501/trees-gene-editing-florida-citrus-industry",
-        "title": "Could trees developed with gene-editing technology protect Florida's citrus industry?",
-        "summary": "Environment Story Of The Day NPR hide caption By Catherine Welch Guy Davies, an inspector for the Florida Division of Plant Industry, checks an orange tree for the insect Asian citrus psyllid that carries the bacterium causing disease, \"citrus greening,\" from tree to tree on May 13, 2013, in Fort Pierce, Florida. Joe Raedle/Getty Images hide caption Citrus growers in Florida are planting new trees that have been modified using gene-editing technology to ward against the lethal citrus greening disease. Growers have tried everything from tents to sprays to protect citrus trees from the bacterial infection, which has killed off many of Florida's citrus trees and led to a massive decline in t...",
-        "source_name": "NPR_Top_Stories",
-        "source_url": "https://www.npr.org/2026/09/18/nx-s1-5966501/trees-gene-editing-florida-citrus-industry",
-        "published_at": "Fri, 18 Sep 2026 05:00:00 -0400",
-        "entities": []
-      },
-      {
-        "id": "https://www.npr.org/2026/09/18/nx-s1-5971202/trump-super-pac-midterm-spending-republicans-democrats",
-        "title": "Republican 'cavalry' arrives with a Trump-backed $150 million ad blitz in key races",
-        "summary": "By Tamara Keith , Stephen Fowler When speaking this month at the Republican convention in Dallas, Texas Senate nominee Ken Paxton, the state attorney general, made no secret of the fact he needed financial backup. Kevin Dietsch/Getty Images hide caption For months, Republican U.S. Senate candidate Ken Paxton was outspent on the air in Texas, first in a bruising primary, then as Democratic nominee James Talarico spent millions of dollars to introduce himself to voters. That all changed this month with a massive money bomb from Republican super PACs and dark money groups, including President Trump's MAGA Inc. and Texas PAC, which is aligned with Senate Republicans. All told, pro-Paxton ad r...",
-        "source_name": "NPR_Top_Stories",
-        "source_url": "https://www.npr.org/2026/09/18/nx-s1-5971202/trump-super-pac-midterm-spending-republicans-democrats",
-        "published_at": "Fri, 18 Sep 2026 05:00:00 -0400",
+        "id": "https://www.economist.com/finance-and-economics/2026/09/17/ricardo-reis-was-too-frank-for-the-imf",
+        "title": "Ricardo Reis was too frank for the IMF",
+        "summary": "It can still benefit from the economist’s ideas",
+        "source_name": "The_Economist",
+        "source_url": "https://www.economist.com/finance-and-economics/2026/09/17/ricardo-reis-was-too-frank-for-the-imf",
+        "published_at": "Thu, 17 Sep 2026 09:24:30 +0000",
         "entities": []
       }
     ]
@@ -177,25 +130,25 @@
     {
       "id": "conn-2026-09-18-0",
       "item_ids": [
-        "https://www.aljazeera.com/news/2026/9/18/just-ask-grok-how-isil-is-using-big-techs-ai-to-build-bombs?traffic_source=rss"
+        "https://www.aljazeera.com/news/2026/9/18/more-than-112000-displaced-by-yemen-fighting-thousands-flee-to-djibouti?traffic_source=rss"
       ],
-      "hypothesis": "Mentre le agenzie di sicurezza temono l’IA, i terroristi hanno già scoperto come trasformare i chatbot in fabbriche di bombe: la nuova frontiera della guerra è digitale, ma con un tocco di ‘fai‑da‑te’ da garage.",
+      "hypothesis": "The Yemen war is quietly redrawing the map of the Horn of Africa: over 112,000 people have been uprooted and thousands are now streaming into Djibouti, turning a humanitarian tragedy into a new geopolitical lever for regional powers vying for influence over migration routes and aid corridors.",
       "confidence": "alta"
     },
     {
       "id": "conn-2026-09-18-1",
       "item_ids": [
-        "https://techcrunch.com/2026/09/17/crusoe-raises-3-9b-to-build-massive-data-centers-and-small-modular-ai-factories/"
+        "yfinance_BTC-USD_2026-09-18"
       ],
-      "hypothesis": "Il colosso dei data center Crusoe ha appena incassato 3,9 miliardi di dollari, dimostrando che gli investitori preferiscono puntare su ‘fabbriche di intelligenza artificiale’ piuttosto che su impianti tradizionali; il mercato delle azioni AI è più un rodeo che una corsa tranquilla.",
+      "hypothesis": "Bitcoin’s 5.82% surge to US$80,847.82 on a single day highlights the irony of digital assets flourishing as traditional equities wrestle with uncertainty – the crypto market behaves like a rebellious teenager, booming when the adult world of stocks looks nervous.",
       "confidence": "alta"
     },
     {
       "id": "conn-2026-09-18-2",
       "item_ids": [
-        "https://arxiv.org/abs/2609.19170"
+        "https://www.scientificamerican.com/article/nasas-nancy-grace-roman-telescope-glimpses-its-first-cosmic-light/"
       ],
-      "hypothesis": "Il nuovo studio su ‘Regularized Emphatic Temporal‑Difference Learning’ rivela che è possibile mantenere la stabilità di algoritmi di apprendimento fuori‑policy anche con passi costanti, grazie a una raffinata regolarizzazione che evita le divergenze catastrofiche e rende l’apprendimento più robusto.",
+      "hypothesis": "NASA’s Nancy Grace Roman Telescope has caught its first glimpse of cosmic light, a milestone that will let astronomers scan the sky for thousands of new exoplanets and hunt the faint fingerprints of dark matter and dark energy – essentially giving the universe a fresh pair of spectacles to reveal what has been hiding in plain sight.",
       "confidence": "alta"
     }
   ]
