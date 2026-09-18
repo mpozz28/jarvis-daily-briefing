@@ -1,0 +1,19 @@
+# Core & Routing
+python-dotenv>=1.0.1
+requests>=2.31.0
+python-dateutil>=2.9.0
+pydantic>=2.6.3
+langgraph>=0.0.26
+
+# Web Server & API
+fastapi>=0.110.0
+uvicorn>=0.27.1
+
+# Data Scraping & OSINT
+yfinance>=0.2.37
+feedparser>=6.0.10
+beautifulsoup4>=4.12.3
+duckduckgo-search>=5.2.1
+
+# Testing
+pytest>=8.0.0

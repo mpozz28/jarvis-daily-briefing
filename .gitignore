@@ -1,0 +1,12 @@
+# Ambienti Virtuali e Cache
+.venv/
+__pycache__/
+.pytest_cache/
+
+# File Segreti
+.env
+
+# Database (evitiamo di caricare file enormi o DB corrotti)
+# Nota: L'azione di GitHub creerà il proprio DB temporaneo
+*.db
+*.sqlite3

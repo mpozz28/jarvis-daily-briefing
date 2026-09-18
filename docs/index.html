@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J.A.R.V.I.S. Daily Briefing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root { --archival-white: #F4F4F0; --carbon-ink: #111111; --blueprint-blue: #0033A0; --wax-red: #8C1515; --graphite: #DEDCD6; --muted-ink: #555555; --font-ui: 'Work Sans', sans-serif; --font-story: 'Lora', serif; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background-color: var(--archival-white); color: var(--carbon-ink); font-family: var(--font-story); line-height: 1.6; padding: 2rem 1rem 6rem 1rem; }
+        .container { max-width: 720px; margin: 0 auto; }
+        header { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 2px solid var(--carbon-ink); padding-bottom: 1rem; margin-bottom: 3rem; font-family: var(--font-ui); text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.85rem; font-weight: 600; }
+        .header-links a { color: var(--muted-ink); text-decoration: none; margin-left: 1.5rem; transition: color 0.2s; }
+        .narrative-block { font-size: 1.25rem; line-height: 1.8; margin-bottom: 4rem; padding-bottom: 3rem; border-bottom: 1px dashed var(--graphite); white-space: pre-line; position: relative; }
+        .narrative-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; }
+        .narrative-header-title { font-family: var(--font-ui); font-size: 0.75rem; font-weight: 600; color: var(--wax-red); text-transform: uppercase; letter-spacing: 0.05em; }
+        .narrative-controls { display: flex; gap: 0.5rem; }
+        .play-btn { background: none; border: 1px solid var(--graphite); border-radius: 20px; padding: 0.25rem 0.75rem; font-family: var(--font-ui); font-size: 0.75rem; font-weight: 600; color: var(--carbon-ink); cursor: pointer; transition: all 0.2s ease; display: flex; align-items: center; gap: 0.5rem; }
+        .play-btn:hover { border-color: var(--carbon-ink); background-color: rgba(0,0,0,0.03); }
+        .play-btn.playing { color: var(--wax-red); border-color: var(--wax-red); }
+        .play-btn.paused { color: var(--blueprint-blue); border-color: var(--blueprint-blue); }
+        .briefing-item { margin-bottom: 4rem; position: relative; }
+        .item-meta { font-family: var(--font-ui); font-size: 0.8rem; font-weight: 600; color: var(--blueprint-blue); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.75rem; }
+        .item-meta::after { content: ""; flex-grow: 1; height: 1px; background-color: var(--graphite); }
+        h2 { font-size: 1.75rem; font-weight: 600; margin-bottom: 1.5rem; line-height: 1.2; }
+        p { font-size: 1.15rem; margin-bottom: 1.5rem; }
+        .connect-dots { margin: 2rem 0; padding: 1.25rem; border-top: 1px solid var(--blueprint-blue); border-bottom: 1px solid var(--blueprint-blue); background-color: rgba(0, 51, 160, 0.03); font-family: var(--font-ui); font-size: 0.95rem; }
+        .connect-dots-header { font-weight: 600; color: var(--blueprint-blue); text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.05em; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+        .confidence-indicator { display: inline-block; width: 8px; height: 8px; background-color: var(--blueprint-blue); border-radius: 50%; }
+        .chat-bar { position: fixed; bottom: 0; left: 0; right: 0; background-color: var(--archival-white); border-top: 1px solid var(--graphite); padding: 1rem; display: flex; align-items: center; justify-content: center; gap: 1rem; z-index: 100; }
+        .chat-input { width: 100%; max-width: 680px; padding: 0.75rem 1rem; font-family: var(--font-ui); font-size: 1rem; border: 1px solid var(--graphite); border-radius: 4px; background-color: white; color: var(--carbon-ink); outline: none; transition: border-color 0.2s; }
+        .chat-input:focus { border-color: var(--blueprint-blue); }
+        .interruption-block { margin: 2.5rem 0; padding-left: 1.5rem; border-left: 3px solid var(--wax-red); animation: slideIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+        .user-query { font-family: var(--font-ui); font-weight: 500; font-size: 1rem; color: var(--muted-ink); margin-bottom: 1rem; }
+        .user-query::before { content: "USER: "; font-size: 0.75rem; font-weight: 600; color: var(--carbon-ink); }
+        .jarvis-response { font-size: 1.15rem; color: var(--carbon-ink); font-style: italic; }
+        .jarvis-response::before { content: "J.A.R.V.I.S.: "; font-family: var(--font-ui); font-size: 0.75rem; font-weight: 600; font-style: normal; color: var(--wax-red); display: block; margin-bottom: 0.25rem; }
+        .pulse { display: inline-block; width: 6px; height: 6px; background-color: var(--wax-red); border-radius: 50%; animation: blink 2s infinite; }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+        @keyframes slideIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div>J.A.R.V.I.S. Core Systems</div>
+            <div class="header-links">
+                <span id="header-date">Initializing...</span>
+            </div>
+        </header>
+
+        <main id="briefing-stream">
+            <div id="loading-state" style="text-align: center; color: var(--muted-ink); margin-top: 4rem;">
+                <span class="pulse"></span> Syncing with global sensors...
+            </div>
+            
+            <div id="narrative-container" style="display: none;">
+                <div class="narrative-header">
+                    <span class="narrative-header-title">J.A.R.V.I.S. Executive Summary</span>
+                    
+                    <div class="narrative-controls">
+                        <button id="play-briefing-btn" class="play-btn">▶ Listen</button>
+                        <button id="stop-briefing-btn" class="play-btn" style="display: none;">■ Stop</button>
+                    </div>
+
+                </div>
+                <div id="narrative-content" class="narrative-block"></div>
+            </div>
+            
+            <div id="news-content"></div>
+        </main>
+    </div>
+
+    <div class="chat-bar">
+        <span class="pulse" id="chat-pulse"></span>
+        <input type="text" id="qa-input" class="chat-input" placeholder="Interrupt J.A.R.V.I.S. with a question (Press Enter)..." autocomplete="off"/>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const newsStream = document.getElementById("news-content");
+            const narrativeStream = document.getElementById("narrative-content");
+            const narrativeContainer = document.getElementById("narrative-container");
+            const loading = document.getElementById("loading-state");
+            const headerDate = document.getElementById("header-date");
+            const inputField = document.getElementById("qa-input");
+            
+            const playBtn = document.getElementById("play-briefing-btn");
+            const stopBtn = document.getElementById("stop-briefing-btn");
+
+            const synth = window.speechSynthesis;
+            let englishVoice = null;
+            
+            let cleanBriefingText = "";
+            let currentBriefingIndex = 0;
+            let cleanQAText = "";
+            let currentQAIndex = 0;
+            let playbackState = 'STOPPED'; 
+            let audioMode = 'NONE';        
+            let resumeBriefingAfterQA = false; 
+
+            function loadVoices() {
+                const voices = synth.getVoices();
+                const enVoices = voices.filter(v => v.lang.startsWith('en'));
+                englishVoice = enVoices.find(v => v.name.includes('Daniel') || v.name.includes('UK English Male') || v.name.includes('Great Britain')) || enVoices[0];
+            }
+            if (speechSynthesis.onvoiceschanged !== undefined) {
+                speechSynthesis.onvoiceschanged = loadVoices;
+            }
+
+            function updatePlayButtons() {
+                if (playbackState === 'STOPPED') {
+                    playBtn.textContent = '▶ Listen';
+                    playBtn.classList.remove('playing', 'paused');
+                    stopBtn.style.display = 'none';
+                } else if (playbackState === 'PLAYING') {
+                    playBtn.textContent = '⏸ Pause';
+                    playBtn.classList.add('playing');
+                    playBtn.classList.remove('paused');
+                    stopBtn.style.display = 'flex';
+                } else if (playbackState === 'PAUSED') {
+                    playBtn.textContent = '▶ Resume';
+                    playBtn.classList.add('paused');
+                    playBtn.classList.remove('playing');
+                    stopBtn.style.display = 'flex';
+                }
+            }
+
+            function playMainBriefing(startIndex = 0) {
+                if (synth.speaking) synth.cancel();
+                
+                let textToSpeak = cleanBriefingText.substring(startIndex);
+                if (!textToSpeak.trim()) {
+                    playbackState = 'STOPPED';
+                    audioMode = 'NONE';
+                    currentBriefingIndex = 0;
+                    updatePlayButtons();
+                    return;
+                }
+                
+                audioMode = 'BRIEFING';
+                playbackState = 'PLAYING';
+                updatePlayButtons();
+
+                const utterance = new SpeechSynthesisUtterance(textToSpeak);
+                utterance.lang = 'en-GB';
+                utterance.pitch = 0.85; 
+                utterance.rate = 1.05; 
+                if (englishVoice) utterance.voice = englishVoice;
+
+                utterance.onboundary = (e) => { currentBriefingIndex = startIndex + e.charIndex; };
+                utterance.onend = () => {
+                    if (playbackState === 'PLAYING' && audioMode === 'BRIEFING') {
+                        playbackState = 'STOPPED';
+                        audioMode = 'NONE';
+                        currentBriefingIndex = 0;
+                        updatePlayButtons();
+                    }
+                };
+
+                synth.speak(utterance);
+            }
+
+            function playQAResponse(startIndex = 0) {
+                if (synth.speaking) synth.cancel();
+                
+                let textToSpeak = cleanQAText.substring(startIndex);
+                if (!textToSpeak.trim()) {
+                    handleQAEnd();
+                    return;
+                }
+
+                audioMode = 'QA';
+                playbackState = 'PLAYING';
+                updatePlayButtons();
+
+                const utterance = new SpeechSynthesisUtterance(textToSpeak);
+                utterance.lang = 'en-GB';
+                utterance.pitch = 0.85; 
+                utterance.rate = 1.05; 
+                if (englishVoice) utterance.voice = englishVoice;
+                
+                utterance.onboundary = (e) => { currentQAIndex = startIndex + e.charIndex; };
+                utterance.onend = () => {
+                    if (playbackState === 'PLAYING' && audioMode === 'QA') {
+                        handleQAEnd();
+                    }
+                };
+
+                synth.speak(utterance);
+            }
+
+            function handleQAEnd() {
+                currentQAIndex = 0;
+                if (resumeBriefingAfterQA) {
+                    resumeBriefingAfterQA = false;
+                    playbackState = 'STOPPED'; 
+                    setTimeout(() => { playMainBriefing(currentBriefingIndex); }, 800);
+                } else {
+                    playbackState = 'STOPPED';
+                    audioMode = 'NONE';
+                    updatePlayButtons();
+                }
+            }
+
+            playBtn.addEventListener('click', () => {
+                if (playbackState === 'STOPPED') {
+                    currentBriefingIndex = 0;
+                    resumeBriefingAfterQA = false;
+                    playMainBriefing(0);
+                } else if (playbackState === 'PLAYING') {
+                    playbackState = 'PAUSED';
+                    synth.cancel(); 
+                    updatePlayButtons();
+                } else if (playbackState === 'PAUSED') {
+                    if (audioMode === 'BRIEFING') playMainBriefing(currentBriefingIndex);
+                    else if (audioMode === 'QA') playQAResponse(currentQAIndex);
+                }
+            });
+
+            stopBtn.addEventListener('click', () => {
+                playbackState = 'STOPPED';
+                audioMode = 'NONE';
+                currentBriefingIndex = 0;
+                currentQAIndex = 0;
+                resumeBriefingAfterQA = false;
+                synth.cancel();
+                updatePlayButtons();
+            });
+
+            const timestamp = new Date().getTime();
+            fetch(`./latest_briefing.json?t=${timestamp}`)
+                .then(res => res.json())
+                .then(data => renderBriefing(data))
+                .catch(err => console.error("JSON fetch error:", err));
+
+            function renderBriefing(data) {
+                loading.style.display = 'none';
+                if(headerDate) headerDate.textContent = data.date_label;
+
+                if(data.narrative_briefing) {
+                    narrativeStream.textContent = data.narrative_briefing;
+                    narrativeContainer.style.display = 'block';
+                    cleanBriefingText = data.narrative_briefing.replace(/<[^>]*>?/gm, '').replace(/\*/g, '');
+                    loadVoices(); 
+                }
+
+                let htmlContent = "";
+                const allItems = [];
+                for (const [domain, items] of Object.entries(data.domains)) {
+                    items.forEach(item => { item.domain_label = domain.replace('_', ' ').toUpperCase(); allItems.push(item); });
+                }
+
+                allItems.forEach(item => {
+                    htmlContent += `
+                    <article class="briefing-item active" id="${item.id}">
+                        <div class="item-meta">
+                            <span>${item.domain_label}</span>
+                            <span style="color: var(--muted-ink); font-weight: normal; font-size: 0.75rem;">${item.source_name}</span>
+                        </div>
+                        <h2>${item.title}</h2>
+                        <p>${item.summary}</p>
+                        <a href="${item.source_url}" target="_blank" style="font-family: var(--font-ui); font-size: 0.8rem; color: var(--blueprint-blue); text-decoration: none; font-weight: 600;">[ Read Primary Source ]</a>
+                    `;
+
+                    data.connections.forEach(conn => {
+                        if (conn.item_ids.includes(item.id)) {
+                            htmlContent += `
+                            <div class="connect-dots">
+                                <div class="connect-dots-header">
+                                    <span class="confidence-indicator"></span> Connect the Dots: System Correlation
+                                </div>
+                                <em>${conn.hypothesis}</em>
+                            </div>`;
+                        }
+                    });
+
+                    htmlContent += `</article>`;
+                });
+                newsStream.innerHTML = htmlContent;
+            }
+
+            inputField.addEventListener('keypress', function (e) {
+                if (e.key === 'Enter' && inputField.value.trim() !== '') {
+                    askJarvis(inputField.value.trim());
+                    inputField.value = '';
+                }
+            });
+
+            async function askJarvis(question) {
+                let wasAudioActive = false;
+                
+                if (playbackState === 'PLAYING' || playbackState === 'PAUSED') {
+                    wasAudioActive = true;
+                    if (audioMode === 'BRIEFING') resumeBriefingAfterQA = true;
+                    playbackState = 'STOPPED'; 
+                    synth.cancel();
+                    updatePlayButtons();
+                } else {
+                    wasAudioActive = false;
+                    resumeBriefingAfterQA = false;
+                }
+
+                const tempId = "qa-" + Date.now();
+                const qaHtml = `
+                    <div id="${tempId}" class="interruption-block">
+                        <div class="user-query">${question}</div>
+                        <div class="jarvis-response"><span class="pulse"></span> <em>Cognitive processing in progress...</em></div>
+                    </div>
+                `;
+                newsStream.insertAdjacentHTML('afterbegin', qaHtml);
+                inputField.disabled = true;
+                
+                try {
+                    const API_BASE_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' 
+                        ? '' 
+                        : 'https://NOME_DEL_TUO_PROGETTO.onrender.com'; // SOSTITUIREMO QUESTO NOME DOPO IL DEPLOY SU RENDER
+
+                    const res = await fetch(`${API_BASE_URL}/api/ask`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ question: question })
+                    });
+                    const data = await res.json();
+                    
+                    const block = document.getElementById(tempId);
+                    block.querySelector('.jarvis-response').innerHTML = data.answer;
+                    
+                    if (wasAudioActive) {
+                        cleanQAText = data.answer.replace(/<[^>]*>?/gm, '').replace(/\*/g, '');
+                        currentQAIndex = 0;
+                        playQAResponse(0);
+                    }
+                    
+                    if(data.target_id) {
+                        const targetEl = document.getElementById(data.target_id);
+                        if(targetEl) {
+                            targetEl.appendChild(block);
+                            targetEl.scrollIntoView({behavior: "smooth", block: "center"});
+                        }
+                    }
+                } catch(e) {
+                    document.getElementById(tempId).querySelector('.jarvis-response').innerHTML = "My apologies, Sir. The cognitive servers are unresponsive.";
+                } finally {
+                    inputField.disabled = false;
+                    inputField.focus();
+                }
+            }
+        });
+    </script>
+</body>
+</html>
