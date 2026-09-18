@@ -104,11 +104,19 @@
             let audioMode = 'NONE';        
             let resumeBriefingAfterQA = false; 
 
+            // ANTI-BUG CHROME: Mantiene in vita l'audio per testi lunghi
+            window.jarvisUtterance = null;
+
             function loadVoices() {
                 const voices = synth.getVoices();
+                if (voices.length === 0) return;
                 const enVoices = voices.filter(v => v.lang.startsWith('en'));
-                englishVoice = enVoices.find(v => v.name.includes('Daniel') || v.name.includes('UK English Male') || v.name.includes('Great Britain')) || enVoices[0];
+                // Prende l'inglese UK, se non c'è prende un inglese a caso, se non c'è prende la prima voce del PC
+                englishVoice = enVoices.find(v => v.name.includes('Daniel') || v.name.includes('UK English') || v.name.includes('Great Britain')) || enVoices[0] || voices[0];
             }
+            
+            // Forza caricamento vocale
+            loadVoices();
             if (speechSynthesis.onvoiceschanged !== undefined) {
                 speechSynthesis.onvoiceschanged = loadVoices;
             }
@@ -132,67 +140,76 @@
             }
 
             function playMainBriefing(startIndex = 0) {
-                if (synth.speaking) synth.cancel();
+                synth.cancel(); // Ferma tutto
                 
-                let textToSpeak = cleanBriefingText.substring(startIndex);
-                if (!textToSpeak.trim()) {
-                    playbackState = 'STOPPED';
-                    audioMode = 'NONE';
-                    currentBriefingIndex = 0;
-                    updatePlayButtons();
-                    return;
-                }
-                
-                audioMode = 'BRIEFING';
-                playbackState = 'PLAYING';
-                updatePlayButtons();
-
-                const utterance = new SpeechSynthesisUtterance(textToSpeak);
-                utterance.lang = 'en-GB';
-                utterance.pitch = 0.85; 
-                utterance.rate = 1.05; 
-                if (englishVoice) utterance.voice = englishVoice;
-
-                utterance.onboundary = (e) => { currentBriefingIndex = startIndex + e.charIndex; };
-                utterance.onend = () => {
-                    if (playbackState === 'PLAYING' && audioMode === 'BRIEFING') {
+                // MICRO-RITARDO: Previene il blocco del motore audio del browser
+                setTimeout(() => {
+                    let textToSpeak = cleanBriefingText.substring(startIndex);
+                    if (!textToSpeak.trim()) {
                         playbackState = 'STOPPED';
                         audioMode = 'NONE';
                         currentBriefingIndex = 0;
                         updatePlayButtons();
+                        return;
                     }
-                };
+                    
+                    audioMode = 'BRIEFING';
+                    playbackState = 'PLAYING';
+                    updatePlayButtons();
 
-                synth.speak(utterance);
+                    const utterance = new SpeechSynthesisUtterance(textToSpeak);
+                    utterance.lang = 'en-GB';
+                    utterance.pitch = 0.85; 
+                    utterance.rate = 1.05; 
+                    if (englishVoice) utterance.voice = englishVoice;
+
+                    window.jarvisUtterance = utterance; // ANTI-BUG CHROME
+
+                    utterance.onboundary = (e) => { currentBriefingIndex = startIndex + e.charIndex; };
+                    utterance.onend = () => {
+                        if (playbackState === 'PLAYING' && audioMode === 'BRIEFING') {
+                            playbackState = 'STOPPED';
+                            audioMode = 'NONE';
+                            currentBriefingIndex = 0;
+                            updatePlayButtons();
+                        }
+                    };
+
+                    synth.speak(utterance);
+                }, 50);
             }
 
             function playQAResponse(startIndex = 0) {
-                if (synth.speaking) synth.cancel();
+                synth.cancel();
                 
-                let textToSpeak = cleanQAText.substring(startIndex);
-                if (!textToSpeak.trim()) {
-                    handleQAEnd();
-                    return;
-                }
-
-                audioMode = 'QA';
-                playbackState = 'PLAYING';
-                updatePlayButtons();
-
-                const utterance = new SpeechSynthesisUtterance(textToSpeak);
-                utterance.lang = 'en-GB';
-                utterance.pitch = 0.85; 
-                utterance.rate = 1.05; 
-                if (englishVoice) utterance.voice = englishVoice;
-                
-                utterance.onboundary = (e) => { currentQAIndex = startIndex + e.charIndex; };
-                utterance.onend = () => {
-                    if (playbackState === 'PLAYING' && audioMode === 'QA') {
+                setTimeout(() => {
+                    let textToSpeak = cleanQAText.substring(startIndex);
+                    if (!textToSpeak.trim()) {
                         handleQAEnd();
+                        return;
                     }
-                };
 
-                synth.speak(utterance);
+                    audioMode = 'QA';
+                    playbackState = 'PLAYING';
+                    updatePlayButtons();
+
+                    const utterance = new SpeechSynthesisUtterance(textToSpeak);
+                    utterance.lang = 'en-GB';
+                    utterance.pitch = 0.85; 
+                    utterance.rate = 1.05; 
+                    if (englishVoice) utterance.voice = englishVoice;
+                    
+                    window.jarvisUtterance = utterance; // ANTI-BUG CHROME
+                    
+                    utterance.onboundary = (e) => { currentQAIndex = startIndex + e.charIndex; };
+                    utterance.onend = () => {
+                        if (playbackState === 'PLAYING' && audioMode === 'QA') {
+                            handleQAEnd();
+                        }
+                    };
+
+                    synth.speak(utterance);
+                }, 50);
             }
 
             function handleQAEnd() {
@@ -215,11 +232,12 @@
                     playMainBriefing(0);
                 } else if (playbackState === 'PLAYING') {
                     playbackState = 'PAUSED';
-                    synth.cancel(); 
+                    synth.pause(); // Usiamo pause() invece di cancel()
                     updatePlayButtons();
                 } else if (playbackState === 'PAUSED') {
-                    if (audioMode === 'BRIEFING') playMainBriefing(currentBriefingIndex);
-                    else if (audioMode === 'QA') playQAResponse(currentQAIndex);
+                    synth.resume(); // Usiamo resume() nativo
+                    playbackState = 'PLAYING';
+                    updatePlayButtons();
                 }
             });
 
@@ -292,6 +310,11 @@
                 }
             });
 
+            // INDIRIZZO DINAMICO: Contatta Render in produzione, localhost in locale
+            const API_BASE_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' 
+                ? '' 
+                : 'https://jarvis-daily-briefing.onrender.com';
+
             async function askJarvis(question) {
                 let wasAudioActive = false;
                 
@@ -301,9 +324,6 @@
                     playbackState = 'STOPPED'; 
                     synth.cancel();
                     updatePlayButtons();
-                } else {
-                    wasAudioActive = false;
-                    resumeBriefingAfterQA = false;
                 }
 
                 const tempId = "qa-" + Date.now();
@@ -317,10 +337,6 @@
                 inputField.disabled = true;
                 
                 try {
-                    const API_BASE_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' 
-                        ? '' 
-                        : 'https://jarvis-daily-briefing.onrender.com';
-
                     const res = await fetch(`${API_BASE_URL}/api/ask`, {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
@@ -331,19 +347,22 @@
                     const block = document.getElementById(tempId);
                     block.querySelector('.jarvis-response').innerHTML = data.answer;
                     
-                    if (wasAudioActive) {
-                        cleanQAText = data.answer.replace(/<[^>]*>?/gm, '').replace(/\*/g, '');
-                        currentQAIndex = 0;
-                        playQAResponse(0);
-                    }
+                    // Forza lo scroll
+                    block.scrollIntoView({behavior: "smooth", block: "center"});
                     
                     if(data.target_id) {
                         const targetEl = document.getElementById(data.target_id);
                         if(targetEl) {
                             targetEl.appendChild(block);
-                            targetEl.scrollIntoView({behavior: "smooth", block: "center"});
+                            block.scrollIntoView({behavior: "smooth", block: "center"});
                         }
                     }
+                    
+                    // Avvia la risposta vocale
+                    cleanQAText = data.answer.replace(/<[^>]*>?/gm, '').replace(/\*/g, '');
+                    currentQAIndex = 0;
+                    playQAResponse(0);
+                    
                 } catch(e) {
                     document.getElementById(tempId).querySelector('.jarvis-response').innerHTML = "My apologies, Sir. The cognitive servers are unresponsive.";
                 } finally {
@@ -353,5 +372,3 @@
             }
         });
     </script>
-</body>
-</html>
