@@ -95,6 +95,7 @@
 
             const synth = window.speechSynthesis;
             let englishVoice = null;
+            let voiceAvailable = false;
             
             let cleanBriefingText = "";
             let currentBriefingIndex = 0;
@@ -104,18 +105,20 @@
             let audioMode = 'NONE';        
             let resumeBriefingAfterQA = false; 
 
-            // ANTI-BUG CHROME: Mantiene in vita l'audio per testi lunghi
             window.jarvisUtterance = null;
 
             function loadVoices() {
                 const voices = synth.getVoices();
                 if (voices.length === 0) return;
+                
                 const enVoices = voices.filter(v => v.lang.startsWith('en'));
-                // Prende l'inglese UK, se non c'è prende un inglese a caso, se non c'è prende la prima voce del PC
                 englishVoice = enVoices.find(v => v.name.includes('Daniel') || v.name.includes('UK English') || v.name.includes('Great Britain')) || enVoices[0] || voices[0];
+                
+                if (englishVoice) {
+                    voiceAvailable = true;
+                }
             }
             
-            // Forza caricamento vocale
             loadVoices();
             if (speechSynthesis.onvoiceschanged !== undefined) {
                 speechSynthesis.onvoiceschanged = loadVoices;
@@ -140,9 +143,17 @@
             }
 
             function playMainBriefing(startIndex = 0) {
-                synth.cancel(); // Ferma tutto
+                // CONTROLLO DI SICUREZZA: Se il sistema non ha voci in inglese, avvisa l'utente
+                loadVoices();
+                if (!voiceAvailable) {
+                    playBtn.textContent = '⚠️ Voice Pack Missing';
+                    setTimeout(() => { updatePlayButtons(); }, 3000);
+                    console.warn("J.A.R.V.I.S.: Web Speech API found no English voices installed on this operating system.");
+                    return;
+                }
+
+                synth.cancel();
                 
-                // MICRO-RITARDO: Previene il blocco del motore audio del browser
                 setTimeout(() => {
                     let textToSpeak = cleanBriefingText.substring(startIndex);
                     if (!textToSpeak.trim()) {
@@ -163,7 +174,7 @@
                     utterance.rate = 1.05; 
                     if (englishVoice) utterance.voice = englishVoice;
 
-                    window.jarvisUtterance = utterance; // ANTI-BUG CHROME
+                    window.jarvisUtterance = utterance;
 
                     utterance.onboundary = (e) => { currentBriefingIndex = startIndex + e.charIndex; };
                     utterance.onend = () => {
@@ -180,6 +191,9 @@
             }
 
             function playQAResponse(startIndex = 0) {
+                loadVoices();
+                if (!voiceAvailable) return;
+
                 synth.cancel();
                 
                 setTimeout(() => {
@@ -199,7 +213,7 @@
                     utterance.rate = 1.05; 
                     if (englishVoice) utterance.voice = englishVoice;
                     
-                    window.jarvisUtterance = utterance; // ANTI-BUG CHROME
+                    window.jarvisUtterance = utterance;
                     
                     utterance.onboundary = (e) => { currentQAIndex = startIndex + e.charIndex; };
                     utterance.onend = () => {
@@ -232,10 +246,10 @@
                     playMainBriefing(0);
                 } else if (playbackState === 'PLAYING') {
                     playbackState = 'PAUSED';
-                    synth.pause(); // Usiamo pause() invece di cancel()
+                    synth.pause();
                     updatePlayButtons();
                 } else if (playbackState === 'PAUSED') {
-                    synth.resume(); // Usiamo resume() nativo
+                    synth.resume();
                     playbackState = 'PLAYING';
                     updatePlayButtons();
                 }
@@ -310,7 +324,6 @@
                 }
             });
 
-            // INDIRIZZO DINAMICO: Contatta Render in produzione, localhost in locale
             const API_BASE_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' 
                 ? '' 
                 : 'https://jarvis-daily-briefing.onrender.com';
@@ -347,7 +360,6 @@
                     const block = document.getElementById(tempId);
                     block.querySelector('.jarvis-response').innerHTML = data.answer;
                     
-                    // Forza lo scroll
                     block.scrollIntoView({behavior: "smooth", block: "center"});
                     
                     if(data.target_id) {
@@ -358,7 +370,6 @@
                         }
                     }
                     
-                    // Avvia la risposta vocale
                     cleanQAText = data.answer.replace(/<[^>]*>?/gm, '').replace(/\*/g, '');
                     currentQAIndex = 0;
                     playQAResponse(0);
