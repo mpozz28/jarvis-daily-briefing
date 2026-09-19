@@ -42,6 +42,25 @@ def is_recent(date_string: str, max_days: int = 2) -> bool:
         return False 
     
     now = datetime.now(timezone.utc)
+    
+    # Mappa dei fusi orari americani più comuni
+    tzinfos = {"EDT": -4*3600, "EST": -5*3600, "CDT": -5*3600, "CST": -6*3600, "PDT": -7*3600, "PST": -8*3600}
+    
+    try:
+        if "oggi" in str(date_string).lower() or "today" in str(date_string).lower():
+            return True
+            
+        # Aggiungiamo tzinfos per evitare warning
+        article_date = dateutil.parser.parse(str(date_string), tzinfos=tzinfos)
+        if article_date.tzinfo is None:
+            article_date = article_date.replace(tzinfo=timezone.utc)
+            
+        diff = now - article_date
+        return diff.days <= max_days
+    except Exception:
+        return False 
+    
+    now = datetime.now(timezone.utc)
     try:
         if "oggi" in str(date_string).lower() or "today" in str(date_string).lower():
             return True
