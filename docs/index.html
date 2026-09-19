@@ -95,28 +95,18 @@
 
             const synth = window.speechSynthesis;
             let englishVoice = null;
-            let voiceAvailable = false;
             
-            let cleanBriefingText = "";
-            let currentBriefingIndex = 0;
-            let cleanQAText = "";
-            let currentQAIndex = 0;
-            let playbackState = 'STOPPED'; 
-            let audioMode = 'NONE';        
-            let resumeBriefingAfterQA = false; 
-
-            window.jarvisUtterance = null;
+            // Variabili per il sistema "A Fette" (Chunking)
+            let briefingChunks = [];
+            let currentChunkIndex = 0;
+            let isPlaying = false; 
+            let isPaused = false;
 
             function loadVoices() {
                 const voices = synth.getVoices();
                 if (voices.length === 0) return;
-                
                 const enVoices = voices.filter(v => v.lang.startsWith('en'));
                 englishVoice = enVoices.find(v => v.name.includes('Daniel') || v.name.includes('UK English') || v.name.includes('Great Britain')) || enVoices[0] || voices[0];
-                
-                if (englishVoice) {
-                    voiceAvailable = true;
-                }
             }
             
             loadVoices();
@@ -125,142 +115,83 @@
             }
 
             function updatePlayButtons() {
-                if (playbackState === 'STOPPED') {
+                if (!isPlaying) {
                     playBtn.textContent = '▶ Listen';
                     playBtn.classList.remove('playing', 'paused');
                     stopBtn.style.display = 'none';
-                } else if (playbackState === 'PLAYING') {
-                    playBtn.textContent = '⏸ Pause';
-                    playBtn.classList.add('playing');
-                    playBtn.classList.remove('paused');
-                    stopBtn.style.display = 'flex';
-                } else if (playbackState === 'PAUSED') {
+                } else if (isPaused) {
                     playBtn.textContent = '▶ Resume';
                     playBtn.classList.add('paused');
                     playBtn.classList.remove('playing');
                     stopBtn.style.display = 'flex';
+                } else {
+                    playBtn.textContent = '⏸ Pause';
+                    playBtn.classList.add('playing');
+                    playBtn.classList.remove('paused');
+                    stopBtn.style.display = 'flex';
                 }
             }
 
-            function playMainBriefing(startIndex = 0) {
-                // CONTROLLO DI SICUREZZA: Se il sistema non ha voci in inglese, avvisa l'utente
-                loadVoices();
-                if (!voiceAvailable) {
-                    playBtn.textContent = '⚠️ Voice Pack Missing';
-                    setTimeout(() => { updatePlayButtons(); }, 3000);
-                    console.warn("J.A.R.V.I.S.: Web Speech API found no English voices installed on this operating system.");
+            // IL CUORE DEL FIX: Legge il testo una frase alla volta
+            function playNextChunk() {
+                if (!isPlaying || isPaused) return;
+                
+                if (currentChunkIndex >= briefingChunks.length) {
+                    isPlaying = false;
+                    currentChunkIndex = 0;
+                    updatePlayButtons();
                     return;
                 }
 
-                synth.cancel();
-                
-                setTimeout(() => {
-                    let textToSpeak = cleanBriefingText.substring(startIndex);
-                    if (!textToSpeak.trim()) {
-                        playbackState = 'STOPPED';
-                        audioMode = 'NONE';
-                        currentBriefingIndex = 0;
-                        updatePlayButtons();
-                        return;
+                const utterance = new SpeechSynthesisUtterance(briefingChunks[currentChunkIndex]);
+                utterance.lang = 'en-GB';
+                utterance.pitch = 0.85; 
+                utterance.rate = 1.05; 
+                if (englishVoice) utterance.voice = englishVoice;
+
+                utterance.onend = () => {
+                    if (isPlaying && !isPaused) {
+                        currentChunkIndex++;
+                        playNextChunk();
                     }
-                    
-                    audioMode = 'BRIEFING';
-                    playbackState = 'PLAYING';
-                    updatePlayButtons();
+                };
+                utterance.onerror = (e) => {
+                    console.warn("Skipped chunk due to Chrome error:", e);
+                    currentChunkIndex++;
+                    playNextChunk();
+                };
 
-                    const utterance = new SpeechSynthesisUtterance(textToSpeak);
-                    utterance.lang = 'en-GB';
-                    utterance.pitch = 0.85; 
-                    utterance.rate = 1.05; 
-                    if (englishVoice) utterance.voice = englishVoice;
-
-                    window.jarvisUtterance = utterance;
-
-                    utterance.onboundary = (e) => { currentBriefingIndex = startIndex + e.charIndex; };
-                    utterance.onend = () => {
-                        if (playbackState === 'PLAYING' && audioMode === 'BRIEFING') {
-                            playbackState = 'STOPPED';
-                            audioMode = 'NONE';
-                            currentBriefingIndex = 0;
-                            updatePlayButtons();
-                        }
-                    };
-
-                    synth.speak(utterance);
-                }, 50);
-            }
-
-            function playQAResponse(startIndex = 0) {
-                loadVoices();
-                if (!voiceAvailable) return;
-
-                synth.cancel();
-                
-                setTimeout(() => {
-                    let textToSpeak = cleanQAText.substring(startIndex);
-                    if (!textToSpeak.trim()) {
-                        handleQAEnd();
-                        return;
-                    }
-
-                    audioMode = 'QA';
-                    playbackState = 'PLAYING';
-                    updatePlayButtons();
-
-                    const utterance = new SpeechSynthesisUtterance(textToSpeak);
-                    utterance.lang = 'en-GB';
-                    utterance.pitch = 0.85; 
-                    utterance.rate = 1.05; 
-                    if (englishVoice) utterance.voice = englishVoice;
-                    
-                    window.jarvisUtterance = utterance;
-                    
-                    utterance.onboundary = (e) => { currentQAIndex = startIndex + e.charIndex; };
-                    utterance.onend = () => {
-                        if (playbackState === 'PLAYING' && audioMode === 'QA') {
-                            handleQAEnd();
-                        }
-                    };
-
-                    synth.speak(utterance);
-                }, 50);
-            }
-
-            function handleQAEnd() {
-                currentQAIndex = 0;
-                if (resumeBriefingAfterQA) {
-                    resumeBriefingAfterQA = false;
-                    playbackState = 'STOPPED'; 
-                    setTimeout(() => { playMainBriefing(currentBriefingIndex); }, 800);
-                } else {
-                    playbackState = 'STOPPED';
-                    audioMode = 'NONE';
-                    updatePlayButtons();
-                }
+                synth.speak(utterance);
             }
 
             playBtn.addEventListener('click', () => {
-                if (playbackState === 'STOPPED') {
-                    currentBriefingIndex = 0;
-                    resumeBriefingAfterQA = false;
-                    playMainBriefing(0);
-                } else if (playbackState === 'PLAYING') {
-                    playbackState = 'PAUSED';
+                if (!isPlaying) {
+                    // Start da zero
+                    synth.cancel();
+                    currentChunkIndex = 0;
+                    isPlaying = true;
+                    isPaused = false;
+                    updatePlayButtons();
+                    playNextChunk();
+                } else if (!isPaused) {
+                    // Metti in pausa
+                    isPaused = true;
                     synth.pause();
                     updatePlayButtons();
-                } else if (playbackState === 'PAUSED') {
+                } else {
+                    // Riprendi dalla pausa
+                    isPaused = false;
                     synth.resume();
-                    playbackState = 'PLAYING';
                     updatePlayButtons();
+                    // Assicurazione per i bug di ripresa di Chrome
+                    if (!synth.speaking) playNextChunk();
                 }
             });
 
             stopBtn.addEventListener('click', () => {
-                playbackState = 'STOPPED';
-                audioMode = 'NONE';
-                currentBriefingIndex = 0;
-                currentQAIndex = 0;
-                resumeBriefingAfterQA = false;
+                isPlaying = false;
+                isPaused = false;
+                currentChunkIndex = 0;
                 synth.cancel();
                 updatePlayButtons();
             });
@@ -278,7 +209,10 @@
                 if(data.narrative_briefing) {
                     narrativeStream.textContent = data.narrative_briefing;
                     narrativeContainer.style.display = 'block';
-                    cleanBriefingText = data.narrative_briefing.replace(/<[^>]*>?/gm, '').replace(/\*/g, '');
+                    
+                    // TAGLIA IL TESTO A FETTE (Usa i punti, i punti esclamativi e i punti di domanda)
+                    let rawText = data.narrative_briefing.replace(/<[^>]*>?/gm, '').replace(/\*/g, '');
+                    briefingChunks = rawText.match(/[^.!?]+[.!?]+/g) || [rawText];
                     loadVoices(); 
                 }
 
@@ -311,7 +245,6 @@
                             </div>`;
                         }
                     });
-
                     htmlContent += `</article>`;
                 });
                 newsStream.innerHTML = htmlContent;
@@ -329,13 +262,10 @@
                 : 'https://jarvis-daily-briefing.onrender.com';
 
             async function askJarvis(question) {
-                let wasAudioActive = false;
-                
-                if (playbackState === 'PLAYING' || playbackState === 'PAUSED') {
-                    wasAudioActive = true;
-                    if (audioMode === 'BRIEFING') resumeBriefingAfterQA = true;
-                    playbackState = 'STOPPED'; 
-                    synth.cancel();
+                // Ferma il briefing principale
+                if (isPlaying) {
+                    isPaused = true;
+                    synth.pause();
                     updatePlayButtons();
                 }
 
@@ -370,9 +300,21 @@
                         }
                     }
                     
-                    cleanQAText = data.answer.replace(/<[^>]*>?/gm, '').replace(/\*/g, '');
-                    currentQAIndex = 0;
-                    playQAResponse(0);
+                    // Fai leggere a J.A.R.V.I.S. anche la risposta (Tagliandola a fette per sicurezza)
+                    let qaRawText = data.answer.replace(/<[^>]*>?/gm, '').replace(/\*/g, '');
+                    let qaChunks = qaRawText.match(/[^.!?]+[.!?]+/g) || [qaRawText];
+                    
+                    let qaIdx = 0;
+                    function playQaChunk() {
+                        if(qaIdx >= qaChunks.length) return;
+                        let u = new SpeechSynthesisUtterance(qaChunks[qaIdx]);
+                        u.lang = 'en-GB'; u.pitch = 0.85; u.rate = 1.05;
+                        if(englishVoice) u.voice = englishVoice;
+                        u.onend = () => { qaIdx++; playQaChunk(); };
+                        synth.speak(u);
+                    }
+                    synth.cancel(); // ferma tutto l'audio precedente
+                    playQaChunk();
                     
                 } catch(e) {
                     document.getElementById(tempId).querySelector('.jarvis-response').innerHTML = "My apologies, Sir. The cognitive servers are unresponsive.";
