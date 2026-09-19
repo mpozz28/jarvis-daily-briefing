@@ -1,13 +1,11 @@
 import os
-import logging
 import requests
 import time
 from typing import Optional
 from dotenv import load_dotenv
+from src.utils.observability import logger, metrics_tracker
 
 load_dotenv()
-
-logger = logging.getLogger(__name__)
 
 # MODEL POOL: Valid and active models in GroqCloud
 MODELS_POOL = [
@@ -52,16 +50,31 @@ class LLMFallbackRouter:
                         "messages": messages,
                         "temperature": self.temperature
                     }
-
+                    
+                    start_time = time.time()
                     response = requests.post(
                         "https://api.groq.com/openai/v1/chat/completions",
                         headers=headers,
                         json=payload,
                         timeout=15
                     )
+                    latency = time.time() - start_time
 
                     if response.status_code == 200:
-                        return response.json()['choices'][0]['message']['content']
+                        data = response.json()
+                        content = data['choices'][0]['message']['content']
+                        
+                        # ESTRAZIONE TOKENS ESATTI DALL'API
+                        usage = data.get('usage', {})
+                        prompt_tokens = usage.get('prompt_tokens', 0)
+                        comp_tokens = usage.get('completion_tokens', 0)
+                        
+                        # REGISTRAZIONE NEL TRACKER GLOBALE
+                        metrics_tracker.record_call(model, prompt_tokens, comp_tokens, latency)
+                        
+                        logger.debug(f"LLM Call Success: {model} | {prompt_tokens} in / {comp_tokens} out | {round(latency, 2)}s")
+                        
+                        return content
 
                     # IF MODEL DOES NOT EXIST (e.g., account restrictions)
                     if response.status_code == 404:
@@ -91,7 +104,7 @@ class LLMFallbackRouter:
                 logger.info("[Wait State] All models saturated. Pausing for 15s before the second attempt...")
                 time.sleep(15)
 
-        logger.error("Critical Failure: All Groq models are offline or saturated.")
+        logger.error("Critical Failure: All Groq models are offline or saturated.", extra={"component": "llm_router"})
         raise RuntimeError(f"Unable to retrieve a response. Last error: {last_error}")
 
 llm_router = LLMFallbackRouter()

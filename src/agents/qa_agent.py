@@ -1,5 +1,7 @@
 import logging
 import requests
+import time
+from src.utils.observability import logger, metrics_tracker
 from bs4 import BeautifulSoup
 from duckduckgo_search import DDGS
 from src.llm_router import llm_router
@@ -23,17 +25,24 @@ class QAAgent:
         prompt += "Return EXCLUSIVELY the ID of the news item the question refers to. If it is a general question or not related to specific news, write NONE."
 
         try:
+            start_time = time.time()
             response = llm_router.invoke(
                 prompt=prompt,
                 system_prompt="You are an ID router. Answer only with the ID or NONE.",
                 preferred_model="openai/gpt-oss-120b"
             )
+            latency = time.time() - start_time
+            
+            # I token li calcola già il router, logghiamo solo l'evento Q&A!
+            logger.info("Relevant item identified", extra={"component": "qa_agent", "metrics": {"latency_ms": round(latency * 1000, 2)}})
+
             resp_clean = response.strip()
             for n in ranked_news:
                 if n.get('id') in resp_clean:
                     return n
+                    
         except Exception as e:
-            logger.error(f"News identification error: {e}")
+            logger.error(f"News identification error: {e}", exc_info=True, extra={"component": "qa_agent"})
             
         return None
 
@@ -109,14 +118,19 @@ class QAAgent:
             prompt += f"\n--- LIVE WEB SUPPORTING RESULTS ---\n{web_results}\n"
 
         try:
+            start_time = time.time()
             answer = llm_router.invoke(
                 prompt=prompt,
                 system_prompt=system_prompt,
                 preferred_model="openai/gpt-oss-120b"
             )
-            # Minimal safety cleanup to avoid raw formatting characters in speech
+            latency = time.time() - start_time
+            
+            logger.info("Q&A Generated", extra={"component": "qa_agent", "metrics": {"latency_ms": round(latency * 1000, 2)}})
+
             answer = answer.replace('##', '').replace('###', '').replace('**', '')
             return answer
+            
         except Exception as e:
-            logger.error(f"Answer generation error: {e}")
+            logger.error(f"Answer generation error: {e}", exc_info=True, extra={"component": "qa_agent"})
             return "My apologies, Sir. My cognitive circuits have encountered a temporary anomaly."

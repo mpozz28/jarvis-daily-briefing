@@ -1,6 +1,8 @@
 import os
 import logging
 import re
+import time
+from src.utils.observability import logger, metrics_tracker
 from typing import TypedDict, List, Dict
 from langgraph.graph import StateGraph, END
 from dotenv import load_dotenv
@@ -130,9 +132,34 @@ def build_graph():
     return workflow.compile()
 
 if __name__ == "__main__":
-    logger.info("Initializing J.A.R.V.I.S. Core Systems...")
+    logger.info("Initializing J.A.R.V.I.S. Core Systems...", extra={"component": "orchestrator"})
     app = build_graph()
     initial_state = {"raw_news": [], "ranked_news": [], "insights": [], "final_briefing": ""}
     
-    app.invoke(initial_state)
-    logger.info("Pipeline execution completed successfully. Data exported to Web App.")
+    start_time = time.time()
+    try:
+        # Avvia la pipeline di LangGraph
+        app.invoke(initial_state)
+        
+        latency = time.time() - start_time
+        summary = metrics_tracker.get_summary()
+        
+        # Log finale STRUTTURATO con tutte le metriche della run
+        logger.info(
+            "Pipeline execution completed successfully. Data exported to Web App.",
+            extra={
+                "component": "orchestrator",
+                "metrics": {
+                    "total_latency_sec": round(latency, 2),
+                    "llm_stats": summary
+                }
+            }
+        )
+        
+    except Exception as e:
+        logger.error(
+            f"Errore critico nella pipeline: {str(e)}", 
+            exc_info=True, 
+            extra={"component": "orchestrator"}
+        )
+        raise e
