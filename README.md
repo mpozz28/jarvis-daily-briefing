@@ -31,6 +31,7 @@ graph TD
     H -.->|GitOps Deploy| I(Frontend UI & Web Speech API)
     I <-->|REST API| J[FastAPI Server]
     J <-->|Evidence-Grounded RAG| K(QA Agent)
+'''
 
 🚀 Core Engineering Features (Why this isn't just an LLM Wrapper)
 1. Evidence-Grounded RAG (Zero-Hallucination)
