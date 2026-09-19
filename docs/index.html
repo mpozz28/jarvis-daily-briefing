@@ -81,7 +81,7 @@
         <input type="text" id="qa-input" class="chat-input" placeholder="Interrupt J.A.R.V.I.S. with a question (Press Enter)..." autocomplete="off"/>
     </div>
 
-    <script>
+<script>
         document.addEventListener("DOMContentLoaded", () => {
             const newsStream = document.getElementById("news-content");
             const narrativeStream = document.getElementById("narrative-content");
@@ -96,7 +96,6 @@
             const synth = window.speechSynthesis;
             let englishVoice = null;
             
-            // Variabili per il sistema "A Fette" (Chunking)
             let briefingChunks = [];
             let currentChunkIndex = 0;
             let isPlaying = false; 
@@ -132,7 +131,6 @@
                 }
             }
 
-            // IL CUORE DEL FIX: Legge il testo una frase alla volta
             function playNextChunk() {
                 if (!isPlaying || isPaused) return;
                 
@@ -166,7 +164,6 @@
 
             playBtn.addEventListener('click', () => {
                 if (!isPlaying) {
-                    // Start da zero
                     synth.cancel();
                     currentChunkIndex = 0;
                     isPlaying = true;
@@ -174,16 +171,13 @@
                     updatePlayButtons();
                     playNextChunk();
                 } else if (!isPaused) {
-                    // Metti in pausa
                     isPaused = true;
                     synth.pause();
                     updatePlayButtons();
                 } else {
-                    // Riprendi dalla pausa
                     isPaused = false;
                     synth.resume();
                     updatePlayButtons();
-                    // Assicurazione per i bug di ripresa di Chrome
                     if (!synth.speaking) playNextChunk();
                 }
             });
@@ -210,7 +204,6 @@
                     narrativeStream.textContent = data.narrative_briefing;
                     narrativeContainer.style.display = 'block';
                     
-                    // TAGLIA IL TESTO A FETTE (Usa i punti, i punti esclamativi e i punti di domanda)
                     let rawText = data.narrative_briefing.replace(/<[^>]*>?/gm, '').replace(/\*/g, '');
                     briefingChunks = rawText.match(/[^.!?]+[.!?]+/g) || [rawText];
                     loadVoices(); 
@@ -262,7 +255,6 @@
                 : 'https://jarvis-daily-briefing.onrender.com';
 
             async function askJarvis(question) {
-                // Ferma il briefing principale
                 if (isPlaying) {
                     isPaused = true;
                     synth.pause();
@@ -300,21 +292,21 @@
                         }
                     }
                     
-                    // Fai leggere a J.A.R.V.I.S. anche la risposta (Tagliandola a fette per sicurezza)
-                    let qaRawText = data.answer.replace(/<[^>]*>?/gm, '').replace(/\*/g, '');
-                    let qaChunks = qaRawText.match(/[^.!?]+[.!?]+/g) || [qaRawText];
-                    
-                    let qaIdx = 0;
-                    function playQaChunk() {
-                        if(qaIdx >= qaChunks.length) return;
-                        let u = new SpeechSynthesisUtterance(qaChunks[qaIdx]);
-                        u.lang = 'en-GB'; u.pitch = 0.85; u.rate = 1.05;
-                        if(englishVoice) u.voice = englishVoice;
-                        u.onend = () => { qaIdx++; playQaChunk(); };
-                        synth.speak(u);
-                    }
-                    synth.cancel(); // ferma tutto l'audio precedente
-                    playQaChunk();
+                    // AUDIO DISABILITATO NELLA CHAT (Fixato usando commenti a riga singola per evitare conflitti Regex)
+                    // let qaRawText = data.answer.replace(/<[^>]*>?/gm, '').replace(/\*/g, '');
+                    // let qaChunks = qaRawText.match(/[^.!?]+[.!?]+/g) || [qaRawText];
+                    // 
+                    // let qaIdx = 0;
+                    // function playQaChunk() {
+                    //     if(qaIdx >= qaChunks.length) return;
+                    //     let u = new SpeechSynthesisUtterance(qaChunks[qaIdx]);
+                    //     u.lang = 'en-GB'; u.pitch = 0.85; u.rate = 1.05;
+                    //     if(englishVoice) u.voice = englishVoice;
+                    //     u.onend = () => { qaIdx++; playQaChunk(); };
+                    //     synth.speak(u);
+                    // }
+                    // synth.cancel(); 
+                    // playQaChunk();
                     
                 } catch(e) {
                     document.getElementById(tempId).querySelector('.jarvis-response').innerHTML = "My apologies, Sir. The cognitive servers are unresponsive.";
