@@ -1,0 +1,50 @@
+[
+    {
+        "id": "1",
+        "title": "Local Bakery Wins First Prize in Pie Contest",
+        "summary": "A small bakery in Ohio has won the regional pie contest with their cherry pie.",
+        "source": "Local News",
+        "published": "2026-09-19",
+        "expected_relevance": 0
+    },
+    {
+        "id": "2",
+        "title": "OpenAI and DeepMind announce major breakthrough in AGI architecture",
+        "summary": "The two leading AI labs have published a joint paper detailing a new architecture that solves current reasoning bottlenecks, moving a step closer to Artificial General Intelligence.",
+        "source": "ArXiv_AI",
+        "published": "2026-09-19",
+        "expected_relevance": 3
+    },
+    {
+        "id": "3",
+        "title": "Federal Reserve cuts interest rates by 50 basis points unexpectedly",
+        "summary": "In a shock move, Jerome Powell announced a massive rate cut citing global market instability and shifting employment dynamics.",
+        "source": "The Economist",
+        "published": "2026-09-19",
+        "expected_relevance": 3
+    },
+    {
+        "id": "4",
+        "title": "Tesla updates infotainment software with new streaming apps",
+        "summary": "Tesla vehicles will now support a few additional video streaming services natively in their dashboard screens.",
+        "source": "TechCrunch",
+        "published": "2026-09-19",
+        "expected_relevance": 1
+    },
+    {
+        "id": "5",
+        "title": "Nvidia announces next-generation AI chips aimed at edge devices",
+        "summary": "Nvidia's new lineup focuses on bringing high-parameter models directly to local devices with low power consumption.",
+        "source": "Bloomberg",
+        "published": "2026-09-19",
+        "expected_relevance": 2
+    },
+    {
+        "id": "6",
+        "title": "Top 10 Fashion Trends for the Upcoming Autumn",
+        "summary": "A look at what people will be wearing this fall, from oversized coats to new boot styles.",
+        "source": "Vogue",
+        "published": "2026-09-19",
+        "expected_relevance": 0
+    }
+]
