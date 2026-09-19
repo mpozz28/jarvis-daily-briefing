@@ -4,6 +4,7 @@ requests>=2.31.0
 python-dateutil>=2.9.0
 pydantic>=2.6.3
 langgraph>=0.0.26
+pandas>=2.2.1
 
 # Web Server & API
 fastapi>=0.110.0

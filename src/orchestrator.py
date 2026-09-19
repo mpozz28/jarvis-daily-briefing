@@ -7,6 +7,7 @@ from typing import TypedDict, List, Dict
 from langgraph.graph import StateGraph, END
 from dotenv import load_dotenv
 from datetime import datetime, timezone
+from src.agents.quant_metrics import calculate_market_regime
 import dateutil.parser
 
 # Initialize Environment & Logger
@@ -27,7 +28,8 @@ from src.export.json_exporter import JsonExporter
 class JarvisState(TypedDict):
     raw_news: List[Dict]          
     ranked_news: List[Dict]       
-    insights: List[Dict]          
+    insights: List[Dict]
+    market_metrics: Dict          
     final_briefing: str           
 
 def generate_id_hash(title: str) -> str:
@@ -95,13 +97,18 @@ def connect_dots_node(state: JarvisState) -> dict:
     insights = connect_the_dots(state["ranked_news"])
     return {"insights": insights}
 
+def quant_node(state: JarvisState) -> dict:
+    logger.info("--- NODE 4: QUANTITATIVE MARKET ANALYSIS ---")
+    metrics = calculate_market_regime()
+    return {"market_metrics": metrics}
+
 def writer_node(state: JarvisState) -> dict:
-    logger.info("--- NODE 4: NARRATIVE BRIEFING GENERATION ---")
-    briefing = write_jarvis_briefing(state["ranked_news"], state["insights"])
+    logger.info("--- NODE 5: NARRATIVE BRIEFING GENERATION ---")
+    briefing = write_jarvis_briefing(state["ranked_news"], state["insights"], state.get("market_metrics", {}))
     return {"final_briefing": briefing}
 
 def export_node(state: JarvisState) -> dict:
-    logger.info("--- NODE 5: JSON EXPORT FOR WEB APP ---")
+    logger.info("--- NODE 6: JSON EXPORT FOR WEB APP ---")
     base_dir = os.path.dirname(os.path.dirname(__file__))
     exporter = JsonExporter(base_dir=base_dir)
     
@@ -119,13 +126,15 @@ def build_graph():
     workflow.add_node("collect", collection_node)
     workflow.add_node("rank", ranking_node)
     workflow.add_node("connect", connect_dots_node)
+    workflow.add_node("quant", quant_node)
     workflow.add_node("write", writer_node)
     workflow.add_node("export", export_node)
     
     workflow.set_entry_point("collect")
     workflow.add_edge("collect", "rank")
     workflow.add_edge("rank", "connect")
-    workflow.add_edge("connect", "write")
+    workflow.add_edge("connect","quant")
+    workflow.add_edge("quant", "write")
     workflow.add_edge("write", "export") 
     workflow.add_edge("export", END)
     
@@ -134,7 +143,7 @@ def build_graph():
 if __name__ == "__main__":
     logger.info("Initializing J.A.R.V.I.S. Core Systems...", extra={"component": "orchestrator"})
     app = build_graph()
-    initial_state = {"raw_news": [], "ranked_news": [], "insights": [], "final_briefing": ""}
+    initial_state = {"raw_news": [], "ranked_news": [], "insights": [], "market_metrics": {}, "final_briefing": ""}
     
     start_time = time.time()
     try:
