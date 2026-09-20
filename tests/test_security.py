@@ -25,8 +25,8 @@ def test_frontend_uses_safe_dom_construction_and_url_validation():
     assert "document.createElement(" in html_content
     assert ".textContent =" in html_content
     assert "new URL(" in html_content
-    assert 'url.protocol === "http:"' in html_content
-    assert 'url.protocol === "https:"' in html_content
+    assert re.search(r'''url\.protocol\s*===\s*['\"]http:['\"]''', html_content)
+    assert re.search(r'''url\.protocol\s*===\s*['\"]https:['\"]''', html_content)
     assert 'rel = "noopener noreferrer"' in html_content
 
 
