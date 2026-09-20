@@ -7,6 +7,7 @@ import requests
 from bs4 import BeautifulSoup
 from duckduckgo_search import DDGS
 
+from src.config import LLM_DEFAULT_MODEL
 from src.llm_router import llm_router
 
 logger = logging.getLogger(__name__)
@@ -35,7 +36,7 @@ class QAAgent:
             response = llm_router.invoke(
                 prompt=prompt,
                 system_prompt="You are an ID router. Answer only with the ID or NONE.",
-                preferred_model="openai/gpt-oss-120b",
+                preferred_model=LLM_DEFAULT_MODEL,
             )
             latency = time.time() - start_time
 
