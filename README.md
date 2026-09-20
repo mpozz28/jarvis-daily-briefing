@@ -6,6 +6,108 @@
 > **Elevator Pitch:** An evidence-grounded AI intelligence pipeline that aggregates multi-domain data, ranks content via a two-tower deterministic/LLM architecture, extracts cross-document knowledge graphs, and serves an interactive web UI backed by strict evidence validation and abstention protocols.
 
 ---
+## 🎯 Recruiter-Facing Demo
+
+### What can you see in under 2 minutes?
+
+J.A.R.V.I.S. is designed to be evaluated as a **complete AI system**, not just as an LLM demo.
+
+**1. Automated Intelligence Briefing**
+
+Run the pipeline and watch it:
+
+```text
+Multi-source ingestion
+        ↓
+Deterministic ranking
+        ↓
+LLM semantic reranking
+        ↓
+Cross-document reasoning
+        ↓
+Market metrics
+        ↓
+Validated briefing
+```
+
+The output is a structured daily briefing containing the highest-ranked stories, cross-document insights and deterministic market data.
+
+**2. Ask J.A.R.V.I.S. a Question**
+
+Use the interactive Q&A interface to ask questions about the generated briefing.
+
+The system:
+
+```text
+Question
+  ↓
+Relevant article identification
+  ↓
+Article / web retrieval
+  ↓
+Evidence extraction
+  ↓
+Evidence verification
+  ↓
+Answer or abstention
+```
+
+When sufficient evidence cannot be verified, the system abstains instead of presenting an unsupported answer as fact.
+
+**3. Inspect the Engineering Behind the Demo**
+
+The repository exposes the complete pipeline:
+
+* deterministic relevance scoring;
+* LLM reranking;
+* multi-document relationships;
+* deterministic financial calculations;
+* structured Pydantic outputs;
+* evidence validation;
+* automated tests;
+* security regression tests;
+* GitHub Actions CI.
+
+**4. Reproduce the Evaluation**
+
+The ranking system includes an offline benchmark that compares:
+
+```text
+Input Order
+     vs
+Deterministic Scoring
+     vs
+Deterministic + LLM Reranking
+```
+
+with reproducible NDCG, Precision and Recall measurements.
+
+### Suggested demo flow
+
+For a technical interview, a concise walkthrough is:
+
+```text
+1. Open the live briefing
+2. Show one cross-document connection
+3. Ask a grounded Q&A question
+4. Show the evidence / abstention behavior
+5. Open the ranking agent
+6. Open the evaluation results
+7. Show the CI pipeline
+```
+
+This gives a recruiter or interviewer a fast view of both the **user-facing product** and the **engineering system underneath it**.
+
+### Demo links
+
+**Live Demo:** `ADD_LIVE_DEMO_URL`
+
+**GitHub Repository:** https://github.com/mpozz28/jarvis-daily-briefing
+
+**Evaluation:** [`docs/evaluation.md`](docs/evaluation.md)
+
+**Architecture Decisions:** [`docs/architecture-decisions.md`](docs/architecture-decisions.md)
+
 
 ## 🏗️ System Architecture
 
