@@ -3,6 +3,8 @@ name: J.A.R.V.I.S. Daily Pipeline
 on:
   push:
     branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
   schedule:
     - cron: '0 4 * * *'
   workflow_dispatch:
@@ -35,13 +37,13 @@ jobs:
         run: python -m src.evaluation.eval_smoke
         
       - name: Run J.A.R.V.I.S. Orchestrator
-        if: github.event_name != 'push' # Esegui API costose solo su schedule/dispatch
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' # Esegui API costose solo su schedule/dispatch
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         run: python -m src.orchestrator
         
       - name: Deploy to Pages
-        if: github.event_name != 'push'
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
