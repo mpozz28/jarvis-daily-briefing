@@ -5,7 +5,7 @@ import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 from src.agents.qa_agent import QAAgent
 
@@ -37,10 +37,20 @@ qa_agent = QAAgent()
 
 
 class ChatRequest(BaseModel):
-    question: str
+    question: str = Field(min_length=1, max_length=2000)
 
 
-@app.post("/api/ask")
+class ChatResponse(BaseModel):
+    answer: str
+    target_id: str | None = None
+    evidence: str | None = None
+    confidence: float = 0.0
+    supported: bool = False
+    source_url: str | None = None
+    retrieval_method: str | None = None
+
+
+@app.post("/api/ask", response_model=ChatResponse)
 def ask_jarvis(request: ChatRequest):
     logger.info(f"User Query Received: {request.question}")
 
@@ -60,28 +70,15 @@ def ask_jarvis(request: ChatRequest):
     source_text = target_item.get("summary", "") if target_item else ""
     qa_result = qa_agent.answer_question(request.question, target_item, source_text, "")
 
-    # 3. Formattazione dell'HTML finale per il frontend
-    base_answer = qa_result.get("answer", "Error in cognitive response.")
-    evidence = qa_result.get("evidence")
-    confidence = qa_result.get("confidence", 0.0)
-
-    final_html = base_answer
-
-    # Aggiunge il blocco citazione testuale se presente (il frontend lo renderizzerà)
-    if evidence and confidence > 0.0:
-        final_html += "<br><br><span style='font-size: 0.8rem; color: var(--muted-ink); border-left: 2px solid var(--blueprint-blue); padding-left: 8px; display: block;'>"
-        final_html += (
-            f"<b>Grounding Evidence (Conf: {confidence}):</b> <em>'{evidence}'</em>"
-        )
-
-        if target_item and target_item.get("source_url"):
-            final_html += f" <br><a href='{target_item['source_url']}' target='_blank' style='color: var(--blueprint-blue); text-decoration: none;'>[Verify Source]</a>"
-
-        final_html += "</span>"
-
+    # 3. Return structured data. Presentation stays in the frontend.
     return {
-        "answer": final_html,  # Il sintetizzatore vocale leggerà la risposta, l'HTML mostrerà le prove
+        "answer": qa_result.get("answer", "Error in cognitive response."),
         "target_id": target_item.get("id") if target_item else None,
+        "evidence": qa_result.get("evidence"),
+        "confidence": qa_result.get("confidence", 0.0),
+        "supported": qa_result.get("supported", False),
+        "source_url": qa_result.get("source_url"),
+        "retrieval_method": qa_result.get("retrieval_method"),
     }
 
 
@@ -91,6 +88,6 @@ app.mount("/", StaticFiles(directory="docs", html=True), name="docs")
 if __name__ == "__main__":
     print("=" * 60)
     print("🚀 J.A.R.V.I.S. API Server Active at http://localhost:8000")
-    print("🔒 Zero-Hallucination Evidence Layer Online")
+    print("🔒 Evidence-Grounded QA Layer Online")
     print("=" * 60)
     uvicorn.run(app, host="0.0.0.0", port=8000, log_level="warning")
