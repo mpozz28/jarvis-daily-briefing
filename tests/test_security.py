@@ -27,7 +27,7 @@ def test_frontend_uses_safe_dom_construction_and_url_validation():
     assert "new URL(" in html_content
     assert re.search(r'''url\.protocol\s*===\s*['\"]http:['\"]''', html_content)
     assert re.search(r'''url\.protocol\s*===\s*['\"]https:['\"]''', html_content)
-    assert 'rel = "noopener noreferrer"' in html_content
+    assert re.search(r'''rel\s*=\s*['\"]noopener noreferrer['\"]''', html_content)
 
 
 def test_frontend_regression_covers_common_xss_payloads():
