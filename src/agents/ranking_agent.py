@@ -2,6 +2,7 @@ import json
 import logging
 
 from src.agents.scoring_agent import score_and_filter_candidates
+from src.config import LLM_DEFAULT_MODEL
 from src.llm_router import llm_router
 
 logger = logging.getLogger(__name__)
@@ -43,7 +44,7 @@ Format required:
         response = llm_router.invoke(
             prompt=prompt,
             system_prompt=system_prompt,
-            preferred_model="openai/gpt-oss-120b",
+            preferred_model=LLM_DEFAULT_MODEL,
         )
 
         clean_json = response.strip()
