@@ -33,7 +33,7 @@ def precision_at_k(predicted: list[int], k: int, threshold: int = 50) -> float:
 def recall_at_k(
     predicted: list[int], ideal: list[int], k: int, threshold: int = 50
 ) -> float:
-    """Calculates binary Recall@K using the ideal relevance list."""
+    """Calculates binary Recall@K using a relevance threshold."""
     if k <= 0 or not ideal:
         return 0.0
 
@@ -58,17 +58,23 @@ def mrr_at_k(predicted: list[int], k: int, threshold: int = 50) -> float:
 
 
 def average_precision_at_k(
-    predicted: list[int], k: int, threshold: int = 50
+    predicted: list[int],
+    ideal: list[int],
+    k: int,
+    threshold: int = 50,
 ) -> float:
-    """Calculates Average Precision@K for a single ranked list."""
-    if k <= 0:
+    """Calculates binary Average Precision@K against a ground-truth list."""
+    if k <= 0 or not ideal:
         return 0.0
 
-    top_k = predicted[:k]
+    total_relevant = sum(1 for rel in ideal if rel >= threshold)
+    if total_relevant == 0:
+        return 0.0
+
     hits = 0
     precision_sum = 0.0
 
-    for rank, relevance in enumerate(top_k, start=1):
+    for rank, relevance in enumerate(predicted[:k], start=1):
         if relevance >= threshold:
             hits += 1
             precision_sum += hits / rank
@@ -76,9 +82,5 @@ def average_precision_at_k(
     if hits == 0:
         return 0.0
 
-    total_relevant_in_list = sum(1 for rel in predicted if rel >= threshold)
-    denominator = min(total_relevant_in_list, k)
-    if denominator == 0:
-        return 0.0
-
+    denominator = min(total_relevant, k)
     return precision_sum / denominator
