@@ -200,65 +200,102 @@
 
             function renderBriefing(data) {
                 loading.style.display = 'none';
-                if(headerDate) headerDate.textContent = data.date_label;
+                if (headerDate) headerDate.textContent = data.date_label;
 
-                if(data.narrative_briefing) {
+                if (data.narrative_briefing) {
                     narrativeStream.textContent = data.narrative_briefing;
                     narrativeContainer.style.display = 'block';
-                    
-                    let rawText = data.narrative_briefing.replace(/<[^>]*>?/gm, '').replace(/\*/g, '');
+
+                    const rawText = data.narrative_briefing.replace(/<[^>]*>?/gm, '').replace(/\\*/g, '');
                     briefingChunks = rawText.match(/[^.!?]+[.!?]+/g) || [rawText];
-                    loadVoices(); 
+                    loadVoices();
                 }
 
-                let htmlContent = "";
                 const allItems = [];
-                for (const [domain, items] of Object.entries(data.domains)) {
-                    items.forEach(item => { item.domain_label = domain.replace('_', ' ').toUpperCase(); allItems.push(item); });
+                for (const [domain, items] of Object.entries(data.domains || {})) {
+                    items.forEach(item => {
+                        item.domain_label = domain.replace('_', ' ').toUpperCase();
+                        allItems.push(item);
+                    });
                 }
 
-                // SISTEMA DI TRACKING PER IL GRAFO 1-a-N
-                const renderedConnections = new Set(); 
+                const renderedConnections = new Set();
 
                 allItems.forEach(item => {
-                    htmlContent += `
-                    <article class="briefing-item active" id="${item.id}">
-                        <div class="item-meta">
-                            <span>${item.domain_label}</span>
-                            <span style="color: var(--muted-ink); font-weight: normal; font-size: 0.75rem;">${item.source_name}</span>
-                        </div>
-                        <h2>${item.title}</h2>
-                        <a href="${item.source_url}" target="_blank" style="font-family: var(--font-ui); font-size: 0.8rem; color: var(--blueprint-blue); text-decoration: none; font-weight: 600;">[ Read Primary Source ]</a>
-                    `;
+                    const article = document.createElement('article');
+                    article.className = 'briefing-item active';
+                    article.id = String(item.id);
 
-                    // Rendering degli insight
-                    if (data.connections && Array.isArray(data.connections)) {
+                    const meta = document.createElement('div');
+                    meta.className = 'item-meta';
+
+                    const domain = document.createElement('span');
+                    domain.textContent = item.domain_label || '';
+                    meta.appendChild(domain);
+
+                    const source = document.createElement('span');
+                    source.style.cssText = 'color: var(--muted-ink); font-weight: normal; font-size: 0.75rem;';
+                    source.textContent = item.source_name || '';
+                    meta.appendChild(source);
+                    article.appendChild(meta);
+
+                    const title = document.createElement('h2');
+                    title.textContent = item.title || '';
+                    article.appendChild(title);
+
+                    const sourceUrl = document.createElement('a');
+                    sourceUrl.textContent = '[ Read Primary Source ]';
+                    sourceUrl.style.cssText = 'font-family: var(--font-ui); font-size: 0.8rem; color: var(--blueprint-blue); text-decoration: none; font-weight: 600;';
+                    sourceUrl.target = '_blank';
+                    sourceUrl.rel = 'noopener noreferrer';
+                    try {
+                        const url = new URL(String(item.source_url || ''), window.location.href);
+                        if (url.protocol === 'http:' || url.protocol === 'https:') {
+                            sourceUrl.href = url.href;
+                        } else {
+                            sourceUrl.removeAttribute('href');
+                        }
+                    } catch (_) {
+                        sourceUrl.removeAttribute('href');
+                    }
+                    article.appendChild(sourceUrl);
+
+                    if (Array.isArray(data.connections)) {
                         data.connections.forEach(conn => {
-                            if (conn.item_ids && Array.isArray(conn.item_ids) && conn.item_ids.map(String).includes(String(item.id))) {
-                                
-                                // CONTROLLO: Disegniamo l'insight solo se non lo abbiamo già fatto!
-                                if (!renderedConnections.has(conn.id)) {
-                                    
-                                    const confidencePct = conn.confidence ? Math.round(conn.confidence * 100) : "N/A";
-                                    
-                                    htmlContent += `
-                                    <div class="connect-dots">
-                                        <div class="connect-dots-header">
-                                            <span class="confidence-indicator"></span> Cross-Document Correlation (Confidence: ${confidencePct}%)
-                                        </div>
-                                        <em>${conn.hypothesis}</em>
-                                    </div>`;
-                                    
-                                    // Segnamolo come "già disegnato" per non ripeterlo negli articoli successivi
-                                    renderedConnections.add(conn.id); 
-                                }
+                            if (Array.isArray(conn.item_ids) &&
+                                conn.item_ids.map(String).includes(String(item.id)) &&
+                                !renderedConnections.has(conn.id)) {
+                                const box = document.createElement('div');
+                                box.className = 'connect-dots';
+
+                                const header = document.createElement('div');
+                                header.className = 'connect-dots-header';
+
+                                const indicator = document.createElement('span');
+                                indicator.className = 'confidence-indicator';
+                                header.appendChild(indicator);
+
+                                const confidencePct = conn.confidence
+                                    ? Math.round(conn.confidence * 100)
+                                    : 'N/A';
+                                const headerText = document.createTextNode(
+                                    `Cross-Document Correlation (Confidence: ${confidencePct}%)`
+                                );
+                                header.appendChild(headerText);
+                                box.appendChild(header);
+
+                                const hypothesis = document.createElement('em');
+                                hypothesis.textContent = conn.hypothesis || '';
+                                box.appendChild(hypothesis);
+
+                                article.appendChild(box);
+                                renderedConnections.add(conn.id);
                             }
                         });
                     }
 
-                    htmlContent += `</article>`;
+                    newsStream.appendChild(article);
                 });
-                newsStream.innerHTML = DOMPurify.sanitize(htmlContent);
             }
 
             inputField.addEventListener('keypress', function (e) {
@@ -280,14 +317,27 @@
                 }
 
                 const tempId = "qa-" + Date.now();
-                const qaHtml = `
-                    <div id="${tempId}" class="interruption-block">
-                        <div class="user-query">${question}</div>
-                        <div class="jarvis-response"><span class="pulse"></span> <em>Cognitive processing in progress...</em></div>
-                    </div>
-                `;
-                // SECURITY: Sanitizziamo il box della chat per evitare XSS da input utente
-                newsStream.insertAdjacentHTML('afterbegin', DOMPurify.sanitize(qaHtml));
+                const block = document.createElement('div');
+                block.id = tempId;
+                block.className = 'interruption-block';
+
+                const userQuery = document.createElement('div');
+                userQuery.className = 'user-query';
+                userQuery.textContent = question;
+                block.appendChild(userQuery);
+
+                const response = document.createElement('div');
+                response.className = 'jarvis-response';
+                const pulse = document.createElement('span');
+                pulse.className = 'pulse';
+                response.appendChild(pulse);
+                const processing = document.createElement('em');
+                processing.textContent = 'Cognitive processing in progress...';
+                response.appendChild(processing);
+                block.appendChild(response);
+
+                newsStream.prepend(block);
+
                 inputField.disabled = true;
                 
                 try {
@@ -300,7 +350,9 @@
                     
                     const block = document.getElementById(tempId);
                     // SECURITY: Sanitizziamo la risposta dell'LLM prima del rendering
-                    block.querySelector('.jarvis-response').innerHTML = DOMPurify.sanitize(data.answer);
+                    const answerEl = block.querySelector('.jarvis-response');
+                    answerEl.textContent = '';
+                    answerEl.textContent = data.answer || '';
                     
                     block.scrollIntoView({behavior: "smooth", block: "center"});
                     
