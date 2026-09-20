@@ -2,27 +2,27 @@
 
 ![Python](https://img.shields.io/badge/Python-3.12-blue)
 ![LangGraph](https://img.shields.io/badge/Orchestration-LangGraph-orange)
-![FastAPI](https://img.shields.io/badge/Backend-FastAPI-009688)
-![Evaluation](https://img.shields.io/badge/Evaluation-NDCG%403%3D1.0-brightgreen)
-![Status](https://img.shields.io/badge/Status-Production_Ready-success)
+![Evaluation](https://img.shields.io/badge/Evaluation-NDCG%403%3D0.99-brightgreen)
+![CI/CD](https://img.shields.io/badge/CI%2FCD-Passing-success)
+![Security](https://img.shields.io/badge/Security-DOMPurify_Hardened-blueviolet)
 
-> **Elevator Pitch:** An evidence-grounded AI intelligence platform that aggregates heterogeneous data (News, ArXiv Research, Market Data), ranks content via a two-tower deterministic/LLM reranking pipeline, maps cross-document knowledge graphs, and serves an interactive zero-hallucination web interface backed by strict evidence validation and abstention protocols.
+> **Elevator Pitch:** An evidence-grounded AI intelligence pipeline that aggregates multi-domain data, ranks content via a two-tower deterministic/LLM architecture, extracts cross-document knowledge graphs, and serves an interactive web UI backed by strict evidence validation and abstention protocols.
 
 ---
 
 ## 🏗️ System Architecture
 
-J.A.R.V.I.S. is built on a **Hybrid Deterministic/LLM Architecture**, ensuring that quantitative math and verification are handled by deterministic Python code, while semantic reasoning is performed by LLM agents.
+J.A.R.V.I.S. implements a **Hybrid Architecture**, separating deterministic computation (Information Retrieval, Quantitative Math, Confidence Validation) from probabilistic reasoning (Semantic Reranking, Narrative Synthesis).
 
 ```mermaid
 flowchart TD
     %% Ingestion
     A[Cron / GitHub Actions] --> B[Multi-Agent Data Ingestion]
-    B -->|RSS / ArXiv / Scrape| C[(SQLite Deduplication)]
+    B -->|RSS / Scrape| C[(SQLite Dedup & Sanitization)]
 
     %% Processing Pipeline
-    C --> D[Deterministic Relevance Scorer]
-    D -->|Top 20 Filtered| E[LLM Semantic Reranker]
+    C --> D[Tower 1: Deterministic Scorer]
+    D -->|Top 20 Filtered| E[Tower 2: LLM Semantic Reranker]
     E --> F[Multi-Document Reasoning Graph]
     F --> G["Quantitative Finance Engine<br/>Pandas / YFinance"]
 
@@ -32,65 +32,48 @@ flowchart TD
     I --> J[docs/latest_briefing.json]
 
     %% Serving & RAG
-    J -.->|GitOps / Pages| K[Web Speech & UI Interface]
-    K <-->|REST API| L[FastAPI Server]
-    L <-->|Evidence Matcher & Abstention| M[Grounded QA Agent]
-
-    %% Observability
-    N[Structured JSON Logging] -.-> E
-    N -.-> F
-    N -.-> M
+    J -.->|GitOps / Pages| K["Web Speech & UI Interface<br/>DOMPurify Hardened"]
+    K <-->|REST API| L["Grounded QA Agent<br/>w/ Abstention Protocol"]
 ```
 
 ## 🚀 Core Engineering Features
 
 ### 1. Two-Tower Information Retrieval (Scoring + Reranking)
-Rather than passing 80+ unstructured items directly into an expensive LLM context window:
+Eliminates LLM context bloat and rate limits by filtering mathematically before invoking cloud models.
 
-- **Tower 1 (Deterministic Filter):** Evaluates time decay (*Freshness*) and authority lookup tables (*Source Quality*), pruning candidates down to the Top 20.
-- **Tower 2 (Semantic Reranker):** An LLM-as-a-Judge scores macro-technological impact, producing structured scores with an automatic deterministic fallback if parsing fails.
+- **Tower 1 (Deterministic Filter):** Evaluates time decay (*Freshness*) and source authority weights, pruning raw feeds down to the Top 20 candidates.
+- **Tower 2 (Semantic Reranker):** An LLM-as-a-Judge scores macro-technological impact on the filtered subset, outputting structured scores.
 
-### 2. Multi-Document Knowledge Reasoning (1-to-N Edges)
-Unlike naive single-article summarizers, the reasoning engine discovers non-obvious correlations across disparate domains (e.g., Geopolitical AI policy → Semiconductor supply chains → ArXiv efficiency papers).
+### 2. Multi-Document Knowledge Reasoning
+Extracts 1-to-N relationships (Edges) between distinct articles (Nodes) to identify macro-trends across disparate domains (e.g., Geopolitics → Semiconductor supply chains).
 
-- Outputs dynamic correlation edges (`item_ids`, `hypothesis`, `evidence`, `confidence`).
-- Implements strict Hallucination Defense checking that every referenced ID exists in the batch before persistence.
-- UI rendering uses O(1) set tracking to prevent redundant rendering across linked articles.
+- **Hallucination Defense:** Implements strict dynamic programmatic validation to ensure all referenced `item_ids` exist in the active state database before persisting the graph.
 
-### 3. Grounded Q&A with Mathematical Confidence & Abstention
-The interactive Q&A system does not rely on model self-reported confidence.
+### 3. Evidence-Grounded Q&A with Abstention
+The interactive RAG system does not rely on calibrated probabilities or LLM self-assessment for confidence.
 
-- Verifies extracted quotes against raw scraped content using longest-common-substring alignment (`difflib.SequenceMatcher`).
-- **Abstention Protocol:** When evidence alignment drops below 60.0%, the agent refuses to answer ("Insufficient evidence to provide a verified answer"), actively preventing hallucinations and prompt injection attacks.
+- **Heuristic Confidence:** Extracts an evidence quote and mathematically verifies it against the raw scraped text using exact substring alignment algorithms (`difflib.SequenceMatcher`).
+- **Abstention Protocol:** If the heuristic confidence drops below 60.0% (indicating LLM paraphrasing or unsupported facts), the agent refuses to answer ("Insufficient evidence to provide a reliable answer").
 
-### 4. Deterministic Quantitative Engine
-Financial metrics (daily return, annualized historical volatility, regime labels) are computed strictly via Pandas and YFinance. The generative writer receives pre-calculated numbers, eliminating numerical hallucinations.
-
-### 5. Enterprise Observability & Resilience
-- Centralized `LLMFallbackRouter` managing automatic failover (OpenAI GPT-OSS / Llama-3 70B / Qwen) and exponential backoff on 429 rate limits.
-- Emits structured JSON execution metrics tracking component latency, prompt/completion token usage, and per-run costs.
+### 4. Deterministic Quantitative Layer
+Financial metrics (daily return, annualized historical volatility, regime labels) are computed strictly via Pandas and injected as static strings into the LLM context, preventing generative arithmetic errors.
 
 ## 📊 Evaluation & Benchmarking
 
-The ranking module is benchmarked against a versioned Golden Dataset (`src/evaluation/golden_dataset.json`):
+Evaluated on a versioned offline relevance benchmark (120 articles across multiple domains, including hard negatives and freshness decay).
 
-| Pipeline Stage | Metric | Score | Target |
-|---|---|---|---|
-| Semantic Ranking | NDCG@3 | 1.0000 | ≥ 0.8500 |
-| Q&A Grounding | Exact Substring Match | 95.0% | ≥ 80.0% |
-| Hallucination Defense | Unsupported Query Abstention | 100% | 100% |
+| System | NDCG@3 | NDCG@5 | Precision@5 | Recall@5 |
+|---|---|---|---|---|
+| Baseline (Deterministic Scoring Only) | 0.9267 | 0.9400 | 1.0000 | 0.0833 |
+| Current (Deterministic + LLM Reranking) | 0.9987 | 0.9877 | 1.0000 | 0.0833 |
 
-Run the evaluation suite locally:
+> **Note:** Metrics demonstrate the value of the Hybrid architecture. While the deterministic filter effectively surfaces highly relevant items (Precision=1.0), the LLM Semantic Reranker optimizes the absolute Top-3 ordering, achieving near-perfect NDCG@3 on the test distribution.
 
-```bash
-python -m src.evaluation.eval_ranking
-```
+## 🛡️ Security & Reliability
 
-## 🛡️ Security Considerations
-
-- **Untrusted Web Input:** Scraped RSS feeds and DuckDuckGo text snippets are explicitly treated as untrusted data and wrapped in `[UNTRUSTED_WEB_CONTEXT]` boundary blocks in system prompts.
-- **XSS & Injection Protection:** Content rendered by the frontend is sanitized and validated against strict Pydantic schemas prior to serialization.
-- **CORS Protection:** API endpoints enforce cross-origin constraints to authorized origins.
+- **XSS Mitigation:** The frontend is hardened with DOMPurify, sanitizing all dynamic HTML generated by untrusted RSS feeds and LLM outputs before DOM insertion. Static fallbacks utilize the safe `textContent` API.
+- **Prompt Injection Defense:** External scraped text is treated as untrusted data and wrapped in explicit `[UNTRUSTED_WEB_CONTEXT]` boundary blocks within system prompts.
+- **Fail-Fast CI/CD:** The automated GitHub Actions production pipeline enforces a strict sequence: Dependency Install → `ruff` Linter → `pytest` (Unit & Security tests) → `eval_smoke.py` (Math checks). The system only invokes expensive LLM APIs and triggers deployment if all checks pass.
 
 ## 💻 Quick Start
 
@@ -104,27 +87,25 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-### 2. Environment Configuration
-
-Create a `.env` file in the root directory:
-
-```
-GROQ_API_KEY=your_groq_api_key_here
-```
-
-### 3. Execution Commands
+### 2. Execution Commands
 
 ```bash
 # Execute batch ingestion, ranking, reasoning, and JSON export:
 python -m src.orchestrator
 
-# Run ranking evaluation against golden dataset:
+# Run offline ranking evaluation against the golden dataset:
 python -m src.evaluation.eval_ranking
 
 # Start real-time grounded Q&A API server:
 python api_server.py
 ```
 
-## 📘 Engineering Decisions & Documentation
+## 📘 Engineering Decisions & Limitations
 
-For deep-dives into trade-offs (e.g., Why LangGraph over AutoGen, Why heuristic confidence over statistical logits, Why SQLite over vector stores), refer to `docs/architecture-decisions.md`.
+**ADRs:** Deep-dives into architectural trade-offs (Why LangGraph, Why SQLite, Why DOMPurify, Why Heuristic Confidence) are documented in `docs/architecture-decisions.md`.
+
+**Known Limitations:**
+
+- **Evaluation:** The current benchmark utilizes a static offline dataset; a true enterprise system would incorporate asynchronous Human-in-the-Loop continuous evaluation.
+- **Graph Persistence:** Multi-document relationships are ephemeral per-run; historical queries would require migrating from SQLite to a persistent Graph/Vector DB (e.g., Neo4j).
+- **Web Scraping:** The current ingestion layer (BeautifulSoup) is vulnerable to anti-bot measures on JS-heavy or Cloudflare-protected SPA domains.

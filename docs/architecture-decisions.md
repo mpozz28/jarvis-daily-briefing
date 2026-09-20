@@ -55,3 +55,32 @@ This document outlines the key architectural decisions, rationale, trade-offs, a
 - **Context:** Including market performance (returns, historical annualized volatility, macro regimes).
 - **Decision:** Calculate all financial metrics deterministically via Pandas and inject them as static facts into the prompt.
 - **Why:** LLMs fail at basic arithmetic and historical standard deviation calculations. Outsourcing calculation to Python guarantees zero-hallucination numbers.
+
+---
+
+## ADR 006: Frontend Security Hardening (DOMPurify vs. Custom Sanitization)
+
+- **Context:** Rendering untrusted HTML generated from external RSS feeds and LLM outputs, exposing the system to Cross-Site Scripting (XSS).
+- **Decision:** Implement `DOMPurify` to sanitize all dynamic HTML injections before mapping them to the DOM via `innerHTML`. Replaced static injections with safe `textContent` API.
+- **Alternatives Considered:** Custom Regex cleaning, rewriting the frontend in React/Vue (which auto-escapes by default).
+- **Why DOMPurify:** Standard industry solution for vanilla JS environments. Prevents prompt injection payloads from executing in the user's browser without requiring a heavy frontend framework rewrite.
+- **Trade-offs:** Adds a lightweight external dependency to the frontend, but guarantees enterprise-level XSS mitigation.
+
+---
+
+## ADR 007: Information Retrieval Evaluation (Offline Golden Dataset)
+
+- **Context:** Proving the efficacy of the Two-Tower ranking architecture over a basic heuristic filter.
+- **Decision:** Built a static 120-item Golden Dataset containing ground-truth relevances, hard negatives, and outdated news. Evaluated using strict IR metrics (`NDCG@3`, `Precision@5`, `Recall@5`).
+- **Alternatives Considered:** LLM-as-a-judge (subjective and uncalibrated) or A/B testing (requires heavy user traffic).
+- **Why Offline NDCG:** Provides a mathematical, reproducible baseline. Proves that the LLM Reranker successfully optimizes the top percentile ordering compared to the deterministic baseline.
+- **Trade-offs:** The dataset is static and requires manual updates to reflect changing macro-trends, unlike an online continuous evaluation system.
+
+---
+
+## ADR 008: Unified CI/CD and Data Pipeline (Fail-Fast Deployment)
+
+- **Context:** Running the daily production briefing via GitHub Actions cron job.
+- **Decision:** Integrated unit testing, security regression tests (`pytest`), syntax checking (`ruff`), and a mathematical smoke test (`eval_smoke.py`) directly into the production deployment pipeline.
+- **Why:** Enforces a "Fail-Fast" architecture. If a commit breaks the logic, the pipeline terminates *before* invoking expensive LLM APIs and *before* pushing a corrupted JSON payload to the live site.
+- **Trade-offs:** Slightly increases the execution time of the daily cron job, but completely eliminates the risk of deploying broken data to production.

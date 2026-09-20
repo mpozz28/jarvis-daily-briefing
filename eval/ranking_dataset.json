@@ -1,50 +1,1082 @@
 [
     {
         "id": "1",
-        "title": "Local Bakery Wins First Prize in Pie Contest",
-        "summary": "A small bakery in Ohio has won the regional pie contest with their cherry pie.",
-        "source": "Local News",
-        "published": "2026-09-19",
-        "expected_relevance": 0
+        "title": "European Union passes comprehensive AI Act says expert",
+        "summary": "This is an automated summary for the article regarding european union passes comprehensive ai act.",
+        "area": "POLITICS",
+        "source": "Unknown Blog",
+        "published": "2026-09-20T03:07:02.567309Z",
+        "expected_relevance": 85
     },
     {
         "id": "2",
-        "title": "OpenAI and DeepMind announce major breakthrough in AGI architecture",
-        "summary": "The two leading AI labs have published a joint paper detailing a new architecture that solves current reasoning bottlenecks, moving a step closer to Artificial General Intelligence.",
-        "source": "ArXiv_AI",
-        "published": "2026-09-19",
-        "expected_relevance": 3
+        "title": "Major breakthrough in solid-state battery tech by Toyota | Analysis",
+        "summary": "This is an automated summary for the article regarding major breakthrough in solid-state battery tech by toyota.",
+        "area": "TECH",
+        "source": "Bloomberg",
+        "published": "2026-09-20T03:07:02.567309Z",
+        "expected_relevance": 92
     },
     {
         "id": "3",
-        "title": "Federal Reserve cuts interest rates by 50 basis points unexpectedly",
-        "summary": "In a shock move, Jerome Powell announced a massive rate cut citing global market instability and shifting employment dynamics.",
-        "source": "The Economist",
-        "published": "2026-09-19",
-        "expected_relevance": 3
+        "title": "NVIDIA unveils next-gen Blackwell GPU architecture | Analysis",
+        "summary": "This is an automated summary for the article regarding nvidia unveils next-gen blackwell gpu architecture.",
+        "area": "TECH",
+        "source": "ArXiv",
+        "published": "2026-09-20T03:07:02.567309Z",
+        "expected_relevance": 97
     },
     {
         "id": "4",
-        "title": "Tesla updates infotainment software with new streaming apps",
-        "summary": "Tesla vehicles will now support a few additional video streaming services natively in their dashboard screens.",
-        "source": "TechCrunch",
-        "published": "2026-09-19",
-        "expected_relevance": 1
+        "title": "European Union passes comprehensive AI Act | Analysis",
+        "summary": "This is an automated summary for the article regarding european union passes comprehensive ai act.",
+        "area": "POLITICS",
+        "source": "ArXiv",
+        "published": "2026-09-20T03:07:02.567309Z",
+        "expected_relevance": 87
     },
     {
         "id": "5",
-        "title": "Nvidia announces next-generation AI chips aimed at edge devices",
-        "summary": "Nvidia's new lineup focuses on bringing high-parameter models directly to local devices with low power consumption.",
-        "source": "Bloomberg",
-        "published": "2026-09-19",
-        "expected_relevance": 2
+        "title": "OpenAI announces breakthrough in Q* reasoning capabilities | Analysis",
+        "summary": "This is an automated summary for the article regarding openai announces breakthrough in q* reasoning capabilities.",
+        "area": "TECH",
+        "source": "ArXiv",
+        "published": "2026-09-20T03:07:02.567309Z",
+        "expected_relevance": 98
     },
     {
         "id": "6",
-        "title": "Top 10 Fashion Trends for the Upcoming Autumn",
-        "summary": "A look at what people will be wearing this fall, from oversized coats to new boot styles.",
-        "source": "Vogue",
-        "published": "2026-09-19",
+        "title": "Major breakthrough in solid-state battery tech by Toyota says expert",
+        "summary": "This is an automated summary for the article regarding major breakthrough in solid-state battery tech by toyota.",
+        "area": "TECH",
+        "source": "Reuters",
+        "published": "2026-09-20T03:07:02.567309Z",
+        "expected_relevance": 89
+    },
+    {
+        "id": "7",
+        "title": "Major breakthrough in solid-state battery tech by Toyota - Report",
+        "summary": "This is an automated summary for the article regarding major breakthrough in solid-state battery tech by toyota.",
+        "area": "TECH",
+        "source": "Reuters",
+        "published": "2026-09-20T03:07:02.567309Z",
+        "expected_relevance": 92
+    },
+    {
+        "id": "8",
+        "title": "Federal Reserve cuts interest rates by 50 basis points | Analysis",
+        "summary": "This is an automated summary for the article regarding federal reserve cuts interest rates by 50 basis points.",
+        "area": "FINANZA",
+        "source": "TechCrunch",
+        "published": "2026-09-20T03:07:02.567309Z",
+        "expected_relevance": 92
+    },
+    {
+        "id": "9",
+        "title": "US GDP growth exceeds expectations in Q3 says expert",
+        "summary": "This is an automated summary for the article regarding us gdp growth exceeds expectations in q3.",
+        "area": "FINANZA",
+        "source": "TechCrunch",
+        "published": "2026-09-20T03:07:02.567309Z",
+        "expected_relevance": 92
+    },
+    {
+        "id": "10",
+        "title": "Federal Reserve cuts interest rates by 50 basis points | Analysis",
+        "summary": "This is an automated summary for the article regarding federal reserve cuts interest rates by 50 basis points.",
+        "area": "FINANZA",
+        "source": "Reuters",
+        "published": "2026-09-20T03:07:02.567309Z",
+        "expected_relevance": 91
+    },
+    {
+        "id": "11",
+        "title": "NVIDIA unveils next-gen Blackwell GPU architecture",
+        "summary": "This is an automated summary for the article regarding nvidia unveils next-gen blackwell gpu architecture.",
+        "area": "TECH",
+        "source": "Bloomberg",
+        "published": "2026-09-20T03:07:02.567309Z",
+        "expected_relevance": 88
+    },
+    {
+        "id": "12",
+        "title": "US GDP growth exceeds expectations in Q3 says expert",
+        "summary": "This is an automated summary for the article regarding us gdp growth exceeds expectations in q3.",
+        "area": "FINANZA",
+        "source": "Reuters",
+        "published": "2026-09-20T03:07:02.567309Z",
+        "expected_relevance": 94
+    },
+    {
+        "id": "13",
+        "title": "US GDP growth exceeds expectations in Q3 | Analysis",
+        "summary": "This is an automated summary for the article regarding us gdp growth exceeds expectations in q3.",
+        "area": "FINANZA",
+        "source": "TechCrunch",
+        "published": "2026-09-20T03:07:02.567309Z",
+        "expected_relevance": 94
+    },
+    {
+        "id": "14",
+        "title": "US GDP growth exceeds expectations in Q3",
+        "summary": "This is an automated summary for the article regarding us gdp growth exceeds expectations in q3.",
+        "area": "FINANZA",
+        "source": "ArXiv",
+        "published": "2026-09-20T03:07:02.567309Z",
+        "expected_relevance": 92
+    },
+    {
+        "id": "15",
+        "title": "OpenAI announces breakthrough in Q* reasoning capabilities - Report",
+        "summary": "This is an automated summary for the article regarding openai announces breakthrough in q* reasoning capabilities.",
+        "area": "TECH",
+        "source": "Unknown Blog",
+        "published": "2026-09-20T03:07:02.567309Z",
+        "expected_relevance": 93
+    },
+    {
+        "id": "16",
+        "title": "OpenAI announces breakthrough in Q* reasoning capabilities - Report",
+        "summary": "This is an automated summary for the article regarding openai announces breakthrough in q* reasoning capabilities.",
+        "area": "TECH",
+        "source": "ArXiv",
+        "published": "2026-09-20T03:07:02.567309Z",
+        "expected_relevance": 95
+    },
+    {
+        "id": "17",
+        "title": "NVIDIA unveils next-gen Blackwell GPU architecture says expert",
+        "summary": "This is an automated summary for the article regarding nvidia unveils next-gen blackwell gpu architecture.",
+        "area": "TECH",
+        "source": "TechCrunch",
+        "published": "2026-09-20T03:07:02.567309Z",
+        "expected_relevance": 95
+    },
+    {
+        "id": "18",
+        "title": "Major breakthrough in solid-state battery tech by Toyota says expert",
+        "summary": "This is an automated summary for the article regarding major breakthrough in solid-state battery tech by toyota.",
+        "area": "TECH",
+        "source": "Bloomberg",
+        "published": "2026-09-20T03:07:02.567309Z",
+        "expected_relevance": 85
+    },
+    {
+        "id": "19",
+        "title": "Major breakthrough in solid-state battery tech by Toyota - Report",
+        "summary": "This is an automated summary for the article regarding major breakthrough in solid-state battery tech by toyota.",
+        "area": "TECH",
+        "source": "Unknown Blog",
+        "published": "2026-09-20T03:07:02.567309Z",
+        "expected_relevance": 84
+    },
+    {
+        "id": "20",
+        "title": "European Union passes comprehensive AI Act - Report",
+        "summary": "This is an automated summary for the article regarding european union passes comprehensive ai act.",
+        "area": "POLITICS",
+        "source": "Reuters",
+        "published": "2026-09-20T03:07:02.567309Z",
+        "expected_relevance": 89
+    },
+    {
+        "id": "21",
+        "title": "Anthropic releases minor Claude 3.5 update",
+        "summary": "This is an automated summary for the article regarding anthropic releases minor claude 3.5 update.",
+        "area": "TECH",
+        "source": "Reuters",
+        "published": "2026-09-19T03:07:02.567309Z",
+        "expected_relevance": 73
+    },
+    {
+        "id": "22",
+        "title": "Senate debates new tech antitrust bill - Report",
+        "summary": "This is an automated summary for the article regarding senate debates new tech antitrust bill.",
+        "area": "POLITICS",
+        "source": "Unknown Blog",
+        "published": "2026-09-19T03:07:02.567309Z",
+        "expected_relevance": 62
+    },
+    {
+        "id": "23",
+        "title": "Anthropic releases minor Claude 3.5 update says expert",
+        "summary": "This is an automated summary for the article regarding anthropic releases minor claude 3.5 update.",
+        "area": "TECH",
+        "source": "Reuters",
+        "published": "2026-09-19T03:07:02.567309Z",
+        "expected_relevance": 75
+    },
+    {
+        "id": "24",
+        "title": "Anthropic releases minor Claude 3.5 update says expert",
+        "summary": "This is an automated summary for the article regarding anthropic releases minor claude 3.5 update.",
+        "area": "TECH",
+        "source": "ArXiv",
+        "published": "2026-09-19T03:07:02.567309Z",
+        "expected_relevance": 71
+    },
+    {
+        "id": "25",
+        "title": "Senate debates new tech antitrust bill says expert",
+        "summary": "This is an automated summary for the article regarding senate debates new tech antitrust bill.",
+        "area": "POLITICS",
+        "source": "Unknown Blog",
+        "published": "2026-09-19T03:07:02.567309Z",
+        "expected_relevance": 69
+    },
+    {
+        "id": "26",
+        "title": "Local startup raises $5M in seed funding says expert",
+        "summary": "This is an automated summary for the article regarding local startup raises $5m in seed funding.",
+        "area": "TECH",
+        "source": "Unknown Blog",
+        "published": "2026-09-19T03:07:02.567309Z",
+        "expected_relevance": 65
+    },
+    {
+        "id": "27",
+        "title": "Senate debates new tech antitrust bill says expert",
+        "summary": "This is an automated summary for the article regarding senate debates new tech antitrust bill.",
+        "area": "POLITICS",
+        "source": "ArXiv",
+        "published": "2026-09-19T03:07:02.567309Z",
+        "expected_relevance": 69
+    },
+    {
+        "id": "28",
+        "title": "Anthropic releases minor Claude 3.5 update",
+        "summary": "This is an automated summary for the article regarding anthropic releases minor claude 3.5 update.",
+        "area": "TECH",
+        "source": "Reuters",
+        "published": "2026-09-19T03:07:02.567309Z",
+        "expected_relevance": 72
+    },
+    {
+        "id": "29",
+        "title": "Senate debates new tech antitrust bill",
+        "summary": "This is an automated summary for the article regarding senate debates new tech antitrust bill.",
+        "area": "POLITICS",
+        "source": "Unknown Blog",
+        "published": "2026-09-19T03:07:02.567309Z",
+        "expected_relevance": 64
+    },
+    {
+        "id": "30",
+        "title": "Bitcoin stabilizes around 65k after brief dip - Report",
+        "summary": "This is an automated summary for the article regarding bitcoin stabilizes around 65k after brief dip.",
+        "area": "FINANZA",
+        "source": "TechCrunch",
+        "published": "2026-09-19T03:07:02.567309Z",
+        "expected_relevance": 68
+    },
+    {
+        "id": "31",
+        "title": "Anthropic releases minor Claude 3.5 update says expert",
+        "summary": "This is an automated summary for the article regarding anthropic releases minor claude 3.5 update.",
+        "area": "TECH",
+        "source": "ArXiv",
+        "published": "2026-09-19T03:07:02.567309Z",
+        "expected_relevance": 80
+    },
+    {
+        "id": "32",
+        "title": "Local startup raises $5M in seed funding - Report",
+        "summary": "This is an automated summary for the article regarding local startup raises $5m in seed funding.",
+        "area": "TECH",
+        "source": "ArXiv",
+        "published": "2026-09-19T03:07:02.567309Z",
+        "expected_relevance": 61
+    },
+    {
+        "id": "33",
+        "title": "Senate debates new tech antitrust bill | Analysis",
+        "summary": "This is an automated summary for the article regarding senate debates new tech antitrust bill.",
+        "area": "POLITICS",
+        "source": "TechCrunch",
+        "published": "2026-09-19T03:07:02.567309Z",
+        "expected_relevance": 61
+    },
+    {
+        "id": "34",
+        "title": "Local startup raises $5M in seed funding says expert",
+        "summary": "This is an automated summary for the article regarding local startup raises $5m in seed funding.",
+        "area": "TECH",
+        "source": "Reuters",
+        "published": "2026-09-19T03:07:02.567309Z",
+        "expected_relevance": 55
+    },
+    {
+        "id": "35",
+        "title": "Senate debates new tech antitrust bill - Report",
+        "summary": "This is an automated summary for the article regarding senate debates new tech antitrust bill.",
+        "area": "POLITICS",
+        "source": "Reuters",
+        "published": "2026-09-19T03:07:02.567309Z",
+        "expected_relevance": 69
+    },
+    {
+        "id": "36",
+        "title": "Senate debates new tech antitrust bill | Analysis",
+        "summary": "This is an automated summary for the article regarding senate debates new tech antitrust bill.",
+        "area": "POLITICS",
+        "source": "Unknown Blog",
+        "published": "2026-09-19T03:07:02.567309Z",
+        "expected_relevance": 64
+    },
+    {
+        "id": "37",
+        "title": "Local startup raises $5M in seed funding says expert",
+        "summary": "This is an automated summary for the article regarding local startup raises $5m in seed funding.",
+        "area": "TECH",
+        "source": "TechCrunch",
+        "published": "2026-09-19T03:07:02.567309Z",
+        "expected_relevance": 56
+    },
+    {
+        "id": "38",
+        "title": "Bitcoin stabilizes around 65k after brief dip says expert",
+        "summary": "This is an automated summary for the article regarding bitcoin stabilizes around 65k after brief dip.",
+        "area": "FINANZA",
+        "source": "TechCrunch",
+        "published": "2026-09-19T03:07:02.567309Z",
+        "expected_relevance": 74
+    },
+    {
+        "id": "39",
+        "title": "Anthropic releases minor Claude 3.5 update",
+        "summary": "This is an automated summary for the article regarding anthropic releases minor claude 3.5 update.",
+        "area": "TECH",
+        "source": "Bloomberg",
+        "published": "2026-09-19T03:07:02.567309Z",
+        "expected_relevance": 72
+    },
+    {
+        "id": "40",
+        "title": "Apple announces new color options for iPhone 16 | Analysis",
+        "summary": "This is an automated summary for the article regarding apple announces new color options for iphone 16.",
+        "area": "TECH",
+        "source": "Unknown Blog",
+        "published": "2026-09-19T03:07:02.567309Z",
+        "expected_relevance": 59
+    },
+    {
+        "id": "41",
+        "title": "Senate debates new tech antitrust bill says expert",
+        "summary": "This is an automated summary for the article regarding senate debates new tech antitrust bill.",
+        "area": "POLITICS",
+        "source": "TechCrunch",
+        "published": "2026-09-19T03:07:02.567309Z",
+        "expected_relevance": 66
+    },
+    {
+        "id": "42",
+        "title": "Anthropic releases minor Claude 3.5 update says expert",
+        "summary": "This is an automated summary for the article regarding anthropic releases minor claude 3.5 update.",
+        "area": "TECH",
+        "source": "Unknown Blog",
+        "published": "2026-09-19T03:07:02.567309Z",
+        "expected_relevance": 76
+    },
+    {
+        "id": "43",
+        "title": "Bitcoin stabilizes around 65k after brief dip - Report",
+        "summary": "This is an automated summary for the article regarding bitcoin stabilizes around 65k after brief dip.",
+        "area": "FINANZA",
+        "source": "Reuters",
+        "published": "2026-09-19T03:07:02.567309Z",
+        "expected_relevance": 74
+    },
+    {
+        "id": "44",
+        "title": "Apple announces new color options for iPhone 16 | Analysis",
+        "summary": "This is an automated summary for the article regarding apple announces new color options for iphone 16.",
+        "area": "TECH",
+        "source": "ArXiv",
+        "published": "2026-09-19T03:07:02.567309Z",
+        "expected_relevance": 52
+    },
+    {
+        "id": "45",
+        "title": "Local startup raises $5M in seed funding - Report",
+        "summary": "This is an automated summary for the article regarding local startup raises $5m in seed funding.",
+        "area": "TECH",
+        "source": "Unknown Blog",
+        "published": "2026-09-19T03:07:02.567309Z",
+        "expected_relevance": 57
+    },
+    {
+        "id": "46",
+        "title": "Local startup raises $5M in seed funding | Analysis",
+        "summary": "This is an automated summary for the article regarding local startup raises $5m in seed funding.",
+        "area": "TECH",
+        "source": "ArXiv",
+        "published": "2026-09-19T03:07:02.567309Z",
+        "expected_relevance": 57
+    },
+    {
+        "id": "47",
+        "title": "Bitcoin stabilizes around 65k after brief dip | Analysis",
+        "summary": "This is an automated summary for the article regarding bitcoin stabilizes around 65k after brief dip.",
+        "area": "FINANZA",
+        "source": "Bloomberg",
+        "published": "2026-09-19T03:07:02.567309Z",
+        "expected_relevance": 71
+    },
+    {
+        "id": "48",
+        "title": "Bitcoin stabilizes around 65k after brief dip says expert",
+        "summary": "This is an automated summary for the article regarding bitcoin stabilizes around 65k after brief dip.",
+        "area": "FINANZA",
+        "source": "TechCrunch",
+        "published": "2026-09-19T03:07:02.567309Z",
+        "expected_relevance": 73
+    },
+    {
+        "id": "49",
+        "title": "Bitcoin stabilizes around 65k after brief dip",
+        "summary": "This is an automated summary for the article regarding bitcoin stabilizes around 65k after brief dip.",
+        "area": "FINANZA",
+        "source": "Reuters",
+        "published": "2026-09-19T03:07:02.567309Z",
+        "expected_relevance": 75
+    },
+    {
+        "id": "50",
+        "title": "Anthropic releases minor Claude 3.5 update says expert",
+        "summary": "This is an automated summary for the article regarding anthropic releases minor claude 3.5 update.",
+        "area": "TECH",
+        "source": "Unknown Blog",
+        "published": "2026-09-19T03:07:02.567309Z",
+        "expected_relevance": 70
+    },
+    {
+        "id": "51",
+        "title": "Apple announces new color options for iPhone 16 | Analysis",
+        "summary": "This is an automated summary for the article regarding apple announces new color options for iphone 16.",
+        "area": "TECH",
+        "source": "Reuters",
+        "published": "2026-09-19T03:07:02.567309Z",
+        "expected_relevance": 53
+    },
+    {
+        "id": "52",
+        "title": "Anthropic releases minor Claude 3.5 update",
+        "summary": "This is an automated summary for the article regarding anthropic releases minor claude 3.5 update.",
+        "area": "TECH",
+        "source": "Reuters",
+        "published": "2026-09-19T03:07:02.567309Z",
+        "expected_relevance": 75
+    },
+    {
+        "id": "53",
+        "title": "Apple announces new color options for iPhone 16",
+        "summary": "This is an automated summary for the article regarding apple announces new color options for iphone 16.",
+        "area": "TECH",
+        "source": "Unknown Blog",
+        "published": "2026-09-19T03:07:02.567309Z",
+        "expected_relevance": 59
+    },
+    {
+        "id": "54",
+        "title": "Bitcoin stabilizes around 65k after brief dip - Report",
+        "summary": "This is an automated summary for the article regarding bitcoin stabilizes around 65k after brief dip.",
+        "area": "FINANZA",
+        "source": "Bloomberg",
+        "published": "2026-09-19T03:07:02.567309Z",
+        "expected_relevance": 67
+    },
+    {
+        "id": "55",
+        "title": "Local startup raises $5M in seed funding - Report",
+        "summary": "This is an automated summary for the article regarding local startup raises $5m in seed funding.",
+        "area": "TECH",
+        "source": "Bloomberg",
+        "published": "2026-09-19T03:07:02.567309Z",
+        "expected_relevance": 57
+    },
+    {
+        "id": "56",
+        "title": "Apple announces new color options for iPhone 16",
+        "summary": "This is an automated summary for the article regarding apple announces new color options for iphone 16.",
+        "area": "TECH",
+        "source": "Bloomberg",
+        "published": "2026-09-19T03:07:02.567309Z",
+        "expected_relevance": 55
+    },
+    {
+        "id": "57",
+        "title": "Anthropic releases minor Claude 3.5 update",
+        "summary": "This is an automated summary for the article regarding anthropic releases minor claude 3.5 update.",
+        "area": "TECH",
+        "source": "TechCrunch",
+        "published": "2026-09-19T03:07:02.567309Z",
+        "expected_relevance": 72
+    },
+    {
+        "id": "58",
+        "title": "Anthropic releases minor Claude 3.5 update | Analysis",
+        "summary": "This is an automated summary for the article regarding anthropic releases minor claude 3.5 update.",
+        "area": "TECH",
+        "source": "Unknown Blog",
+        "published": "2026-09-19T03:07:02.567309Z",
+        "expected_relevance": 70
+    },
+    {
+        "id": "59",
+        "title": "Apple announces new color options for iPhone 16 | Analysis",
+        "summary": "This is an automated summary for the article regarding apple announces new color options for iphone 16.",
+        "area": "TECH",
+        "source": "TechCrunch",
+        "published": "2026-09-19T03:07:02.567309Z",
+        "expected_relevance": 59
+    },
+    {
+        "id": "60",
+        "title": "Senate debates new tech antitrust bill - Report",
+        "summary": "This is an automated summary for the article regarding senate debates new tech antitrust bill.",
+        "area": "POLITICS",
+        "source": "ArXiv",
+        "published": "2026-09-19T03:07:02.567309Z",
+        "expected_relevance": 63
+    },
+    {
+        "id": "61",
+        "title": "Review: The new ergonomic office chair | Analysis",
+        "summary": "This is an automated summary for the article regarding review: the new ergonomic office chair.",
+        "area": "LIFESTYLE",
+        "source": "Unknown Blog",
+        "published": "2026-09-20T03:07:02.567309Z",
+        "expected_relevance": 25
+    },
+    {
+        "id": "62",
+        "title": "Celebrity spotted at local coffee shop - Report",
+        "summary": "This is an automated summary for the article regarding celebrity spotted at local coffee shop.",
+        "area": "GOSSIP",
+        "source": "ArXiv",
+        "published": "2026-09-20T03:07:02.567309Z",
+        "expected_relevance": 1
+    },
+    {
+        "id": "63",
+        "title": "How to bake the perfect chocolate chip cookie | Analysis",
+        "summary": "This is an automated summary for the article regarding how to bake the perfect chocolate chip cookie.",
+        "area": "FOOD",
+        "source": "Reuters",
+        "published": "2026-09-20T03:07:02.567309Z",
+        "expected_relevance": 17
+    },
+    {
+        "id": "64",
+        "title": "How to bake the perfect chocolate chip cookie",
+        "summary": "This is an automated summary for the article regarding how to bake the perfect chocolate chip cookie.",
+        "area": "FOOD",
+        "source": "TechCrunch",
+        "published": "2026-09-20T03:07:02.567309Z",
+        "expected_relevance": 10
+    },
+    {
+        "id": "65",
+        "title": "Review: The new ergonomic office chair - Report",
+        "summary": "This is an automated summary for the article regarding review: the new ergonomic office chair.",
+        "area": "LIFESTYLE",
+        "source": "Bloomberg",
+        "published": "2026-09-20T03:07:02.567309Z",
+        "expected_relevance": 18
+    },
+    {
+        "id": "66",
+        "title": "How to bake the perfect chocolate chip cookie - Report",
+        "summary": "This is an automated summary for the article regarding how to bake the perfect chocolate chip cookie.",
+        "area": "FOOD",
+        "source": "ArXiv",
+        "published": "2026-09-20T03:07:02.567309Z",
+        "expected_relevance": 13
+    },
+    {
+        "id": "67",
+        "title": "Celebrity spotted at local coffee shop says expert",
+        "summary": "This is an automated summary for the article regarding celebrity spotted at local coffee shop.",
+        "area": "GOSSIP",
+        "source": "Bloomberg",
+        "published": "2026-09-20T03:07:02.567309Z",
+        "expected_relevance": 9
+    },
+    {
+        "id": "68",
+        "title": "Local sports team wins regional championship - Report",
+        "summary": "This is an automated summary for the article regarding local sports team wins regional championship.",
+        "area": "SPORTS",
+        "source": "ArXiv",
+        "published": "2026-09-20T03:07:02.567309Z",
+        "expected_relevance": 23
+    },
+    {
+        "id": "69",
+        "title": "Top 10 vacation spots for this summer",
+        "summary": "This is an automated summary for the article regarding top 10 vacation spots for this summer.",
+        "area": "LIFESTYLE",
+        "source": "Unknown Blog",
+        "published": "2026-09-20T03:07:02.567309Z",
+        "expected_relevance": 11
+    },
+    {
+        "id": "70",
+        "title": "Top 10 vacation spots for this summer - Report",
+        "summary": "This is an automated summary for the article regarding top 10 vacation spots for this summer.",
+        "area": "LIFESTYLE",
+        "source": "ArXiv",
+        "published": "2026-09-20T03:07:02.567309Z",
+        "expected_relevance": 6
+    },
+    {
+        "id": "71",
+        "title": "Celebrity spotted at local coffee shop | Analysis",
+        "summary": "This is an automated summary for the article regarding celebrity spotted at local coffee shop.",
+        "area": "GOSSIP",
+        "source": "Reuters",
+        "published": "2026-09-20T03:07:02.567309Z",
+        "expected_relevance": 6
+    },
+    {
+        "id": "72",
+        "title": "How to bake the perfect chocolate chip cookie",
+        "summary": "This is an automated summary for the article regarding how to bake the perfect chocolate chip cookie.",
+        "area": "FOOD",
+        "source": "Bloomberg",
+        "published": "2026-09-20T03:07:02.567309Z",
+        "expected_relevance": 16
+    },
+    {
+        "id": "73",
+        "title": "Top 10 vacation spots for this summer - Report",
+        "summary": "This is an automated summary for the article regarding top 10 vacation spots for this summer.",
+        "area": "LIFESTYLE",
+        "source": "TechCrunch",
+        "published": "2026-09-20T03:07:02.567309Z",
+        "expected_relevance": 12
+    },
+    {
+        "id": "74",
+        "title": "Review: The new ergonomic office chair - Report",
+        "summary": "This is an automated summary for the article regarding review: the new ergonomic office chair.",
+        "area": "LIFESTYLE",
+        "source": "Unknown Blog",
+        "published": "2026-09-20T03:07:02.567309Z",
+        "expected_relevance": 17
+    },
+    {
+        "id": "75",
+        "title": "How to bake the perfect chocolate chip cookie",
+        "summary": "This is an automated summary for the article regarding how to bake the perfect chocolate chip cookie.",
+        "area": "FOOD",
+        "source": "ArXiv",
+        "published": "2026-09-20T03:07:02.567309Z",
+        "expected_relevance": 14
+    },
+    {
+        "id": "76",
+        "title": "Top 10 vacation spots for this summer",
+        "summary": "This is an automated summary for the article regarding top 10 vacation spots for this summer.",
+        "area": "LIFESTYLE",
+        "source": "Bloomberg",
+        "published": "2026-09-20T03:07:02.567309Z",
+        "expected_relevance": 11
+    },
+    {
+        "id": "77",
+        "title": "Local sports team wins regional championship",
+        "summary": "This is an automated summary for the article regarding local sports team wins regional championship.",
+        "area": "SPORTS",
+        "source": "ArXiv",
+        "published": "2026-09-20T03:07:02.567309Z",
+        "expected_relevance": 21
+    },
+    {
+        "id": "78",
+        "title": "How to bake the perfect chocolate chip cookie says expert",
+        "summary": "This is an automated summary for the article regarding how to bake the perfect chocolate chip cookie.",
+        "area": "FOOD",
+        "source": "Unknown Blog",
+        "published": "2026-09-20T03:07:02.567309Z",
+        "expected_relevance": 11
+    },
+    {
+        "id": "79",
+        "title": "Top 10 vacation spots for this summer - Report",
+        "summary": "This is an automated summary for the article regarding top 10 vacation spots for this summer.",
+        "area": "LIFESTYLE",
+        "source": "Reuters",
+        "published": "2026-09-20T03:07:02.567309Z",
+        "expected_relevance": 13
+    },
+    {
+        "id": "80",
+        "title": "Local sports team wins regional championship - Report",
+        "summary": "This is an automated summary for the article regarding local sports team wins regional championship.",
+        "area": "SPORTS",
+        "source": "ArXiv",
+        "published": "2026-09-20T03:07:02.567309Z",
+        "expected_relevance": 27
+    },
+    {
+        "id": "81",
+        "title": "Local sports team wins regional championship - Report",
+        "summary": "This is an automated summary for the article regarding local sports team wins regional championship.",
+        "area": "SPORTS",
+        "source": "Bloomberg",
+        "published": "2026-09-20T03:07:02.567309Z",
+        "expected_relevance": 27
+    },
+    {
+        "id": "82",
+        "title": "Top 10 vacation spots for this summer - Report",
+        "summary": "This is an automated summary for the article regarding top 10 vacation spots for this summer.",
+        "area": "LIFESTYLE",
+        "source": "Reuters",
+        "published": "2026-09-20T03:07:02.567309Z",
+        "expected_relevance": 11
+    },
+    {
+        "id": "83",
+        "title": "Local sports team wins regional championship - Report",
+        "summary": "This is an automated summary for the article regarding local sports team wins regional championship.",
+        "area": "SPORTS",
+        "source": "Bloomberg",
+        "published": "2026-09-20T03:07:02.567309Z",
+        "expected_relevance": 25
+    },
+    {
+        "id": "84",
+        "title": "Review: The new ergonomic office chair",
+        "summary": "This is an automated summary for the article regarding review: the new ergonomic office chair.",
+        "area": "LIFESTYLE",
+        "source": "Reuters",
+        "published": "2026-09-20T03:07:02.567309Z",
+        "expected_relevance": 25
+    },
+    {
+        "id": "85",
+        "title": "How to bake the perfect chocolate chip cookie says expert",
+        "summary": "This is an automated summary for the article regarding how to bake the perfect chocolate chip cookie.",
+        "area": "FOOD",
+        "source": "TechCrunch",
+        "published": "2026-09-20T03:07:02.567309Z",
+        "expected_relevance": 18
+    },
+    {
+        "id": "86",
+        "title": "Review: The new ergonomic office chair",
+        "summary": "This is an automated summary for the article regarding review: the new ergonomic office chair.",
+        "area": "LIFESTYLE",
+        "source": "Reuters",
+        "published": "2026-09-20T03:07:02.567309Z",
+        "expected_relevance": 15
+    },
+    {
+        "id": "87",
+        "title": "Local sports team wins regional championship says expert",
+        "summary": "This is an automated summary for the article regarding local sports team wins regional championship.",
+        "area": "SPORTS",
+        "source": "Unknown Blog",
+        "published": "2026-09-20T03:07:02.567309Z",
+        "expected_relevance": 20
+    },
+    {
+        "id": "88",
+        "title": "Celebrity spotted at local coffee shop | Analysis",
+        "summary": "This is an automated summary for the article regarding celebrity spotted at local coffee shop.",
+        "area": "GOSSIP",
+        "source": "TechCrunch",
+        "published": "2026-09-20T03:07:02.567309Z",
+        "expected_relevance": 9
+    },
+    {
+        "id": "89",
+        "title": "Top 10 vacation spots for this summer",
+        "summary": "This is an automated summary for the article regarding top 10 vacation spots for this summer.",
+        "area": "LIFESTYLE",
+        "source": "Reuters",
+        "published": "2026-09-20T03:07:02.567309Z",
+        "expected_relevance": 8
+    },
+    {
+        "id": "90",
+        "title": "Review: The new ergonomic office chair - Report",
+        "summary": "This is an automated summary for the article regarding review: the new ergonomic office chair.",
+        "area": "LIFESTYLE",
+        "source": "Unknown Blog",
+        "published": "2026-09-20T03:07:02.567309Z",
+        "expected_relevance": 21
+    },
+    {
+        "id": "91",
+        "title": "Review: The new ergonomic office chair",
+        "summary": "This is an automated summary for the article regarding review: the new ergonomic office chair.",
+        "area": "LIFESTYLE",
+        "source": "Bloomberg",
+        "published": "2026-09-20T03:07:02.567309Z",
+        "expected_relevance": 24
+    },
+    {
+        "id": "92",
+        "title": "Local sports team wins regional championship says expert",
+        "summary": "This is an automated summary for the article regarding local sports team wins regional championship.",
+        "area": "SPORTS",
+        "source": "ArXiv",
+        "published": "2026-09-20T03:07:02.567309Z",
+        "expected_relevance": 23
+    },
+    {
+        "id": "93",
+        "title": "Local sports team wins regional championship",
+        "summary": "This is an automated summary for the article regarding local sports team wins regional championship.",
+        "area": "SPORTS",
+        "source": "Reuters",
+        "published": "2026-09-20T03:07:02.567309Z",
+        "expected_relevance": 29
+    },
+    {
+        "id": "94",
+        "title": "How to bake the perfect chocolate chip cookie - Report",
+        "summary": "This is an automated summary for the article regarding how to bake the perfect chocolate chip cookie.",
+        "area": "FOOD",
+        "source": "Reuters",
+        "published": "2026-09-20T03:07:02.567309Z",
+        "expected_relevance": 15
+    },
+    {
+        "id": "95",
+        "title": "Top 10 vacation spots for this summer | Analysis",
+        "summary": "This is an automated summary for the article regarding top 10 vacation spots for this summer.",
+        "area": "LIFESTYLE",
+        "source": "Bloomberg",
+        "published": "2026-09-20T03:07:02.567309Z",
+        "expected_relevance": 6
+    },
+    {
+        "id": "96",
+        "title": "Local sports team wins regional championship",
+        "summary": "This is an automated summary for the article regarding local sports team wins regional championship.",
+        "area": "SPORTS",
+        "source": "Bloomberg",
+        "published": "2026-09-20T03:07:02.567309Z",
+        "expected_relevance": 22
+    },
+    {
+        "id": "97",
+        "title": "Top 10 vacation spots for this summer says expert",
+        "summary": "This is an automated summary for the article regarding top 10 vacation spots for this summer.",
+        "area": "LIFESTYLE",
+        "source": "Unknown Blog",
+        "published": "2026-09-20T03:07:02.567309Z",
+        "expected_relevance": 9
+    },
+    {
+        "id": "98",
+        "title": "Top 10 vacation spots for this summer - Report",
+        "summary": "This is an automated summary for the article regarding top 10 vacation spots for this summer.",
+        "area": "LIFESTYLE",
+        "source": "TechCrunch",
+        "published": "2026-09-20T03:07:02.567309Z",
+        "expected_relevance": 6
+    },
+    {
+        "id": "99",
+        "title": "Local sports team wins regional championship | Analysis",
+        "summary": "This is an automated summary for the article regarding local sports team wins regional championship.",
+        "area": "SPORTS",
+        "source": "ArXiv",
+        "published": "2026-09-20T03:07:02.567309Z",
+        "expected_relevance": 20
+    },
+    {
+        "id": "100",
+        "title": "Review: The new ergonomic office chair",
+        "summary": "This is an automated summary for the article regarding review: the new ergonomic office chair.",
+        "area": "LIFESTYLE",
+        "source": "Bloomberg",
+        "published": "2026-09-20T03:07:02.567309Z",
+        "expected_relevance": 16
+    },
+    {
+        "id": "101",
+        "title": "Windows 7 support officially ends today - Report",
+        "summary": "This is an automated summary for the article regarding windows 7 support officially ends today.",
+        "area": "TECH",
+        "source": "ArXiv",
+        "published": "2023-12-25T03:07:02.567309Z",
         "expected_relevance": 0
+    },
+    {
+        "id": "102",
+        "title": "Windows 7 support officially ends today",
+        "summary": "This is an automated summary for the article regarding windows 7 support officially ends today.",
+        "area": "TECH",
+        "source": "ArXiv",
+        "published": "2023-12-25T03:07:02.567309Z",
+        "expected_relevance": 2
+    },
+    {
+        "id": "103",
+        "title": "CEO buys a new yacht",
+        "summary": "This is an automated summary for the article regarding ceo buys a new yacht.",
+        "area": "FINANZA",
+        "source": "Bloomberg",
+        "published": "2023-12-25T03:07:02.567309Z",
+        "expected_relevance": 1
+    },
+    {
+        "id": "104",
+        "title": "CEO buys a new yacht | Analysis",
+        "summary": "This is an automated summary for the article regarding ceo buys a new yacht.",
+        "area": "FINANZA",
+        "source": "TechCrunch",
+        "published": "2023-12-25T03:07:02.567309Z",
+        "expected_relevance": 10
+    },
+    {
+        "id": "105",
+        "title": "CEO buys a new yacht - Report",
+        "summary": "This is an automated summary for the article regarding ceo buys a new yacht.",
+        "area": "FINANZA",
+        "source": "Unknown Blog",
+        "published": "2023-12-25T03:07:02.567309Z",
+        "expected_relevance": 4
+    },
+    {
+        "id": "106",
+        "title": "Windows 7 support officially ends today says expert",
+        "summary": "This is an automated summary for the article regarding windows 7 support officially ends today.",
+        "area": "TECH",
+        "source": "TechCrunch",
+        "published": "2023-12-25T03:07:02.567309Z",
+        "expected_relevance": 0
+    },
+    {
+        "id": "107",
+        "title": "CEO buys a new yacht says expert",
+        "summary": "This is an automated summary for the article regarding ceo buys a new yacht.",
+        "area": "FINANZA",
+        "source": "TechCrunch",
+        "published": "2023-12-25T03:07:02.567309Z",
+        "expected_relevance": 4
+    },
+    {
+        "id": "108",
+        "title": "CEO buys a new yacht - Report",
+        "summary": "This is an automated summary for the article regarding ceo buys a new yacht.",
+        "area": "FINANZA",
+        "source": "Unknown Blog",
+        "published": "2023-12-25T03:07:02.567309Z",
+        "expected_relevance": 3
+    },
+    {
+        "id": "109",
+        "title": "Rumor: Apple might remove headphone jack | Analysis",
+        "summary": "This is an automated summary for the article regarding rumor: apple might remove headphone jack.",
+        "area": "TECH",
+        "source": "Reuters",
+        "published": "2023-12-25T03:07:02.567309Z",
+        "expected_relevance": 0
+    },
+    {
+        "id": "110",
+        "title": "Rumor: Apple might remove headphone jack - Report",
+        "summary": "This is an automated summary for the article regarding rumor: apple might remove headphone jack.",
+        "area": "TECH",
+        "source": "Bloomberg",
+        "published": "2023-12-25T03:07:02.567309Z",
+        "expected_relevance": 0
+    },
+    {
+        "id": "111",
+        "title": "Windows 7 support officially ends today | Analysis",
+        "summary": "This is an automated summary for the article regarding windows 7 support officially ends today.",
+        "area": "TECH",
+        "source": "Unknown Blog",
+        "published": "2023-12-25T03:07:02.567309Z",
+        "expected_relevance": 0
+    },
+    {
+        "id": "112",
+        "title": "Rumor: Apple might remove headphone jack says expert",
+        "summary": "This is an automated summary for the article regarding rumor: apple might remove headphone jack.",
+        "area": "TECH",
+        "source": "ArXiv",
+        "published": "2023-12-25T03:07:02.567309Z",
+        "expected_relevance": 3
+    },
+    {
+        "id": "113",
+        "title": "Rumor: Apple might remove headphone jack",
+        "summary": "This is an automated summary for the article regarding rumor: apple might remove headphone jack.",
+        "area": "TECH",
+        "source": "TechCrunch",
+        "published": "2023-12-25T03:07:02.567309Z",
+        "expected_relevance": 0
+    },
+    {
+        "id": "114",
+        "title": "Windows 7 support officially ends today says expert",
+        "summary": "This is an automated summary for the article regarding windows 7 support officially ends today.",
+        "area": "TECH",
+        "source": "TechCrunch",
+        "published": "2023-12-25T03:07:02.567309Z",
+        "expected_relevance": 0
+    },
+    {
+        "id": "115",
+        "title": "Windows 7 support officially ends today",
+        "summary": "This is an automated summary for the article regarding windows 7 support officially ends today.",
+        "area": "TECH",
+        "source": "Unknown Blog",
+        "published": "2023-12-25T03:07:02.567309Z",
+        "expected_relevance": 0
+    },
+    {
+        "id": "116",
+        "title": "Windows 7 support officially ends today | Analysis",
+        "summary": "This is an automated summary for the article regarding windows 7 support officially ends today.",
+        "area": "TECH",
+        "source": "TechCrunch",
+        "published": "2023-12-25T03:07:02.567309Z",
+        "expected_relevance": 0
+    },
+    {
+        "id": "117",
+        "title": "CEO buys a new yacht - Report",
+        "summary": "This is an automated summary for the article regarding ceo buys a new yacht.",
+        "area": "FINANZA",
+        "source": "Reuters",
+        "published": "2023-12-25T03:07:02.567309Z",
+        "expected_relevance": 10
+    },
+    {
+        "id": "118",
+        "title": "Windows 7 support officially ends today",
+        "summary": "This is an automated summary for the article regarding windows 7 support officially ends today.",
+        "area": "TECH",
+        "source": "Bloomberg",
+        "published": "2023-12-25T03:07:02.567309Z",
+        "expected_relevance": 5
+    },
+    {
+        "id": "119",
+        "title": "CEO buys a new yacht - Report",
+        "summary": "This is an automated summary for the article regarding ceo buys a new yacht.",
+        "area": "FINANZA",
+        "source": "Unknown Blog",
+        "published": "2023-12-25T03:07:02.567309Z",
+        "expected_relevance": 4
+    },
+    {
+        "id": "120",
+        "title": "CEO buys a new yacht says expert",
+        "summary": "This is an automated summary for the article regarding ceo buys a new yacht.",
+        "area": "FINANZA",
+        "source": "Unknown Blog",
+        "published": "2023-12-25T03:07:02.567309Z",
+        "expected_relevance": 6
     }
 ]

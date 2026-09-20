@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>J.A.R.V.I.S. Daily Briefing</title>
+    <!-- SECURITY: DOMPurify per prevenire attacchi XSS dai contenuti RSS/LLM -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.6/purify.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -226,7 +228,6 @@
                             <span style="color: var(--muted-ink); font-weight: normal; font-size: 0.75rem;">${item.source_name}</span>
                         </div>
                         <h2>${item.title}</h2>
-                        <p>${item.summary}</p>
                         <a href="${item.source_url}" target="_blank" style="font-family: var(--font-ui); font-size: 0.8rem; color: var(--blueprint-blue); text-decoration: none; font-weight: 600;">[ Read Primary Source ]</a>
                     `;
 
@@ -257,7 +258,7 @@
 
                     htmlContent += `</article>`;
                 });
-                newsStream.innerHTML = htmlContent;
+                newsStream.innerHTML = DOMPurify.sanitize(htmlContent);
             }
 
             inputField.addEventListener('keypress', function (e) {
@@ -285,7 +286,8 @@
                         <div class="jarvis-response"><span class="pulse"></span> <em>Cognitive processing in progress...</em></div>
                     </div>
                 `;
-                newsStream.insertAdjacentHTML('afterbegin', qaHtml);
+                // SECURITY: Sanitizziamo il box della chat per evitare XSS da input utente
+                newsStream.insertAdjacentHTML('afterbegin', DOMPurify.sanitize(qaHtml));
                 inputField.disabled = true;
                 
                 try {
@@ -297,7 +299,8 @@
                     const data = await res.json();
                     
                     const block = document.getElementById(tempId);
-                    block.querySelector('.jarvis-response').innerHTML = data.answer;
+                    // SECURITY: Sanitizziamo la risposta dell'LLM prima del rendering
+                    block.querySelector('.jarvis-response').innerHTML = DOMPurify.sanitize(data.answer);
                     
                     block.scrollIntoView({behavior: "smooth", block: "center"});
                     
@@ -326,7 +329,8 @@
                     // playQaChunk();
                     
                 } catch(e) {
-                    document.getElementById(tempId).querySelector('.jarvis-response').innerHTML = "My apologies, Sir. The cognitive servers are unresponsive.";
+                    // SECURITY: Usiamo textContent invece di innerHTML per testi statici sicuri
+                    document.getElementById(tempId).querySelector('.jarvis-response').textContent = "My apologies, Sir. The cognitive servers are unresponsive.";
                 } finally {
                     inputField.disabled = false;
                     inputField.focus();
