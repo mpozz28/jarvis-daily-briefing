@@ -100,11 +100,9 @@ This gives a recruiter or interviewer a fast view of both the **user-facing prod
 
 ### Demo links
 
-**Live Demo:** `ADD_LIVE_DEMO_URL`
+**Live Demo:** https://mpozz28.github.io/jarvis-daily-briefing/
 
 **GitHub Repository:** https://github.com/mpozz28/jarvis-daily-briefing
-
-**Evaluation:** [`docs/evaluation.md`](docs/evaluation.md)
 
 **Architecture Decisions:** [`docs/architecture-decisions.md`](docs/architecture-decisions.md)
 
