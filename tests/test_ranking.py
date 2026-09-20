@@ -15,6 +15,8 @@ def test_ranking_metrics():
 
     assert round(ndcg_at_k(predicted, ideal, 3), 4) == 0.9037
     assert precision_at_k([100, 20, 60], 3, 50) == 2 / 3
-    assert recall_at_k([100, 20, 60], [100, 80, 60, 40], 3, 50) == 2 / 3
+    assert recall_at_k([100, 20, 60], ideal, 3, 50) == 2 / 3
     assert mrr_at_k([20, 40, 100], 3, 50) == 1 / 3
-    assert average_precision_at_k([100, 20, 60], 3, 50) == pytest.approx(5 / 6)
+    assert average_precision_at_k(
+        [100, 20, 60], ideal, 3, 50
+    ) == pytest.approx(5 / 9)
