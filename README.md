@@ -129,7 +129,7 @@ flowchart TD
     I --> J[docs/latest_briefing.json]
 
     %% Serving & RAG
-    J -.->|GitOps / Pages| K["Web Speech & UI Interface<br/>DOMPurify Hardened"]
+    J -.->|GitOps / Pages| K["Web Speech & UI Interface<br/>Safe DOM Rendering"]
     K <-->|REST API| L["Grounded QA Agent<br/>w/ Abstention Protocol"]
 ```
 
@@ -147,17 +147,17 @@ Extracts 1-to-N relationships (Edges) between distinct articles (Nodes) to ident
 - **Hallucination Defense:** Implements strict dynamic programmatic validation to ensure all referenced `item_ids` exist in the active state database before persisting the graph.
 
 ### 3. Evidence-Grounded Q&A with Abstention
-The interactive RAG system does not rely on calibrated probabilities or LLM self-assessment for confidence.
+The interactive retrieval/QA system does not treat LLM self-assessment as a calibrated probability.
 
-- **Heuristic Confidence:** Extracts an evidence quote and mathematically verifies it against the raw scraped text using exact substring alignment algorithms (`difflib.SequenceMatcher`).
-- **Abstention Protocol:** If the heuristic confidence drops below 60.0% (indicating LLM paraphrasing or unsupported facts), the agent refuses to answer ("Insufficient evidence to provide a reliable answer").
+- **Heuristic Confidence:** Extracts an evidence quote and checks whether the generated evidence has sufficient textual overlap with retrieved source context using `difflib.SequenceMatcher`.
+- **Abstention Protocol:** If the heuristic evidence score drops below 60.0%, the agent abstains ("Insufficient evidence to provide a reliable answer").
 
 ### 4. Deterministic Quantitative Layer
 Financial metrics (daily return, annualized historical volatility, regime labels) are computed strictly via Pandas and injected as static strings into the LLM context, preventing generative arithmetic errors.
 
 ## 📊 Evaluation & Benchmarking
 
-Evaluated offline on a curated 120-item relevance benchmark containing multi-domain events, hard negatives, and freshness decay. To ensure strict reproducibility, benchmarking utilizes a fixed `REFERENCE_TIME` parameter to calculate deterministic temporal decay independently of the live production clock.
+Evaluated offline on a curated 120-item relevance benchmark containing multi-domain events, hard negatives, and freshness decay. The deterministic portion of the benchmark uses a fixed `REFERENCE_TIME` parameter to calculate deterministic temporal decay independently of the live production clock.
 
 | System | NDCG@3 | NDCG@5 | P@3 | P@5 | R@5 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -165,7 +165,7 @@ Evaluated offline on a curated 120-item relevance benchmark containing multi-dom
 | **Baseline 1 (Deterministic Only)** | 0.9719 | 0.9764 | 1.0000 | 1.0000 | 0.0833 |
 | **Current (Deterministic + LLM)** Current_LLM  | 1.0000 | 0.9851 | 1.0000 | 1.0000 | 0.0833 |
 
-*Note: These results are specific to this curated offline benchmark. They indicate how the deterministic and hybrid pipelines behave on the evaluated relevance labels; they should not be interpreted as a general guarantee of ranking quality.*
+*Note: These results are specific to this curated offline benchmark and its manually assigned relevance labels. They are useful for regression testing, but they are not evidence of general ranking performance on live news. LLM reranking can also vary across model/API versions.*
 
 ## 🛡️ Security & Reliability
 
@@ -200,10 +200,10 @@ python api_server.py
 
 ## 📘 Engineering Decisions & Limitations
 
-**ADRs:** Deep-dives into architectural trade-offs (Why LangGraph, Why SQLite, Why DOMPurify, Why Heuristic Confidence) are documented in `docs/architecture-decisions.md`.
+**ADRs:** Deep-dives into architectural trade-offs (Why LangGraph, Why SQLite, Why safe DOM rendering, Why Heuristic Evidence Scoring) are documented in `docs/architecture-decisions.md`.
 
 **Known Limitations:**
 
-- **Evaluation:** The current benchmark utilizes a static offline dataset; a true enterprise system would incorporate asynchronous Human-in-the-Loop continuous evaluation.
+- **Evaluation:** The current benchmark is a static offline regression set with manual labels. A stronger research evaluation would use a larger real-world corpus, multiple annotators, temporal holdouts, and repeated runs across model versions.
 - **Graph Persistence:** Multi-document relationships are ephemeral per-run; historical queries would require migrating from SQLite to a persistent Graph/Vector DB (e.g., Neo4j).
 - **Web Scraping:** The current ingestion layer (BeautifulSoup) is vulnerable to anti-bot measures on JS-heavy or Cloudflare-protected SPA domains.
