@@ -1,9 +1,11 @@
 import json
 import logging
-from src.llm_router import llm_router
+
 from src.agents.scoring_agent import score_and_filter_candidates
+from src.llm_router import llm_router
 
 logger = logging.getLogger(__name__)
+
 
 def rank_and_filter(news_list: list, max_items: int = 15, reference_time=None) -> list:
     """
@@ -15,7 +17,9 @@ def rank_and_filter(news_list: list, max_items: int = 15, reference_time=None) -
 
     # --- FASE 1: DETERMINISTIC SCORING ---
     # Passiamo il reference_time per consentire l'evaluation riproducibile nel tempo
-    top_candidates = score_and_filter_candidates(news_list, max_candidates=20, reference_time=reference_time)
+    top_candidates = score_and_filter_candidates(
+        news_list, max_candidates=20, reference_time=reference_time
+    )
 
     # --- FASE 2: LLM SEMANTIC RERANKING ---
     logger.info("Executing LLM Semantic Reranking on Top Candidates...")
@@ -39,31 +43,38 @@ Format required:
         response = llm_router.invoke(
             prompt=prompt,
             system_prompt=system_prompt,
-            preferred_model="openai/gpt-oss-120b"
+            preferred_model="openai/gpt-oss-120b",
         )
-        
+
         clean_json = response.strip()
-        if clean_json.startswith('```json'):
-            clean_json = clean_json.removeprefix('```json').removesuffix('```').strip()
-        elif clean_json.startswith('```'):
-            clean_json = clean_json.removeprefix('```').removesuffix('```').strip()
-            
+        if clean_json.startswith("```json"):
+            clean_json = clean_json.removeprefix("```json").removesuffix("```").strip()
+        elif clean_json.startswith("```"):
+            clean_json = clean_json.removeprefix("```").removesuffix("```").strip()
+
         scores = json.loads(clean_json)
         for item in scores:
-            score_map[str(item.get('id'))] = item.get('semantic_score', 0)
-            
+            score_map[str(item.get("id"))] = item.get("semantic_score", 0)
+
     except Exception as e:
-        logger.error(f"LLM Reranking failed: {e}. Falling back to deterministic sorting.")
-        pass
+        logger.error(
+            f"LLM Reranking failed: {e}. Falling back to deterministic sorting."
+        )
 
     # Aggiorniamo i punteggi finali
     for n in top_candidates:
-        n['relevance_score'] = score_map.get(str(n.get('id')), n.get('deterministic_score', 0))
-        
+        n["relevance_score"] = score_map.get(
+            str(n.get("id")), n.get("deterministic_score", 0)
+        )
+
     # Ultimo sorting definitivo
-    ranked_news = sorted(top_candidates, key=lambda x: x.get('relevance_score', 0), reverse=True)
-    
+    ranked_news = sorted(
+        top_candidates, key=lambda x: x.get("relevance_score", 0), reverse=True
+    )
+
     if ranked_news:
-        logger.info(f"Reranking completed. Top article: {ranked_news[0].get('title')} (Score: {ranked_news[0].get('relevance_score')})")
-    
+        logger.info(
+            f"Reranking completed. Top article: {ranked_news[0].get('title')} (Score: {ranked_news[0].get('relevance_score')})"
+        )
+
     return ranked_news[:max_items]

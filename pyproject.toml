@@ -1,0 +1,17 @@
+[tool.ruff]
+# Specifica la versione di Python di riferimento
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F"]
+ignore = [
+    "E501", # Ignora la lunghezza massima delle righe (evita errori su stringhe e prompt lunghi)
+    "E402", # Ignora l'ordine degli import nei file di orchestrazione
+]
+
+exclude = [
+    ".git",
+    "venv",
+    "__pycache__",
+    "docs",
+]

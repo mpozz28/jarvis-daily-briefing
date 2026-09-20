@@ -1,15 +1,18 @@
-import os
 import json
 import logging
-import requests
+import os
 import tarfile
 import tempfile
+
+import requests
 from bs4 import BeautifulSoup
+
 from src.config import DATA_DIR
 
 logger = logging.getLogger(__name__)
 CACHE_DIR = os.path.join(DATA_DIR, "source_cache")
 os.makedirs(CACHE_DIR, exist_ok=True)
+
 
 class SourceCache:
     def __init__(self):
@@ -34,11 +37,11 @@ class SourceCache:
 
         content = ""
         logger.info(f"Downloading source for: {item.get('title', '')[:30]}...")
-        
+
         try:
             if "arxiv.org" in url:
                 content = self._fetch_arxiv_latex(url)
-                if not content: 
+                if not content:
                     content = item.get("description", "") + "\n[LaTeX TEXT UNAVAILABLE]"
             else:
                 content = self._fetch_web_text(url)
@@ -50,7 +53,9 @@ class SourceCache:
 
         try:
             with open(cache_path, "w", encoding="utf-8") as f:
-                json.dump({"id": item_id, "title": item.get("title"), "content": content}, f)
+                json.dump(
+                    {"id": item_id, "title": item.get("title"), "content": content}, f
+                )
         except Exception as e:
             logger.error(f"Unable to save cache: {e}")
 
@@ -75,8 +80,10 @@ class SourceCache:
                     if member.name.endswith(".tex"):
                         f = tar.extractfile(member)
                         if f:
-                            tex_content += f.read().decode('utf-8', errors='ignore') + "\n\n"
-                            
+                            tex_content += (
+                                f.read().decode("utf-8", errors="ignore") + "\n\n"
+                            )
+
             os.remove(tmp_path)
             return tex_content
         except Exception as e:
@@ -85,24 +92,25 @@ class SourceCache:
 
     def _fetch_web_text(self, url: str) -> str:
         """Extracts ONLY the relevant text from the webpage, ignoring menus/ads."""
-        headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
+        headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
         try:
             response = requests.get(url, headers=headers, timeout=10)
             if response.status_code != 200:
                 return ""
-                
-            soup = BeautifulSoup(response.text, 'html.parser')
-            
+
+            soup = BeautifulSoup(response.text, "html.parser")
+
             # Target the article tag (used by 90% of news publishers)
-            article = soup.find('article')
+            article = soup.find("article")
             if article:
-                return article.get_text(separator=' ', strip=True)
-            
+                return article.get_text(separator=" ", strip=True)
+
             # Fallback: extract only paragraphs
-            paragraphs = soup.find_all('p')
-            text = ' '.join([p.get_text(strip=True) for p in paragraphs])
-            return text if text else soup.get_text(separator=' ', strip=True)
+            paragraphs = soup.find_all("p")
+            text = " ".join([p.get_text(strip=True) for p in paragraphs])
+            return text if text else soup.get_text(separator=" ", strip=True)
         except Exception:
             return ""
+
 
 source_cache = SourceCache()

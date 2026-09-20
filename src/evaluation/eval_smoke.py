@@ -1,5 +1,7 @@
 import sys
+
 from src.evaluation.metrics import ndcg_at_k
+
 
 def run_smoke():
     ideal = [100, 80, 60, 40]
@@ -10,6 +12,7 @@ def run_smoke():
         sys.exit(0)
     print("Smoke test failed.")
     sys.exit(1)
+
 
 if __name__ == "__main__":
     run_smoke()
