@@ -1,14 +1,15 @@
-name: J.A.R.V.I.S. Daily Briefing
+name: J.A.R.V.I.S. Daily Pipeline
 
 on:
+  push:
+    branches: [ "main" ]
   schedule:
-    - cron: '0 4 * * *' # 06:00 AM CEST (04:00 UTC)
-  workflow_dispatch: # Permette di avviarlo a mano con un click
+    - cron: '0 4 * * *'
+  workflow_dispatch:
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-24.04
-    
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -23,18 +24,24 @@ jobs:
           pip install -r requirements.txt
           pip install ruff pytest
           
-      - name: 🛡️ Pre-Flight Quality Checks & Tests
-        run: |
-          ruff check .
-          pytest tests/
-          python -m src.evaluation.eval_smoke
-          
+      - name: Code Quality (Ruff)
+        run: ruff check . --output-format=github
+        continue-on-error: false
+        
+      - name: Unit & Security Tests (Pytest)
+        run: pytest tests/
+        
+      - name: Evaluation Smoke Test
+        run: python -m src.evaluation.eval_smoke
+        
       - name: Run J.A.R.V.I.S. Orchestrator
+        if: github.event_name != 'push' # Esegui API costose solo su schedule/dispatch
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         run: python -m src.orchestrator
         
-      - name: Commit and Push Update
+      - name: Deploy to Pages
+        if: github.event_name != 'push'
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"

@@ -1,4 +1,4 @@
-# 🧠 J.A.R.V.I.S. - Enterprise AI Intelligence Platform
+# 🧠 J.A.R.V.I.S. - Evidence-Grounded AI Intelligence Platform
 
 ![Python](https://img.shields.io/badge/Python-3.12-blue)
 ![LangGraph](https://img.shields.io/badge/Orchestration-LangGraph-orange)
@@ -60,14 +60,15 @@ Financial metrics (daily return, annualized historical volatility, regime labels
 
 ## 📊 Evaluation & Benchmarking
 
-Evaluated on a versioned offline relevance benchmark (120 articles across multiple domains, including hard negatives and freshness decay).
+Evaluated offline on a curated 120-item relevance benchmark containing multi-domain events, hard negatives, and freshness decay. To ensure strict reproducibility, benchmarking utilizes a fixed `REFERENCE_TIME` parameter to calculate deterministic temporal decay independently of the live production clock.
 
-| System | NDCG@3 | NDCG@5 | Precision@5 | Recall@5 |
-|---|---|---|---|---|
-| Baseline (Deterministic Scoring Only) | 0.9267 | 0.9400 | 1.0000 | 0.0833 |
-| Current (Deterministic + LLM Reranking) | 0.9987 | 0.9877 | 1.0000 | 0.0833 |
+| System | NDCG@3 | NDCG@5 | P@3 | P@5 | R@5 |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Baseline 0 (Input Order)**  | 0.9267 | 0.9400 | 1.0000 | 1.0000 | 0.0833 |
+| **Baseline 1 (Deterministic Only)** | 0.9719 | 0.9764 | 1.0000 | 1.0000 | 0.0833 |
+| **Current (Deterministic + LLM)** Current_LLM  | 1.0000 | 0.9851 | 1.0000 | 1.0000 | 0.0833 |
 
-> **Note:** Metrics demonstrate the value of the Hybrid architecture. While the deterministic filter effectively surfaces highly relevant items (Precision=1.0), the LLM Semantic Reranker optimizes the absolute Top-3 ordering, achieving near-perfect NDCG@3 on the test distribution.
+*Note: Metrics prove the viability of the hybrid architecture. Baseline 1 (Python math) effectively filters noise to surface highly relevant items (P=1.0), while the LLM Semantic Reranker optimizes the absolute Top-3 ordering without reading 120 documents.*
 
 ## 🛡️ Security & Reliability
 

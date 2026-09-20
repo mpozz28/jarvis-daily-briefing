@@ -18,7 +18,7 @@ SOURCE_QUALITY_WEIGHTS = {
     "default": 0.5          # Fonti sconosciute o generiche
 }
 
-def calculate_freshness_score(published_date_str: str) -> float:
+def calculate_freshness_score(published_date_str: str, reference_time: datetime = None) -> float:
     """
     Calcola un decadimento temporale (Time Decay).
     Oggi/Ieri = punteggio alto. >2 giorni = punteggio crolla.
@@ -27,8 +27,8 @@ def calculate_freshness_score(published_date_str: str) -> float:
         return 0.5 # Neutro se manca la data
 
     try:
-        now = datetime.now(timezone.utc)
-        tzinfos = {"EDT": -4*3600, "EST": -5*3600, "CDT": -5*3600, "CST": -6*3600, "PDT": -7*3600, "PST": -8*3600}
+        # SECURITY/EVAL FIX: Usa reference_time se fornito (per i benchmark), altrimenti usa now()
+        now = reference_time or datetime.now(timezone.utc)
         
         # Gestione fallback per stringhe non formattate
         if "oggi" in str(published_date_str).lower() or "today" in str(published_date_str).lower():
@@ -64,7 +64,7 @@ def calculate_source_score(source_name: str) -> float:
             
     return SOURCE_QUALITY_WEIGHTS["default"]
 
-def score_and_filter_candidates(news_list: list, max_candidates: int = 20) -> list:
+def score_and_filter_candidates(news_list: list, max_candidates: int = 20, reference_time: datetime = None) -> list:
     """
     Pipeline deterministica: valuta tutti gli articoli e restituisce i Top K
     con i metadati dei punteggi esposti in modo trasparente.
@@ -75,8 +75,8 @@ def score_and_filter_candidates(news_list: list, max_candidates: int = 20) -> li
     scored_news = []
     
     for item in news_list:
-        # 1. Estrazione metriche
-        freshness = calculate_freshness_score(item.get('published', ''))
+        # 1. Estrazione metriche passando il reference_time
+        freshness = calculate_freshness_score(item.get('published', ''), reference_time=reference_time)
         source_quality = calculate_source_score(item.get('source', ''))
         
         # 2. Formula Deterministica Composita (Customizzabile)

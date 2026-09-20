@@ -5,7 +5,7 @@ from src.agents.scoring_agent import score_and_filter_candidates
 
 logger = logging.getLogger(__name__)
 
-def rank_and_filter(news_list: list, max_items: int = 15) -> list:
+def rank_and_filter(news_list: list, max_items: int = 15, reference_time=None) -> list:
     """
     Fase 1: Pre-filtraggio deterministico veloce (Python).
     Fase 2: Reranking semantico di precisione (LLM-as-a-Judge).
@@ -14,8 +14,8 @@ def rank_and_filter(news_list: list, max_items: int = 15) -> list:
         return []
 
     # --- FASE 1: DETERMINISTIC SCORING ---
-    # Riduciamo il rumore: teniamo solo i 20 candidati migliori basati su fonte e data.
-    top_candidates = score_and_filter_candidates(news_list, max_candidates=20)
+    # Passiamo il reference_time per consentire l'evaluation riproducibile nel tempo
+    top_candidates = score_and_filter_candidates(news_list, max_candidates=20, reference_time=reference_time)
 
     # --- FASE 2: LLM SEMANTIC RERANKING ---
     logger.info("Executing LLM Semantic Reranking on Top Candidates...")
@@ -54,12 +54,10 @@ Format required:
             
     except Exception as e:
         logger.error(f"LLM Reranking failed: {e}. Falling back to deterministic sorting.")
-        # Se l'LLM fallisce, abbiamo un fallback naturale perfetto: il punteggio deterministico!
         pass
 
     # Aggiorniamo i punteggi finali
     for n in top_candidates:
-        # Se l'LLM ha funzionato, usiamo il suo score, altrimenti usiamo il deterministic score come salvagente
         n['relevance_score'] = score_map.get(str(n.get('id')), n.get('deterministic_score', 0))
         
     # Ultimo sorting definitivo

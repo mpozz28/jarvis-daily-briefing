@@ -1,15 +1,28 @@
+import os
+import re
 from src.agents.qa_agent import QAAgent
 
-def test_xss_payload_in_evidence_is_handled():
-    """Verifica che payload XSS vengano estratti e non eseguiti, demandando la sanitizzazione al frontend."""
+def test_frontend_xss_protection_enforced():
+    """Static analysis to ensure innerHTML is strictly wrapped in DOMPurify."""
+    index_path = os.path.join(os.path.dirname(__file__), '../docs/index.html')
+    with open(index_path, 'r', encoding='utf-8') as f:
+        html_content = f.read()
+    
+    # Trova tutti gli utilizzi di innerHTML
+    inner_html_assignments = re.findall(r'\.innerHTML\s*=\s*(.+);', html_content)
+    for assignment in inner_html_assignments:
+        # Verifica che l'assegnazione passi attraverso DOMPurify
+        assert "DOMPurify.sanitize(" in assignment, f"Vulnerabilità XSS trovata: innerHTML assegnato senza DOMPurify -> {assignment}"
+
+def test_backend_neutrality_on_malicious_payloads():
+    """Verifica che il backend non vada in crash e non modifichi payload XSS (delega al frontend)."""
     agent = QAAgent()
-    
-    malicious_text = "<script>alert('XSS')</script> This is the answer."
-    evidence = "<script>alert('XSS')</script>"
-    
-    # Passiamo (is_supported=True, evidence, source_text)
-    conf = agent._calculate_deterministic_confidence(True, evidence, malicious_text)
-    
-    # La confidenza sarà calcolata correttamente tramite SequenceMatcher. 
-    # Nessun crash Python. La prevenzione XSS reale è poi garantita dal frontend.
-    assert conf > 0
+    malicious_payloads = [
+        "<script>alert(1)</script>",
+        "<img src=x onerror=alert(1)>",
+        "<a href=\"javascript:alert(1)\">click</a>"
+    ]
+    for payload in malicious_payloads:
+        # Passiamo payload malevoli come contesto ed evidenza
+        conf = agent._calculate_deterministic_confidence(True, payload, f"Context with {payload}")
+        assert conf > 0.0 # L'algoritmo matematico non deve fallire sui tag HTML
