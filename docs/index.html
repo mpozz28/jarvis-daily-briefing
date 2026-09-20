@@ -215,6 +215,9 @@
                     items.forEach(item => { item.domain_label = domain.replace('_', ' ').toUpperCase(); allItems.push(item); });
                 }
 
+                // SISTEMA DI TRACKING PER IL GRAFO 1-a-N
+                const renderedConnections = new Set(); 
+
                 allItems.forEach(item => {
                     htmlContent += `
                     <article class="briefing-item active" id="${item.id}">
@@ -227,17 +230,31 @@
                         <a href="${item.source_url}" target="_blank" style="font-family: var(--font-ui); font-size: 0.8rem; color: var(--blueprint-blue); text-decoration: none; font-weight: 600;">[ Read Primary Source ]</a>
                     `;
 
-                    data.connections.forEach(conn => {
-                        if (conn.item_ids.includes(item.id)) {
-                            htmlContent += `
-                            <div class="connect-dots">
-                                <div class="connect-dots-header">
-                                    <span class="confidence-indicator"></span> Connect the Dots: System Correlation
-                                </div>
-                                <em>${conn.hypothesis}</em>
-                            </div>`;
-                        }
-                    });
+                    // Rendering degli insight
+                    if (data.connections && Array.isArray(data.connections)) {
+                        data.connections.forEach(conn => {
+                            if (conn.item_ids && Array.isArray(conn.item_ids) && conn.item_ids.map(String).includes(String(item.id))) {
+                                
+                                // CONTROLLO: Disegniamo l'insight solo se non lo abbiamo già fatto!
+                                if (!renderedConnections.has(conn.id)) {
+                                    
+                                    const confidencePct = conn.confidence ? Math.round(conn.confidence * 100) : "N/A";
+                                    
+                                    htmlContent += `
+                                    <div class="connect-dots">
+                                        <div class="connect-dots-header">
+                                            <span class="confidence-indicator"></span> Cross-Document Correlation (Confidence: ${confidencePct}%)
+                                        </div>
+                                        <em>${conn.hypothesis}</em>
+                                    </div>`;
+                                    
+                                    // Segnamolo come "già disegnato" per non ripeterlo negli articoli successivi
+                                    renderedConnections.add(conn.id); 
+                                }
+                            }
+                        });
+                    }
+
                     htmlContent += `</article>`;
                 });
                 newsStream.innerHTML = htmlContent;

@@ -5,7 +5,7 @@ import re
 import requests
 from bs4 import BeautifulSoup
 from datetime import datetime, timezone
-from typing import List, Dict
+from typing import List, Dict, Any, Union
 from pydantic import BaseModel, Field, ValidationError
 
 logger = logging.getLogger(__name__)
@@ -21,12 +21,14 @@ class BriefingItem(BaseModel):
 
 class Connection(BaseModel):
     id: str
-    item_ids: List[str]
+    item_ids: List[str]  # Adesso supporta array multipli (Multi-Document Reasoning)
     hypothesis: str
-    confidence: str = Field(pattern="^(bassa|media|alta)$")
+    domains: List[str] = []
+    # Accettiamo sia numero che stringa per non spaccare nulla in caso l'LLM si sbagli
+    confidence: Union[float, str] = 0.5 
 
 class BriefingSchema(BaseModel):
-    schema_version: int = 1
+    schema_version: int = 2  # Versione 2 per l'architettura Multi-Document
     generated_at: str
     date_label: str
     narrative_briefing: str = ""
@@ -116,22 +118,29 @@ class JsonExporter:
             )
             domains_dict[domain_key].append(briefing_item)
 
+        # AGGIORNATO PER IL NUOVO MULTI-DOCUMENT REASONING GRAPH
         connections = []
         for idx, conn_data in enumerate(insights_data):
-            target_id = conn_data.get("target_id")
-            insight_text = conn_data.get("insight", "")
+            # Estraiamo i dati dal nuovo formato generato in connect_dots_agent.py
+            insight_id = conn_data.get("insight_id", f"conn-{date_str}-{idx}")
+            connected_items = conn_data.get("item_ids", [])
+            hypothesis_text = conn_data.get("hypothesis", "")
+            domains = conn_data.get("domains", [])
+            confidence = conn_data.get("confidence", 0.8)
             
-            if target_id and insight_text:
+            # Se è presente una vera correlazione Multi-Document (ha più item associati)
+            if connected_items and hypothesis_text:
                 conn = Connection(
-                    id=f"conn-{date_str}-{idx}",
-                    item_ids=[target_id],
-                    hypothesis=insight_text,
-                    confidence="alta"
+                    id=insight_id,
+                    item_ids=connected_items,
+                    hypothesis=hypothesis_text,
+                    domains=domains,
+                    confidence=confidence
                 )
                 connections.append(conn)
 
         payload = {
-            "schema_version": 1,
+            "schema_version": 2,
             "generated_at": now.isoformat(),
             "date_label": now.strftime("%d %B %Y"),
             "narrative_briefing": narrative_briefing,
