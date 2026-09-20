@@ -83,7 +83,7 @@ def evaluate_ranked_relevances(
         )
         metrics["mrr"][str(k)] = round(mrr_at_k(predicted, k, threshold), 4)
         metrics["average_precision"][str(k)] = round(
-            average_precision_at_k(predicted, k, threshold), 4
+            average_precision_at_k(predicted, ideal, k, threshold), 4
         )
 
     return metrics
