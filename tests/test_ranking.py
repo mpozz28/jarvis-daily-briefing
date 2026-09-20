@@ -15,4 +15,4 @@ def test_ranking_metrics():
     assert precision_at_k([100, 20, 60], 3, 50) == 2 / 3
     assert recall_at_k([100, 20, 60], [100, 80, 60, 40], 3, 50) == 2 / 3
     assert mrr_at_k([20, 40, 100], 3, 50) == 1 / 3
-    assert average_precision_at_k([100, 20, 60], 3, 50) == 1.0
+    assert average_precision_at_k([100, 20, 60], 3, 50) == 5 / 6
