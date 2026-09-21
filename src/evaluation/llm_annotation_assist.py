@@ -77,9 +77,6 @@ def parse_response(raw: str, expected_ids: set[str]) -> dict[str, dict]:
             "rationale": str(obj.get("rationale", "")).strip(),
             "flags": obj.get("flags", []),
         }
-    missing = expected_ids - set(parsed)
-    if missing:
-        raise ValueError(f"Missing annotations for ids: {sorted(missing)}")
     return parsed
 
 def annotate_queue(records: list[dict], batch_size: int, model_a: str, model_b: str | None, limit: int | None) -> dict:
@@ -87,31 +84,49 @@ def annotate_queue(records: list[dict], batch_size: int, model_a: str, model_b: 
     router = LLMFallbackRouter(temperature=0.0)
     suggestions = []
 
-    for start in range(0, len(selected), batch_size):
-        batch = selected[start:start + batch_size]
-        parsed = parse_response(
-            router.invoke_with_metadata(build_prompt(batch), system_prompt=SCORING_SYSTEM_PROMPT, preferred_model=model_a)[0],
-            {str(item["id"]) for item in batch},
-        )
-        for item in batch:
-            value = parsed[str(item["id"])]
-            suggestions.append({
-                "id": str(item["id"]),
-                "model": model_a,
-                "score": value["score"],
-                "rationale": value["rationale"],
-                "flags": value["flags"],
-            })
+    def annotate_batches(items, requested_model, slot):
+        nonlocal suggestions
+        for start in range(0, len(items), batch_size):
+            batch = items[start:start + batch_size]
+            pending = list(batch)
+            for attempt in range(3):
+                raw, actual_model = router.invoke_with_metadata(
+                    build_prompt(pending),
+                    system_prompt=SCORING_SYSTEM_PROMPT,
+                    preferred_model=requested_model,
+                )
+                parsed = parse_response(raw, {str(item["id"]) for item in pending})
+                missing = [item for item in pending if str(item["id"]) not in parsed]
+                if not missing:
+                    for item in batch:
+                        value = parsed[str(item["id"])]
+                        suggestions.append({
+                            "id": str(item["id"]),
+                            "slot": slot,
+                            "requested_model": requested_model,
+                            "actual_model": actual_model,
+                            "score": value["score"],
+                            "rationale": value["rationale"],
+                            "flags": value["flags"],
+                        })
+                    break
+                pending = missing
+            else:
+                raise ValueError(f"Missing annotations after retries: {[str(item["id"]) for item in pending]}")
+
+    annotate_batches(selected, model_a, "A")
 
     double_ids = {str(item["id"]) for item in selected if item.get("double_annotation_required")}
     if model_b and double_ids:
         double_items = [item for item in selected if str(item["id"]) in double_ids]
         for start in range(0, len(double_items), batch_size):
             batch = double_items[start:start + batch_size]
-            parsed = parse_response(
-                router.invoke_with_metadata(build_prompt(batch), system_prompt=SCORING_SYSTEM_PROMPT, preferred_model=model_b)[0],
-                {str(item["id"]) for item in batch},
+            raw, actual_model = router.invoke_with_metadata(
+                build_prompt(batch),
+                system_prompt=SCORING_SYSTEM_PROMPT,
+                preferred_model=model_b,
             )
+            parsed = parse_response(raw, {str(item["id"]) for item in batch})
             for item in batch:
                 value = parsed[str(item["id"])]
                 suggestions.append({
