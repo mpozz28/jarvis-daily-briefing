@@ -38,9 +38,30 @@ def parse_response(raw: str, expected_ids: set[str]) -> dict[str, dict]:
     text = raw.strip()
     if text.startswith("```"):
         text = text.removeprefix("```json").removeprefix("```").removesuffix("```").strip()
-    data = json.loads(text)
+    decoder = json.JSONDecoder()
+    objects = []
+    cursor = 0
+    while cursor < len(text):
+        while cursor < len(text) and text[cursor].isspace():
+            cursor += 1
+        if cursor >= len(text):
+            break
+        obj, end = decoder.raw_decode(text, cursor)
+        objects.append(obj)
+        cursor = end
+
+    if len(objects) == 1 and isinstance(objects[0], list):
+        data = objects[0]
+    else:
+        data = []
+        for obj in objects:
+            if isinstance(obj, list):
+                data.extend(obj)
+            else:
+                data.append(obj)
+
     if not isinstance(data, list):
-        raise ValueError("LLM response must be a JSON array")
+        raise ValueError("LLM response must contain a JSON array or JSON objects")
     parsed = {}
     for obj in data:
         if not isinstance(obj, dict):
@@ -69,7 +90,7 @@ def annotate_queue(records: list[dict], batch_size: int, model_a: str, model_b: 
     for start in range(0, len(selected), batch_size):
         batch = selected[start:start + batch_size]
         parsed = parse_response(
-            router.invoke(build_prompt(batch), system_prompt=SCORING_SYSTEM_PROMPT, preferred_model=model_a),
+            router.invoke_with_metadata(build_prompt(batch), system_prompt=SCORING_SYSTEM_PROMPT, preferred_model=model_a)[0],
             {str(item["id"]) for item in batch},
         )
         for item in batch:
@@ -88,7 +109,7 @@ def annotate_queue(records: list[dict], batch_size: int, model_a: str, model_b: 
         for start in range(0, len(double_items), batch_size):
             batch = double_items[start:start + batch_size]
             parsed = parse_response(
-                router.invoke(build_prompt(batch), system_prompt=SCORING_SYSTEM_PROMPT, preferred_model=model_b),
+                router.invoke_with_metadata(build_prompt(batch), system_prompt=SCORING_SYSTEM_PROMPT, preferred_model=model_b)[0],
                 {str(item["id"]) for item in batch},
             )
             for item in batch:
