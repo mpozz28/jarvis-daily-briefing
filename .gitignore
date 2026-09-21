@@ -19,3 +19,6 @@ eval/annotation_manifest.json
 eval/annotation_quality_report.json
 eval/gold_dataset_v1.json
 eval/results/*.json
+eval/annotation_assistance_v1.json
+eval/annotation_sheet_v1.csv
+eval/annotation_queue_annotated.json
