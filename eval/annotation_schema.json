@@ -10,7 +10,10 @@
     "area",
     "source",
     "published",
-    "expected_relevance"
+    "expected_relevance",
+    "dataset_version",
+    "gold_score_source",
+    "gold_created_at"
   ],
   "properties": {
     "id": {
@@ -73,21 +76,6 @@
     "annotation_version": {
       "type": "string",
       "minLength": 1
-    },
-    "annotator_ids": {
-      "type": "array",
-      "items": {
-        "type": "string",
-        "minLength": 1
-      },
-      "minItems": 1
-    },
-    "annotated_at": {
-      "type": "string",
-      "format": "date-time"
-    },
-    "notes": {
-      "type": "string"
     },
     "gold_score_source": {
       "type": "string",
