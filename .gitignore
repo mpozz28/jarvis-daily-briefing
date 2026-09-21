@@ -10,15 +10,5 @@ __pycache__/
 *.db
 *.sqlite3
 
-# Evaluation artifacts generated from real-world collection/annotation
-eval/real_corpus_unannotated.json
-eval/real_corpus_manifest.json
-eval/annotation_queue.json
-eval/double_annotation_sample.json
-eval/annotation_manifest.json
-eval/annotation_quality_report.json
-eval/gold_dataset_v1.json
+# Evaluation outputs
 eval/results/*.json
-eval/annotation_assistance_v1.json
-eval/annotation_sheet_v1.csv
-eval/annotation_queue_annotated.json
