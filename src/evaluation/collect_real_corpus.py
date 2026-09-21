@@ -24,6 +24,8 @@ DEFAULT_FEEDS = {
     "Guardian_Technology": {"url": "https://www.theguardian.com/technology/rss", "area_hint": "TECH"},
     "Guardian_Business": {"url": "https://www.theguardian.com/business/rss", "area_hint": "FINANCE"},
     "Guardian_Science": {"url": "https://www.theguardian.com/science/rss", "area_hint": "SCIENCE"},
+    "NASA_Science": {"url": "https://science.nasa.gov/feed/", "area_hint": "SCIENCE"},
+    "JPL_News": {"url": "https://www.jpl.nasa.gov/feeds/news/", "area_hint": "SCIENCE"},
     "ArXiv_AI": {"url": "https://export.arxiv.org/rss/cs.AI", "area_hint": "AI/ML"},
     "ArXiv_ML": {"url": "https://export.arxiv.org/rss/cs.LG", "area_hint": "AI/ML"},
 }
@@ -289,10 +291,38 @@ def assign_temporal_split(items: list[dict], test_days: int) -> None:
             item["split"] = "dev"
 
 
+def select_balanced_items(items: list[dict], max_items: int, max_per_source_output: int) -> tuple[list[dict], int]:
+    grouped = {}
+    for item in items:
+        grouped.setdefault(item["source"], []).append(item)
+    for source_items in grouped.values():
+        source_items.sort(key=lambda item: item["published"] or "", reverse=True)
+
+    selected = []
+    source_counts = {source: 0 for source in grouped}
+    while len(selected) < max_items:
+        added = False
+        for source in sorted(grouped):
+            if len(selected) >= max_items:
+                break
+            if source_counts[source] >= max_per_source_output:
+                continue
+            index = source_counts[source]
+            if index >= len(grouped[source]):
+                continue
+            selected.append(grouped[source][index])
+            source_counts[source] += 1
+            added = True
+        if not added:
+            break
+    return selected, len(items) - len(selected)
+
+
 def collect_corpus(
     per_source: int,
     max_items: int,
     test_days: int,
+    max_per_source_output: int,
 ) -> tuple[list[dict], dict]:
     all_items = []
     source_stats = {}
@@ -316,11 +346,9 @@ def collect_corpus(
             continue
         unique[key] = item
 
-    corpus = sorted(
-        unique.values(),
-        key=lambda item: item["published"] or "",
-        reverse=True,
-    )[:max_items]
+    corpus, quota_removed = select_balanced_items(
+        list(unique.values()), max_items, max_per_source_output
+    )
 
     assign_temporal_split(corpus, test_days)
 
@@ -329,9 +357,11 @@ def collect_corpus(
         "feed_count": len(DEFAULT_FEEDS),
         "per_source_limit": per_source,
         "max_items": max_items,
+        "max_per_source_output": max_per_source_output,
         "test_window_days": test_days,
         "raw_items": len(all_items),
         "exact_duplicates_removed": duplicate_count,
+        "quota_items_not_selected": quota_removed,
         "final_items": len(corpus),
         "sources": source_stats,
         "label_status": "unannotated",
@@ -346,7 +376,13 @@ def main() -> None:
         description="Collect real RSS articles for manual J.A.R.V.I.S. ranking annotation."
     )
     parser.add_argument("--per-source", type=int, default=50)
-    parser.add_argument("--max-items", type=int, default=500)
+    parser.add_argument("--max-items", type=int, default=450)
+    parser.add_argument(
+        "--max-per-source-output",
+        type=int,
+        default=30,
+        help="Maximum articles retained from each source in the final corpus.",
+    )
     parser.add_argument(
         "--test-days",
         type=int,
@@ -361,6 +397,7 @@ def main() -> None:
         args.per_source,
         args.max_items,
         args.test_days,
+        args.max_per_source_output,
     )
 
     os.makedirs(os.path.dirname(args.output) or ".", exist_ok=True)
