@@ -1,104 +1,91 @@
 # J.A.R.V.I.S. Evaluation Protocol
 
-This directory contains the offline ranking benchmark and the protocol used to build a research-grade relevance dataset.
+This directory contains the offline ranking regression benchmark and the protocol for building a research-grade real-news relevance dataset.
 
-## Current benchmark
+## 1. Development regression benchmark
 
-`ranking_dataset.json` is a small regression fixture used to detect ranking regressions during development. It is intentionally treated as a **curated regression set**, not as evidence of general live-news ranking performance.
-
-The evaluator uses NDCG@3/5/10, Precision@K, Recall@K, MRR@K and Average Precision@K against the ground-truth relevance set.
-
-Deterministic benchmark:
-
-```powershell
-python -m src.evaluation.eval_ranking
-```
-
-Live LLM reranking is opt-in:
-
-```powershell
-python -m src.evaluation.eval_ranking --include-llm
-```
-
-## Real corpus collection
-
-The repository includes `src/evaluation/collect_real_corpus.py`, a reproducible RSS collector for building an **unannotated** real-news corpus.
+`ranking_dataset.json` is a curated regression fixture used to detect ranking regressions. It is not evidence of general live-news ranking performance.
 
 Run:
 
-```powershell
-python -m src.evaluation.collect_real_corpus --per-source 50 --max-items 500
-```
+    python -m src.evaluation.eval_ranking
 
-The collector:
+Live LLM reranking:
 
-- pulls from multiple independent RSS sources;
-- normalizes URLs and removes common tracking parameters;
-- normalizes HTML/text fields;
-- assigns a transparent topic hint;
-- removes exact URL duplicates;
-- creates a temporal `dev` / `test` split;
-- writes a collection manifest;
-- deliberately leaves gold relevance unassigned.
+    python -m src.evaluation.eval_ranking --include-llm
 
-Outputs:
+Metrics: NDCG@3/5/10, Precision@K, Recall@K, MRR@K and Average Precision@K.
 
-- `eval/real_corpus_unannotated.json`
-- `eval/real_corpus_manifest.json`
+## 2. Real corpus collection
 
-The generated corpus must be manually reviewed and annotated before being used as a gold benchmark.
+`src/evaluation/collect_real_corpus.py` builds an unannotated real-news corpus from multiple RSS sources.
 
-## Target real-world evaluation set
+Recommended collection:
 
-Target approximately 300-500 real articles across TECH, AI/ML, FINANCE, SCIENCE, WORLD and POLITICS, with multiple publication-age bands and at least six independent source domains. At least 20% should be independently double-annotated.
+    python -m src.evaluation.collect_real_corpus --per-source 50 --max-items 450 --max-per-source-output 30 --test-days 1
 
-## Dataset format
+The collector normalizes URLs, removes exact duplicates, limits per-source representation, assigns transparent topic areas, creates a temporal dev/test split, and never assigns gold relevance automatically.
 
-The machine-readable annotation schema is defined in `annotation_schema.json`. The unannotated collector output is additionally described by `real_corpus_schema.json`.
+Generated collection artifacts are intentionally ignored by Git.
 
-Required gold fields include `id`, `title`, `summary`, `area`, `source`, `published` and `expected_relevance`.
+## 3. Annotation queue
 
-The evaluation label should describe **content relevance**, not source prestige. Source quality is already an input to the deterministic ranker and must not be smuggled into the gold label.
+Create a reproducible randomized queue with a stratified 20% double-annotation sample:
 
-## Relevance rubric
+    python -m src.evaluation.prepare_annotation_queue --double-fraction 0.20 --seed 42
+
+Current corpus snapshot: 366 records, 73 selected for independent second annotation.
+
+Do not expose model rankings to annotators before relevance scores are assigned.
+
+## 4. Relevance rubric
 
 | Score | Interpretation |
 |---|---|
-| 90-100 | Critical: major event or development with immediate, broad significance |
-| 75-89 | High: clearly important and worth prominent briefing placement |
-| 50-74 | Moderate: useful context or material development, but not top-tier |
+| 90-100 | Critical: major development with immediate, broad briefing significance |
+| 75-89 | High: clearly important and suitable for prominent briefing placement |
+| 50-74 | Moderate: useful material development or context, but not top-tier |
 | 25-49 | Low: limited significance, narrow impact, or weak novelty |
-| 0-24 | Irrelevant for the briefing, obsolete, duplicate, or otherwise unsuitable |
+| 0-24 | Minimal: little briefing value, obsolete, duplicate, or otherwise unsuitable |
 
-Annotators should judge the article itself using the same briefing objective for every item. Do not increase a score simply because the source is prestigious, the headline is sensational, or the topic is personally interesting.
+Judge content relevance to the briefing objective, not source prestige. Source quality is already an input to the deterministic ranker and must not be smuggled into the gold label.
 
-## Duplicate and syndicated stories
+## 5. Annotation validation and agreement
 
-Near-duplicates should be grouped with `duplicate_group`. Rewrites or syndicated copies of the same underlying event should not become multiple independent gold signals.
+Before finalization:
 
-## Temporal protocol
+    python -m src.evaluation.validate_annotations
 
-Use a time-based holdout:
+After annotation is complete:
 
-- `dev`: older articles used to refine the scoring protocol;
-- `test`: a later time window kept untouched until the protocol is frozen.
+    python -m src.evaluation.validate_annotations --require-complete
 
-Test labels should not be used to tune thresholds, prompt wording, source weights or model selection.
+The report includes completeness, double-annotation count, exact agreement, within-5/10/20-point agreement, mean absolute score difference and weighted kappa over ten relevance bins.
 
-## Annotation quality control
+Disagreements must be adjudicated and recorded; they are never silently averaged.
 
-At least 20% of the real corpus should be independently labeled by a second annotator. Resolve disagreements using the written rubric and document adjudication.
+## 6. Freeze the gold dataset
 
-Do not inspect model rankings before assigning gold labels.
+Once annotation and adjudication are complete:
 
-## Reporting
+    python -m src.evaluation.finalize_gold_dataset --version real_news_v1
 
-Every benchmark result should report dataset version, dataset size, relevance threshold, reference time, split, systems compared, NDCG@3/5/10, Recall@5/10, MRR@5, AP@5/10, LLM model identifier when applicable, latency, token usage and estimated cost.
+This creates `eval/gold_dataset_v1.json`. A double-annotated disagreement without an explicit adjudicated score causes finalization to fail.
 
-Results from the current 120-item fixture must remain labeled as regression-test results. They should not be described as generalization performance.
+## 7. Temporal evaluation protocol
 
-## Current limitations
+The dev split is available for refining thresholds, prompts, source weights and model configuration. The test split is a later temporal holdout and must remain untouched until the protocol is frozen.
 
-The current fixture is intentionally small and contains curated/synthetic-style examples. It is useful for regression detection but insufficient for a strong claim about real-world ranking quality.
+Do not tune on test labels.
 
-The next research step is **data quality and annotation quality**, not further metric proliferation.
+## 8. Reporting requirements
+
+Real benchmark reports should include dataset version, collection timestamp, article count, source domains, dev/test split, topic distribution, annotation coverage, double-annotation agreement, relevance threshold, fixed reference time, NDCG@3/5/10, Recall@5/10, MRR@5, AP@5/10, LLM model identifier, latency, token usage and estimated cost.
+
+The current 120-item fixture remains explicitly a regression benchmark, not generalization performance.
+
+## 9. Research limitations
+
+The real corpus is a manually annotated benchmark built from RSS metadata. It is not a random sample of all global news; topic and source distributions describe this collection snapshot only.
+
+The next scientific bottleneck is annotation quality and dataset validity, not adding more ranking metrics.
