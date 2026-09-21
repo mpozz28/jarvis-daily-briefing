@@ -112,30 +112,21 @@ def annotate_queue(records: list[dict], batch_size: int, model_a: str, model_b: 
                     break
                 pending = missing
             else:
-                raise ValueError(f"Missing annotations after retries: {[str(item["id"]) for item in pending]}")
+                missing_ids = [str(item["id"]) for item in pending]\n                raise ValueError(f"Missing annotations after retries: {missing_ids}")
 
     annotate_batches(selected, model_a, "A")
 
-    double_ids = {str(item["id"]) for item in selected if item.get("double_annotation_required")}
+    double_ids = {
+        str(item["id"])
+        for item in selected
+        if item.get("double_annotation_required")
+    }
     if model_b and double_ids:
-        double_items = [item for item in selected if str(item["id"]) in double_ids]
-        for start in range(0, len(double_items), batch_size):
-            batch = double_items[start:start + batch_size]
-            raw, actual_model = router.invoke_with_metadata(
-                build_prompt(batch),
-                system_prompt=SCORING_SYSTEM_PROMPT,
-                preferred_model=model_b,
-            )
-            parsed = parse_response(raw, {str(item["id"]) for item in batch})
-            for item in batch:
-                value = parsed[str(item["id"])]
-                suggestions.append({
-                    "id": str(item["id"]),
-                    "model": model_b,
-                    "score": value["score"],
-                    "rationale": value["rationale"],
-                    "flags": value["flags"],
-                })
+        double_items = [
+            item for item in selected
+            if str(item["id"]) in double_ids
+        ]
+        annotate_batches(double_items, model_b, "B")
 
     return {
         "created_at": datetime.now(timezone.utc).isoformat(),
