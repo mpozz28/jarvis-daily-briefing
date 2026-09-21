@@ -6,7 +6,9 @@ __pycache__/
 # File Segreti
 .env
 
-# Database (evitiamo di caricare file enormi o DB corrotti)
-# Nota: L'azione di GitHub creerà il proprio DB temporaneo
+# Database
 *.db
 *.sqlite3
+
+# Evaluation outputs
+eval/results/*.json

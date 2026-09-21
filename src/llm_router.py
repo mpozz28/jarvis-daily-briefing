@@ -4,27 +4,39 @@ import time
 import requests
 from dotenv import load_dotenv
 
+from src.config import LLM_MODEL_POOL
 from src.utils.observability import logger, metrics_tracker
 
 load_dotenv()
 
-# MODEL POOL: Valid and active models in GroqCloud
-MODELS_POOL = [
-    "openai/gpt-oss-20b",  # Primary: 1000 t/s, extremely fast, perfect for Q&A
-    "openai/gpt-oss-120b",  # Secondary: 500 t/s, brilliant for ranking and writing
-    "qwen/qwen3.8-27b",  # Fallback 1
-    "openai/gpt-oss-safeguard-20b",  # Fallback 2 (Last resort)
-]
-
 
 class LLMFallbackRouter:
+    """Groq router with explicit fallback order and per-model observability."""
+
     def __init__(self, temperature: float = 0.1):
         self.temperature = temperature
         self.groq_api_key = os.getenv("GROQ_API_KEY")
+        self.model_pool = list(LLM_MODEL_POOL)
 
     def invoke(
-        self, prompt: str, system_prompt: str = "", preferred_model: str | None = None
+        self,
+        prompt: str,
+        system_prompt: str = "",
+        preferred_model: str | None = None,
     ) -> str:
+        content, _ = self.invoke_with_metadata(
+            prompt=prompt,
+            system_prompt=system_prompt,
+            preferred_model=preferred_model,
+        )
+        return content
+
+    def invoke_with_metadata(
+        self,
+        prompt: str,
+        system_prompt: str = "",
+        preferred_model: str | None = None,
+    ) -> tuple[str, str]:
         if not self.groq_api_key:
             raise RuntimeError("No GROQ_API_KEY found in the .env file.")
 
@@ -38,14 +50,13 @@ class LLMFallbackRouter:
             "Content-Type": "application/json",
         }
 
-        candidate_models = list(MODELS_POOL)
+        candidate_models = list(self.model_pool)
         if preferred_model and preferred_model in candidate_models:
             candidate_models.remove(preferred_model)
             candidate_models.insert(0, preferred_model)
 
         last_error = ""
 
-        # Attempt up to 2 full loops across all available models
         for big_attempt in range(2):
             for model in candidate_models:
                 try:
@@ -68,65 +79,71 @@ class LLMFallbackRouter:
                         data = response.json()
                         content = data["choices"][0]["message"]["content"]
 
-                        # ESTRAZIONE TOKENS ESATTI DALL'API
                         usage = data.get("usage", {})
                         prompt_tokens = usage.get("prompt_tokens", 0)
-                        comp_tokens = usage.get("completion_tokens", 0)
+                        completion_tokens = usage.get("completion_tokens", 0)
 
-                        # REGISTRAZIONE NEL TRACKER GLOBALE
-                        metrics_tracker.record_call(
-                            model, prompt_tokens, comp_tokens, latency
+                        call_cost = metrics_tracker.record_call(
+                            model=model,
+                            prompt_tokens=prompt_tokens,
+                            completion_tokens=completion_tokens,
+                            latency=latency,
                         )
 
-                        logger.debug(
-                            f"LLM Call Success: {model} | {prompt_tokens} in / {comp_tokens} out | {round(latency, 2)}s"
+                        logger.info(
+                            "LLM call succeeded",
+                            extra={
+                                "component": "llm_router",
+                                "metrics": {
+                                    "model": model,
+                                    "prompt_tokens": prompt_tokens,
+                                    "completion_tokens": completion_tokens,
+                                    "latency_ms": round(latency * 1000, 2),
+                                    "estimated_cost_usd": round(call_cost, 8),
+                                },
+                            },
                         )
+                        return content, model
 
-                        return content
-
-                    # IF MODEL DOES NOT EXIST (e.g., account restrictions)
                     if response.status_code == 404:
-                        logger.warning(
-                            f"[Groq 404] Model {model} is not enabled on your account."
-                        )
-                        last_error = "Model 404"
-                        continue
-
-                    # RATE LIMIT HANDLING (429)
-                    if (
-                        response.status_code == 429
-                        or "rate_limit" in response.text.lower()
-                    ):
-                        logger.warning(
-                            f"[Groq RateLimit] {model} is saturated. Immediate switch to fallback..."
-                        )
-                        last_error = response.text
-                        continue
-
-                    # OTHER HTTP ERRORS
+                        last_error = f"Model unavailable: {model}"
+                    elif response.status_code == 429 or "rate_limit" in response.text.lower():
+                        last_error = f"Rate limited: {model}"
                     else:
-                        logger.warning(
-                            f"Error {response.status_code} on {model}: {response.text}"
-                        )
-                        last_error = response.text
-                        continue
+                        last_error = f"HTTP {response.status_code}: {model}"
 
-                except requests.exceptions.RequestException as e:
-                    logger.warning(f"Timeout or network error with {model}: {e}")
-                    last_error = str(e)
-                    continue
+                    logger.warning(
+                        "LLM model attempt failed",
+                        extra={
+                            "component": "llm_router",
+                            "metrics": {
+                                "model": model,
+                                "status_code": response.status_code,
+                                "attempt": big_attempt + 1,
+                            },
+                        },
+                    )
 
-            # If we reach this point, ALL models in the pool failed.
+                except requests.exceptions.RequestException as exc:
+                    last_error = str(exc)
+                    logger.warning(
+                        "LLM request failed",
+                        extra={
+                            "component": "llm_router",
+                            "metrics": {
+                                "model": model,
+                                "attempt": big_attempt + 1,
+                            },
+                        },
+                    )
+
             if big_attempt == 0:
                 logger.info(
-                    "[Wait State] All models saturated. Pausing for 15s before the second attempt..."
+                    "All configured LLM models failed; retrying fallback pool",
+                    extra={"component": "llm_router"},
                 )
                 time.sleep(15)
 
-        logger.error(
-            "Critical Failure: All Groq models are offline or saturated.",
-            extra={"component": "llm_router"},
-        )
         raise RuntimeError(f"Unable to retrieve a response. Last error: {last_error}")
 
 

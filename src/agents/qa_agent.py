@@ -7,6 +7,7 @@ import requests
 from bs4 import BeautifulSoup
 from duckduckgo_search import DDGS
 
+from src.config import LLM_DEFAULT_MODEL
 from src.llm_router import llm_router
 
 logger = logging.getLogger(__name__)
@@ -35,7 +36,7 @@ class QAAgent:
             response = llm_router.invoke(
                 prompt=prompt,
                 system_prompt="You are an ID router. Answer only with the ID or NONE.",
-                preferred_model="openai/gpt-oss-120b",
+                preferred_model=LLM_DEFAULT_MODEL,
             )
             latency = time.time() - start_time
 
@@ -208,7 +209,6 @@ class QAAgent:
 
             # 5. Aggiungiamo il badge visivo per il frontend
             final_answer = parsed_response.get("answer", "")
-            final_answer += f" <br><br><span style='font-size:0.85rem; color:var(--muted-ink); border-left: 2px solid var(--blueprint-blue); padding-left: 8px; display: block; margin-top: 8px;'><b>[Verified Evidence]:</b> <i>\"{evidence}\"</i><br><b>[Composite Confidence]:</b> {confidence}%</span>"
 
             logger.info(
                 "Grounded Q&A Generated with Mathematical Confidence",
@@ -225,6 +225,17 @@ class QAAgent:
                 "answer": final_answer,
                 "evidence": evidence,
                 "confidence": confidence,
+                "supported": True,
+                "source_url": target_item.get("source_url") if target_item else None,
+                "retrieval_method": (
+                    "live_article_and_web_search"
+                    if live_text and web_results
+                    else "live_article"
+                    if live_text
+                    else "web_search"
+                    if web_results
+                    else "briefing_summary"
+                ),
             }
 
         except Exception as e:
