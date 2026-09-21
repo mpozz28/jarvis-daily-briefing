@@ -112,7 +112,8 @@ def annotate_queue(records: list[dict], batch_size: int, model_a: str, model_b: 
                     break
                 pending = missing
             else:
-                missing_ids = [str(item["id"]) for item in pending]\n                raise ValueError(f"Missing annotations after retries: {missing_ids}")
+                missing_ids = [str(item["id"]) for item in pending]
+                raise ValueError(f"Missing annotations after retries: {missing_ids}")
 
     annotate_batches(selected, model_a, "A")
 
