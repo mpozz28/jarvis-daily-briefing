@@ -6,73 +6,61 @@ This directory contains the offline ranking benchmark and the protocol used to b
 
 `ranking_dataset.json` is a small regression fixture used to detect ranking regressions during development. It is intentionally treated as a **curated regression set**, not as evidence of general live-news ranking performance.
 
-The evaluator uses:
+The evaluator uses NDCG@3/5/10, Precision@K, Recall@K, MRR@K and Average Precision@K against the ground-truth relevance set.
 
-- NDCG@3, @5, @10 for graded relevance
-- Precision@K for binary relevance at a configurable threshold
-- Recall@K for retrieval coverage
-- MRR@K for the first relevant result
-- Average Precision@K against the ground-truth relevance set
-
-The standard command is deterministic and does not call an external LLM:
+Deterministic benchmark:
 
 ```powershell
 python -m src.evaluation.eval_ranking
 ```
 
-The live LLM reranker is opt-in:
+Live LLM reranking is opt-in:
 
 ```powershell
 python -m src.evaluation.eval_ranking --include-llm
 ```
 
+## Real corpus collection
+
+The repository includes `src/evaluation/collect_real_corpus.py`, a reproducible RSS collector for building an **unannotated** real-news corpus.
+
+Run:
+
+```powershell
+python -m src.evaluation.collect_real_corpus --per-source 50 --max-items 500
+```
+
+The collector:
+
+- pulls from multiple independent RSS sources;
+- normalizes URLs and removes common tracking parameters;
+- normalizes HTML/text fields;
+- assigns a transparent topic hint;
+- removes exact URL duplicates;
+- creates a temporal `dev` / `test` split;
+- writes a collection manifest;
+- deliberately leaves gold relevance unassigned.
+
+Outputs:
+
+- `eval/real_corpus_unannotated.json`
+- `eval/real_corpus_manifest.json`
+
+The generated corpus must be manually reviewed and annotated before being used as a gold benchmark.
+
 ## Target real-world evaluation set
 
-The next dataset version should contain approximately 300-500 real articles sampled across multiple topic areas, source types and publication ages.
-
-Recommended coverage:
-
-| Dimension | Target |
-|---|---|
-| Articles | 300-500 |
-| Areas | TECH, AI/ML, FINANCE, SCIENCE, WORLD, POLITICS |
-| Age bands | 0-12h, 12-24h, 1-2d, 2-7d, >7d |
-| Sources | >=6 independent domains |
-| Annotation scale | 0-100 |
-| Double-annotated subset | >=20% |
-| Locked test set | temporal holdout |
-
-The exact counts are targets, not hard requirements. The important property is that the sample is diverse enough to expose failure modes.
+Target approximately 300-500 real articles across TECH, AI/ML, FINANCE, SCIENCE, WORLD and POLITICS, with multiple publication-age bands and at least six independent source domains. At least 20% should be independently double-annotated.
 
 ## Dataset format
 
-The machine-readable schema is defined in `annotation_schema.json`.
+The machine-readable annotation schema is defined in `annotation_schema.json`. The unannotated collector output is additionally described by `real_corpus_schema.json`.
 
-Required fields for a future real corpus:
-
-- `id`
-- `title`
-- `summary`
-- `area`
-- `source`
-- `published`
-- `expected_relevance`
-
-Recommended additional fields:
-
-- `url`
-- `canonical_url`
-- `duplicate_group`
-- `split`
-- `annotation_version`
-- `annotator_ids`
-- `notes`
+Required gold fields include `id`, `title`, `summary`, `area`, `source`, `published` and `expected_relevance`.
 
 The evaluation label should describe **content relevance**, not source prestige. Source quality is already an input to the deterministic ranker and must not be smuggled into the gold label.
 
 ## Relevance rubric
-
-Use the following anchors when assigning `expected_relevance`:
 
 | Score | Interpretation |
 |---|---|
@@ -88,49 +76,29 @@ Annotators should judge the article itself using the same briefing objective for
 
 Near-duplicates should be grouped with `duplicate_group`. Rewrites or syndicated copies of the same underlying event should not become multiple independent gold signals.
 
-When a duplicate group is present, annotate the underlying event relevance consistently and record source-specific differences only in `notes`.
-
 ## Temporal protocol
 
-For a research-grade test set, use a time-based holdout.
+Use a time-based holdout:
 
-A practical structure is:
+- `dev`: older articles used to refine the scoring protocol;
+- `test`: a later time window kept untouched until the protocol is frozen.
 
-- `dev`: older articles used to refine the scoring protocol
-- `test`: a later time window kept untouched until the protocol is frozen
-
-The `test` labels should not be used to tune thresholds, prompt wording, source weights or model selection.
+Test labels should not be used to tune thresholds, prompt wording, source weights or model selection.
 
 ## Annotation quality control
 
-At least 20% of the real corpus should be independently labeled by a second annotator.
+At least 20% of the real corpus should be independently labeled by a second annotator. Resolve disagreements using the written rubric and document adjudication.
 
-Resolve disagreements using the written rubric rather than silently averaging scores. Report the final adjudication process in the evaluation report.
-
-For the double-annotated subset, report an agreement statistic appropriate to the selected label representation. The important goal is to demonstrate that the rubric produces reasonably consistent judgments, not to manufacture a high agreement number.
+Do not inspect model rankings before assigning gold labels.
 
 ## Reporting
 
-Every benchmark result should report:
+Every benchmark result should report dataset version, dataset size, relevance threshold, reference time, split, systems compared, NDCG@3/5/10, Recall@5/10, MRR@5, AP@5/10, LLM model identifier when applicable, latency, token usage and estimated cost.
 
-- dataset version
-- dataset size
-- relevance threshold
-- temporal reference time
-- split used
-- systems compared
-- NDCG@3/5/10
-- Recall@5/10
-- MRR@5
-- AP@5/10
-- whether an external LLM was used
-- LLM model identifier when applicable
-- latency, token usage and estimated cost for live LLM evaluation
-
-Results from the current 120-item fixture must be labeled as regression-test results. They should not be described as generalization performance.
+Results from the current 120-item fixture must remain labeled as regression-test results. They should not be described as generalization performance.
 
 ## Current limitations
 
-The current fixture is intentionally small and contains curated/synthetic-style examples. It is useful for detecting regressions but is not sufficient for a strong claim about real-world ranking quality.
+The current fixture is intentionally small and contains curated/synthetic-style examples. It is useful for regression detection but insufficient for a strong claim about real-world ranking quality.
 
-The next research step is therefore **data quality and annotation quality**, not further metric proliferation.
+The next research step is **data quality and annotation quality**, not further metric proliferation.
