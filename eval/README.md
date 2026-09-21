@@ -64,6 +64,25 @@ The report includes completeness, double-annotation count, exact agreement, with
 
 Disagreements must be adjudicated and recorded; they are never silently averaged.
 
+
+## 5a. Optional LLM-assisted annotation
+
+LLM assistance can reduce annotation effort, but its output is explicitly **non-gold**:
+
+    python -m src.evaluation.llm_annotation_assist --model-a openai/gpt-oss-120b --model-b qwen/qwen3.8-27b
+
+Then export an Excel-compatible sheet:
+
+    python -m src.evaluation.export_annotation_sheet
+
+Annotators review the article and enter human scores independently. LLM suggestions and rationales remain visible as optional assistance, not as the final label.
+
+After review, import the completed sheet:
+
+    python -m src.evaluation.import_annotation_sheet
+
+The recommended portfolio wording is **"LLM-assisted annotation with independent double-annotation and documented adjudication"**, not "human gold" unless the relevant labels were actually assigned/reviewed by humans.
+
 ## 6. Freeze the gold dataset
 
 Once annotation and adjudication are complete:
