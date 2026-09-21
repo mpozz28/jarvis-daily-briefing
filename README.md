@@ -191,7 +191,7 @@ pip install -r requirements.txt
 # Execute batch ingestion, ranking, reasoning, and JSON export:
 python -m src.orchestrator
 
-# Run offline ranking evaluation against the golden dataset:
+# Run the offline ranking regression benchmark:
 python -m src.evaluation.eval_ranking
 
 # Start real-time grounded Q&A API server:
@@ -204,6 +204,6 @@ python api_server.py
 
 **Known Limitations:**
 
-- **Evaluation:** The current benchmark is a static offline regression set with manual labels. A stronger research evaluation would use a larger real-world corpus, multiple annotators, temporal holdouts, and repeated runs across model versions.
+- **Evaluation:** The included 120-item benchmark is a curated regression fixture, not a representative sample of live news. It is intended to catch ranking regressions; it should not be presented as generalization performance.
 - **Graph Persistence:** Multi-document relationships are ephemeral per-run; historical queries would require migrating from SQLite to a persistent Graph/Vector DB (e.g., Neo4j).
 - **Web Scraping:** The current ingestion layer (BeautifulSoup) is vulnerable to anti-bot measures on JS-heavy or Cloudflare-protected SPA domains.
