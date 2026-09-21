@@ -89,31 +89,53 @@ def annotate_queue(records: list[dict], batch_size: int, model_a: str, model_b: 
         for start in range(0, len(items), batch_size):
             batch = items[start:start + batch_size]
             pending = list(batch)
+            completed = {}
+            actual_models = []
+
             for attempt in range(3):
+                if not pending:
+                    break
+
                 raw, actual_model = router.invoke_with_metadata(
                     build_prompt(pending),
                     system_prompt=SCORING_SYSTEM_PROMPT,
                     preferred_model=requested_model,
                 )
-                parsed = parse_response(raw, {str(item["id"]) for item in pending})
-                missing = [item for item in pending if str(item["id"]) not in parsed]
-                if not missing:
-                    for item in batch:
-                        value = parsed[str(item["id"])]
-                        suggestions.append({
-                            "id": str(item["id"]),
-                            "slot": slot,
-                            "requested_model": requested_model,
-                            "actual_model": actual_model,
-                            "score": value["score"],
-                            "rationale": value["rationale"],
-                            "flags": value["flags"],
-                        })
-                    break
-                pending = missing
-            else:
+                actual_models.append(actual_model)
+                parsed = parse_response(
+                    raw,
+                    {str(item["id"]) for item in pending},
+                )
+                completed.update(parsed)
+
+                missing_ids = {
+                    str(item["id"])
+                    for item in pending
+                    if str(item["id"]) not in parsed
+                }
+                pending = [
+                    item
+                    for item in pending
+                    if str(item["id"]) in missing_ids
+                ]
+
+            if pending:
                 missing_ids = [str(item["id"]) for item in pending]
-                raise ValueError(f"Missing annotations after retries: {missing_ids}")
+                raise ValueError(
+                    f"Missing annotations after retries: {missing_ids}"
+                )
+
+            for item in batch:
+                value = completed[str(item["id"])]
+                suggestions.append({
+                    "id": str(item["id"]),
+                    "slot": slot,
+                    "requested_model": requested_model,
+                    "actual_model": actual_models[-1] if actual_models else requested_model,
+                    "score": value["score"],
+                    "rationale": value["rationale"],
+                    "flags": value["flags"],
+                })
 
     annotate_batches(selected, model_a, "A")
 
