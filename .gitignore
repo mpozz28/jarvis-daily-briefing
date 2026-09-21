@@ -6,7 +6,16 @@ __pycache__/
 # File Segreti
 .env
 
-# Database (evitiamo di caricare file enormi o DB corrotti)
-# Nota: L'azione di GitHub creerà il proprio DB temporaneo
+# Database
 *.db
 *.sqlite3
+
+# Evaluation artifacts generated from real-world collection/annotation
+eval/real_corpus_unannotated.json
+eval/real_corpus_manifest.json
+eval/annotation_queue.json
+eval/double_annotation_sample.json
+eval/annotation_manifest.json
+eval/annotation_quality_report.json
+eval/gold_dataset_v1.json
+eval/results/*.json
