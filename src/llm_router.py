@@ -24,6 +24,19 @@ class LLMFallbackRouter:
         system_prompt: str = "",
         preferred_model: str | None = None,
     ) -> str:
+        content, _ = self.invoke_with_metadata(
+            prompt=prompt,
+            system_prompt=system_prompt,
+            preferred_model=preferred_model,
+        )
+        return content
+
+    def invoke_with_metadata(
+        self,
+        prompt: str,
+        system_prompt: str = "",
+        preferred_model: str | None = None,
+    ) -> tuple[str, str]:
         if not self.groq_api_key:
             raise RuntimeError("No GROQ_API_KEY found in the .env file.")
 
@@ -90,7 +103,7 @@ class LLMFallbackRouter:
                                 },
                             },
                         )
-                        return content
+                        return content, model
 
                     if response.status_code == 404:
                         last_error = f"Model unavailable: {model}"
