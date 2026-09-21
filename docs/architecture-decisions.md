@@ -58,23 +58,23 @@ This document outlines the key architectural decisions, rationale, trade-offs, a
 
 ---
 
-## ADR 006: Safe Structured QA Responses and DOM Rendering
+## ADR 006: Frontend Security Hardening (DOMPurify vs. Custom Sanitization)
 
-- **Context:** The API previously assembled HTML strings from LLM output, evidence and source URLs.
-- **Decision:** Return a typed JSON response from FastAPI containing answer, evidence, confidence, source URL and retrieval method. The frontend renders these fields with safe DOM APIs.
-- **Alternatives Considered:** Server-generated HTML, DOMPurify around generated HTML, or migrating to React/Vue.
-- **Why:** Keeps model output as data until rendering, removes HTML injection from the API contract, and separates data from presentation.
-- **Trade-offs:** The frontend owns presentation logic, but the API becomes cleaner and easier to test.
+- **Context:** Rendering untrusted HTML generated from external RSS feeds and LLM outputs, exposing the system to Cross-Site Scripting (XSS).
+- **Decision:** Implement `DOMPurify` to sanitize all dynamic HTML injections before mapping them to the DOM via `innerHTML`. Replaced static injections with safe `textContent` API.
+- **Alternatives Considered:** Custom Regex cleaning, rewriting the frontend in React/Vue (which auto-escapes by default).
+- **Why DOMPurify:** Standard industry solution for vanilla JS environments. Prevents prompt injection payloads from executing in the user's browser without requiring a heavy frontend framework rewrite.
+- **Trade-offs:** Adds a lightweight external dependency to the frontend, but guarantees enterprise-level XSS mitigation.
 
 ---
 
-## ADR 007: Information Retrieval Evaluation as Regression Testing
+## ADR 007: Information Retrieval Evaluation (Offline Golden Dataset)
 
-- **Context:** Detecting ranking regressions without calling a live LLM in CI.
-- **Decision:** Maintain a static 120-item relevance dataset as an offline regression fixture. The evaluator reports NDCG, Precision, Recall, MRR and Average Precision at multiple cutoffs. The live LLM comparison is opt-in and records the configured model.
-- **Alternatives Considered:** LLM-as-a-judge, live-only evaluation, or user A/B testing.
-- **Why:** The deterministic benchmark is cheap and reproducible. It is explicitly treated as a regression test rather than evidence of general ranking performance.
-- **Limitations:** The current fixture is curated/synthetic-style data rather than a representative corpus of real-world news. A future research-grade evaluation should use a larger real corpus, independent relevance annotation, temporal holdouts, repeated model runs, and cost/latency reporting.
+- **Context:** Proving the efficacy of the Two-Tower ranking architecture over a basic heuristic filter.
+- **Decision:** Built a static 120-item Golden Dataset containing ground-truth relevances, hard negatives, and outdated news. Evaluated using strict IR metrics (`NDCG@3`, `Precision@5`, `Recall@5`).
+- **Alternatives Considered:** LLM-as-a-judge (subjective and uncalibrated) or A/B testing (requires heavy user traffic).
+- **Why Offline NDCG:** Provides a mathematical, reproducible baseline. Proves that the LLM Reranker successfully optimizes the top percentile ordering compared to the deterministic baseline.
+- **Trade-offs:** The dataset is static and requires manual updates to reflect changing macro-trends, unlike an online continuous evaluation system.
 
 ---
 

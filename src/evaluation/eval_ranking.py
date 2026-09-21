@@ -1,221 +1,79 @@
-import argparse
 import json
 import logging
 import os
-from datetime import datetime, timezone
+from datetime import datetime
 
 from src.agents.ranking_agent import rank_and_filter
 from src.agents.scoring_agent import score_and_filter_candidates
-from src.config import LLM_DEFAULT_MODEL
-from src.evaluation.metrics import (
-    average_precision_at_k,
-    mrr_at_k,
-    ndcg_at_k,
-    precision_at_k,
-    recall_at_k,
-)
+from src.evaluation.metrics import ndcg_at_k, precision_at_k, recall_at_k
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - EVALUATOR - %(message)s")
-logger = logging.getLogger("ranking-evaluator")
+logger = logging.getLogger(__name__)
 
+# FIX: Reference time fisso per garantire riproducibilità assoluta nel benchmark
 REFERENCE_TIME = datetime.fromisoformat("2026-09-20T12:00:00+00:00")
-DEFAULT_K_LIST = (3, 5, 10)
 
 
-def load_dataset(path: str) -> list[dict]:
-    with open(path, "r", encoding="utf-8") as f:
-        data = json.load(f)
-
-    if not isinstance(data, list) or not data:
-        raise ValueError("Ranking dataset must be a non-empty JSON list.")
-
-    required = {"id", "expected_relevance"}
-    missing = required - set(data[0])
-    if missing:
-        raise ValueError(f"Dataset is missing required fields: {sorted(missing)}")
-
-    return data
-
-
-def profile_dataset(dataset: list[dict], threshold: int) -> dict:
-    relevances = [int(item["expected_relevance"]) for item in dataset]
-    relevant_count = sum(score >= threshold for score in relevances)
-    stale_count = sum(
-        str(item.get("published", "")).startswith(("2023-", "2024-", "2025-"))
-        for item in dataset
+def run_evaluation():
+    logger.info("Avvio Benchmark (Input vs Deterministic vs Current)...")
+    dataset_path = os.path.join(
+        os.path.dirname(__file__), "../../eval/ranking_dataset.json"
     )
 
-    return {
-        "size": len(dataset),
-        "relevance_threshold": threshold,
-        "relevant_items": relevant_count,
-        "relevant_rate": round(relevant_count / len(dataset), 4),
-        "min_relevance": min(relevances),
-        "max_relevance": max(relevances),
-        "mean_relevance": round(sum(relevances) / len(relevances), 4),
-        "stale_items_by_year_prefix": stale_count,
-    }
+    with open(dataset_path, "r", encoding="utf-8") as f:
+        golden_data = json.load(f)
 
-
-def evaluate_ranked_relevances(
-    name: str,
-    predicted: list[int],
-    ideal: list[int],
-    k_list: tuple[int, ...],
-    threshold: int,
-) -> dict:
-    metrics = {
-        "system": name,
-        "ndcg": {},
-        "precision": {},
-        "recall": {},
-        "mrr": {},
-        "average_precision": {},
-    }
-
-    for k in k_list:
-        metrics["ndcg"][str(k)] = round(ndcg_at_k(predicted, ideal, k), 4)
-        metrics["precision"][str(k)] = round(
-            precision_at_k(predicted, k, threshold), 4
-        )
-        metrics["recall"][str(k)] = round(
-            recall_at_k(predicted, ideal, k, threshold), 4
-        )
-        metrics["mrr"][str(k)] = round(mrr_at_k(predicted, k, threshold), 4)
-        metrics["average_precision"][str(k)] = round(
-            average_precision_at_k(predicted, ideal, k, threshold), 4
-        )
-
-    return metrics
-
-
-def run_evaluation(
-    dataset_path: str,
-    include_llm: bool = False,
-    threshold: int = 50,
-    max_items: int = 20,
-) -> dict:
-    golden_data = load_dataset(dataset_path)
-    test_data = [item.copy() for item in golden_data]
-
-    relevance_map = {
-        str(item["id"]): int(item["expected_relevance"]) for item in golden_data
-    }
-    ideal = sorted(
-        (int(item["expected_relevance"]) for item in golden_data), reverse=True
+    relevance_map = {item["id"]: item["expected_relevance"] for item in golden_data}
+    ideal_order = sorted(
+        golden_data, key=lambda x: x["expected_relevance"], reverse=True
     )
+    ideal_relevances = [item["expected_relevance"] for item in ideal_order]
 
-    input_order = [
-        relevance_map[str(item["id"])]
-        for item in test_data
-    ]
+    test_data = []
+    for item in golden_data:
+        test_item = item.copy()
+        test_item.pop("expected_relevance", None)
+        test_data.append(test_item)
 
+    # Baseline 0: Input Order (Come sono arrivati dall'ingestion)
+    baseline_0_rel = [relevance_map.get(item["id"], 0) for item in test_data]
+
+    # Baseline 1: Deterministic Scoring Only
     scored_data = score_and_filter_candidates(
-        [item.copy() for item in test_data],
-        max_candidates=len(test_data),
-        reference_time=REFERENCE_TIME,
+        test_data.copy(), max_candidates=len(test_data), reference_time=REFERENCE_TIME
     )
-    deterministic = [
-        relevance_map[str(item["id"])]
-        for item in scored_data
-    ]
+    baseline_1_rel = [relevance_map.get(item["id"], 0) for item in scored_data]
 
+    # Current: Deterministic + LLM Reranking
+    ranked_data = rank_and_filter(
+        test_data.copy(), max_items=20, reference_time=REFERENCE_TIME
+    )
+    current_rel = [relevance_map.get(item["id"], 0) for item in ranked_data]
+
+    K_list = [3, 5]
+    metrics = {"B0_Input": {}, "B1_Deterministic": {}, "Current_LLM": {}}
     systems = [
-        evaluate_ranked_relevances(
-            "input_order", input_order, ideal, DEFAULT_K_LIST, threshold
-        ),
-        evaluate_ranked_relevances(
-            "deterministic", deterministic, ideal, DEFAULT_K_LIST, threshold
-        ),
+        ("B0_Input", baseline_0_rel),
+        ("B1_Deterministic", baseline_1_rel),
+        ("Current_LLM", current_rel),
     ]
 
-    if include_llm:
-        ranked_data = rank_and_filter(
-            [item.copy() for item in test_data],
-            max_items=max_items,
-            reference_time=REFERENCE_TIME,
-        )
-        llm_ranked = [
-            relevance_map[str(item["id"])]
-            for item in ranked_data
-        ]
-        systems.append(
-            evaluate_ranked_relevances(
-                "deterministic_plus_llm",
-                llm_ranked,
-                ideal,
-                DEFAULT_K_LIST,
-                threshold,
-            )
-        )
+    for k in K_list:
+        for name, rels in systems:
+            metrics[name][f"ndcg_{k}"] = ndcg_at_k(rels, ideal_relevances, k)
+            metrics[name][f"p_{k}"] = precision_at_k(rels, k, 50)
+            metrics[name][f"r_{k}"] = recall_at_k(rels, ideal_relevances, k, 50)
 
-    result = {
-        "benchmark": {
-            "type": "single-list ranking regression",
-            "dataset": os.path.relpath(dataset_path),
-            "dataset_profile": profile_dataset(golden_data, threshold),
-            "reference_time": REFERENCE_TIME.isoformat(),
-            "llm_included": include_llm,
-            "llm_model": LLM_DEFAULT_MODEL if include_llm else None,
-            "max_items": max_items,
-        },
-        "systems": systems,
-        "generated_at": datetime.now(timezone.utc).isoformat(),
-    }
-
-    logger.info("Ranking benchmark completed.")
-    for system in systems:
+    logger.info("====================== BENCHMARK RESULTS ======================")
+    logger.info("System           | NDCG@3 | NDCG@5 | P@3    | P@5    | R@5   ")
+    logger.info("---------------------------------------------------------------")
+    for name in ["B0_Input", "B1_Deterministic", "Current_LLM"]:
+        m = metrics[name]
         logger.info(
-            "%s | NDCG@5=%s | P@5=%s | R@5=%s | MRR@5=%s",
-            system["system"],
-            system["ndcg"]["5"],
-            system["precision"]["5"],
-            system["recall"]["5"],
-            system["mrr"]["5"],
+            f"{name:<16} | {m['ndcg_3']:.4f} | {m['ndcg_5']:.4f} | {m['p_3']:.4f} | {m['p_5']:.4f} | {m['r_5']:.4f}"
         )
-
-    return result
-
-
-def main():
-    parser = argparse.ArgumentParser(description="Evaluate J.A.R.V.I.S. ranking.")
-    parser.add_argument(
-        "--include-llm",
-        action="store_true",
-        help="Run the live LLM reranker. Disabled by default for reproducible CI.",
-    )
-    parser.add_argument(
-        "--threshold",
-        type=int,
-        default=50,
-        help="Binary relevance threshold for Precision/Recall/MRR.",
-    )
-    parser.add_argument(
-        "--dataset",
-        default=os.path.join(
-            os.path.dirname(__file__), "../../eval/ranking_dataset.json"
-        ),
-    )
-    parser.add_argument(
-        "--output",
-        default=os.path.join(
-            os.path.dirname(__file__), "../../eval/results/latest_ranking_eval.json"
-        ),
-    )
-    args = parser.parse_args()
-
-    result = run_evaluation(
-        dataset_path=args.dataset,
-        include_llm=args.include_llm,
-        threshold=args.threshold,
-    )
-
-    os.makedirs(os.path.dirname(args.output), exist_ok=True)
-    with open(args.output, "w", encoding="utf-8") as f:
-        json.dump(result, f, indent=2)
-
-    print(json.dumps(result, indent=2))
+    logger.info("===============================================================")
 
 
 if __name__ == "__main__":
-    main()
+    run_evaluation()

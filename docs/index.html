@@ -349,45 +349,10 @@
                     const data = await res.json();
                     
                     const block = document.getElementById(tempId);
-                    // SECURITY: Render structured API fields with safe DOM APIs
+                    // SECURITY: Sanitizziamo la risposta dell'LLM prima del rendering
                     const answerEl = block.querySelector('.jarvis-response');
                     answerEl.textContent = '';
-
-                    const answerText = document.createElement('div');
-                    answerText.textContent = data.answer || '';
-                    answerEl.appendChild(answerText);
-
-                    if (data.evidence) {
-                        const evidenceBox = document.createElement('div');
-                        evidenceBox.className = 'qa-evidence';
-                        evidenceBox.style.marginTop = '8px';
-                        evidenceBox.style.paddingLeft = '8px';
-                        evidenceBox.style.borderLeft = '2px solid var(--blueprint-blue)';
-
-                        const evidenceLabel = document.createElement('strong');
-                        evidenceLabel.textContent = 'Verified Evidence';
-                        evidenceBox.appendChild(evidenceLabel);
-
-                        const evidenceText = document.createElement('div');
-                        evidenceText.textContent = data.evidence;
-                        evidenceBox.appendChild(evidenceText);
-
-                        const confidenceText = document.createElement('small');
-                        confidenceText.textContent =
-                            `Evidence score: ${Number(data.confidence || 0).toFixed(1)}% • Retrieval: ${data.retrieval_method || 'unknown'}`;
-                        evidenceBox.appendChild(confidenceText);
-
-                        if (data.source_url) {
-                            const sourceLink = document.createElement('a');
-                            sourceLink.href = data.source_url;
-                            sourceLink.target = '_blank';
-                            sourceLink.rel = 'noopener noreferrer';
-                            sourceLink.textContent = ' Verify source';
-                            evidenceBox.appendChild(sourceLink);
-                        }
-
-                        answerEl.appendChild(evidenceBox);
-                    }
+                    answerEl.textContent = data.answer || '';
                     
                     block.scrollIntoView({behavior: "smooth", block: "center"});
                     
