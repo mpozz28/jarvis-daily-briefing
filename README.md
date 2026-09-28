@@ -1,7 +1,16 @@
 # 🧠 J.A.R.V.I.S. - Evidence-Grounded AI Intelligence Platform
 
-![Python](https://img.shields.io/badge/Python-3.12-blue)
-![LangGraph](https://img.shields.io/badge/Orchestration-LangGraph-orange)
+[![Python](https://img.shields.io/badge/Python-3.12-blue)](https://www.python.org/)
+[![LangGraph](https://img.shields.io/badge/Orchestration-LangGraph-orange)](https://github.com/langchain-ai/langgraph)
+[![FastAPI](https://img.shields.io/badge/API-FastAPI-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+[![Pydantic](https://img.shields.io/badge/Validation-Pydantic_v2-E92063?logo=pydantic&logoColor=white)](https://docs.pydantic.dev/)
+[![SQLite](https://img.shields.io/badge/DB-SQLite-003B57?logo=sqlite&logoColor=white)](https://www.sqlite.org/)
+[![Pandas](https://img.shields.io/badge/Data-Pandas-150458?logo=pandas&logoColor=white)](https://pandas.pydata.org/)
+[![LLMs](https://img.shields.io/badge/LLMs-gpt--oss_%7C_Qwen-8A2BE2)](#-system-architecture)
+[![Tests](https://img.shields.io/badge/Tests-pytest-0A9EDC?logo=pytest&logoColor=white)](https://docs.pytest.org/)
+[![Lint](https://img.shields.io/badge/Lint-Ruff-D7FF64?logo=ruff&logoColor=black)](https://docs.astral.sh/ruff/)
+[![CI](https://github.com/mpozz28/jarvis-daily-briefing/actions/workflows/daily_briefing.yml/badge.svg)](https://github.com/mpozz28/jarvis-daily-briefing/actions)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?logo=githubpages&logoColor=white)](https://mpozz28.github.io/jarvis-daily-briefing/)
 
 > **Elevator Pitch:** An evidence-grounded AI intelligence pipeline that aggregates multi-domain data, ranks content via a two-tower deterministic/LLM architecture, extracts cross-document knowledge graphs, and serves an interactive web UI backed by strict evidence validation and abstention protocols.
 
