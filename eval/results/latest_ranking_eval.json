@@ -1,0 +1,107 @@
+{
+  "benchmark": {
+    "type": "single-list ranking regression",
+    "dataset": "eval\\ranking_dataset.json",
+    "dataset_profile": {
+      "size": 120,
+      "relevance_threshold": 50,
+      "relevant_items": 60,
+      "relevant_rate": 0.5,
+      "min_relevance": 0,
+      "max_relevance": 98,
+      "mean_relevance": 42.8833,
+      "stale_items_by_year_prefix": 20
+    },
+    "reference_time": "2026-09-20T12:00:00+00:00",
+    "llm_included": true,
+    "llm_model": "openai/gpt-oss-120b",
+    "max_items": 20
+  },
+  "systems": [
+    {
+      "system": "input_order",
+      "ndcg": {
+        "3": 0.9267,
+        "5": 0.94,
+        "10": 0.9549
+      },
+      "precision": {
+        "3": 1.0,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "recall": {
+        "3": 0.05,
+        "5": 0.0833,
+        "10": 0.1667
+      },
+      "mrr": {
+        "3": 1.0,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "average_precision": {
+        "3": 1.0,
+        "5": 1.0,
+        "10": 1.0
+      }
+    },
+    {
+      "system": "deterministic",
+      "ndcg": {
+        "3": 0.9719,
+        "5": 0.9764,
+        "10": 0.6834
+      },
+      "precision": {
+        "3": 1.0,
+        "5": 1.0,
+        "10": 0.5
+      },
+      "recall": {
+        "3": 0.05,
+        "5": 0.0833,
+        "10": 0.0833
+      },
+      "mrr": {
+        "3": 1.0,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "average_precision": {
+        "3": 1.0,
+        "5": 1.0,
+        "10": 0.5
+      }
+    },
+    {
+      "system": "deterministic_plus_llm",
+      "ndcg": {
+        "3": 0.974,
+        "5": 0.9784,
+        "10": 0.974
+      },
+      "precision": {
+        "3": 1.0,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "recall": {
+        "3": 0.05,
+        "5": 0.0833,
+        "10": 0.1667
+      },
+      "mrr": {
+        "3": 1.0,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "average_precision": {
+        "3": 1.0,
+        "5": 1.0,
+        "10": 1.0
+      }
+    }
+  ],
+  "generated_at": "2026-09-21T01:03:35.622250+00:00"
+}

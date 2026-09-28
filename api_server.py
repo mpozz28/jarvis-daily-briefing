@@ -45,52 +45,71 @@ def ask_jarvis(request: ChatRequest):
     logger.info(f"User Query Received: {request.question}")
 
     ranked_news = []
+    executive_summary = ""
+    connections_text = ""
+    
+    # 1. Caricamento del Contesto
     try:
         with open("docs/latest_briefing.json", "r", encoding="utf-8") as f:
             data = json.load(f)
+            
+            executive_summary = data.get("narrative_briefing", "")
+            
+            connections = data.get("connections", [])
+            if isinstance(connections, list) and connections:
+                connections_text = "\n--- SYSTEM CORRELATIONS ---\n"
+                for c in connections:
+                    if isinstance(c, dict):
+                        connections_text += f"- {c.get('description', '') or c.get('summary', '') or str(c)}\n"
+                    else:
+                        connections_text += f"- {str(c)}\n"
+
             for domain, items in data.get("domains", {}).items():
                 ranked_news.extend(items)
+                
+        logger.info(f"Caricato narrative_briefing: {len(executive_summary)} caratteri")
     except Exception as e:
         logger.error(f"Failed to read latest_briefing.json context: {e}")
 
-    # 1. Routing
-    target_item = qa_agent.identify_relevant_item(request.question, ranked_news, "")
+    # 2. Routing
+    target_item = qa_agent.identify_relevant_item(request.question, ranked_news, executive_summary)
 
-    # 2. Grounded Generation (Restituisce un Dictionary)
-    source_text = target_item.get("summary", "") if target_item else ""
-    qa_result = qa_agent.answer_question(request.question, target_item, source_text, "")
+    # 3. Costruzione del Contesto Completo
+    item_summary = target_item.get("summary", "") if target_item else ""
+    full_text_context = f"{executive_summary}\n\n{connections_text}\n\n{item_summary}".strip()
+    
+    # 4. Grounded Generation (Questa è la chiamata all'LLM che era saltata!)
+    qa_result = qa_agent.answer_question(
+        question=request.question, 
+        target_item=target_item, 
+        source_text=full_text_context, 
+        context=""
+    )
 
-    # 3. Formattazione dell'HTML finale per il frontend
+    # 5. Estrazione Dati per Frontend e Sintesi Vocale
     base_answer = qa_result.get("answer", "Error in cognitive response.")
     evidence = qa_result.get("evidence")
     confidence = qa_result.get("confidence", 0.0)
 
-    final_html = base_answer
-
-    # Aggiunge il blocco citazione testuale se presente (il frontend lo renderizzerà)
+    # 6. Costruzione del blocco visivo (solo HTML)
+    html_answer = base_answer
     if evidence and confidence > 0.0:
-        final_html += "<br><br><span style='font-size: 0.8rem; color: var(--muted-ink); border-left: 2px solid var(--blueprint-blue); padding-left: 8px; display: block;'>"
-        final_html += (
-            f"<b>Grounding Evidence (Conf: {confidence}):</b> <em>'{evidence}'</em>"
-        )
-
-        if target_item and target_item.get("source_url"):
-            final_html += f" <br><a href='{target_item['source_url']}' target='_blank' style='color: var(--blueprint-blue); text-decoration: none;'>[Verify Source]</a>"
-
-        final_html += "</span>"
+        html_answer += f"<br><br><span style='font-size:0.85rem; color:var(--muted-ink); border-left: 2px solid var(--blueprint-blue); padding-left: 8px; display: block; margin-top: 8px;'><b>[Verified Evidence]:</b> <i>\"{evidence}\"</i><br><b>[Composite Confidence]:</b> {confidence}%</span>"
 
     return {
-        "answer": final_html,  # Il sintetizzatore vocale leggerà la risposta, l'HTML mostrerà le prove
+        "spoken_answer": base_answer,  # J.A.R.V.I.S. leggerà solo questo (Testo pulito)
+        "html_answer": html_answer,    # Lo schermo visualizzerà questo (Testo + Badge formattato)
         "target_id": target_item.get("id") if target_item else None,
+        "confidence": confidence
     }
 
 
 # Mount static files to serve the Web UI directly from the API
 app.mount("/", StaticFiles(directory="docs", html=True), name="docs")
-
 if __name__ == "__main__":
     print("=" * 60)
     print("🚀 J.A.R.V.I.S. API Server Active at http://localhost:8000")
     print("🔒 Zero-Hallucination Evidence Layer Online")
     print("=" * 60)
-    uvicorn.run(app, host="0.0.0.0", port=8000, log_level="warning")
+    uvicorn.run(app, host="0.0.0.0", port=8000, log_level="warning") 
+

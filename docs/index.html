@@ -349,10 +349,12 @@
                     const data = await res.json();
                     
                     const block = document.getElementById(tempId);
-                    // SECURITY: Sanitizziamo la risposta dell'LLM prima del rendering
                     const answerEl = block.querySelector('.jarvis-response');
-                    answerEl.textContent = '';
-                    answerEl.textContent = data.answer || '';
+                    
+                    // 1. RENDERING GRAFICO (Usa html_answer se presente, altrimenti fallback su answer)
+                    const htmlToRender = data.html_answer || data.answer || '';
+                    // Usiamo DOMPurify.sanitize + innerHTML per renderizzare i badge in totale sicurezza
+                    answerEl.innerHTML = DOMPurify.sanitize(htmlToRender);
                     
                     block.scrollIntoView({behavior: "smooth", block: "center"});
                     
@@ -363,25 +365,9 @@
                             block.scrollIntoView({behavior: "smooth", block: "center"});
                         }
                     }
-                    
-                    // AUDIO DISABILITATO NELLA CHAT (Fixato usando commenti a riga singola per evitare conflitti Regex)
-                    // let qaRawText = data.answer.replace(/<[^>]*>?/gm, '').replace(/\*/g, '');
-                    // let qaChunks = qaRawText.match(/[^.!?]+[.!?]+/g) || [qaRawText];
-                    // 
-                    // let qaIdx = 0;
-                    // function playQaChunk() {
-                    //     if(qaIdx >= qaChunks.length) return;
-                    //     let u = new SpeechSynthesisUtterance(qaChunks[qaIdx]);
-                    //     u.lang = 'en-GB'; u.pitch = 0.85; u.rate = 1.05;
-                    //     if(englishVoice) u.voice = englishVoice;
-                    //     u.onend = () => { qaIdx++; playQaChunk(); };
-                    //     synth.speak(u);
-                    // }
-                    // synth.cancel(); 
-                    // playQaChunk();
-                    
+
                 } catch(e) {
-                    // SECURITY: Usiamo textContent invece di innerHTML per testi statici sicuri
+                    console.error(e);
                     document.getElementById(tempId).querySelector('.jarvis-response').textContent = "My apologies, Sir. The cognitive servers are unresponsive.";
                 } finally {
                     inputField.disabled = false;
