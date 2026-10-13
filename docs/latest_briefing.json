@@ -1,55 +1,91 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-12T11:36:57.513140+00:00",
-  "date_label": "12 October 2026",
-  "narrative_briefing": "Good morning, Sir. The headlines this dawn paint a tableau of turbulence and opportunity, beginning with the ever‑present geopolitical theatre. President Zelenskyy’s recent charge that Moscow has breached the so‑called “energy cease‑fire” first articulated under former President Trump adds fresh fuel to the sanctions furnace, a development that U.S. partisan operatives are already exploiting to justify an aggressive mid‑term fundraising push. The narrative of foreign aggression is being repackaged as a domestic fiscal rallying cry, a classic case of external pressure being transformed into internal political capital. Meanwhile, the cosmic perspective offered by the latest musings on Mars and the Moon reminds us that while the Red Planet may be a veritable hellhole, our nearest celestial neighbour is not far behind in the race for habitation—a race that is quietly being reshaped by advances in artificial intelligence.\n\nTurning to the laboratory of ideas, the arXiv preprint entitled “EliteTable: Self‑Improving Program Search for Executable Control Policies” (arXiv:2610.12536v1) introduces a self‑refining algorithm that leverages large language models to maintain a fixed‑capacity table of high‑scoring solutions. By iteratively proposing, editing, and remixing these solutions across generations, EliteTable demonstrated superior performance on six Gymnasium control tasks, each evaluated over ten independent searches. The technical relevance is profound: a bounded yet dynamically improving repository of policies can be deployed on resource‑constrained platforms, such as the autonomous construction bots envisioned for lunar habitats. In the system correlations, this very capability is flagged as a critical tool for planning and optimizing the nascent moon‑city race, where every kilogram of payload and every joule of power must be judiciously allocated.\n\nIn a complementary vein, the position paper “Faithfulness Without Anchors” (arXiv:2610.12493v1) delivers a sobering critique of current explainable AI (XAI) metrics. It argues that the prevailing faithfulness measures are structurally misaligned with the true objective of fostering trustworthy human‑machine interaction, often engendering overreliance on flawed predictions. The authors’ call for a re‑examination of feature‑importance metrics is not merely academic; it bears directly on the deployment of AI systems in high‑stakes environments—be they financial trading desks or autonomous lunar rovers—where misplaced confidence can have catastrophic consequences. The paper’s insights dovetail with the broader industry shift toward more robust, verifiable AI, a shift that Apple’s forthcoming HomeView device exemplifies.\n\nFurther enriching the AI landscape, the study “Equal‑Budget Monte Carlo Tree Search versus Randomized‑Restart List Scheduling for DAG Workflows” (arXiv:2610.12542v1) conducts a rigorously controlled comparison between a classic MCTS approach and a simpler randomized‑restart scheduler, each given an identical computational budget. The findings reveal that the ostensibly more sophisticated MCTS does not consistently outperform the modest baseline, a reminder that algorithmic elegance does not guarantee practical superiority. This revelation has immediate implications for the scheduling of complex DAG‑based workflows in both terrestrial data centers and extraterrestrial construction sites, where budgeted compute cycles are a scarce commodity. It also reinforces the system correlation that AI‑driven services, now anchored in consumer hardware like Apple’s HomeView, must be underpinned by algorithms whose performance is demonstrably justified under equal‑budget constraints.\n\nOn the market front, the deterministic metrics for today are as follows: the S&P 500 stands at 778.57 dollars, posting a daily return of 0.6 percent with a volatility of 8.06 percent, and its trend remains bullish. The Nasdaq is quoted at 751.27 dollars, delivering a daily return of 0.49 percent, volatility of 11.56 percent, also on a bullish trajectory. Bitcoin trades at 83 355.97 dollars, showing a modest decline of 0.39 percent, a volatility of 20.02 percent, and a bearish trend despite the high volatility. Gold is priced at 384.58 dollars, enjoying a robust daily gain of 1.57 percent, volatility of 23.08 percent, and a bullish outlook amid its own high‑volatility environment. These figures collectively suggest a market environment where equity indices are buoyant, digital assets are under pressure, and precious metals are rallying as a hedge against uncertainty.\n\nIn closing, Sir, the confluence of geopolitical maneuvering, cutting‑edge AI research, and shifting market dynamics offers a fertile ground for decisive action. Harness the self‑improving intelligence of EliteTable to accelerate lunar ambitions, demand rigor in AI explainability to safeguard trust, and allocate capital with the precision of an equal‑budget scheduler. The future is not merely arriving—it is being engineered, and you stand at the helm. Let us stride forward with confidence and a dash of British irreverence.",
+  "generated_at": "2026-10-13T11:22:07.730488+00:00",
+  "date_label": "13 October 2026",
+  "narrative_briefing": "Good morning, Sir. I trust the dawn finds you in fine spirits and ready to navigate the intricate tapestry of today’s headlines. Allow me to lay out the landscape with the precision of a seasoned strategist and the wit of a well‑read but slightly sardonic British gentleman.\n\nOn the geopolitical and macro‑economic front, the world’s attention remains sharply divided between the lofty corridors of Nobel laureates and the gritty realities of conflict. A Nobel prize has been awarded for the art of keeping economies on an even keel—a commendable nod to the ever‑elusive quest for stability in a world that seems to delight in turbulence. Yet, just a few kilometres away, Israel’s military has conducted raids on NGO offices in Ramallah, underscoring how data‑driven intelligence and hard power continue to intersect in the West Bank. Meanwhile, the United States Air Force has inked a substantial contract with WindBorne for balloon‑derived data, a reminder that the skies are becoming as contested as any terrestrial battlefield, with meteorological insights now weaponised for strategic advantage.\n\nTurning to the realm of technology, Meta has unveiled its first frontier model, Muse Wonder, a development that has already sparked a 3.38 percent rally, closing at $742.96. The market’s swift enthusiasm suggests investors are already pricing in the revenue streams that such high‑capability models can unlock, from premium services to bespoke advertising solutions. Simultaneously, the discourse around open‑model adoption intensifies: proponents argue that democratised AI fuels innovation, while critics warn of the ethical quagmire posed by training on data harvested from defunct crypto startups. El‑Sayed’s recent proclamation of an “existential crisis” for AI platforms adds a theatrical flourish to the debate, hinting that the very foundations of our digital ecosystems may be under philosophical siege. The broader AI community is also wrestling with the paradox of open‑source benefits versus the escalating risk of data misuse—a tension that will shape regulatory contours for years to come.\n\nNow, for the deterministic market metrics you requested, the numbers stand as follows: the S&P 500 is trading at $778.1, registering a daily return of minus 0.06 percent, with volatility measured at 8.07 percent and a bearish trend. The Nasdaq sits at $746.04, down 0.7 percent for the day, volatility at 11.53 percent, also bearish. Bitcoin, ever the rebel, is priced at $83 280.26, up 1.86 percent, volatility soaring at 23.79 percent, and maintaining a bullish, albeit highly volatile, trajectory. Gold rests at $382.15, slipping 0.63 percent, volatility at 22.93 percent, and a bearish outlook. These figures paint a picture of cautious equity markets, a crypto rally that refuses to be ignored, and precious metals caught in the cross‑currents of risk aversion.\n\nThe system correlations bind these threads together with a subtle yet unmistakable logic. Meta’s Muse Wonder launch acted as a catalyst for the immediate stock surge, confirming that frontier‑model releases are now perceived as direct revenue generators rather than long‑term research bets. The burgeoning appetite for open models fuels a scramble for unconventional data—hence the AI labs’ procurement of assets from dead crypto startups—thereby amplifying the ethical‑risk debate that El‑Sayed so dramatically framed. Concurrently, governments are capitalising on data‑rich platforms: the U.S. Air Force’s balloon contract exemplifies the militarisation of atmospheric intelligence, while the Israeli raids illustrate how data‑driven surveillance can be weaponised in geopolitical theatres. In essence, the convergence of high‑value AI releases, data acquisition strategies, and state‑level data exploitation creates a feedback loop that accelerates market movements, reshapes regulatory discourse, and redefines the contours of modern conflict.\n\nIn closing, Sir, the day ahead offers a tableau of opportunity woven through challenge. Harness the insights, steer with audacity, and let the symphony of data, policy, and market dynamics play to your advantage. Onward, with resolve and a dash of British irreverence.",
   "domains": {
     "ai_research": [],
     "markets": [],
     "news_politics": [
       {
-        "id": "https://www.technologyreview.com/2026/10/12/1145760/imagining-building-cities-on-the-moon/",
-        "title": "Mars may be a hellhole, but the moon is not far behind",
-        "summary": "We’re still imagining building cities on the moon. There are just a few obstacles in the way. Welcome to the second space race. You can be forgiven for experiencing déjà vu. Last time, it was the Soviet Union and the United States vying to be the first to plant some flags. Now it’s a sprint to the lunar surface between America and China—alongside a host of varyingly friendly and rival nations—plus a cornucopia of private spaceflight companies. And this time it looks like they’re getting ready to set up camp. There will be, the contenders say, bases on the moon, permanently inhabited castles under the stars. The notion of a moon base, fanciful as it might sound, isn’t new. But this year, u...",
-        "source_name": "MIT_Tech_Review",
-        "source_url": "https://www.technologyreview.com/2026/10/12/1145760/imagining-building-cities-on-the-moon/",
-        "published_at": "Mon, 12 Oct 2026 09:37:02 +0000",
-        "entities": []
-      },
-      {
-        "id": "https://www.aljazeera.com/news/2026/10/12/ukraines-zelenskyy-accuses-russia-of-violating-trumps-energy-ceasefire?traffic_source=rss",
-        "title": "Ukraine’s Zelenskyy accuses Russia of violating Trump’s ‘energy ceasefire’",
-        "summary": "The EU also announced that it officially added almost 1,600 new sanctions on Russia’s military industrial complex. Save Share Ukraine’s Volodymyr Zelenskyy has accused Russia of violating the “energy ceasefire” that United States President Donald Trump unilaterally announced at the weekend and promised to respond if the attacks continue. Speaking at the Warsaw Security Forum via videolink on Monday, the Ukrainian president urged the US to step in to ensure ⁠that Moscow abided by the truce, noting that there have already been “Russian violations of the energy ceasefire announced by ‌President Trump.” “We are waiting for the details of the conditions between the Americans and Russians, ⁠and...",
-        "source_name": "Al_Jazeera_Global",
-        "source_url": "https://www.aljazeera.com/news/2026/10/12/ukraines-zelenskyy-accuses-russia-of-violating-trumps-energy-ceasefire?traffic_source=rss",
-        "published_at": "Mon, 12 Oct 2026 10:35:51 +0000",
-        "entities": []
-      },
-      {
-        "id": "https://techcrunch.com/2026/10/11/will-the-homeview-be-apples-first-smart-home-success/",
-        "title": "Will the HomeView be Apple’s first smart home success?",
-        "summary": "Last day to exhibit your breakthrough to 10,000+ tech leaders at Disrupt is on Oct 2. Book Exhibit Table Now. Disrupt doors open Oct. 13. Get your pass and bring someone with you at 50% off. REGISTER NOW. Latest AI Amazon Apps Biotech & Health Climate Cloud Computing Commerce Crypto Enterprise EVs Fintech Fundraising Gadgets Gaming Google Government & Policy Hardware Instagram Layoffs Media & Entertainment Meta Microsoft Privacy Robotics Security Social Space Startups TikTok Transportation Venture Staff Events Startup Battlefield StrictlyVC Newsletters Podcasts Videos Partner Content TechCrunch Brand Studio Contact Us Posted: Apple will announce a new smart home hub on Tuesday called the ...",
+        "id": "https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder/",
+        "title": "Meta releases its first frontier model, Muse Wonder",
+        "summary": "Last day to exhibit your breakthrough to 10,000+ tech leaders at Disrupt is on Oct 2. Book Exhibit Table Now. Disrupt doors open Oct. 13. Get your pass and bring someone with you at 50% off. REGISTER NOW. Latest AI Amazon Apps Biotech & Health Climate Cloud Computing Commerce Crypto Enterprise EVs Fintech Fundraising Gadgets Gaming Google Government & Policy Hardware Instagram Layoffs Media & Entertainment Meta Microsoft Privacy Robotics Security Social Space Startups TikTok Transportation Venture Staff Events Startup Battlefield StrictlyVC Newsletters Podcasts Videos Partner Content TechCrunch Brand Studio Contact Us Meta’s Superintelligence Lab released a pair of new state-of-the-art mo...",
         "source_name": "TechCrunch",
-        "source_url": "https://techcrunch.com/2026/10/11/will-the-homeview-be-apples-first-smart-home-success/",
-        "published_at": "Sun, 11 Oct 2026 21:14:40 +0000",
+        "source_url": "https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder/",
+        "published_at": "Mon, 12 Oct 2026 17:56:56 +0000",
         "entities": []
       },
       {
-        "id": "https://arxiv.org/abs/2610.12536",
-        "title": "EliteTable: Self-Improving Program Search for Executable Control Policies",
-        "summary": "arXiv:2610.12536v1 Announce Type: new Abstract: EliteTable is a self-improving program-search algorithm guided by large language models (LLMs) that uses a fixed-capacity table of high-scoring solutions to guide new proposals, edits of existing solutions, and remixes of several solutions. Performance was evaluated across six Gymnasium control tasks, each with ten generations and fifty candidate slots per generation. Each task was evaluated across ten independently initialized searches. Candidate...",
-        "source_name": "ArXiv_AI",
-        "source_url": "https://arxiv.org/abs/2610.12536",
-        "published_at": "Mon, 12 Oct 2026 00:00:00 -0400",
+        "id": "https://www.economist.com/finance-and-economics/2026/10/12/a-nobel-prize-for-how-to-keep-economies-on-an-even-keel",
+        "title": "A Nobel prize for how to keep economies on an even keel",
+        "summary": "Two “New Keynesians”, Robert Hall and Michael Woodford, win the highest honour in economics",
+        "source_name": "The_Economist",
+        "source_url": "https://www.economist.com/finance-and-economics/2026/10/12/a-nobel-prize-for-how-to-keep-economies-on-an-even-keel",
+        "published_at": "Mon, 12 Oct 2026 16:29:06 +0000",
         "entities": []
       },
       {
-        "id": "https://www.technologyreview.com/2026/10/12/1145745/daisy-dent-ecologist-revealing-invisible-networks-revive-rainforests/",
-        "title": "The ecologist revealing the invisible networks that revive rainforests",
-        "summary": "Massive tree-planting programs lead to unhealthy monocrop plantations. Daisy Dent aims to help forests rebuild themselves. In a research station in central Panama, you can walk through a century of forest time, watching scrubby plots of adolescent trees give way to cathedral-­like canopies of mature growth. Forest ecologist Daisy Dent, a senior scientist at ETH Zurich, oversees this sequence of plots across the Barro Colorado Nature Monument, some of which date as far back as the 19th century. Not one of the trees she surveys was planted by human hands. She maps, measures, and tracks each trunk that emerges, revealing how waves of tree life rise from bare earth. Tropical forests like thes...",
+        "id": "https://www.technologyreview.com/2026/10/13/1146366/open-models-have-real-benefits-do-they-outweigh-the-risks/",
+        "title": "Open models have real benefits. Do they outweigh the risks?",
+        "summary": "Why the open-closed AI debate is more complicated than it seems MIT Technology Review Explains: Let our writers untangle the complex, messy world of science and technology to help you understand what’s coming next. You can read more from the series here. Late last month, Anthropic released a report arguing that the model GLM-5.3 poses a major cyberattack risk. The report’s core concern is that the powerful new model, released in August by the Chinese company Z.ai, is freely available for anyone to download and modify. Anthropic’s assertion is only the latest move in a long-running debate about whether frontier AI models should be made open, like GLM-5.3, or should stay locked behind the d...",
         "source_name": "MIT_Tech_Review",
-        "source_url": "https://www.technologyreview.com/2026/10/12/1145745/daisy-dent-ecologist-revealing-invisible-networks-revive-rainforests/",
-        "published_at": "Mon, 12 Oct 2026 09:00:00 +0000",
+        "source_url": "https://www.technologyreview.com/2026/10/13/1146366/open-models-have-real-benefits-do-they-outweigh-the-risks/",
+        "published_at": "Tue, 13 Oct 2026 10:00:00 +0000",
+        "entities": []
+      },
+      {
+        "id": "https://www.nytimes.com/2026/10/13/us/el-sayed-releasing-his-platform-on-ai-calls-it-an-existential-crisis.html",
+        "title": "El-Sayed, Releasing His Platform on A.I., Calls It an ‘Existential Crisis’",
+        "summary": "Dr. Abdul El-Sayed of Michigan is the first Democrat running in a battleground Senate race to publicly call for a pause on artificial intelligence development.",
+        "source_name": "NYT_US_News",
+        "source_url": "https://www.nytimes.com/2026/10/13/us/el-sayed-releasing-his-platform-on-ai-calls-it-an-existential-crisis.html",
+        "published_at": "Tue, 13 Oct 2026 10:01:04 +0000",
+        "entities": []
+      },
+      {
+        "id": "https://www.technologyreview.com/2026/10/13/1145755/ai-labs-buying-data-from-dead-startups-to-train-models/",
+        "title": "AI labs are buying data from dead startups to train their models",
+        "summary": "Most startups fail. A new industry is giving their data an afterlife in AI. When Keelan Miskell began winding down his crypto startup this year, he didn’t think its data was worth much: the users were anonymous, the company just a few years old. But he’s since turned the firm’s digital archives into real money. He’s netted roughly $25,000 for his code base and a still-pending amount (likely around $15,000) for the workspace data in Google, Notion, Figma, and Slack. “At least all that stuff we were doing for two and a half years is worth something to someone somewhere,” he says. The sale was brokered by a company called SimpleClosure, part of a new growth sector in tech: businesses caterin...",
+        "source_name": "MIT_Tech_Review",
+        "source_url": "https://www.technologyreview.com/2026/10/13/1145755/ai-labs-buying-data-from-dead-startups-to-train-models/",
+        "published_at": "Tue, 13 Oct 2026 09:00:00 +0000",
+        "entities": []
+      },
+      {
+        "id": "https://techcrunch.com/2026/10/12/windborne-wins-a-hefty-us-air-force-contract-for-its-balloon-data/",
+        "title": "WindBorne wins a hefty US Air Force contract for its balloon data",
+        "summary": "Last day to exhibit your breakthrough to 10,000+ tech leaders at Disrupt is on Oct 2. Book Exhibit Table Now. Disrupt doors open Oct. 13. Get your pass and bring someone with you at 50% off. REGISTER NOW. Latest AI Amazon Apps Biotech & Health Climate Cloud Computing Commerce Crypto Enterprise EVs Fintech Fundraising Gadgets Gaming Google Government & Policy Hardware Instagram Layoffs Media & Entertainment Meta Microsoft Privacy Robotics Security Social Space Startups TikTok Transportation Venture Staff Events Startup Battlefield StrictlyVC Newsletters Podcasts Videos Partner Content TechCrunch Brand Studio Contact Us The U.S. Air Force will buy data collected by WindBorne Systems‘ fleet ...",
+        "source_name": "TechCrunch",
+        "source_url": "https://techcrunch.com/2026/10/12/windborne-wins-a-hefty-us-air-force-contract-for-its-balloon-data/",
+        "published_at": "Mon, 12 Oct 2026 17:19:14 +0000",
+        "entities": []
+      },
+      {
+        "id": "https://www.aljazeera.com/video/newsfeed/2026/10/13/israels-military-raids-ngo-offices-in-ramallah?traffic_source=rss",
+        "title": "Israel’s military raids NGO offices in Ramallah",
+        "summary": "Israel's military raids NGO offices in Ramallah Al Jazeera’s Nida Ibrahim reports from Ramallah in the occupied West Bank where Israeli forces raided several NGOs, including the Union of Palestinian Women’s Committees and a prison support and human rights association. They also stormed the courtyard of a government hospital. Save Share Follow Al Jazeera English:",
+        "source_name": "Al_Jazeera_Global",
+        "source_url": "https://www.aljazeera.com/video/newsfeed/2026/10/13/israels-military-raids-ngo-offices-in-ramallah?traffic_source=rss",
+        "published_at": "Tue, 13 Oct 2026 10:53:16 +0000",
+        "entities": []
+      },
+      {
+        "id": "yfinance_META_2026-10-12",
+        "title": "Abnormal movement for META: +3.38%",
+        "summary": "Oops, something went wrong The above button links to Coinbase. Yahoo Finance is not a broker-dealer or investment adviser and does not offer securities or cryptocurrencies for sale or facilitate trading. Coinbase pays us for certain activity generated through this link. Prices displayed are informational. Meta’s Muse Wonder launch and fresh usage data kept investors focused on whether AI products can justify the company’s heavier spending. The stock rose about 3.4% on the day, helped by strong early retention for Muse, but the bigger question remains whether subscriptions, paid tools, and other revenue can scale fast enough before the next earnings update. Meta Platforms, Inc. engages in ...",
+        "source_name": "Yahoo Finance Data",
+        "source_url": "https://finance.yahoo.com/quote/META",
+        "published_at": "2026-10-12",
+        "entities": []
+      },
+      {
+        "id": "https://techcrunch.com/2026/10/12/honeyjar-offers-ai-tools-to-improve-pr-and-comms-at-every-company/",
+        "title": "Honeyjar offers AI tools to improve PR and comms at every company",
+        "summary": "Last day to exhibit your breakthrough to 10,000+ tech leaders at Disrupt is on Oct 2. Book Exhibit Table Now. Disrupt doors open Oct. 13. Get your pass and bring someone with you at 50% off. REGISTER NOW. Latest AI Amazon Apps Biotech & Health Climate Cloud Computing Commerce Crypto Enterprise EVs Fintech Fundraising Gadgets Gaming Google Government & Policy Hardware Instagram Layoffs Media & Entertainment Meta Microsoft Privacy Robotics Security Social Space Startups TikTok Transportation Venture Staff Events Startup Battlefield StrictlyVC Newsletters Podcasts Videos Partner Content TechCrunch Brand Studio Contact Us Journalists, entrepreneurs, and even some public relations professional...",
+        "source_name": "TechCrunch",
+        "source_url": "https://techcrunch.com/2026/10/12/honeyjar-offers-ai-tools-to-improve-pr-and-comms-at-every-company/",
+        "published_at": "Mon, 12 Oct 2026 15:45:00 +0000",
         "entities": []
       },
       {
@@ -58,7 +94,16 @@
         "summary": "arXiv:2610.12493v1 Announce Type: new Abstract: Explainable Artificial Intelligence (XAI) tools have often been presented as methods to increase trust in machine learning models by making aspects of their algorithms more human-understandable. However, evidence accumulated over the last decade points to an overall failure of this objective, instead promoting overreliance on incorrect predictions, which can subsequently lead to algorithmic aversion. Rather, XAI appears to function primarily as a ...",
         "source_name": "ArXiv_AI",
         "source_url": "https://arxiv.org/abs/2610.12493",
-        "published_at": "Mon, 12 Oct 2026 00:00:00 -0400",
+        "published_at": "Tue, 13 Oct 2026 00:00:00 -0400",
+        "entities": []
+      },
+      {
+        "id": "https://arxiv.org/abs/2610.12536",
+        "title": "EliteTable: Self-Improving Program Search for Executable Control Policies",
+        "summary": "arXiv:2610.12536v1 Announce Type: new Abstract: EliteTable is a self-improving program-search algorithm guided by large language models (LLMs) that uses a fixed-capacity table of high-scoring solutions to guide new proposals, edits of existing solutions, and remixes of several solutions. Performance was evaluated across six Gymnasium control tasks, each with ten generations and fifty candidate slots per generation. Each task was evaluated across ten independently initialized searches. Candidate...",
+        "source_name": "ArXiv_AI",
+        "source_url": "https://arxiv.org/abs/2610.12536",
+        "published_at": "Tue, 13 Oct 2026 00:00:00 -0400",
         "entities": []
       },
       {
@@ -67,79 +112,34 @@
         "summary": "arXiv:2610.12542v1 Announce Type: new Abstract: Monte Carlo Tree Search (MCTS) is often proposed for scheduling directed-acyclic-graph (DAG) workflows, yet most studies never run the comparison that could refute it - giving a much simpler method the same search effort. We run that comparison under a controlled protocol. All arms receive an identical budget - the same number of candidate schedules built and evaluated: an MCTS scheduling method, preregistered as the main arm; a randomized-restart...",
         "source_name": "ArXiv_AI",
         "source_url": "https://arxiv.org/abs/2610.12542",
-        "published_at": "Mon, 12 Oct 2026 00:00:00 -0400",
+        "published_at": "Tue, 13 Oct 2026 00:00:00 -0400",
         "entities": []
       },
       {
-        "id": "https://www.economist.com/finance-and-economics/2026/10/11/dont-feel-sorry-for-millennials-they-are-living-it-up-now",
-        "title": "Don’t feel sorry for millennials. They are living it up now",
-        "summary": "It is easy to exaggerate their economic woes",
-        "source_name": "The_Economist",
-        "source_url": "https://www.economist.com/finance-and-economics/2026/10/11/dont-feel-sorry-for-millennials-they-are-living-it-up-now",
-        "published_at": "Sun, 11 Oct 2026 15:27:00 +0000",
-        "entities": []
-      },
-      {
-        "id": "https://www.nytimes.com/2026/10/12/us/democrats-midterms-corruption-affordability.html",
-        "title": "Democrats Tie Corruption to High Costs in Final Midterms Push",
-        "summary": "Party leaders are working to connect Washington profiteering and the influence of billionaires and corporate America to affordability, in what they hope will be a potent closing message.",
+        "id": "https://www.nytimes.com/video/us/100000011152176/san-francisco-bay-boat-dwellers-deadline.html",
+        "title": "They Lived Rent-Free on Boats Near San Francisco. Until Now.",
+        "summary": "For decades, dozens of boat dwellers lived rent free on a bay just north of San Francisco. After a yearslong fight, just a few holdouts remained, with a deadline to leave by Oct. 15.",
         "source_name": "NYT_US_News",
-        "source_url": "https://www.nytimes.com/2026/10/12/us/democrats-midterms-corruption-affordability.html",
-        "published_at": "Mon, 12 Oct 2026 09:02:32 +0000",
+        "source_url": "https://www.nytimes.com/video/us/100000011152176/san-francisco-bay-boat-dwellers-deadline.html",
+        "published_at": "Tue, 13 Oct 2026 09:18:28 +0000",
         "entities": []
       },
       {
-        "id": "https://www.nytimes.com/2026/10/12/us/politics/whos-winning-the-race-for-congress.html",
-        "title": "Who’s Winning the Race for Congress?",
-        "summary": "It’s Oct. 12 — 22 days away from the midterms. Here’s the state of play.",
+        "id": "https://www.nytimes.com/2026/10/13/us/california-anchor-outs-boats.html",
+        "title": "These California Boat Dwellers Fear the Worst: Life on Land",
+        "summary": "For decades, dozens of people lived rent-free on a bay just north of San Francisco. A few holdouts remained as a deadline loomed to leave the water.",
         "source_name": "NYT_US_News",
-        "source_url": "https://www.nytimes.com/2026/10/12/us/politics/whos-winning-the-race-for-congress.html",
-        "published_at": "Mon, 12 Oct 2026 09:02:39 +0000",
+        "source_url": "https://www.nytimes.com/2026/10/13/us/california-anchor-outs-boats.html",
+        "published_at": "Tue, 13 Oct 2026 09:00:34 +0000",
         "entities": []
       },
       {
-        "id": "https://www.politico.com/news/2026/10/12/maga-inc-money-midterms-01116078",
-        "title": "MAGA Inc. plots final midterm money moves",
-        "summary": "The push includes cutting off spending for some House races, piling in money to shore up others and training its focus on key Senate races.",
-        "source_name": "Politico_US",
-        "source_url": "https://www.politico.com/news/2026/10/12/maga-inc-money-midterms-01116078",
-        "published_at": "Mon, 12 Oct 2026 06:55:00 EDT",
-        "entities": []
-      },
-      {
-        "id": "https://techcrunch.com/2026/10/11/the-founders-guide-to-techcrunch-disrupt-2026-everything-you-need-to-know/",
-        "title": "The founder’s guide to TechCrunch Disrupt 2026: Everything you need to know",
-        "summary": "Last day to exhibit your breakthrough to 10,000+ tech leaders at Disrupt is on Oct 2. Book Exhibit Table Now. Disrupt doors open Oct. 13. Get your pass and bring someone with you at 50% off. REGISTER NOW. Latest AI Amazon Apps Biotech & Health Climate Cloud Computing Commerce Crypto Enterprise EVs Fintech Fundraising Gadgets Gaming Google Government & Policy Hardware Instagram Layoffs Media & Entertainment Meta Microsoft Privacy Robotics Security Social Space Startups TikTok Transportation Venture Staff Events Startup Battlefield StrictlyVC Newsletters Podcasts Videos Partner Content TechCrunch Brand Studio Contact Us TechCrunch Disrupt 2026 is built around one question: How do you build ...",
-        "source_name": "TechCrunch",
-        "source_url": "https://techcrunch.com/2026/10/11/the-founders-guide-to-techcrunch-disrupt-2026-everything-you-need-to-know/",
-        "published_at": "Mon, 12 Oct 2026 00:59:01 +0000",
-        "entities": []
-      },
-      {
-        "id": "https://techcrunch.com/2026/10/11/aaron-sorkins-social-reckoning-is-off-to-a-weak-start/",
-        "title": "Aaron Sorkin’s ‘Social Reckoning’ is off to a weak start",
-        "summary": "Last day to exhibit your breakthrough to 10,000+ tech leaders at Disrupt is on Oct 2. Book Exhibit Table Now. Disrupt doors open Oct. 13. Get your pass and bring someone with you at 50% off. REGISTER NOW. Latest AI Amazon Apps Biotech & Health Climate Cloud Computing Commerce Crypto Enterprise EVs Fintech Fundraising Gadgets Gaming Google Government & Policy Hardware Instagram Layoffs Media & Entertainment Meta Microsoft Privacy Robotics Security Social Space Startups TikTok Transportation Venture Staff Events Startup Battlefield StrictlyVC Newsletters Podcasts Videos Partner Content TechCrunch Brand Studio Contact Us “The Social Reckoning,” Aaron Sorkin’s follow-up to “The Social Network...",
-        "source_name": "TechCrunch",
-        "source_url": "https://techcrunch.com/2026/10/11/aaron-sorkins-social-reckoning-is-off-to-a-weak-start/",
-        "published_at": "Sun, 11 Oct 2026 20:51:47 +0000",
-        "entities": []
-      },
-      {
-        "id": "https://www.aljazeera.com/sports/2026/10/12/manchester-city-guilty-verdict-financial-charges-liverpool-anfield?traffic_source=rss",
-        "title": "What we learned from ‘guilty’ Man City’s win over Liverpool at Anfield",
-        "summary": "City beat Reds despite a hostile Anfield reception, but Premier League season still hangs in the balance. Save Share Despite the hostile atmosphere created by Liverpool at Anfield for Sunday’s fiery clash, it was leaders Manchester City who had the last laugh with a superb 3-0 victory to maintain their perfect start to the Premier League season. The noise centred on off-pitch matters as City returned to action after a bombshell ruling by an independent commission found them guilty of breaking more than 100 Premier League financial rules. Enzo Maresca’s side could not have chosen a worse venue to restart their campaign after the guilty verdict. Anfield for years has dished out an angry wel...",
+        "id": "https://www.aljazeera.com/video/centre-stage/2026/10/13/a-look-at-the-countrys-local-regional-and-global-initiatives?traffic_source=rss",
+        "title": "A look at Qatar’s local, regional and global autism initiatives",
+        "summary": "In 2025, the Qatar Foundation launched a 10-year autism strategy to provide lifelong support for individuals with autism",
         "source_name": "Al_Jazeera_Global",
-        "source_url": "https://www.aljazeera.com/sports/2026/10/12/manchester-city-guilty-verdict-financial-charges-liverpool-anfield?traffic_source=rss",
-        "published_at": "Mon, 12 Oct 2026 10:18:58 +0000",
-        "entities": []
-      },
-      {
-        "id": "https://www.nytimes.com/2026/10/12/us/grieving-mother-seattle-mariners-tickets.html",
-        "title": "One Grieving Mother, Two Mariners Tickets and a Season of New Friends",
-        "summary": "Rhenda Strub invited strangers to accompany her to Seattle Mariners games this season to help overcome the loneliness of grieving for her son’s death.",
-        "source_name": "NYT_US_News",
-        "source_url": "https://www.nytimes.com/2026/10/12/us/grieving-mother-seattle-mariners-tickets.html",
-        "published_at": "Mon, 12 Oct 2026 09:02:29 +0000",
+        "source_url": "https://www.aljazeera.com/video/centre-stage/2026/10/13/a-look-at-the-countrys-local-regional-and-global-initiatives?traffic_source=rss",
+        "published_at": "Tue, 13 Oct 2026 10:42:30 +0000",
         "entities": []
       }
     ]
@@ -148,44 +148,41 @@
     {
       "id": "insight_001",
       "item_ids": [
-        "https://www.technologyreview.com/2026/10/12/1145760/imagining-building-cities-on-the-moon/",
-        "https://arxiv.org/abs/2610.12536"
+        "https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder/",
+        "yfinance_META_2026-10-12"
       ],
-      "hypothesis": "Advances in self‑improving LLM‑guided program search like EliteTable will become a critical tool for autonomously planning and optimizing lunar habitat construction, accelerating the emerging moon‑city race.",
+      "hypothesis": "Meta's launch of the high‑capability Muse Wonder frontier model directly triggered a sharp short‑term stock rally, indicating investors view frontier‑model releases as immediate revenue catalysts.",
       "domains": [
-        "space",
-        "ai",
-        "technology"
+        "tech",
+        "finance"
       ],
       "confidence": 0.88
     },
     {
       "id": "insight_002",
       "item_ids": [
-        "https://www.aljazeera.com/news/2026/10/12/ukraines-zelenskyy-accuses-russia-of-violating-trumps-energy-ceasefire?traffic_source=rss",
-        "https://www.politico.com/news/2026/10/12/maga-inc-money-midterms-01116078"
+        "https://www.technologyreview.com/2026/10/13/1145755/ai-labs-buying-data-from-dead-startups-to-train-models/",
+        "https://www.technologyreview.com/2026/10/13/1146366/open-models-have-real-benefits-do-they-outweigh-the-risks/"
       ],
-      "hypothesis": "Escalating sanctions against Russia are being leveraged by U.S. partisan actors to justify aggressive midterm fundraising, linking foreign aggression to domestic campaign spending narratives.",
+      "hypothesis": "The surge in open‑model adoption is pushing AI labs to harvest unconventional data sources, such as defunct crypto startups, which intensifies the ethical‑risk debate surrounding open‑source AI.",
       "domains": [
-        "geopolitics",
-        "politics",
-        "finance"
+        "tech",
+        "ethics"
       ],
-      "confidence": 0.84
+      "confidence": 0.82
     },
     {
       "id": "insight_003",
       "item_ids": [
-        "https://techcrunch.com/2026/10/11/will-the-homeview-be-apples-first-smart-home-success/",
-        "https://techcrunch.com/2026/10/11/the-founders-guide-to-techcrunch-disrupt-2026-everything-you-need-to-know/"
+        "https://techcrunch.com/2026/10/12/windborne-wins-a-hefty-us-air-force-contract-for-its-balloon-data/",
+        "https://www.aljazeera.com/video/newsfeed/2026/10/13/israels-military-raids-ngo-offices-in-ramallah?traffic_source=rss"
       ],
-      "hypothesis": "Apple’s imminent HomeView launch exemplifies the broader industry shift where consumer hardware is now a primary platform for AI‑driven services, a trend highlighted as the central challenge for startups at TechCrunch Disrupt 2026.",
+      "hypothesis": "Governments are increasingly monetizing and militarizing data‑rich platforms—weather‑balloon AI for the U.S. Air Force and aggressive intelligence actions in the West Bank—signaling a broader trend of data‑driven warfare amid rising geopolitical tension.",
       "domains": [
-        "tech",
-        "business",
-        "ai"
+        "geopolitics",
+        "tech"
       ],
-      "confidence": 0.86
+      "confidence": 0.8
     }
   ]
 }
