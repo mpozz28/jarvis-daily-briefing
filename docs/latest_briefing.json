@@ -1,19 +1,109 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-11-10T12:02:28.003689+00:00",
-  "date_label": "10 November 2026",
-  "narrative_briefing": "Good morning, Sir. As the first light filters over the horizon, I have assembled a layered briefing that weaves together the day’s most consequential developments, their underlying currents, and the market’s pulse, all presented in a tone befitting a seasoned strategist with a dash of British wit.\n\nOn the geopolitical front, U.S.‑mediated negotiations aimed at ending the Russia‑Ukraine conflict have convened in Abu Dhabi, signalling Washington’s renewed appetite for multilateral diplomacy in the Middle East. This effort runs in parallel with discreet overtures toward Tehran, suggesting a broader strategic pivot that could recalibrate regional power balances and, by extension, global risk premiums. Meanwhile, the domestic arena remains turbulent: the proposed California “billionaire tax” has stumbled, a defeat orchestrated by a coalition of tech‑industry lobbyists whose influence appears to have reverberated through the equity markets. The failure of that fiscal experiment dovetails with the ongoing debate over “Trumponomics,” where the spectre of compromise versus outright failure continues to shape investor sentiment on fiscal policy and regulatory outlooks. Finally, the upcoming COP31 climate summit looms large, with its agenda set to engage nearly two hundred nations—a diplomatic marathon that will test the world’s capacity to translate ambition into actionable policy.\n\nTurning to technology, Otter AI has unveiled a multilingual conversation‑tracking capability that now spans more than thirty languages. While no academic preprints accompany the announcement, the practical implication is clear: delegates at COP31 will be able to follow, in real time, the nuanced exchanges that occur across linguistic divides, potentially accelerating consensus on climate commitments. In the equity arena, Tesla surged 5.54 percent to close at $378.05, a rally that appears to be buoyed by the California tax defeat and the broader optimism surrounding clean‑energy vehicles. Conversely, Nvidia slipped 4.27 percent to $178.67, perhaps reflecting heightened concerns over semiconductor supply chains amid geopolitical tensions. Meta, however, posted a 5.12 percent gain, settling at $641.37, suggesting that the market still rewards its bet on the metaverse and AI‑driven advertising despite broader tech volatility.\n\nThe deterministic market metrics paint a picture of heightened dynamism. The S&P 500 stands at $752.69, delivering a daily return of 2.37 percent amid a volatility reading of 25.7 percent, and is classified as bullish despite the elevated turbulence. The Nasdaq, at $679.35, posted a robust 3.54 percent gain, though its volatility spikes to 40.48 percent, underscoring the sector’s sensitivity to tech‑driven news. Bitcoin, now priced at $74,289.26, slipped by 1.24 percent, its 37.33 percent volatility reinforcing a bearish trend. Gold, a traditional safe haven, rose to $379.53, up 1.88 percent with a volatility of 29.34 percent, maintaining its bullish stance in these uncertain times.\n\nThe system correlations knit these threads together with a subtle elegance. The United States’ diplomatic thrust in the Middle East not only seeks to defuse entrenched conflicts but also serves to stabilize energy markets, indirectly supporting the bullish tilt in commodities such as gold. The defeat of California’s billionaire tax, driven by a tech‑industry coalition, appears to have lifted sentiment for leading technology firms, a sentiment reflected in Tesla’s rally and Meta’s uplift, even as Nvidia feels the pressure of supply‑chain anxieties. Otter AI’s multilingual breakthrough dovetails neatly with the multilingual demands of COP31, promising smoother dialogue that could accelerate climate policy, which in turn may influence long‑term investment flows into renewable energy and related tech sectors. In essence, diplomatic, fiscal, and technological developments are converging to shape a market environment where volatility is high but opportunities abound for those who can read the interconnections.\n\nLet us stride forward, Sir, with the confidence that understanding these intertwined forces equips us not merely to react, but to anticipate and shape the narrative of tomorrow. The day beckons—seize it with purpose and poise.",
+  "generated_at": "2026-11-11T11:39:48.043264+00:00",
+  "date_label": "11 November 2026",
+  "narrative_briefing": "Good morning, Sir. I trust the dawn finds you in fine spirits and ready to navigate the intricate tapestry of today’s headlines. Allow me to lay out the salient currents shaping the macro‑economic, geopolitical, and technological landscape, and to illuminate the subtle inter‑dependencies that may influence your strategic decisions.\n\nTurning first to the realm of geopolitics and macro‑finance, the turbulence surrounding Nvidia’s corporate governance has become a veritable popcorn‑stand for governance scholars, yet the spectacle carries weighty implications. Hedge funds, still nursing the after‑effects of a dismal month, are tightening their belts and retreating from any allocation that strays beyond the narrow AI niche. This concentration of capital amplifies systemic risk, as the market’s appetite for diversification wanes. Simultaneously, the United States military’s expressed anxiety over a looming launch‑supply crunch threatens the steady flow of raw satellite imagery—a lifeline for Earth observation initiatives. Should launch windows become scarce, the pipeline feeding benchmarks such as EarthRecord will constrict, potentially throttling progress in AI‑driven environmental monitoring. Moreover, the broader macro‑trend of AI firms branching into consumer and creator domains—exemplified by OpenAI’s acquisition of the travel‑oriented startup Odessia and the rollout of video‑clipping tools by X—signals an accelerating embedding of artificial intelligence into everyday experiences and influencer economies, a shift that could reshape advertising spend and data monetisation models across sectors.\n\nOn the technology front, three noteworthy arXiv preprints merit particular attention. The first, “EarthRecord: From Pixels to Land Change with Multimodal Agents over Four Decades of Satellite Imagery” (arXiv:2611.12934v1), introduces a benchmark that compels multimodal agents to ingest raw, multi‑sensor satellite archives rather than curated subsets. By demanding end‑to‑end analysis of decades‑long imagery, the work pushes the envelope on temporal reasoning and cross‑modal fusion, promising more reliable land‑change detection that could inform climate policy, agricultural planning, and disaster response. The second paper, “Auditable Human‑Agent Teams for Autonomous X‑ray Experimentation” (arXiv:2611.12933v1), showcases a coding‑agent infrastructure that autonomously conducts synchrotron X‑ray experiments on nanoparticle superlattices while remaining auditable to human overseers. This blend of closed‑loop experimentation with transparent accountability could democratise high‑throughput materials discovery, reducing reliance on specialist operators and accelerating the pipeline from hypothesis to prototype. The third contribution, “Train on prefill, monitor at decode: Using sparse autoencoders for topic monitoring” (arXiv:2611.12935v1), presents TopicScope, a framework that leverages sparse autoencoder features to assign dynamic topic labels to each token during generation. By enabling fine‑grained, real‑time monitoring of model output, this technique opens avenues for nuanced content moderation, adaptive dialogue systems, and even market sentiment analysis where token‑level topic shifts can be correlated with trading signals.\n\nThe system correlations you outlined knit these strands together with a subtle elegance. The governance upheaval at Nvidia not only curtails hedge fund diversification but also reinforces a feedback loop wherein capital is funneled predominantly into AI‑centric equities, thereby magnifying exposure to any shock in the AI sector—such as a supply‑chain bottleneck affecting satellite launches. That very bottleneck, in turn, jeopardises the data streams essential for EarthRecord’s benchmark, potentially slowing the maturation of multimodal agents that could otherwise diversify AI applications beyond the narrow confines of chip‑maker fortunes. Meanwhile, the expansion of AI into consumer‑facing services, as seen with OpenAI’s travel venture, creates new data reservoirs that could be harnessed by frameworks like TopicScope, enriching the contextual awareness of models that will eventually be deployed in those very services. In essence, the geopolitical supply constraints, financial concentration, and technological diffusion are co‑evolving, each amplifying the others in a complex, self‑reinforcing system.\n\nNow for the deterministic market metrics, presented verbatim as supplied: The S&P 500 stands at 749.92 dollars, registering a daily return of minus 0.37 percent, with volatility measured at 25.53 percent and a bearish trend under high volatility conditions. The Nasdaq is at 674.76 dollars, down 0.68 percent for the day, volatility at 39.97 percent, also bearish and highly volatile. Bitcoin trades at 73,986.48 dollars, up 0.36 percent, volatility at 37.61 percent, and remains bullish despite the turbulence. Gold is priced at 369.36 dollars, down 2.68 percent, volatility at 31.48 percent, and likewise bearish in a high‑volatility environment. These figures underscore a market environment dominated by risk aversion in equities, a modest rally in crypto, and a retreat in safe‑haven gold, all of which should inform any reallocation or hedging strategies you contemplate.\n\nIn closing, Sir, the confluence of governance drama, supply‑chain fragility, and rapid AI diffusion presents both peril and promise. By discerning the hidden linkages and acting with calibrated foresight, you can turn today’s volatility into tomorrow’s advantage. Let us stride forward with resolve, for the future favours the audacious.",
   "domains": {
     "ai_research": [],
     "markets": [],
     "news_politics": [
       {
-        "id": "https://www.npr.org/2026/11/10/g-s1-152773/russia-ukraine-war-talks",
-        "title": "U.S.-mediated talks on ending Russia-Ukraine war begin in Abu Dhabi",
-        "summary": "By The Associated Press Crosses bearing the names of Viktor Fomenko, Natalia Karapetian and Andrii Anikin, killed in a Russian airstrike that destroyed an underground school in Komyshuvakha, lie in a cemetery in Zaporizhzhia, Ukraine, Saturday, Nov. 7, 2026. Evgeniy Maloletka/AP hide caption ABU DHABI, United Arab Emirates — Three-way talks between Russia, Ukraine and the United States opened Tuesday in the United Arab Emirates, as Washington renews its push to end the war that followed Moscow's all-out invasion nearly five years ago. The two-day session in the UAE's capital, Abu Dhabi, is the first such meeting since February. It will focus on security guarantees, the White House said be...",
-        "source_name": "NPR_Top_Stories",
-        "source_url": "https://www.npr.org/2026/11/10/g-s1-152773/russia-ukraine-war-talks",
-        "published_at": "Tue, 10 Nov 2026 05:58:18 -0500",
+        "id": "https://techcrunch.com/2026/11/10/nvidias-crisis-has-corporate-governance-experts-reaching-for-the-popcorn/",
+        "title": "Nvidia’s crisis has corporate governance experts reaching for the popcorn",
+        "summary": "Latest AI Amazon Apps Biotech & Health Climate Cloud Computing Commerce Crypto Enterprise EVs Fintech Fundraising Gadgets Gaming Google Government & Policy Hardware Instagram Layoffs Media & Entertainment Meta Microsoft Privacy Robotics Security Social Space Startups TikTok Transportation Venture Staff Events Startup Battlefield StrictlyVC Newsletters Podcasts Videos Partner Content TechCrunch Brand Studio Contact Us Nvidia’s stock sank 5.47% on Tuesday, following a 4% drop on Monday, a loss of about 9.5% in two days, even though there wasn’t much news out of the company. CEO Jensen Huang has reportedly been trying to conduct business as usual after admitting to an extramarital affair wit...",
+        "source_name": "TechCrunch",
+        "source_url": "https://techcrunch.com/2026/11/10/nvidias-crisis-has-corporate-governance-experts-reaching-for-the-popcorn/",
+        "published_at": "Wed, 11 Nov 2026 07:30:51 +0000",
+        "entities": []
+      },
+      {
+        "id": "https://arxiv.org/abs/2611.12934",
+        "title": "EarthRecord: From Pixels to Land Change with Multimodal Agents over Four Decades of Satellite Imagery",
+        "summary": "arXiv:2611.12934v1 Announce Type: new Abstract: While multimodal agents now carry out complex data analysis with tools, their ability to turn decades of satellite imagery into reliable land-change analysis, crucial for Earth observation science, remains unmeasured. Existing benchmarks fall short: they pose questions on curated images or give agents preprocessed inputs, leaving out the raw multi-sensor archives where such analysis begins. We introduce EarthRecord, a benchmark built on the raw re...",
+        "source_name": "ArXiv_AI",
+        "source_url": "https://arxiv.org/abs/2611.12934",
+        "published_at": "Wed, 11 Nov 2026 00:00:00 -0500",
+        "entities": []
+      },
+      {
+        "id": "https://arxiv.org/abs/2611.12933",
+        "title": "Auditable Human-Agent Teams for Autonomous X-ray Experimentation",
+        "summary": "arXiv:2611.12933v1 Announce Type: new Abstract: Closed-loop autonomous experimentation can accelerate scientific discovery, but implementation effort limits accessibility. Agentic systems may lower this barrier, although sustained operation on physical instruments remains largely unexplored. Here, using coding-agent infrastructure grounded in validated scientific methods, we demonstrate autonomous synchrotron X-ray experiments on nanoparticle superlattices under evolving, human-defined objectiv...",
+        "source_name": "ArXiv_AI",
+        "source_url": "https://arxiv.org/abs/2611.12933",
+        "published_at": "Wed, 11 Nov 2026 00:00:00 -0500",
+        "entities": []
+      },
+      {
+        "id": "https://arstechnica.com/space/2026/11/the-us-military-seems-to-be-getting-nervous-about-the-launch-supply-crunch/",
+        "title": "The US military seems to be getting nervous about the launch supply crunch",
+        "summary": "“Launch is extremely constrained and that is exactly the situation we predicted.” The US military is taking a new approach to prop up commercial launch companies as SpaceX looks to wind down its Falcon rocket program, suggesting defense officials see the workhorse rocket’s retirement as a potential national security risk. The Pentagon’s Office of Strategic Capital has twice in the last two weeks announced it was sending cash to two of SpaceX’s competitors in the launch business. First, on October 26, the office announced a $150 million conditional loan commitment to Stoke Space. Military officials revealed a second $150 million Pentagon loan Tuesday for Rocket Lab. Stoke Space and Rocket ...",
+        "source_name": "Ars_Technica",
+        "source_url": "https://arstechnica.com/space/2026/11/the-us-military-seems-to-be-getting-nervous-about-the-launch-supply-crunch/",
+        "published_at": "Tue, 10 Nov 2026 23:02:39 +0000",
+        "entities": []
+      },
+      {
+        "id": "https://arxiv.org/abs/2611.12935",
+        "title": "Train on prefill, monitor at decode: Using sparse autoencoders for topic monitoring",
+        "summary": "arXiv:2611.12935v1 Announce Type: new Abstract: Topic monitoring is the task of labelling the topic of each token in a model's response during generation. Activation-based monitors that run at generation time have so far been trained to detect harmful content and are limited to two or three classes. We introduce TopicScope, a framework for training causal topic classifiers on SAE features that assign a topic to every token, so that the label can change partway through a response. We train three...",
+        "source_name": "ArXiv_AI",
+        "source_url": "https://arxiv.org/abs/2611.12935",
+        "published_at": "Wed, 11 Nov 2026 00:00:00 -0500",
+        "entities": []
+      },
+      {
+        "id": "https://www.economist.com/finance-and-economics/2026/11/10/lessons-from-a-miserable-month-for-hedge-funds",
+        "title": "Lessons from a miserable month for hedge funds",
+        "summary": "The struggle to invest in anything other than AI",
+        "source_name": "The_Economist",
+        "source_url": "https://www.economist.com/finance-and-economics/2026/11/10/lessons-from-a-miserable-month-for-hedge-funds",
+        "published_at": "Tue, 10 Nov 2026 20:47:39 +0000",
+        "entities": []
+      },
+      {
+        "id": "https://techcrunch.com/2026/11/10/openai-acquires-odessia-travel-startup-created-by-sonder-founder/",
+        "title": "OpenAI acquires Odessia, travel startup created by Sonder founder",
+        "summary": "Latest AI Amazon Apps Biotech & Health Climate Cloud Computing Commerce Crypto Enterprise EVs Fintech Fundraising Gadgets Gaming Google Government & Policy Hardware Instagram Layoffs Media & Entertainment Meta Microsoft Privacy Robotics Security Social Space Startups TikTok Transportation Venture Staff Events Startup Battlefield StrictlyVC Newsletters Podcasts Videos Partner Content TechCrunch Brand Studio Contact Us OpenAI has acquired an AI travel agent called Odessia, according to Odessia’s founder, Francis Davidson. Davidson says in a post announcing the deal that he’s now working for OpenAI, helping the AI lab with the future of travel. Terms of the deal were not disclosed, but this ...",
+        "source_name": "TechCrunch",
+        "source_url": "https://techcrunch.com/2026/11/10/openai-acquires-odessia-travel-startup-created-by-sonder-founder/",
+        "published_at": "Tue, 10 Nov 2026 21:08:52 +0000",
+        "entities": []
+      },
+      {
+        "id": "https://arstechnica.com/gadgets/2026/11/seagate-resurrects-the-ssd-hdd-hybrid-drive/",
+        "title": "Seagate's new hybrid drive raises some old questions",
+        "summary": "The FireCuda Forge revisits an old idea, with some familiar questions. Seagate doesn’t think hybrid drives are done just yet. On Tuesday, the company announced the launch of the new FireCuda Forge line of storage drives. The new drives combine the high capacity of a traditional plattered HDD with the speed and responsiveness of a user-supplied solid-state drive (SSD). The new hybrid storage solution is Seagate’s first to be powered and managed by the new Alkemi intelligent storage platform. The FireCuda Forge is available right now through Seagate’s web store, and comes in 8TB ($699) or 20TB ($899) HDD configurations—neither of which includes the required SSD. Users will have to bring the...",
+        "source_name": "Ars_Technica",
+        "source_url": "https://arstechnica.com/gadgets/2026/11/seagate-resurrects-the-ssd-hdd-hybrid-drive/",
+        "published_at": "Tue, 10 Nov 2026 23:30:56 +0000",
+        "entities": []
+      },
+      {
+        "id": "https://www.nytimes.com/2026/11/11/us/politics/trump-arlington-cemetery-arch.html",
+        "title": "Trump to Visit Arlington Cemetery as His Proposed Arch Faces Growing Opposition",
+        "summary": "An expanding legal fight over the proposed site of President Trump’s 250-foot triumphal arch looms over his visit to Arlington National Cemetery on Veterans Day.",
+        "source_name": "NYT_US_News",
+        "source_url": "https://www.nytimes.com/2026/11/11/us/politics/trump-arlington-cemetery-arch.html",
+        "published_at": "Wed, 11 Nov 2026 10:03:55 +0000",
+        "entities": []
+      },
+      {
+        "id": "https://www.nytimes.com/2026/11/11/us/elections/trump-voters-democrats-priorities.html",
+        "title": "Democrats Pulled in Moderates. Can They Hold On to Them?",
+        "summary": "Does Democratic success signal a broad realignment in American politics? Or is it a temporary turn away from an unpopular president?",
+        "source_name": "NYT_US_News",
+        "source_url": "https://www.nytimes.com/2026/11/11/us/elections/trump-voters-democrats-priorities.html",
+        "published_at": "Wed, 11 Nov 2026 10:03:49 +0000",
+        "entities": []
+      },
+      {
+        "id": "https://www.economist.com/finance-and-economics/2026/11/10/for-boomers-economic-boom-times-are-over",
+        "title": "For boomers, economic boom times are over",
+        "summary": "Across the rich world, the geriatric share of income and wealth is ebbing",
+        "source_name": "The_Economist",
+        "source_url": "https://www.economist.com/finance-and-economics/2026/11/10/for-boomers-economic-boom-times-are-over",
+        "published_at": "Tue, 10 Nov 2026 20:28:56 +0000",
         "entities": []
       },
       {
@@ -26,120 +116,30 @@
         "entities": []
       },
       {
-        "id": "https://www.scientificamerican.com/article/5-things-to-know-going-into-the-cop31-climate-meeting/",
-        "title": "5 things to know going into the COP31 climate meeting",
-        "summary": "November 10, 2026 4 min read 5 things to know going into the COP31 climate meeting Nearly 200 countries will participate in this year’s climate talks, held in Antalya, Türkiye By Jackie Flynn Mogensen edited by Andrea Thompson In the shadow of global conflict and a record-setting year for climate extremes, countries are once again meeting for the United Nations’ annual climate conference, which in previous years produced the landmark 2015 Paris Agreement and a 2023 pledge to phase out fossil fuels. Called COP31 (for the 31st meeting of the Conference of the Parties to the U.N. Framework Convention on Climate Change), it will take place in Antalya, Türkiye, between November 9 and 20 and wi...",
-        "source_name": "Scientific_American",
-        "source_url": "https://www.scientificamerican.com/article/5-things-to-know-going-into-the-cop31-climate-meeting/",
-        "published_at": "Tue, 10 Nov 2026 11:00:00 +0000",
+        "id": "https://www.nytimes.com/2026/11/11/us/democratic-dark-money-super-pac-complaint.html",
+        "title": "A New Democratic-Tied Dark-Money Group Draws Scrutiny Over Midterm Spending",
+        "summary": "More money in the political system is coming from shadowy nonprofits that appear out of nowhere and start spending big with little disclosure.",
+        "source_name": "NYT_US_News",
+        "source_url": "https://www.nytimes.com/2026/11/11/us/democratic-dark-money-super-pac-complaint.html",
+        "published_at": "Wed, 11 Nov 2026 10:04:13 +0000",
         "entities": []
       },
       {
-        "id": "yfinance_TSLA_2026-11-09",
-        "title": "Abnormal movement for TSLA: +5.54%",
-        "summary": "Oops, something went wrong The above button links to Coinbase. Yahoo Finance is not a broker-dealer or investment adviser and does not offer securities or cryptocurrencies for sale or facilitate trading. Coinbase pays us for certain activity generated through this link. Prices displayed are informational. Tesla is reallocating Austin factory capacity from the Cybertruck toward the two-seat Cybercab robotaxi, sharpening its shift toward autonomous vehicles. The move supports Tesla’s long-term autonomy narrative but raises questions about Cybertruck demand, manufacturing economics, and the company’s high valuation. ETF buying provided a counterpoint, although recent fund flows remained mixe...",
-        "source_name": "Yahoo Finance Data",
-        "source_url": "https://finance.yahoo.com/quote/TSLA",
-        "published_at": "2026-11-09",
-        "entities": []
-      },
-      {
-        "id": "https://techcrunch.com/2026/11/09/otter-ai-can-now-follow-conversations-across-30-languages/",
-        "title": "Otter AI can now follow conversations across 30+ languages",
-        "summary": "Latest AI Amazon Apps Biotech & Health Climate Cloud Computing Commerce Crypto Enterprise EVs Fintech Fundraising Gadgets Gaming Google Government & Policy Hardware Instagram Layoffs Media & Entertainment Meta Microsoft Privacy Robotics Security Social Space Startups TikTok Transportation Venture Staff Events Startup Battlefield StrictlyVC Newsletters Podcasts Videos Partner Content TechCrunch Brand Studio Contact Us Otter.ai, the AI-powered note-taking tool, announced Tuesday that it’s expanding its multilingual capabilities, including a new multilingual transcription feature that can follow conversations as speakers switch between languages during the same meeting. The company is also a...",
-        "source_name": "TechCrunch",
-        "source_url": "https://techcrunch.com/2026/11/09/otter-ai-can-now-follow-conversations-across-30-languages/",
-        "published_at": "Tue, 10 Nov 2026 07:00:00 +0000",
-        "entities": []
-      },
-      {
-        "id": "yfinance_NVDA_2026-11-09",
-        "title": "Abnormal movement for NVDA: -4.27%",
-        "summary": "Oops, something went wrong The above button links to Coinbase. Yahoo Finance is not a broker-dealer or investment adviser and does not offer securities or cryptocurrencies for sale or facilitate trading. Coinbase pays us for certain activity generated through this link. Prices displayed are informational. Nvidia faces a proposed shareholder class-action lawsuit and government scrutiny over allegations involving CEO Jensen Huang and a former Megaspeed executive. Nvidia’s board has opened an independent investigation, while the company says it found no evidence that national security or proprietary information was compromised. The latest Yahoo Finance data shows NVDA up 0.22% in today’s pre...",
-        "source_name": "Yahoo Finance Data",
-        "source_url": "https://finance.yahoo.com/quote/NVDA",
-        "published_at": "2026-11-09",
-        "entities": []
-      },
-      {
-        "id": "https://techcrunch.com/2026/11/09/californias-proposed-billionaire-tax-fails-to-pass/",
-        "title": "California’s proposed ‘billionaire tax’ fails to pass",
-        "summary": "Latest AI Amazon Apps Biotech & Health Climate Cloud Computing Commerce Crypto Enterprise EVs Fintech Fundraising Gadgets Gaming Google Government & Policy Hardware Instagram Layoffs Media & Entertainment Meta Microsoft Privacy Robotics Security Social Space Startups TikTok Transportation Venture Staff Events Startup Battlefield StrictlyVC Newsletters Podcasts Videos Partner Content TechCrunch Brand Studio Contact Us California voters have rejected Proposition 40, the state’s proposed one-time tax on billionaires, the Associated Press reported Monday. The measure failed after an expensive campaign that pitted labor unions against some of tech’s wealthiest figures. It was also opposed by G...",
-        "source_name": "TechCrunch",
-        "source_url": "https://techcrunch.com/2026/11/09/californias-proposed-billionaire-tax-fails-to-pass/",
-        "published_at": "Tue, 10 Nov 2026 05:18:43 +0000",
-        "entities": []
-      },
-      {
-        "id": "yfinance_META_2026-11-09",
-        "title": "Abnormal movement for META: +5.12%",
-        "summary": "Oops, something went wrong The above button links to Coinbase. Yahoo Finance is not a broker-dealer or investment adviser and does not offer securities or cryptocurrencies for sale or facilitate trading. Coinbase pays us for certain activity generated through this link. Prices displayed are informational. Meta’s latest coverage centers on strong third-quarter advertising results, expanding artificial-intelligence infrastructure, and early adoption of its Muse shopping agent. The company also faces rising capital demands, potential dilution, and proposed European restrictions affecting social-media engagement and AI chatbots. Meta Platforms, Inc. engages in the development of products that...",
-        "source_name": "Yahoo Finance Data",
-        "source_url": "https://finance.yahoo.com/quote/META",
-        "published_at": "2026-11-09",
-        "entities": []
-      },
-      {
-        "id": "https://www.aljazeera.com/opinions/2026/11/10/who-moves-first-in-iran-us-diplomacy?traffic_source=rss",
-        "title": "Who moves first in Iran-US diplomacy?",
-        "summary": "Breaking the deadlock requires coordinated, verifiable concessions, not demands for one side to act first. Former Member of Iran's Parliament. Save Share For nearly two decades, one question has haunted Iran-US diplomacy: Who should move first? Since the early 2000s, Washington and Tehran have repeatedly faced the same dilemma: Should Iran limit its nuclear activities before receiving economic relief, or should the United States ease pressure before expecting Iranian concessions? Yet the latest diplomatic crisis suggests that these may no longer be the right questions. The real challenge is not who moves first. It is whether both sides can move together. This question has become urgent ag...",
+        "id": "https://www.aljazeera.com/news/2026/11/11/did-democrats-save-pete-hegseth-from-impeachment?traffic_source=rss",
+        "title": "Did Democrats save Pete Hegseth from impeachment?",
+        "summary": "Eleven Democrats are absent from a procedural vote that narrowly shelves a House impeachment vote against US defence secretary. Save Share The United States House ⁠of Representatives has blocked an attempt to impeach Defense Secretary Pete Hegseth in a surprise reprieve for President Donald Trump’s administration as Republicans reel from their midterm election defeat. The impeachment articles were introduced by Republican Congressman Thomas Massie, but the effort was backed primarily by Democrats. They accuse Hegseth of abuses of power and conducting illegal military operations. The Republican-led House voted 211-204 on Tuesday to refer the articles back to the House Judiciary Committee, ...",
         "source_name": "Al_Jazeera_Global",
-        "source_url": "https://www.aljazeera.com/opinions/2026/11/10/who-moves-first-in-iran-us-diplomacy?traffic_source=rss",
-        "published_at": "Tue, 10 Nov 2026 11:14:16 +0000",
+        "source_url": "https://www.aljazeera.com/news/2026/11/11/did-democrats-save-pete-hegseth-from-impeachment?traffic_source=rss",
+        "published_at": "Wed, 11 Nov 2026 10:32:03 +0000",
         "entities": []
       },
       {
-        "id": "https://www.npr.org/sections/planet-money/2026/11/10/g-s1-152755/why-did-californias-billionaire-tax-fail-to-surf-the-blue-wave",
-        "title": "Why did California's billionaire tax fail to surf the blue wave?",
-        "summary": "Greg Rosalsky Ultrasound Technologist Mayra Castaneda speaks in front of healthcare workers holding placards in support of the Billionaire Tax during a media briefing in Los Angeles on April 27, 2026. Healthcare workers and allies outlined the next steps in their effort to get California's Billionaire Tax on the ballot for the November election, with their efforts already exceeding 1,500,000 signatures collected from across the state. The initiative would levy a one-time 5% tax on California billionaires. (Photo by Frederic J. BROWN / AFP via Getty Images) FREDERIC J. BROWN/AFP via Getty Images/AFP hide caption Late Monday, The Associated Press determined that California voters had reject...",
-        "source_name": "NPR_Top_Stories",
-        "source_url": "https://www.npr.org/sections/planet-money/2026/11/10/g-s1-152755/why-did-californias-billionaire-tax-fail-to-surf-the-blue-wave",
-        "published_at": "Tue, 10 Nov 2026 06:30:00 -0500",
-        "entities": []
-      },
-      {
-        "id": "https://www.npr.org/2026/11/10/nx-s1-6030988/gop-leadership-election-steve-scalise-jim-jordan",
-        "title": "House Republicans to elect a new leader as they look to rebuild from midterm defeat",
-        "summary": "Claudia Grisales Rep. Jim Jordan, R-Ohio, left, and Rep. Steve Scalise, R-La., confer during a news conference at the Capitol on June 8, 2022. The two GOP leaders are competing to replace Mike Johnson as the top House Republican. J. Scott Applewhite/AP hide caption Just one week after losing the majority in the midterm elections, House Republicans will meet behind closed doors on Tuesday to pick a minority leader for the next Congress. The choice to succeed Mike Johnson, R-La., as the top House Republican will be between current House Majority Leader Steve Scalise, R-La., and Ohio Republican Jim Jordan, a co-founder of the ultra-conservative House Freedom Caucus. The election — which will...",
-        "source_name": "NPR_Top_Stories",
-        "source_url": "https://www.npr.org/2026/11/10/nx-s1-6030988/gop-leadership-election-steve-scalise-jim-jordan",
-        "published_at": "Tue, 10 Nov 2026 05:01:00 -0500",
-        "entities": []
-      },
-      {
-        "id": "https://arstechnica.com/culture/2026/11/dcu-shake-up-james-gunn-and-peter-safran-out-post-merger/",
-        "title": "DCU shake-up: James Gunn and Peter Safran out post-merger",
-        "summary": "Producer and former Kevin Feige protege Jeremy Latcham will replace Gunn and Safran. It’s barely been two months since the controversial Paramount and Warner Bros. merger, and we’ve already got a shockingly unexpected ouster: Co-CEOs of the rebooted DC Universe, James Gunn and Peter Safran, are stepping down from that role despite the Hollywood rumor mill assuming that the duo would be safe. It’s unclear whether the pair chose to resign or were forced out, or what will happen to their planned slate of projects beyond 2028’s Superman: Man of Tomorrow, which is in post-production. Producer Jeremy Latcham—a protege of Marvel’s Kevin Feige who worked with Gunn on Guardians of the Galaxy among...",
-        "source_name": "Ars_Technica",
-        "source_url": "https://arstechnica.com/culture/2026/11/dcu-shake-up-james-gunn-and-peter-safran-out-post-merger/",
-        "published_at": "Mon, 09 Nov 2026 21:55:35 +0000",
-        "entities": []
-      },
-      {
-        "id": "https://www.aljazeera.com/news/2026/11/10/malaysian-court-clears-former-pm-najib-razak-for-house-arrest-transfer?traffic_source=rss",
-        "title": "Malaysian court clears former PM Najib Razak for house arrest transfer",
-        "summary": "Najib, 73, was jailed for his role in one of the largest global plunders of a sovereign wealth fund, the now-defunct 1MDB. Save Share A Malaysian court has cleared the way for jailed former Prime Minister Najib Razak to be transferred to house arrest after an earlier directive was disputed. “In accordance with the order of conditional pardon, the accused shall serve the remainder of the reduced sentence of six years’ imprisonment under house arrest,” Kuala Lumpur High Court Judge Aslam Zainuddin said on Tuesday. Najib, 73, was jailed for his role in one of the largest thefts of public funds ever recorded from the now-defunct 1Malaysia Development Berhad (1MDB) and was granted a conditiona...",
-        "source_name": "Al_Jazeera_Global",
-        "source_url": "https://www.aljazeera.com/news/2026/11/10/malaysian-court-clears-former-pm-najib-razak-for-house-arrest-transfer?traffic_source=rss",
-        "published_at": "Tue, 10 Nov 2026 11:17:36 +0000",
-        "entities": []
-      },
-      {
-        "id": "https://techcrunch.com/2026/11/09/jensen-huangs-alleged-honeypot-scandal-has-inspired-some-top-notch-memes/",
-        "title": "Jensen Huang’s alleged honeypot scandal has inspired some top-notch memes",
-        "summary": "Latest AI Amazon Apps Biotech & Health Climate Cloud Computing Commerce Crypto Enterprise EVs Fintech Fundraising Gadgets Gaming Google Government & Policy Hardware Instagram Layoffs Media & Entertainment Meta Microsoft Privacy Robotics Security Social Space Startups TikTok Transportation Venture Staff Events Startup Battlefield StrictlyVC Newsletters Podcasts Videos Partner Content TechCrunch Brand Studio Contact Us Jensen Huang, the CEO and co-founder of the world’s most prominent chip company, has allegedly been honey-trapped by a suspected Chinese spy, and the news has struck the internet like a match to gasoline. Huang has long been seen as a wife guy (or so everyone assumed). He and...",
+        "id": "https://techcrunch.com/2026/11/10/x-launches-its-own-clipping-feature-to-spur-influencer-engagement/",
+        "title": "X launches its own clipping feature to spur influencer engagement",
+        "summary": "Latest AI Amazon Apps Biotech & Health Climate Cloud Computing Commerce Crypto Enterprise EVs Fintech Fundraising Gadgets Gaming Google Government & Policy Hardware Instagram Layoffs Media & Entertainment Meta Microsoft Privacy Robotics Security Social Space Startups TikTok Transportation Venture Staff Events Startup Battlefield StrictlyVC Newsletters Podcasts Videos Partner Content TechCrunch Brand Studio Contact Us Over the past few years, X has released a number of features to make itself a friendlier hub for influencers. The latest effort to attract social media talent? Its own clipping tool. Clipping is the pivotal social media technique by which longer videos are spliced into TikTok...",
         "source_name": "TechCrunch",
-        "source_url": "https://techcrunch.com/2026/11/09/jensen-huangs-alleged-honeypot-scandal-has-inspired-some-top-notch-memes/",
-        "published_at": "Tue, 10 Nov 2026 04:34:15 +0000",
-        "entities": []
-      },
-      {
-        "id": "https://www.aljazeera.com/sports/2026/11/10/moroccan-trio-make-african-player-of-year-shortlist-as-salah-absent?traffic_source=rss",
-        "title": "Moroccan trio make African Player of Year shortlist as Salah absent",
-        "summary": "WAFCON winners Cameroon dominate women’s list after heroics from Monique Ngock, Michaely Bihina and Marie Ngah Manga. Save Share Achraf Hakimi will hope to defend his title of African Footballer of the Year on December 2 as he leads a trio of Moroccan players on the shortlist, which does not feature Egyptian star and former winner Mohamed Salah. Morocco captain Hakimi is joined by Brahim Diaz and Ismael Saibari on the 10-man shortlist released by the Confederation of African Football (CAF) last week. The trio led Morocco to a controversial Africa Cup of Nations (AFCON) title in January. Although Senegal beat Morocco 1-0 after extra time in the final, Morocco were subsequently awarded the ...",
-        "source_name": "Al_Jazeera_Global",
-        "source_url": "https://www.aljazeera.com/sports/2026/11/10/moroccan-trio-make-african-player-of-year-shortlist-as-salah-absent?traffic_source=rss",
-        "published_at": "Tue, 10 Nov 2026 11:05:20 +0000",
+        "source_url": "https://techcrunch.com/2026/11/10/x-launches-its-own-clipping-feature-to-spur-influencer-engagement/",
+        "published_at": "Wed, 11 Nov 2026 01:02:13 +0000",
         "entities": []
       }
     ]
@@ -148,43 +148,43 @@
     {
       "id": "insight_1",
       "item_ids": [
-        "https://www.npr.org/2026/11/10/g-s1-152773/russia-ukraine-war-talks",
-        "https://www.aljazeera.com/opinions/2026/11/10/who-moves-first-in-iran-us-diplomacy?traffic_source=rss"
+        "https://techcrunch.com/2026/11/10/nvidias-crisis-has-corporate-governance-experts-reaching-for-the-popcorn/",
+        "https://www.economist.com/finance-and-economics/2026/11/10/lessons-from-a-miserable-month-for-hedge-funds"
       ],
-      "hypothesis": "The United States is concurrently intensifying diplomatic outreach in the Middle East, using parallel tracks in Abu Dhabi and Iran to reshape regional conflict dynamics and signal a broader strategic pivot toward multilateral conflict resolution.",
+      "hypothesis": "The unprecedented governance turmoil at Nvidia is deepening hedge funds' reluctance to allocate capital outside the AI niche, accelerating a concentration of investment risk in AI‑centric equities.",
       "domains": [
-        "geopolitics",
-        "diplomacy"
+        "finance",
+        "tech",
+        "governance"
       ],
       "confidence": 0.88
     },
     {
       "id": "insight_2",
       "item_ids": [
-        "https://techcrunch.com/2026/11/09/californias-proposed-billionaire-tax-fails-to-pass/",
-        "yfinance_TSLA_2026-11-09"
+        "https://arstechnica.com/space/2026/11/the-us-military-seems-to-be-getting-nervous-about-the-launch-supply-crunch/",
+        "https://arxiv.org/abs/2611.12934"
       ],
-      "hypothesis": "The defeat of California's billionaire tax, driven by a tech‑industry‑led campaign, lifted market sentiment for leading tech firms, as reflected in Tesla’s 5.54% rally on the same day.",
+      "hypothesis": "The US military's warning of a launch‑supply crunch threatens the pipeline of raw satellite imagery that benchmarks like EarthRecord rely on, linking geopolitical launch constraints to the future of AI‑driven Earth observation research.",
       "domains": [
-        "economics",
-        "tech",
-        "politics"
+        "geopolitics",
+        "space",
+        "tech"
       ],
-      "confidence": 0.81
+      "confidence": 0.82
     },
     {
       "id": "insight_3",
       "item_ids": [
-        "https://techcrunch.com/2026/11/09/otter-ai-can-now-follow-conversations-across-30-languages/",
-        "https://www.scientificamerican.com/article/5-things-to-know-going-into-the-cop31-climate-meeting/"
+        "https://techcrunch.com/2026/11/10/openai-acquires-odessia-travel-startup-created-by-sonder-founder/",
+        "https://techcrunch.com/2026/11/10/x-launches-its-own-clipping-feature-to-spur-influencer-engagement/"
       ],
-      "hypothesis": "Otter AI’s new multilingual conversation‑tracking feature directly addresses the translation needs of the nearly 200‑nation COP31 climate summit, potentially streamlining real‑time multilingual dialogue among delegates.",
+      "hypothesis": "AI leaders are expanding beyond core models into consumer lifestyle and creator tools, as shown by OpenAI's entry into travel and X's rollout of video clipping, indicating a macro‑trend of AI embedding itself in everyday experiences and influencer economies.",
       "domains": [
         "tech",
-        "environment",
-        "climate"
+        "media"
       ],
-      "confidence": 0.84
+      "confidence": 0.86
     }
   ]
 }
