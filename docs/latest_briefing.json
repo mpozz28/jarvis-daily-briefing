@@ -1,46 +1,19 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-11-12T12:07:01.075664+00:00",
-  "date_label": "12 November 2026",
-  "narrative_briefing": "Good morning, Sir. I trust the dawn finds you in fine spirits and ready to navigate the intricate tapestry of today’s headlines. Let us commence with a macro‑geopolitical sweep: the relentless Russian bombardment of Ukraine’s power infrastructure has once again underscored the weaponisation of energy grids as a lever of modern warfare. The resulting blackouts—“no light, no water, no heat”—are not merely humanitarian tragedies; they are a stark reminder that AI‑driven cyber‑offensives are now integral to statecraft. As adversaries refine autonomous intrusion tools, regulators and intelligence agencies worldwide are sharpening their focus on the supply chain of high‑performance computing, with Nvidia perched squarely in the crosshairs.\n\nTurning to the corporate arena, Nvidia’s board appears to be rehearsing a dramatic exit for its charismatic founder‑CEO Jensen Huang. While the precise motives remain cloaked in speculation, the confluence of an FBI probe into alleged export violations and the board’s overtures to replace Huang signals a nascent form of state‑driven economic warfare. Governments are increasingly leveraging security investigations to extract concessions from firms that sit at the heart of the AI‑chip ecosystem. Should the board succeed, the market will witness a rare instance of a founder‑led titan being unseated, a scenario that could reverberate through the entire semiconductor sector.\n\nIn the realm of capital flows, the immediate fallout from the Nvidia saga has already manifested as a sharp sell‑off in the chipmaker’s shares, stoking anti‑AI sentiment across the board. Historically, when semiconductor behemoths stumble, investors pivot toward alternative growth engines—most notably Indian equities, which have a documented propensity to rally under such conditions. This reallocation is further amplified by the burgeoning discourse around “anti‑AI trade” measures, where protectionist policies seek to curb the diffusion of advanced AI technologies. The combined effect is a subtle yet discernible shift in global risk appetite, nudging capital away from high‑tech exposure toward markets perceived as less entangled with the AI regulatory maelstrom.\n\nOn the European front, Italy’s proposed exit tax has ignited a fresh bout of fiscal turbulence, threatening to dissuade foreign direct investment and complicate the continent’s already delicate balance between fiscal prudence and competitiveness. While the tax is framed as a revenue‑raising necessity, its broader implication is a potential acceleration of capital flight toward jurisdictions with more favourable tax regimes—a development that dovetails with the earlier noted migration of funds into Indian markets. Moreover, the “snatch‑and‑grab state” narrative, which describes governments’ increasingly aggressive appropriation of private sector assets, finds a vivid illustration in both the Italian tax proposal and the United States’ intensified scrutiny of AI‑chip exporters.\n\nNow, for the deterministic market metrics you requested: the S&P 500 stands at 759.81 dollars, posting a daily return of 1.32 percent amid a volatility reading of 25.88 percent, and is currently flagged as bullish despite the high volatility. The Nasdaq is trading at 690.38 dollars, delivering a more robust daily return of 2.31 percent, though its volatility is even higher at 40.04 percent, also maintaining a bullish trend in this turbulent environment. Bitcoin, meanwhile, has slipped to 72 737.99 dollars, registering a daily decline of 1.66 percent, with volatility at 34.13 percent and a bearish trend. Gold is priced at 365.17 dollars, down 1.13 percent for the day, volatility measured at 29.81 percent, and likewise trending bearish. These figures collectively paint a portrait of a market that is simultaneously buoyant in equities yet jittery across risk assets, underscoring the importance of strategic positioning.\n\nIn closing, Sir, the confluence of geopolitical tension, corporate upheaval, and shifting fiscal policies presents a crucible of opportunity for the discerning executive. By anticipating the ripple effects of today’s events and aligning your portfolio with the emerging currents, you will not merely weather the storm—you will harness its energy to propel forward. Let us stride confidently into the day, ever ready to turn challenge into triumph.",
+  "generated_at": "2026-11-13T11:48:57.124022+00:00",
+  "date_label": "13 November 2026",
+  "narrative_briefing": "Good morning, Sir. The latest flare‑up in the Persian Gulf, where Tehran has warned of an “unlimited response” following a U.S. strike near the Strait of Hormuz, adds a fresh layer of volatility to an already fraught geopolitical tableau. The strategic chokepoint, vital for the flow of oil, now sits at the centre of a potential escalation that could reverberate through global energy markets, prompting a reassessment of risk premiums across commodities and sovereign debt. Simultaneously, the Italian government’s proposal of an exit tax has stirred disquiet among multinational investors, hinting at a broader European trend toward fiscal nationalism that may further strain cross‑border capital flows. These developments, while distinct, converge in their capacity to heighten uncertainty for the macro‑economic environment and to sharpen the focus of regulators on any activity that could be construed as a national security concern.\n\nIn the technology arena, the United States’ intensified scrutiny of AI‑hardware firms—exemplified by the Democratic Committee’s scathing letter accusing Nvidia’s CEO Jensen Huang of colluding with former President Trump—signals a decisive shift toward political oversight of the semiconductor supply chain. The unfolding scandal, now chronicled in a detailed timeline, underscores how geopolitical friction can translate into legislative action, potentially curbing the export of high‑performance GPUs that are indispensable for both commercial AI workloads and advanced military applications. This regulatory pressure dovetails with the broader Western backlash against AI‑related trade, a sentiment that is already prompting capital to seek refuge in emerging markets, where equities such as those in India have begun to outpace their Western counterparts as investors hedge against the fallout from chip‑maker turbulence.\n\nOn the frontier of neurotechnology, a surprising surge of volunteers is requesting participation in brain‑implant trials, demanding greater autonomy and fewer non‑disclosure agreements. While no specific academic preprints have been cited, the trend mirrors a growing civilian appetite for direct brain‑computer interfaces, a field that is rapidly moving from experimental labs to commercial viability. The parallel emergence of armed autonomous robots—most notably El Salvador’s deployment of such units to combat gangs in Haiti—suggests a convergence where military and medical neuro‑technologies are advancing along similar trajectories. This duality raises profound ethical questions: the same algorithms that enable precision targeting in conflict zones could soon be embedded in devices that augment human cognition, blurring the line between defense and personal enhancement.\n\nTurning to the deterministic market metrics, the S&P 500 presently stands at 757.12 dollars, registering a daily return of minus 0.35 percent and a volatility reading of 25.83 percent, firmly entrenched in a bearish, high‑volatility trend. The Nasdaq follows at 688.17 dollars, down 0.32 percent with an even steeper volatility of 40.05 percent, also bearish. Bitcoin, the flagship cryptocurrency, trades at 69,393.21 dollars, slipping 2.73 percent amid a volatility of 37.42 percent, while gold, the traditional safe haven, is priced at 354.89 dollars, down 2.82 percent with a volatility of 31.98 percent, both reflecting bearish momentum. These figures collectively illustrate a market under pressure, where heightened geopolitical risk and regulatory uncertainty are feeding into broader risk aversion across asset classes.\n\nIn sum, Sir, the tapestry of today’s headlines weaves together a narrative of escalating tension—both on the world stage and within the corridors of technology—while financial markets respond with palpable nervousness. By recognising the interlocking nature of these events, you can anticipate where capital may flow, where policy may tighten, and where innovation may surge. Let us stride forward with clarity of purpose, turning today’s turbulence into tomorrow’s opportunity.",
   "domains": {
     "ai_research": [],
     "markets": [],
     "news_politics": [
       {
-        "id": "https://techcrunch.com/2026/11/11/nvidias-stock-drops-as-board-reportedly-preps-to-oust-ceo-jensen-huang/",
-        "title": "Nvidia’s stock drops as board reportedly preps to oust CEO Jensen Huang",
-        "summary": "Latest AI Amazon Apps Biotech & Health Climate Cloud Computing Commerce Crypto Enterprise EVs Fintech Fundraising Gadgets Gaming Google Government & Policy Hardware Instagram Layoffs Media & Entertainment Meta Microsoft Privacy Robotics Security Social Space Startups TikTok Transportation Venture Staff Events Startup Battlefield StrictlyVC Newsletters Podcasts Videos Partner Content TechCrunch Brand Studio Contact Us Posted: Nvidia is reportedly planning to oust its co-founder and CEO Jensen Huang, who has led the company for the last 33 years, the Wall Street Journal reports. Sources told the newspaper that the Nvidia board is meeting as soon as Wednesday to determine Huang’s future at t...",
-        "source_name": "TechCrunch",
-        "source_url": "https://techcrunch.com/2026/11/11/nvidias-stock-drops-as-board-reportedly-preps-to-oust-ceo-jensen-huang/",
-        "published_at": "Wed, 11 Nov 2026 23:28:45 +0000",
-        "entities": []
-      },
-      {
-        "id": "https://www.bbc.co.uk/news/articles/cr1ewpd95d21o?at_medium=RSS&at_campaign=rss",
-        "title": "'No light, no water, no heat': Ukrainians struggle with blackouts as Russia hits power grid",
-        "summary": "This video can not be played Watch: Life in the darkness during Ukraine's blackouts Daryna Kulchytska is a mum under pressure. A single parent in a seventh floor flat in Kyiv trying to feed two lively kids and ensure they do their homework. But Daryna also faces the added strain of a deadline she can't even be certain of. All she knows is soon the lights will go out, the sockets will lose power, the wi-fi will drop, and the taps will run dry. Tonight, the electricity has kept flowing an hour longer than advertised, but Daryna's still racing to serve dinner and finish her own work from home. \"The last few days it was only four or five hours we had power, but it's not at the same times. For...",
-        "source_name": "BBC_World",
-        "source_url": "https://www.bbc.co.uk/news/articles/cr1ewpd95d21o?at_medium=RSS&at_campaign=rss",
-        "published_at": "Thu, 12 Nov 2026 07:59:33 GMT",
-        "entities": []
-      },
-      {
-        "id": "https://www.aljazeera.com/news/2026/11/12/nvidia-board-weighs-jensen-huangs-future-can-it-remove-its-founder?traffic_source=rss",
-        "title": "Nvidia board weighs Jensen Huang’s future: Can it remove its founder?",
-        "summary": "CEO of chip maker is under scrutiny after reports of affairs, including a relationship with an alleged Chinese spy. Save Share Jensen Huang may be ousted as the CEO of Nvidia after the tech giant lost more than $600bn in market value this week, following reports that he had extramarital affairs with two women, including a businesswoman accused of spying for China. Nvidia’s board of directors met late on Wednesday to decide whether to remove Huang, who cofounded the $4.2 trillion company, which supplies most of the chips used for advanced artificial intelligence (AI). Huang, 63, admitted on Sunday in a memo to staff that he had been unfaithful to his wife, following the reports of a relati...",
+        "id": "https://www.aljazeera.com/video/newsfeed/2026/11/13/13-11-reported-resul-serdar-iran-basij?traffic_source=rss",
+        "title": "Iran threatens unlimited response over Strait of Hormuz after US attack",
+        "summary": "Iran threatens unlimited response over Strait of Hormuz after US attack Iran’s Islamic Revolutionary Guard Corps says it destroyed a US early-warning radar in Bahrain in retaliation for an attack on a telecommunications centre in Iran. Al Jazeera’s Resul Serdar Atas reports from Tehran. Save Share Follow Al Jazeera English:",
         "source_name": "Al_Jazeera_Global",
-        "source_url": "https://www.aljazeera.com/news/2026/11/12/nvidia-board-weighs-jensen-huangs-future-can-it-remove-its-founder?traffic_source=rss",
-        "published_at": "Thu, 12 Nov 2026 11:43:19 +0000",
-        "entities": []
-      },
-      {
-        "id": "https://arstechnica.com/gadgets/2026/11/ceo-jensen-huangs-job-is-suddenly-on-the-line-at-nvidia/",
-        "title": "CEO Jensen Huang's job is suddenly on the line at Nvidia",
-        "summary": "The FBI is investigating as Nvidia’s board holds urgent talks over Huang’s future. Nvidia’s board is set to decide the future of its founder Jensen Huang after revelations that he had a romantic relationship with a company executive, days after it emerged that he had an affair with a suspected Chinese spy. The board held urgent talks on Wednesday night after news broke of the Nvidia chief executive’s relationship with Kimberly Powell, the chipmaker’s vice-president of healthcare, according to people familiar with the matter. The relationship with an Nvidia employee deepens an already damaging scandal for the $4.2 trillion semiconductor group. Huang on Sunday admitted to having an affair, ...",
-        "source_name": "Ars_Technica",
-        "source_url": "https://arstechnica.com/gadgets/2026/11/ceo-jensen-huangs-job-is-suddenly-on-the-line-at-nvidia/",
-        "published_at": "Wed, 11 Nov 2026 23:10:17 +0000",
+        "source_url": "https://www.aljazeera.com/video/newsfeed/2026/11/13/13-11-reported-resul-serdar-iran-basij?traffic_source=rss",
+        "published_at": "Fri, 13 Nov 2026 10:54:25 +0000",
         "entities": []
       },
       {
@@ -53,12 +26,12 @@
         "entities": []
       },
       {
-        "id": "https://www.economist.com/finance-and-economics/2026/11/12/the-return-of-the-snatch-and-grab-state",
-        "title": "The return of the snatch-and-grab state",
-        "summary": "A new history of confiscation sheds light on modern economic warfare",
-        "source_name": "The_Economist",
-        "source_url": "https://www.economist.com/finance-and-economics/2026/11/12/the-return-of-the-snatch-and-grab-state",
-        "published_at": "Thu, 12 Nov 2026 10:40:24 +0000",
+        "id": "https://www.technologyreview.com/2026/11/13/1148474/more-autonomy-fewer-ndas-volunteers-have-new-requests-for-brain-implant-trials/",
+        "title": "More autonomy, fewer NDAs: Volunteers have new requests for brain implant trials",
+        "summary": "People with experimental brain implants are pushing for more recognition and respect. Scientists have been working on ways to decode brain activity for decades. Teams have developed brain implants that can be used to control robotic limbs and computers, and even to “speak.” The people who volunteer for trials of those devices play a vital role in that research, and they ought to be recognized for their contributions, says Ian Burkhart, who had one implanted in his own brain back in 2014. He’s been working on a set of guidelines for researchers developing brain-computer interfaces (BCIs). Ethics guidelines for clinical trials already exist. But BCI trials are different, says Jennifer Chand...",
+        "source_name": "MIT_Tech_Review",
+        "source_url": "https://www.technologyreview.com/2026/11/13/1148474/more-autonomy-fewer-ndas-volunteers-have-new-requests-for-brain-implant-trials/",
+        "published_at": "Fri, 13 Nov 2026 10:00:00 +0000",
         "entities": []
       },
       {
@@ -71,109 +44,147 @@
         "entities": []
       },
       {
-        "id": "https://www.aljazeera.com/video/newsfeed/2026/11/12/robot-tells-al-jazeera-ai-is-too-useful-to?traffic_source=rss",
-        "title": "Robot tells Al Jazeera AI is ‘too useful to disappear’",
-        "summary": "Robot tells Al Jazeera AI is ‘too useful to disappear’ Massive investments in AI have driven the dominance of tech companies in US stock markets, but experts warn valuations may be outpacing the technology’s actual capabilities. Al Jazeera’s Rosie Birchard put the question to a humanoid robot at the Web Summit in Lisbon. Save Share Follow Al Jazeera English:",
-        "source_name": "Al_Jazeera_Global",
-        "source_url": "https://www.aljazeera.com/video/newsfeed/2026/11/12/robot-tells-al-jazeera-ai-is-too-useful-to?traffic_source=rss",
-        "published_at": "Thu, 12 Nov 2026 10:53:23 +0000",
+        "id": "https://techcrunch.com/2026/11/12/democrats-launch-nvidia-investigation-write-scathing-letter-on-huangs-scheme-with-trump/",
+        "title": "Democrats launch Nvidia investigation, write scathing letter on Huang’s ‘scheme’ with Trump",
+        "summary": "Latest AI Amazon Apps Biotech & Health Climate Cloud Computing Commerce Crypto Enterprise EVs Fintech Fundraising Gadgets Gaming Google Government & Policy Hardware Instagram Layoffs Media & Entertainment Meta Microsoft Privacy Robotics Security Social Space Startups TikTok Transportation Venture Staff Events Startup Battlefield StrictlyVC Newsletters Podcasts Videos Partner Content TechCrunch Brand Studio Contact Us Democrats on Thursday opened an inquiry into how the Trump administration handled Nvidia’s chip sales to China. Earlier on Thursday, the company ousted its CEO Jensen Huang. He also agreed to testify to a different set of Republican-led Congressional committees. Huang was rem...",
+        "source_name": "TechCrunch",
+        "source_url": "https://techcrunch.com/2026/11/12/democrats-launch-nvidia-investigation-write-scathing-letter-on-huangs-scheme-with-trump/",
+        "published_at": "Thu, 12 Nov 2026 22:42:51 +0000",
         "entities": []
       },
       {
-        "id": "https://techcrunch.com/2026/11/11/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline/",
+        "id": "https://www.economist.com/finance-and-economics/2026/11/12/the-return-of-the-snatch-and-grab-state",
+        "title": "The return of the snatch-and-grab state",
+        "summary": "A new history of confiscation sheds light on modern economic warfare",
+        "source_name": "The_Economist",
+        "source_url": "https://www.economist.com/finance-and-economics/2026/11/12/the-return-of-the-snatch-and-grab-state",
+        "published_at": "Thu, 12 Nov 2026 10:40:24 +0000",
+        "entities": []
+      },
+      {
+        "id": "https://techcrunch.com/2026/11/12/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline/",
         "title": "The unfolding Jensen Huang scandal: a timeline",
-        "summary": "Latest AI Amazon Apps Biotech & Health Climate Cloud Computing Commerce Crypto Enterprise EVs Fintech Fundraising Gadgets Gaming Google Government & Policy Hardware Instagram Layoffs Media & Entertainment Meta Microsoft Privacy Robotics Security Social Space Startups TikTok Transportation Venture Staff Events Startup Battlefield StrictlyVC Newsletters Podcasts Videos Partner Content TechCrunch Brand Studio Contact Us Nvidia co-founder CEO Jensen Huang has never been as flashy or controversy-prone as AI leaders like OpenAI’s Sam Altman or SpaceXAI’s Elon Musk. Now, the 63-year-old industry kingpin has admitted that he cheated on his wife of 40 years in an affair that could have ramificatio...",
+        "summary": "Latest AI Amazon Apps Biotech & Health Climate Cloud Computing Commerce Crypto Enterprise EVs Fintech Fundraising Gadgets Gaming Google Government & Policy Hardware Instagram Layoffs Media & Entertainment Meta Microsoft Privacy Robotics Security Social Space Startups TikTok Transportation Venture Staff Events Startup Battlefield StrictlyVC Newsletters Podcasts Videos Partner Content TechCrunch Brand Studio Contact Us Nvidia co-founder and now former CEO Jensen Huang has never been as flashy or controversy-prone as AI leaders like OpenAI’s Sam Altman or SpaceXAI’s Elon Musk. Now, the 63-year-old industry kingpin has admitted that he cheated on his wife of 40 years in affairs that could hav...",
         "source_name": "TechCrunch",
-        "source_url": "https://techcrunch.com/2026/11/11/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline/",
-        "published_at": "Wed, 11 Nov 2026 23:50:00 +0000",
+        "source_url": "https://techcrunch.com/2026/11/12/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline/",
+        "published_at": "Thu, 12 Nov 2026 21:35:00 +0000",
         "entities": []
       },
       {
-        "id": "https://www.bbc.co.uk/news/articles/cw7vppyr80eeo?at_medium=RSS&at_campaign=rss",
-        "title": "Democrat Scott Colom makes history as Mississippi's first black senator since 19th Century",
-        "summary": "This video can not be played Why Democrat Scott Colomâs Senate win in Mississippi is so significant Democrat Scott Colom has won the US Senate race in Mississippi, delivering a shock victory for the party in a deeply conservative state that has elected Republicans for decades. Colom's victory makes him the first black person from Mississippi to be seated in the US Senate since Blanche Bruce served from 1875 to 1881. Fewer than five thousand votes out of nearly a million counted separated him from his Republican opponent, the incumbent Cindy Hyde-Smith. The result means the Democrats will hold 55 seats in the 100-member Senate, with a knife-edge race in Alaska still to be called. Colom, ...",
-        "source_name": "BBC_World",
-        "source_url": "https://www.bbc.co.uk/news/articles/cw7vppyr80eeo?at_medium=RSS&at_campaign=rss",
-        "published_at": "Thu, 12 Nov 2026 10:02:32 GMT",
-        "entities": []
-      },
-      {
-        "id": "https://www.aljazeera.com/news/2026/11/12/who-is-scott-colom-mississippis-first-black-senator-in-150-years?traffic_source=rss",
-        "title": "Who is Scott Colom, Mississippi’s first Black senator in 150 years?",
-        "summary": "Mississippi is home to a large Black American population but no Black person has held a Senate seat since the 1800s. Save Share United States prosecutor and Democrat Scott Colom has made history in Mississippi by becoming the deeply conservative state’s first Black senator in more than 150 years and ushering in the first Democratic victory there in more than four decades. Senator-elect Colom’s narrow victory against Republican Cindy Hyde-Smith was declared late on Wednesday, more than a week after the US midterms, which many have called a “blue tsunami” as Democrats firmly seized control of both the Senate and House of Representatives. It has been 43 years since Democrats last won a Senat...",
+        "id": "https://www.aljazeera.com/video/newsfeed/2026/11/13/el-salvador-deploys-armed-robots-to-fight-gangs-in-haiti?traffic_source=rss",
+        "title": "El Salvador deploys armed robots to fight gangs in Haiti",
+        "summary": "El Salvador deploys armed robots to fight gangs in Haiti El Salvador’s President Nayib Bukele has released a video showing armed robots during an operation against gangs at the main stadium in Port-au-Prince, Haiti. The stadium has been under gang control for the last two years. Save Share Follow Al Jazeera English:",
         "source_name": "Al_Jazeera_Global",
-        "source_url": "https://www.aljazeera.com/news/2026/11/12/who-is-scott-colom-mississippis-first-black-senator-in-150-years?traffic_source=rss",
-        "published_at": "Thu, 12 Nov 2026 11:31:16 +0000",
+        "source_url": "https://www.aljazeera.com/video/newsfeed/2026/11/13/el-salvador-deploys-armed-robots-to-fight-gangs-in-haiti?traffic_source=rss",
+        "published_at": "Fri, 13 Nov 2026 10:57:20 +0000",
         "entities": []
       },
       {
-        "id": "https://techcrunch.com/2026/11/11/who-could-replace-jensen-huang-a-highly-unscientific-list-of-possible-successors/",
-        "title": "Who could replace Jensen Huang? A highly unscientific list of possible successors",
-        "summary": "Latest AI Amazon Apps Biotech & Health Climate Cloud Computing Commerce Crypto Enterprise EVs Fintech Fundraising Gadgets Gaming Google Government & Policy Hardware Instagram Layoffs Media & Entertainment Meta Microsoft Privacy Robotics Security Social Space Startups TikTok Transportation Venture Staff Events Startup Battlefield StrictlyVC Newsletters Podcasts Videos Partner Content TechCrunch Brand Studio Contact Us It’s almost inconceivable that Nvidia would fire its rock star CEO. Yet here we are, on the precipice of this happening. Over at Kalshi, Jensen Huang’s odds of surviving the week are sitting at a lowly 30%. Even though he built one of the world’s most valuable — and, many wou...",
+        "id": "https://www.aljazeera.com/news/liveblog/2026/11/13/live-microsoft-struggles-to-restore-services-as-outage-hits-global-users?traffic_source=rss",
+        "title": "Live: Microsoft struggles to restore services as outage hits global users",
+        "summary": "As disruption affects users worldwide, Microsoft admits fixes are not going ‘as expected’. Save Share Follow Al Jazeera English:",
+        "source_name": "Al_Jazeera_Global",
+        "source_url": "https://www.aljazeera.com/news/liveblog/2026/11/13/live-microsoft-struggles-to-restore-services-as-outage-hits-global-users?traffic_source=rss",
+        "published_at": "Fri, 13 Nov 2026 11:18:01 +0000",
+        "entities": []
+      },
+      {
+        "id": "yfinance_NVDA_2026-11-12",
+        "title": "Abnormal movement for NVDA: -4.34%",
+        "summary": "Oops, something went wrong The above button links to Coinbase. Yahoo Finance is not a broker-dealer or investment adviser and does not offer securities or cryptocurrencies for sale or facilitate trading. Coinbase pays us for certain activity generated through this link. Prices displayed are informational. Nvidia faces a leadership transition after Jensen Huang’s reported resignation, with Colette Kress serving as interim chief executive officer. The company has launched an independent investigation and will report fiscal third-quarter results next week, while rivals gain investor attention. Nvidia is up 2.77% in today’s pre-market move against the prior close; the regular session has not ...",
+        "source_name": "Yahoo Finance Data",
+        "source_url": "https://finance.yahoo.com/quote/NVDA",
+        "published_at": "2026-11-12",
+        "entities": []
+      },
+      {
+        "id": "https://www.technologyreview.com/2026/11/13/1148498/silicon-valley-claims-to-know-the-future-so-why-did-it-get-the-midterms-so-wrong/",
+        "title": "Silicon Valley claims to know the future. So why did it get the midterms so wrong?",
+        "summary": "Tech executives traded their reputations as visionaries for short-term political gain. The self-styled visionaries of Silicon Valley, leaders like OpenAI chief executive Sam Altman and SpaceX boss Elon Musk, have built careers claiming to see the future. Long-term vision is currency: Meta’s Mark Zuckerberg built a 10-year road map for Facebook in 2016, and Google famously told investors before its public offering that it was unconcerned with short-term results. And yet there they all were, a mere five weeks before the midterm elections, gathered at the White House to smile for photos with President Trump and sign on to his “Super Intelligence” agenda. Even by the diminished standards of t...",
+        "source_name": "MIT_Tech_Review",
+        "source_url": "https://www.technologyreview.com/2026/11/13/1148498/silicon-valley-claims-to-know-the-future-so-why-did-it-get-the-midterms-so-wrong/",
+        "published_at": "Fri, 13 Nov 2026 10:00:00 +0000",
+        "entities": []
+      },
+      {
+        "id": "https://techcrunch.com/2026/11/12/muse-can-now-place-calls-to-u-s-businesses-if-you-pay/",
+        "title": "Muse can now place calls to US businesses — if you pay",
+        "summary": "Latest AI Amazon Apps Biotech & Health Climate Cloud Computing Commerce Crypto Enterprise EVs Fintech Fundraising Gadgets Gaming Google Government & Policy Hardware Instagram Layoffs Media & Entertainment Meta Microsoft Privacy Robotics Security Social Space Startups TikTok Transportation Venture Staff Events Startup Battlefield StrictlyVC Newsletters Podcasts Videos Partner Content TechCrunch Brand Studio Contact Us After initially testing the feature in September, Meta’s consumer AI agent Muse is now able to place calls to U.S. businesses on behalf of its users. However, only paid subscribers have access to the feature, the company says. Meta’s Muse, which now has over 10 million users,...",
         "source_name": "TechCrunch",
-        "source_url": "https://techcrunch.com/2026/11/11/who-could-replace-jensen-huang-a-highly-unscientific-list-of-possible-successors/",
-        "published_at": "Thu, 12 Nov 2026 03:13:10 +0000",
+        "source_url": "https://techcrunch.com/2026/11/12/muse-can-now-place-calls-to-u-s-businesses-if-you-pay/",
+        "published_at": "Thu, 12 Nov 2026 22:22:28 +0000",
         "entities": []
       },
       {
-        "id": "https://arstechnica.com/features/2026/11/review-apples-m6-imac-is-pricey-but-its-still-a-good-choice-for-a-clean-desk/",
-        "title": "Review: Apple's M6 iMac is pricey, but it's still a good choice for a clean desk",
-        "summary": "Apple’s M6 keeps the iMac current without shaking things up much. The Apple Silicon iMac got its fourth refresh this month. Every other Apple Silicon Mac has found a way to move forward over the last half-decade—we’ve gotten a more Pro design for the MacBook Pro, a mini-er design for the Mac mini, and a Mac Studio that has finally made Apple admit it doesn’t want to make the Mac Pro anymore. But the Apple Silicon iMac has always been more interested in looking backward. It’s the thin, screen-on-a-stand iMac design by way of the original Bondi Blue G3 iMac. It’s a clean and pretty desktop computer, one I see all the time in small offices and on TV shows that depict small offices. We’re lon...",
-        "source_name": "Ars_Technica",
-        "source_url": "https://arstechnica.com/features/2026/11/review-apples-m6-imac-is-pricey-but-its-still-a-good-choice-for-a-clean-desk/",
-        "published_at": "Thu, 12 Nov 2026 12:00:37 +0000",
+        "id": "https://www.npr.org/2026/11/13/nx-s1-6032777/rivers-in-the-sky-are-raining-down-on-the-pacific-northwest-what-are-they",
+        "title": "Rivers in the sky are raining down on the Pacific Northwest. What are they?",
+        "summary": "By Ava Berger STANWOOD, WASHINGTON - DECEMBER 6: In an aerial view, floodwaters surround a home on December 6, 2023 in Stanwood, Washington. Atmospheric river conditions in the region brought heavy rains and flooding. David Ryder/Getty Images hide caption It's the wettest time of the year for one of the wettest parts of the country: the Pacific Northwest. This week is no exception as heavy rain, high tides and a rising sea level hit the West Coast. And more storms are on their way. Two atmospheric rivers, bringing heavy rain, will pound parts of Oregon and Washington state back-to-back on Friday and Saturday. Two other atmospheric rivers already dropped multiple inches of rain on both sta...",
+        "source_name": "NPR_Top_Stories",
+        "source_url": "https://www.npr.org/2026/11/13/nx-s1-6032777/rivers-in-the-sky-are-raining-down-on-the-pacific-northwest-what-are-they",
+        "published_at": "Fri, 13 Nov 2026 05:01:00 -0500",
         "entities": []
       },
       {
-        "id": "https://www.bbc.co.uk/news/articles/c8zx964glvwxo?at_medium=RSS&at_campaign=rss",
-        "title": "New York building collapse kills at least four people",
-        "summary": "This video can not be played Watch: Aerial video shows survivor being pulled from collapsed building in New York At least four people have died after a building in New York City collapsed into an open construction site on Wednesday afternoon. Nineteen others have been injured, of whom four are in a critical condition, according to the BBC's US partner CBS News, which cited local officials. The collapse sparked a massive search-and-rescue operation, with more than 250 first responders going to the scene of the fallen three-storey building in Brooklyn. Aerial footage has shown firefighters pulling a survivor, covered in dust, out of the debris on a stretcher. She was later said to have been...",
-        "source_name": "BBC_World",
-        "source_url": "https://www.bbc.co.uk/news/articles/c8zx964glvwxo?at_medium=RSS&at_campaign=rss",
-        "published_at": "Thu, 12 Nov 2026 11:48:14 GMT",
+        "id": "https://www.npr.org/2026/11/13/nx-s1-6039203/kratom-7-oh-dea-addiction-opioid",
+        "title": "Kratom and 7-OH can feel like 'a miracle.' They can also be addictive",
+        "summary": "By Rachel Carlson Kratom and related 7-OH products are widely available at gas stations, smoke shops, liquor stores and online. As early as Friday, the federal government could make some of the products illegal. Mindy Schauer/MediaNewsGroup/Orange County Register via Getty Images hide caption Tyler's opioid addiction began in his early 20s, and when he decided he wanted to quit, he used kratom leaf powders to help ease withdrawal symptoms. Tyler, now 38, told NPR he thinks kratom helped him stop using opioids for a decade. Tyler asked NPR to use only his first name because of the stigma attached to his history with drug use and addiction. In early 2025, he saw a new product at a gas stati...",
+        "source_name": "NPR_Top_Stories",
+        "source_url": "https://www.npr.org/2026/11/13/nx-s1-6039203/kratom-7-oh-dea-addiction-opioid",
+        "published_at": "Fri, 13 Nov 2026 06:00:00 -0500",
+        "entities": []
+      },
+      {
+        "id": "https://www.npr.org/2026/11/13/nx-s1-6039845/hegseth-awards-medal-to-soldier-who-chastised-him",
+        "title": "Hegseth awards medal to soldier who chastised him",
+        "summary": "By Kate Bartlett U.S. Defense Secretary Pete Hegseth, right, and his wife Jennifer Rauchet attend a ceremony at the Tomb of the Unknown Soldier on National Veterans Day Observance at Arlington National Cemetery in Arlington, Va., Wednesday, Nov. 11, 2026. Mark Schiefelbein/AP hide caption Coming out of the bruising the Republicans suffered in the midterms, this week was bearing up to be a bad one for Secretary of Defense Pete Hegseth. Many thought he'd be the first in the administration to be fired for his support of the Iran war, which proved unpopular with voters. Then a member of his own party called for a vote to impeach him and, in an embarrassing incident that went viral, he also go...",
+        "source_name": "NPR_Top_Stories",
+        "source_url": "https://www.npr.org/2026/11/13/nx-s1-6039845/hegseth-awards-medal-to-soldier-who-chastised-him",
+        "published_at": "Fri, 13 Nov 2026 05:27:08 -0500",
         "entities": []
       }
     ]
   },
   "connections": [
     {
-      "id": "insight_001",
+      "id": "insight_1",
       "item_ids": [
-        "https://arstechnica.com/gadgets/2026/11/ceo-jensen-huangs-job-is-suddenly-on-the-line-at-nvidia/",
-        "https://www.economist.com/finance-and-economics/2026/11/12/the-return-of-the-snatch-and-grab-state"
+        "https://www.aljazeera.com/video/newsfeed/2026/11/13/13-11-reported-resul-serdar-iran-basij?traffic_source=rss",
+        "https://techcrunch.com/2026/11/12/democrats-launch-nvidia-investigation-write-scathing-letter-on-huangs-scheme-with-trump/",
+        "yfinance_NVDA_2026-11-12"
       ],
-      "hypothesis": "The FBI probe and board's move to oust Jensen Huang illustrate a new wave of state‑driven economic warfare where governments weaponize security investigations to gain leverage over strategic AI‑chip assets.",
+      "hypothesis": "Escalating geopolitical tensions in the Middle East are amplifying U.S. regulatory scrutiny of AI‑hardware firms, which in turn is driving heightened volatility in leading chip stocks like Nvidia.",
       "domains": [
         "geopolitics",
         "tech",
-        "economics"
+        "finance"
       ],
       "confidence": 0.88
     },
     {
-      "id": "insight_002",
+      "id": "insight_2",
       "item_ids": [
-        "https://techcrunch.com/2026/11/11/nvidias-stock-drops-as-board-reportedly-preps-to-oust-ceo-jensen-huang/",
-        "https://www.economist.com/finance-and-economics/2026/11/12/where-to-find-the-anti-ai-trade"
+        "https://www.economist.com/finance-and-economics/2026/11/12/where-to-find-the-anti-ai-trade",
+        "https://techcrunch.com/2026/11/12/democrats-launch-nvidia-investigation-write-scathing-letter-on-huangs-scheme-with-trump/"
       ],
-      "hypothesis": "The sharp sell‑off in Nvidia shares triggered by the CEO scandal fuels anti‑AI sentiment, channeling capital toward Indian equities that historically rise when chipmakers underperform.",
+      "hypothesis": "Western political backlash against AI chip exports is redirecting investor capital toward emerging markets, as evidenced by Indian equities outperforming when major chipmakers falter.",
       "domains": [
-        "finance",
-        "tech"
+        "economics",
+        "tech",
+        "geopolitics"
       ],
       "confidence": 0.84
     },
     {
-      "id": "insight_003",
+      "id": "insight_3",
       "item_ids": [
-        "https://www.bbc.co.uk/news/articles/cr1ewpd95d21o?at_medium=RSS&at_campaign=rss",
-        "https://arstechnica.com/gadgets/2026/11/ceo-jensen-huangs-job-is-suddenly-on-the-line-at-nvidia/"
+        "https://www.aljazeera.com/video/newsfeed/2026/11/13/el-salvador-deploys-armed-robots-to-fight-gangs-in-haiti?traffic_source=rss",
+        "https://www.technologyreview.com/2026/11/13/1148474/more-autonomy-fewer-ndas-volunteers-have-new-requests-for-brain-implant-trials/"
       ],
-      "hypothesis": "Russia’s attacks on Ukraine’s power grid highlight the strategic importance of AI‑driven cyber tools, prompting heightened scrutiny of AI‑chip leaders like Nvidia as potential dual‑use technology providers.",
+      "hypothesis": "The rapid deployment of armed autonomous robots by states is paralleled by civilian demand for brain‑computer interfaces, indicating a convergence of military and medical neuro‑technology development.",
       "domains": [
-        "geopolitics",
-        "tech",
-        "security"
+        "defense",
+        "biotech",
+        "tech"
       ],
       "confidence": 0.81
     }
