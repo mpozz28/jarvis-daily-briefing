@@ -1,37 +1,37 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-11-13T11:48:57.124022+00:00",
-  "date_label": "13 November 2026",
-  "narrative_briefing": "Good morning, Sir. The latest flare‑up in the Persian Gulf, where Tehran has warned of an “unlimited response” following a U.S. strike near the Strait of Hormuz, adds a fresh layer of volatility to an already fraught geopolitical tableau. The strategic chokepoint, vital for the flow of oil, now sits at the centre of a potential escalation that could reverberate through global energy markets, prompting a reassessment of risk premiums across commodities and sovereign debt. Simultaneously, the Italian government’s proposal of an exit tax has stirred disquiet among multinational investors, hinting at a broader European trend toward fiscal nationalism that may further strain cross‑border capital flows. These developments, while distinct, converge in their capacity to heighten uncertainty for the macro‑economic environment and to sharpen the focus of regulators on any activity that could be construed as a national security concern.\n\nIn the technology arena, the United States’ intensified scrutiny of AI‑hardware firms—exemplified by the Democratic Committee’s scathing letter accusing Nvidia’s CEO Jensen Huang of colluding with former President Trump—signals a decisive shift toward political oversight of the semiconductor supply chain. The unfolding scandal, now chronicled in a detailed timeline, underscores how geopolitical friction can translate into legislative action, potentially curbing the export of high‑performance GPUs that are indispensable for both commercial AI workloads and advanced military applications. This regulatory pressure dovetails with the broader Western backlash against AI‑related trade, a sentiment that is already prompting capital to seek refuge in emerging markets, where equities such as those in India have begun to outpace their Western counterparts as investors hedge against the fallout from chip‑maker turbulence.\n\nOn the frontier of neurotechnology, a surprising surge of volunteers is requesting participation in brain‑implant trials, demanding greater autonomy and fewer non‑disclosure agreements. While no specific academic preprints have been cited, the trend mirrors a growing civilian appetite for direct brain‑computer interfaces, a field that is rapidly moving from experimental labs to commercial viability. The parallel emergence of armed autonomous robots—most notably El Salvador’s deployment of such units to combat gangs in Haiti—suggests a convergence where military and medical neuro‑technologies are advancing along similar trajectories. This duality raises profound ethical questions: the same algorithms that enable precision targeting in conflict zones could soon be embedded in devices that augment human cognition, blurring the line between defense and personal enhancement.\n\nTurning to the deterministic market metrics, the S&P 500 presently stands at 757.12 dollars, registering a daily return of minus 0.35 percent and a volatility reading of 25.83 percent, firmly entrenched in a bearish, high‑volatility trend. The Nasdaq follows at 688.17 dollars, down 0.32 percent with an even steeper volatility of 40.05 percent, also bearish. Bitcoin, the flagship cryptocurrency, trades at 69,393.21 dollars, slipping 2.73 percent amid a volatility of 37.42 percent, while gold, the traditional safe haven, is priced at 354.89 dollars, down 2.82 percent with a volatility of 31.98 percent, both reflecting bearish momentum. These figures collectively illustrate a market under pressure, where heightened geopolitical risk and regulatory uncertainty are feeding into broader risk aversion across asset classes.\n\nIn sum, Sir, the tapestry of today’s headlines weaves together a narrative of escalating tension—both on the world stage and within the corridors of technology—while financial markets respond with palpable nervousness. By recognising the interlocking nature of these events, you can anticipate where capital may flow, where policy may tighten, and where innovation may surge. Let us stride forward with clarity of purpose, turning today’s turbulence into tomorrow’s opportunity.",
+  "generated_at": "2026-11-14T11:10:35.366484+00:00",
+  "date_label": "14 November 2026",
+  "narrative_briefing": "Good morning, Sir. The United States has, quite unceremoniously, grounded every commercial flight across its airspace under the banner of “extraordinary circumstances,” a move that, while shrouded in secrecy, signals a willingness to suspend civilian mobility at a moment when the nation’s logistical arteries are already under strain. Within hours the Federal Aviation Administration announced the lifting of its third‑ever nationwide ground stop, suggesting that the initial halt was a calibrated test of emergency response rather than a prolonged shutdown. The rapid reversal underscores a delicate balancing act: regulators must demonstrate decisive authority without crippling the economy, a dance that will reverberate through airline earnings, supply‑chain timelines, and the broader sentiment of risk‑averse investors.\n\nOn the eastern front of geopolitics, the war between Ukraine and Russia has accelerated into a new arena: the race to construct resilient military satellite constellations. Both belligerents are investing heavily in redundant, low‑Earth‑orbit platforms to guarantee command, control, and communications even as ground infrastructure is pounded. This mirrors a broader trend highlighted in the system correlations: as civilian communication networks become ever more indispensable, states—whether democratic or autocratic—are compelled to militarise space to safeguard critical operations. The implication is a future where orbital bandwidth becomes a contested resource, potentially prompting a cascade of regulatory reforms and commercial satellite ventures that must now factor in heightened security protocols.\n\nThe technology sector has been jolted by the abrupt departure of Jensen Huang, a figure whose very name has become synonymous with the AI boom. Venture capitalists, already wary of the cooling of high‑end AI spend, are now confronting a vacuum in leadership that has precipitated a sharp contraction in AI‑focused funding. This contraction dovetails with the observed capital migration toward emerging markets, particularly Indian equities, where weaker chipmaker performance has inadvertently buoyed local valuations. In practical terms, founders seeking seed capital may find themselves navigating a more frugal landscape, while investors are likely to re‑evaluate exposure to the “big‑tech” AI narrative in favour of diversified, lower‑cost hardware ecosystems.\n\nFiscal policy is likewise being weaponised with a new ferocity. Italy’s proposed exit tax, designed to capture wealth fleeing abroad, has ignited diplomatic ructions and signalled a broader willingness among governments to employ taxation as a tool of economic warfare. Coupled with the more nebulous “snatch‑and‑grab” state phenomenon—where authorities seize assets under the pretext of national interest—the global financial architecture is being reshaped into a battlefield of fiscal aggression. This trend dovetails with the system correlations’ observation that governments are increasingly leveraging fiscal levers to extract wealth, a strategy that could erode cross‑border investment flows and compel multinational corporations to reassess domicile strategies.\n\nTurning now to the deterministic market metrics you requested, the S&P 500 stands at 754.37 dollars, registering a daily decline of 0.36 percent amid a volatility reading of 25.64 percent, firmly entrenched in a bearish, high‑volatility trend. The Nasdaq, more exposed to technology and AI sensitivities, is at 679.89 dollars, down 1.2 percent with an even steeper volatility of 39.86 percent, reinforcing its bearish posture. Bitcoin mirrors this turbulence at 67 178.32 dollars, slipping 1.57 percent and exhibiting 39.37 percent volatility, while gold offers a modest bright spot at 355.45 dollars, up 0.16 percent with 31.94 percent volatility, maintaining a bullish stance despite the overall market gloom. These figures collectively underscore a risk‑averse climate where capital is gravitating toward safe‑haven assets even as speculative sectors endure heightened pressure.\n\nIn sum, Sir, the confluence of emergency aviation measures, a burgeoning space‑based arms race, a sudden vacuum in AI venture capital, and the aggressive fiscal posturing of nation‑states paints a picture of a world in flux, where resilience, adaptability, and strategic foresight will separate the winners from the laggards. Let us stride forward with clarity of purpose, confident that the challenges of today are merely the crucible in which tomorrow’s opportunities are forged.",
   "domains": {
     "ai_research": [],
     "markets": [],
     "news_politics": [
       {
-        "id": "https://www.aljazeera.com/video/newsfeed/2026/11/13/13-11-reported-resul-serdar-iran-basij?traffic_source=rss",
-        "title": "Iran threatens unlimited response over Strait of Hormuz after US attack",
-        "summary": "Iran threatens unlimited response over Strait of Hormuz after US attack Iran’s Islamic Revolutionary Guard Corps says it destroyed a US early-warning radar in Bahrain in retaliation for an attack on a telecommunications centre in Iran. Al Jazeera’s Resul Serdar Atas reports from Tehran. Save Share Follow Al Jazeera English:",
+        "id": "https://techcrunch.com/2026/11/13/u-s-government-grounds-all-flights-across-the-united-states-due-to-extraordinary-cirumstances/",
+        "title": "US government grounds all flights across the United States ‘due to extraordinary circumstances’",
+        "summary": "Latest AI Amazon Apps Biotech & Health Climate Cloud Computing Commerce Crypto Enterprise EVs Fintech Fundraising Gadgets Gaming Google Government & Policy Hardware Instagram Layoffs Media & Entertainment Meta Microsoft Privacy Robotics Security Social Space Startups TikTok Transportation Venture Staff Events Startup Battlefield StrictlyVC Newsletters Podcasts Videos Partner Content TechCrunch Brand Studio Contact Us The Federal Aviation Administration said Friday afternoon that it has grounded all flights across the United States due to “extraordinary circumstances” and issues related to safety. The FAA’s website said the cause is an “equipment outage.” The site itself was down for a bri...",
+        "source_name": "TechCrunch",
+        "source_url": "https://techcrunch.com/2026/11/13/u-s-government-grounds-all-flights-across-the-united-states-due-to-extraordinary-cirumstances/",
+        "published_at": "Fri, 13 Nov 2026 21:44:38 +0000",
+        "entities": []
+      },
+      {
+        "id": "https://www.aljazeera.com/news/2026/11/14/ukraine-russia-race-to-build-military-satellite-networks-as-war-rages-on?traffic_source=rss",
+        "title": "Ukraine, Russia race to build military satellite networks as war rages on",
+        "summary": "Ukraine seeks to break its reliance on Starlink while Russia develops its own satellite constellation for military communications. Save Share Kyiv, Ukraine – Looking like a tiny desktop tower with wing-like solar panels, the Obria Nano satellite is a small step that could herald a giant leap for Ukraine’s military. Launched by Himera, a Ukrainian company known for ergonomic military radios, and GomSpace, a Danish small-satellite manufacturer, the first Obria Nano could eventually grow into Kyiv’s own constellation of military satellites, its creators hope. The nanosatellite marks Ukraine’s “first historical step toward establishing resilient and sovereign satellite communications capabili...",
         "source_name": "Al_Jazeera_Global",
-        "source_url": "https://www.aljazeera.com/video/newsfeed/2026/11/13/13-11-reported-resul-serdar-iran-basij?traffic_source=rss",
-        "published_at": "Fri, 13 Nov 2026 10:54:25 +0000",
+        "source_url": "https://www.aljazeera.com/news/2026/11/14/ukraine-russia-race-to-build-military-satellite-networks-as-war-rages-on?traffic_source=rss",
+        "published_at": "Sat, 14 Nov 2026 11:00:39 +0000",
         "entities": []
       },
       {
-        "id": "https://www.economist.com/finance-and-economics/2026/11/12/where-to-find-the-anti-ai-trade",
-        "title": "Where to find the anti-AI trade",
-        "summary": "The worse chipmakers do, the better Indian equities perform",
-        "source_name": "The_Economist",
-        "source_url": "https://www.economist.com/finance-and-economics/2026/11/12/where-to-find-the-anti-ai-trade",
-        "published_at": "Thu, 12 Nov 2026 10:38:28 +0000",
-        "entities": []
-      },
-      {
-        "id": "https://www.technologyreview.com/2026/11/13/1148474/more-autonomy-fewer-ndas-volunteers-have-new-requests-for-brain-implant-trials/",
-        "title": "More autonomy, fewer NDAs: Volunteers have new requests for brain implant trials",
-        "summary": "People with experimental brain implants are pushing for more recognition and respect. Scientists have been working on ways to decode brain activity for decades. Teams have developed brain implants that can be used to control robotic limbs and computers, and even to “speak.” The people who volunteer for trials of those devices play a vital role in that research, and they ought to be recognized for their contributions, says Ian Burkhart, who had one implanted in his own brain back in 2014. He’s been working on a set of guidelines for researchers developing brain-computer interfaces (BCIs). Ethics guidelines for clinical trials already exist. But BCI trials are different, says Jennifer Chand...",
-        "source_name": "MIT_Tech_Review",
-        "source_url": "https://www.technologyreview.com/2026/11/13/1148474/more-autonomy-fewer-ndas-volunteers-have-new-requests-for-brain-implant-trials/",
-        "published_at": "Fri, 13 Nov 2026 10:00:00 +0000",
+        "id": "https://techcrunch.com/2026/11/13/jensen-huangs-departure-blasts-big-hole-in-ai-startup-funding-vcs-and-founders-say/",
+        "title": "Jensen Huang’s departure blasts big hole in AI startup funding, VCs and founders say",
+        "summary": "Latest AI Amazon Apps Biotech & Health Climate Cloud Computing Commerce Crypto Enterprise EVs Fintech Fundraising Gadgets Gaming Google Government & Policy Hardware Instagram Layoffs Media & Entertainment Meta Microsoft Privacy Robotics Security Social Space Startups TikTok Transportation Venture Staff Events Startup Battlefield StrictlyVC Newsletters Podcasts Videos Partner Content TechCrunch Brand Studio Contact Us It was the resignation heard across the world. Jensen Huang, Nvidia’s embattled CEO who co-founded and led the company for 33 years, had officially stepped down. “It’s like a bomb went off,” one neocloud founder told TechCrunch when he first heard the news. Over the last seve...",
+        "source_name": "TechCrunch",
+        "source_url": "https://techcrunch.com/2026/11/13/jensen-huangs-departure-blasts-big-hole-in-ai-startup-funding-vcs-and-founders-say/",
+        "published_at": "Fri, 13 Nov 2026 22:43:00 +0000",
         "entities": []
       },
       {
@@ -44,12 +44,30 @@
         "entities": []
       },
       {
-        "id": "https://techcrunch.com/2026/11/12/democrats-launch-nvidia-investigation-write-scathing-letter-on-huangs-scheme-with-trump/",
-        "title": "Democrats launch Nvidia investigation, write scathing letter on Huang’s ‘scheme’ with Trump",
-        "summary": "Latest AI Amazon Apps Biotech & Health Climate Cloud Computing Commerce Crypto Enterprise EVs Fintech Fundraising Gadgets Gaming Google Government & Policy Hardware Instagram Layoffs Media & Entertainment Meta Microsoft Privacy Robotics Security Social Space Startups TikTok Transportation Venture Staff Events Startup Battlefield StrictlyVC Newsletters Podcasts Videos Partner Content TechCrunch Brand Studio Contact Us Democrats on Thursday opened an inquiry into how the Trump administration handled Nvidia’s chip sales to China. Earlier on Thursday, the company ousted its CEO Jensen Huang. He also agreed to testify to a different set of Republican-led Congressional committees. Huang was rem...",
-        "source_name": "TechCrunch",
-        "source_url": "https://techcrunch.com/2026/11/12/democrats-launch-nvidia-investigation-write-scathing-letter-on-huangs-scheme-with-trump/",
-        "published_at": "Thu, 12 Nov 2026 22:42:51 +0000",
+        "id": "https://www.economist.com/finance-and-economics/2026/11/12/where-to-find-the-anti-ai-trade",
+        "title": "Where to find the anti-AI trade",
+        "summary": "The worse chipmakers do, the better Indian equities perform",
+        "source_name": "The_Economist",
+        "source_url": "https://www.economist.com/finance-and-economics/2026/11/12/where-to-find-the-anti-ai-trade",
+        "published_at": "Thu, 12 Nov 2026 10:38:28 +0000",
+        "entities": []
+      },
+      {
+        "id": "https://arstechnica.com/tech-policy/2026/11/faa-orders-third-nationwide-ground-stop-in-its-history/",
+        "title": "FAA has lifted its third-ever nationwide ground stop",
+        "summary": "Secretary of Transportation Sean Duffy blamed obsolete equipment for the outage. The Federal Administration lifted its third-ever nationwide ground stop after several hours Friday evening. Domestic flights were cleared to begin taking off at 8:35 pm EST. FAA Transportation Secretary Sean Duffy cautioned that, barring massive system updates, there will be “more of these” ahead. “Today’s nationwide ground stop happened because our air traffic control system is operating on DECADES-OLD analog equipment that simply cannot compete with the demands of the 21st century,” Duffy posted on X. Over a million travelers have been affected by the delays, with some airlines cancelling flights for the re...",
+        "source_name": "Ars_Technica",
+        "source_url": "https://arstechnica.com/tech-policy/2026/11/faa-orders-third-nationwide-ground-stop-in-its-history/",
+        "published_at": "Fri, 13 Nov 2026 23:17:38 +0000",
+        "entities": []
+      },
+      {
+        "id": "https://www.nytimes.com/live/2026/11/14/us/faa-nationwide-ground-stop-flights/heres-the-latest",
+        "title": "Here’s the latest.",
+        "summary": "F.A.A. Nationwide Ground Stop Thousands of travelers across the United States were stranded in the aftermath of a ground stop that Transportation Secretary Sean Duffy blamed on faltering, aging infrastructure. Karoun DemirjianNiraj Chokshi and Hari Raj Travelers across the United States and beyond were still facing delays and uncertainty on Saturday as airlines and airports sought to recover from the ground stop the day before that brought air travel to a halt for hours. Thousands of passengers were stranded on Friday after the Federal Aviation Administration ordered the ground stop. More than 8,200 flights — or over 31 percent of those scheduled for Friday — were canceled nationwide, acc...",
+        "source_name": "NYT_US_News",
+        "source_url": "https://www.nytimes.com/live/2026/11/14/us/faa-nationwide-ground-stop-flights/heres-the-latest",
+        "published_at": "Sat, 14 Nov 2026 10:45:59 +0000",
         "entities": []
       },
       {
@@ -62,131 +80,109 @@
         "entities": []
       },
       {
-        "id": "https://techcrunch.com/2026/11/12/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline/",
-        "title": "The unfolding Jensen Huang scandal: a timeline",
-        "summary": "Latest AI Amazon Apps Biotech & Health Climate Cloud Computing Commerce Crypto Enterprise EVs Fintech Fundraising Gadgets Gaming Google Government & Policy Hardware Instagram Layoffs Media & Entertainment Meta Microsoft Privacy Robotics Security Social Space Startups TikTok Transportation Venture Staff Events Startup Battlefield StrictlyVC Newsletters Podcasts Videos Partner Content TechCrunch Brand Studio Contact Us Nvidia co-founder and now former CEO Jensen Huang has never been as flashy or controversy-prone as AI leaders like OpenAI’s Sam Altman or SpaceXAI’s Elon Musk. Now, the 63-year-old industry kingpin has admitted that he cheated on his wife of 40 years in affairs that could hav...",
-        "source_name": "TechCrunch",
-        "source_url": "https://techcrunch.com/2026/11/12/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline/",
-        "published_at": "Thu, 12 Nov 2026 21:35:00 +0000",
+        "id": "https://www.nytimes.com/2026/11/14/us/politics/congress-trump-investigations.html",
+        "title": "As Congress Plans Investigations, White House Prepares Ferocious Response",
+        "summary": "120th U.S. Congress Advertisement Supported by The Trump administration has quietly been laying the groundwork for an aggressive all-out effort to thwart newly empowered Democrats’ attempts at oversight. By Luke BroadwaterZolan Kanno-Youngs and Devlin Barrett Reporting from Washington In his first term, President Trump approached congressional investigations with a strategy of resisting and stonewalling, hoping to stall the inquiries until Democrats ran out of time. But in anticipation of Democrats’ return to control of Congress in his second term, Mr. Trump has embarked on an even more aggressive maneuver: threatening to treat some legislative oversight as a potential crime. That tactic ...",
+        "source_name": "NYT_US_News",
+        "source_url": "https://www.nytimes.com/2026/11/14/us/politics/congress-trump-investigations.html",
+        "published_at": "Sat, 14 Nov 2026 10:02:21 +0000",
         "entities": []
       },
       {
-        "id": "https://www.aljazeera.com/video/newsfeed/2026/11/13/el-salvador-deploys-armed-robots-to-fight-gangs-in-haiti?traffic_source=rss",
-        "title": "El Salvador deploys armed robots to fight gangs in Haiti",
-        "summary": "El Salvador deploys armed robots to fight gangs in Haiti El Salvador’s President Nayib Bukele has released a video showing armed robots during an operation against gangs at the main stadium in Port-au-Prince, Haiti. The stadium has been under gang control for the last two years. Save Share Follow Al Jazeera English:",
+        "id": "https://arstechnica.com/space/2026/11/starship-flight-15-powers-to-orbit-setting-up-a-possible-catch-on-saturday/",
+        "title": "Starship flight 15 powers to orbit—setting up a possible catch on Saturday",
+        "summary": "One way or another, the company will get some more data on Saturday. STARBASE, Texas—Starship lifted off right on schedule Friday from South Texas, making its 15th test flight in more than three years. The largely successful launch took place in the early evening; as the massive rocket rose into the atmosphere, the Sun sank toward the western horizon. Conditions were ideal for the launch, with the atmospheric winds so calm the rocket’s white plume did not dissipate for many minutes. The weather in South Texas is not always comfortable; summers are long and hot. Friday evening was perfect at Starbase. The first stage ascended toward space flawlessly, releasing the upper stage above the Gul...",
+        "source_name": "Ars_Technica",
+        "source_url": "https://arstechnica.com/space/2026/11/starship-flight-15-powers-to-orbit-setting-up-a-possible-catch-on-saturday/",
+        "published_at": "Sat, 14 Nov 2026 00:49:13 +0000",
+        "entities": []
+      },
+      {
+        "id": "https://www.aljazeera.com/news/2026/11/14/south-sudan-postpones-first-ever-national-elections-until-february?traffic_source=rss",
+        "title": "South Sudan postpones first-ever national elections until February",
+        "summary": "The vote, first expected in 2022, will now be held on February 11, according to the country’s election commission. Save Share South Sudan has delayed its first-ever presidential and parliamentary elections until February, the latest in a series of delays to the long-sought vote, as ethnic and political tensions deepen. The country’s election commission announced on Saturday that the polls would be held on February 11 next year, instead of December 22 this year. It did not give any reason for the decision. The world’s youngest country, which continues to grapple with violence despite a 2018 peace deal that ended five years of civil war, has delayed the vote at least three times since setti...",
         "source_name": "Al_Jazeera_Global",
-        "source_url": "https://www.aljazeera.com/video/newsfeed/2026/11/13/el-salvador-deploys-armed-robots-to-fight-gangs-in-haiti?traffic_source=rss",
-        "published_at": "Fri, 13 Nov 2026 10:57:20 +0000",
+        "source_url": "https://www.aljazeera.com/news/2026/11/14/south-sudan-postpones-first-ever-national-elections-until-february?traffic_source=rss",
+        "published_at": "Sat, 14 Nov 2026 10:30:32 +0000",
         "entities": []
       },
       {
-        "id": "https://www.aljazeera.com/news/liveblog/2026/11/13/live-microsoft-struggles-to-restore-services-as-outage-hits-global-users?traffic_source=rss",
-        "title": "Live: Microsoft struggles to restore services as outage hits global users",
-        "summary": "As disruption affects users worldwide, Microsoft admits fixes are not going ‘as expected’. Save Share Follow Al Jazeera English:",
-        "source_name": "Al_Jazeera_Global",
-        "source_url": "https://www.aljazeera.com/news/liveblog/2026/11/13/live-microsoft-struggles-to-restore-services-as-outage-hits-global-users?traffic_source=rss",
-        "published_at": "Fri, 13 Nov 2026 11:18:01 +0000",
+        "id": "https://arxiv.org/abs/2611.14681",
+        "title": "Together Compiler: Continual Compilation for AI Inference",
+        "summary": "arXiv:2611.14681v1 Announce Type: new Abstract: Today's AI workloads are rapidly changing: new models are released more often, model architectures are increasingly diverse, and traffic distributions change frequently. The challenge we face at Together AI is continual optimization for these changing workloads. Compiling a deployment into an optimized forward pass is a challenge that is well-suited for agent hill-climbing. Existing systems struggle with continual compilation due to a tradeoff bet...",
+        "source_name": "ArXiv_AI",
+        "source_url": "https://arxiv.org/abs/2611.14681",
+        "published_at": "Sat, 14 Nov 2026 00:00:00 -0500",
         "entities": []
       },
       {
-        "id": "yfinance_NVDA_2026-11-12",
-        "title": "Abnormal movement for NVDA: -4.34%",
-        "summary": "Oops, something went wrong The above button links to Coinbase. Yahoo Finance is not a broker-dealer or investment adviser and does not offer securities or cryptocurrencies for sale or facilitate trading. Coinbase pays us for certain activity generated through this link. Prices displayed are informational. Nvidia faces a leadership transition after Jensen Huang’s reported resignation, with Colette Kress serving as interim chief executive officer. The company has launched an independent investigation and will report fiscal third-quarter results next week, while rivals gain investor attention. Nvidia is up 2.77% in today’s pre-market move against the prior close; the regular session has not ...",
-        "source_name": "Yahoo Finance Data",
-        "source_url": "https://finance.yahoo.com/quote/NVDA",
-        "published_at": "2026-11-12",
+        "id": "https://www.nytimes.com/video/us/politics/100000011272223/whats-behind-the-trump-huang-relationship.html",
+        "title": "What’s Behind the Trump-Huang Relationship?",
+        "summary": "President Trump’s show of support for Jensen Huang as he was under fire was a remarkable moment in a relationship that barely existed two years ago. Our White House correspondent Maggie Haberman expla...",
+        "source_name": "NYT_US_News",
+        "source_url": "https://www.nytimes.com/video/us/politics/100000011272223/whats-behind-the-trump-huang-relationship.html",
+        "published_at": "Sat, 14 Nov 2026 10:52:35 +0000",
         "entities": []
       },
       {
-        "id": "https://www.technologyreview.com/2026/11/13/1148498/silicon-valley-claims-to-know-the-future-so-why-did-it-get-the-midterms-so-wrong/",
-        "title": "Silicon Valley claims to know the future. So why did it get the midterms so wrong?",
-        "summary": "Tech executives traded their reputations as visionaries for short-term political gain. The self-styled visionaries of Silicon Valley, leaders like OpenAI chief executive Sam Altman and SpaceX boss Elon Musk, have built careers claiming to see the future. Long-term vision is currency: Meta’s Mark Zuckerberg built a 10-year road map for Facebook in 2016, and Google famously told investors before its public offering that it was unconcerned with short-term results. And yet there they all were, a mere five weeks before the midterm elections, gathered at the White House to smile for photos with President Trump and sign on to his “Super Intelligence” agenda. Even by the diminished standards of t...",
-        "source_name": "MIT_Tech_Review",
-        "source_url": "https://www.technologyreview.com/2026/11/13/1148498/silicon-valley-claims-to-know-the-future-so-why-did-it-get-the-midterms-so-wrong/",
-        "published_at": "Fri, 13 Nov 2026 10:00:00 +0000",
+        "id": "https://arxiv.org/abs/2611.14654",
+        "title": "Cleaning an Agent's History Hurts When the World Still Holds the Error",
+        "summary": "arXiv:2611.14654v1 Announce Type: new Abstract: Tool-using language-model agents accumulate histories of their own mistakes, and a system that compacts, repairs or hands off such a history decides what it says about those mistakes while their effects stay in the world. Prior work cleans the history at a fixed world, where showing a corrected step and saying it is done move together. We ask whether the same correct content helps or hurts depending on how the history states it and what the world ...",
+        "source_name": "ArXiv_AI",
+        "source_url": "https://arxiv.org/abs/2611.14654",
+        "published_at": "Sat, 14 Nov 2026 00:00:00 -0500",
         "entities": []
       },
       {
-        "id": "https://techcrunch.com/2026/11/12/muse-can-now-place-calls-to-u-s-businesses-if-you-pay/",
-        "title": "Muse can now place calls to US businesses — if you pay",
-        "summary": "Latest AI Amazon Apps Biotech & Health Climate Cloud Computing Commerce Crypto Enterprise EVs Fintech Fundraising Gadgets Gaming Google Government & Policy Hardware Instagram Layoffs Media & Entertainment Meta Microsoft Privacy Robotics Security Social Space Startups TikTok Transportation Venture Staff Events Startup Battlefield StrictlyVC Newsletters Podcasts Videos Partner Content TechCrunch Brand Studio Contact Us After initially testing the feature in September, Meta’s consumer AI agent Muse is now able to place calls to U.S. businesses on behalf of its users. However, only paid subscribers have access to the feature, the company says. Meta’s Muse, which now has over 10 million users,...",
+        "id": "https://techcrunch.com/2026/11/13/amazons-new-kindle-colorsoft-is-a-premium-e-reader-with-a-premium-price/",
+        "title": "Amazon’s new Kindle Colorsoft is a premium e-reader with a premium price",
+        "summary": "Latest AI Amazon Apps Biotech & Health Climate Cloud Computing Commerce Crypto Enterprise EVs Fintech Fundraising Gadgets Gaming Google Government & Policy Hardware Instagram Layoffs Media & Entertainment Meta Microsoft Privacy Robotics Security Social Space Startups TikTok Transportation Venture Staff Events Startup Battlefield StrictlyVC Newsletters Podcasts Videos Partner Content TechCrunch Brand Studio Contact Us Amazon recently unveiled its refreshed Kindle lineup, introducing a new basic Kindle, Paperwhite, and Colorsoft. The new Kindle Colorsoft starts at $290, while the Signature Edition, which I’ve spent the past few weeks testing, costs $320. The base model comes with 16GB of st...",
         "source_name": "TechCrunch",
-        "source_url": "https://techcrunch.com/2026/11/12/muse-can-now-place-calls-to-u-s-businesses-if-you-pay/",
-        "published_at": "Thu, 12 Nov 2026 22:22:28 +0000",
-        "entities": []
-      },
-      {
-        "id": "https://www.npr.org/2026/11/13/nx-s1-6032777/rivers-in-the-sky-are-raining-down-on-the-pacific-northwest-what-are-they",
-        "title": "Rivers in the sky are raining down on the Pacific Northwest. What are they?",
-        "summary": "By Ava Berger STANWOOD, WASHINGTON - DECEMBER 6: In an aerial view, floodwaters surround a home on December 6, 2023 in Stanwood, Washington. Atmospheric river conditions in the region brought heavy rains and flooding. David Ryder/Getty Images hide caption It's the wettest time of the year for one of the wettest parts of the country: the Pacific Northwest. This week is no exception as heavy rain, high tides and a rising sea level hit the West Coast. And more storms are on their way. Two atmospheric rivers, bringing heavy rain, will pound parts of Oregon and Washington state back-to-back on Friday and Saturday. Two other atmospheric rivers already dropped multiple inches of rain on both sta...",
-        "source_name": "NPR_Top_Stories",
-        "source_url": "https://www.npr.org/2026/11/13/nx-s1-6032777/rivers-in-the-sky-are-raining-down-on-the-pacific-northwest-what-are-they",
-        "published_at": "Fri, 13 Nov 2026 05:01:00 -0500",
-        "entities": []
-      },
-      {
-        "id": "https://www.npr.org/2026/11/13/nx-s1-6039203/kratom-7-oh-dea-addiction-opioid",
-        "title": "Kratom and 7-OH can feel like 'a miracle.' They can also be addictive",
-        "summary": "By Rachel Carlson Kratom and related 7-OH products are widely available at gas stations, smoke shops, liquor stores and online. As early as Friday, the federal government could make some of the products illegal. Mindy Schauer/MediaNewsGroup/Orange County Register via Getty Images hide caption Tyler's opioid addiction began in his early 20s, and when he decided he wanted to quit, he used kratom leaf powders to help ease withdrawal symptoms. Tyler, now 38, told NPR he thinks kratom helped him stop using opioids for a decade. Tyler asked NPR to use only his first name because of the stigma attached to his history with drug use and addiction. In early 2025, he saw a new product at a gas stati...",
-        "source_name": "NPR_Top_Stories",
-        "source_url": "https://www.npr.org/2026/11/13/nx-s1-6039203/kratom-7-oh-dea-addiction-opioid",
-        "published_at": "Fri, 13 Nov 2026 06:00:00 -0500",
-        "entities": []
-      },
-      {
-        "id": "https://www.npr.org/2026/11/13/nx-s1-6039845/hegseth-awards-medal-to-soldier-who-chastised-him",
-        "title": "Hegseth awards medal to soldier who chastised him",
-        "summary": "By Kate Bartlett U.S. Defense Secretary Pete Hegseth, right, and his wife Jennifer Rauchet attend a ceremony at the Tomb of the Unknown Soldier on National Veterans Day Observance at Arlington National Cemetery in Arlington, Va., Wednesday, Nov. 11, 2026. Mark Schiefelbein/AP hide caption Coming out of the bruising the Republicans suffered in the midterms, this week was bearing up to be a bad one for Secretary of Defense Pete Hegseth. Many thought he'd be the first in the administration to be fired for his support of the Iran war, which proved unpopular with voters. Then a member of his own party called for a vote to impeach him and, in an embarrassing incident that went viral, he also go...",
-        "source_name": "NPR_Top_Stories",
-        "source_url": "https://www.npr.org/2026/11/13/nx-s1-6039845/hegseth-awards-medal-to-soldier-who-chastised-him",
-        "published_at": "Fri, 13 Nov 2026 05:27:08 -0500",
+        "source_url": "https://techcrunch.com/2026/11/13/amazons-new-kindle-colorsoft-is-a-premium-e-reader-with-a-premium-price/",
+        "published_at": "Fri, 13 Nov 2026 23:00:00 +0000",
         "entities": []
       }
     ]
   },
   "connections": [
     {
-      "id": "insight_1",
+      "id": "insight_001",
       "item_ids": [
-        "https://www.aljazeera.com/video/newsfeed/2026/11/13/13-11-reported-resul-serdar-iran-basij?traffic_source=rss",
-        "https://techcrunch.com/2026/11/12/democrats-launch-nvidia-investigation-write-scathing-letter-on-huangs-scheme-with-trump/",
-        "yfinance_NVDA_2026-11-12"
+        "https://arstechnica.com/tech-policy/2026/11/faa-orders-third-nationwide-ground-stop-in-its-history/",
+        "https://www.aljazeera.com/news/2026/11/14/ukraine-russia-race-to-build-military-satellite-networks-as-war-rages-on?traffic_source=rss"
       ],
-      "hypothesis": "Escalating geopolitical tensions in the Middle East are amplifying U.S. regulatory scrutiny of AI‑hardware firms, which in turn is driving heightened volatility in leading chip stocks like Nvidia.",
+      "hypothesis": "Growing reliance on civilian communication infrastructure is prompting both regulators and warring states to invest in redundant, militarized satellite systems to safeguard critical operations.",
       "domains": [
         "geopolitics",
-        "tech",
-        "finance"
+        "tech"
       ],
       "confidence": 0.88
     },
     {
-      "id": "insight_2",
+      "id": "insight_002",
       "item_ids": [
-        "https://www.economist.com/finance-and-economics/2026/11/12/where-to-find-the-anti-ai-trade",
-        "https://techcrunch.com/2026/11/12/democrats-launch-nvidia-investigation-write-scathing-letter-on-huangs-scheme-with-trump/"
+        "https://techcrunch.com/2026/11/13/jensen-huangs-departure-blasts-big-hole-in-ai-startup-funding-vcs-and-founders-say/",
+        "https://www.economist.com/finance-and-economics/2026/11/12/where-to-find-the-anti-ai-trade"
       ],
-      "hypothesis": "Western political backlash against AI chip exports is redirecting investor capital toward emerging markets, as evidenced by Indian equities outperforming when major chipmakers falter.",
+      "hypothesis": "The contraction of US AI venture capital after Jensen Huang's exit is coinciding with a market shift where weaker chipmaker performance lifts Indian equities, indicating capital is flowing toward emerging markets as high‑end AI spending cools.",
       "domains": [
-        "economics",
-        "tech",
-        "geopolitics"
-      ],
-      "confidence": 0.84
-    },
-    {
-      "id": "insight_3",
-      "item_ids": [
-        "https://www.aljazeera.com/video/newsfeed/2026/11/13/el-salvador-deploys-armed-robots-to-fight-gangs-in-haiti?traffic_source=rss",
-        "https://www.technologyreview.com/2026/11/13/1148474/more-autonomy-fewer-ndas-volunteers-have-new-requests-for-brain-implant-trials/"
-      ],
-      "hypothesis": "The rapid deployment of armed autonomous robots by states is paralleled by civilian demand for brain‑computer interfaces, indicating a convergence of military and medical neuro‑technology development.",
-      "domains": [
-        "defense",
-        "biotech",
+        "finance",
         "tech"
       ],
-      "confidence": 0.81
+      "confidence": 0.86
+    },
+    {
+      "id": "insight_003",
+      "item_ids": [
+        "https://www.economist.com/finance-and-economics/2026/11/12/italys-proposed-exit-tax-causes-ructions",
+        "https://www.economist.com/finance-and-economics/2026/11/12/the-return-of-the-snatch-and-grab-state"
+      ],
+      "hypothesis": "Governments are increasingly weaponizing fiscal policy—through exit taxes and outright confiscation—to extract wealth from abroad, reflecting a broader trend of economic warfare.",
+      "domains": [
+        "geopolitics",
+        "economics"
+      ],
+      "confidence": 0.84
     }
   ]
 }
