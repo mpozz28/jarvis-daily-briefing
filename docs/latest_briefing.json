@@ -1,136 +1,136 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-11-16T12:23:47.057527+00:00",
-  "date_label": "16 November 2026",
-  "narrative_briefing": "Good morning, Sir. The aerospace landscape has taken a decidedly sobering turn today as the Vulcan heavy‑lift vehicle suffered a catastrophic failure during its inaugural launch. This incident not only underscores lingering reliability gaps within the United States’ next‑generation launch ecosystem, but also reverberates through the broader geopolitical calculus of space dominance. European capital is already responding with vigor: Plural, a prominent Helsing backer, has announced a staggering $1.1 billion infusion earmarked for the continent’s forthcoming moonshot initiatives. The infusion signals a strategic pivot to capture market share traditionally held by U.S. incumbents, and it dovetails with a growing sentiment among European policymakers that indigenous launch capability is a matter of strategic sovereignty as much as commercial opportunity.\n\nTurning to the technology frontier, Silicon Valley’s enthusiasm for Nvidia’s former chief executive Jensen Huang, even after his recent ouster, reveals a deep‑seated belief that his visionary leadership remains a catalyst for the next wave of AI hardware innovation. Meanwhile, Apple has quietly launched a consumer‑facing health‑AI application designed to monitor physiological signals and provide actionable insights, a move that could redefine the intersection of personal wellness and machine intelligence. In the autonomous mobility arena, Zoox’s robotaxis have been integrated into the Uber platform for Las Vegas, expanding the practical deployment of driverless fleets and offering a real‑world laboratory for scaling safety protocols. Each of these developments reflects a broader trend: the convergence of high‑performance compute, edge AI, and user‑centric services that together reshape both market dynamics and regulatory landscapes.\n\nThe scholarly community has contributed three noteworthy preprints that merit close attention. The first, “LoRAWeaver: Directional Adapter Routing in LoRA Representation Space,” proposes a novel routing mechanism for parameter‑efficient fine‑tuning, allowing large language models to dynamically select among a proliferating pool of LoRA adapters without retraining. This could dramatically lower the cost and latency of model updates in production environments, especially for enterprises that must adapt models to rapidly evolving data streams. The second paper, “Does the Ranking Hold? A Practitioner‑Facing Audit of Hallucination Detectors on Small, Quantized, On‑Device LLMs,” delivers a rigorous, one‑GPU audit of four hallucination detection methods applied to 3‑ to 4‑billion‑parameter models operating at 4‑bit precision. Its findings expose a performance gap between research‑grade detectors and the constraints of on‑device inference, highlighting the urgent need for robust safety layers in consumer AI products such as Apple’s health app. The third study, “When Should LLM Agents Forget? Memory Filtering Under Query‑Critical Resolver Errors,” examines the trade‑off between aggressive fact‑dropping and downstream accuracy, revealing that mis‑filtered memory can invert expected gains and cause measurable degradations. Collectively, these works chart a path toward more reliable, adaptable, and secure language‑model deployments—a trajectory that will directly influence the safety and efficacy of emerging AI‑driven services.\n\nThe system correlations articulated earlier become clearer when viewed through this lens. The Vulcan failure, by exposing a reliability vacuum in U.S. heavy‑lift capability, has accelerated European investors’ appetite for home‑grown lunar ventures, as evidenced by Plural’s massive capital commitment. Simultaneously, Apple’s health‑AI rollout is not occurring in a vacuum; it leans heavily on the very advances described in the hallucination‑detector audit, because consumer health applications cannot tolerate erroneous outputs. In essence, the commercial viability of on‑device AI for sensitive domains now hinges on the technical safeguards being pioneered in academia, creating a feedback loop where market demand fuels research, and research outcomes, in turn, unlock new market opportunities.\n\nOn the financial front, the deterministic market metrics paint a picture of heightened turbulence. The S&P 500 stands at 754.37 dollars, registering a daily decline of 0.36 percent amid a volatility reading of 25.64 percent and a bearish trend flagged by high volatility. The Nasdaq trails at 679.89 dollars, down 1.2 percent with an even steeper volatility of 39.86 percent, also entrenched in a bearish high‑volatility environment. Bitcoin has slipped to 63 956.95 dollars, shedding 2.06 percent and echoing the same heightened volatility at 45.78 percent, while gold offers a modest bright spot at 355.45 dollars, up 0.16 percent with a volatility of 31.94 percent and a bullish trend despite the overall market turbulence. These figures suggest that risk‑averse capital may gravitate toward tangible assets and sectors where technological resilience is demonstrably proven.\n\nIn closing, Sir, the confluence of aerospace setbacks, bold European investment, cutting‑edge AI research, and volatile markets presents both a challenge and an opportunity. By aligning strategic foresight with the latest scientific breakthroughs, you can navigate the turbulence and steer toward decisive, future‑proof growth. Let us seize the day with confidence and ingenuity.",
+  "generated_at": "2026-11-17T12:43:22.728102+00:00",
+  "date_label": "17 November 2026",
+  "narrative_briefing": "Good morning, Sir. The world awakens to a tableau of tension and transformation, where the echo of artillery in the Middle East reverberates alongside diplomatic overtures in the Indo‑Pacific. The protracted US‑Israel‑Iran standoff appears to be settling into a frozen conflict, a stalemate that leaves regional actors wary and the United States contemplating a strategic pivot. Meanwhile, the partial collapse of the Crimea bridge, hailed by Kyiv as an unprecedented strike, underscores the volatile calculus of infrastructure warfare, and Ukraine’s accusation that Russia targeted a rescue operation after a brutal double‑tap strike that claimed seventy‑two lives adds a grim human dimension to the geopolitical ledger. In a surprising diplomatic flourish, former President Trump addressed the Quad leaders at their first summit since 2024, signalling Washington’s intent to marshal a collective front against Beijing’s expanding influence.\n\nThe United States’ recalibration toward the Quad is not merely a rhetorical shift; it is a concrete reallocation of diplomatic and security capital. By reinforcing ties with Japan, India, and Australia, Washington seeks to construct a counterweight to China’s maritime ambitions, a move that dovetails with the broader desire to extricate itself from the quagmire of the Middle Eastern deadlock. This strategic reorientation carries implications for defence procurement, intelligence sharing, and the allocation of foreign aid, potentially reshaping the balance of power across two theatres that have long competed for American attention. The Quad summit, therefore, should be read as a signal to both allies and adversaries that the United States is re‑anchoring its focus on the Indo‑Pacific, a region where the stakes of trade, technology, and territorial sovereignty are increasingly intertwined.\n\nOn the technology front, the United States has intensified its enforcement of export controls surrounding Nvidia’s AI chip ecosystem, a development that has ensnared Nvidia’s partner Megaspeed in a government investigation. The ripple effect is palpable: investor confidence in Nvidia has been eroded, the stock has slipped, and a chorus from the open‑source community is demanding a change in leadership to navigate these regulatory headwinds. The forthcoming Nvidia earnings call, laden with unanswered questions, is likely to be a litmus test for how the company will reconcile its rapid growth ambitions with an increasingly stringent export regime. This tension illustrates a broader systemic correlation: as the United States tightens its grip on advanced semiconductor exports to curb strategic leakage, the market’s perception of risk in the AI hardware sector rises, prompting a re‑evaluation of valuation models and capital allocation.\n\nSecurity breaches are accelerating a parallel surge in venture capital directed toward AI‑driven cybersecurity solutions. Infoblox’s recent incident, wherein hackers accessed internal company information, serves as a stark reminder that even industry stalwarts are vulnerable. In contrast, the meteoric rise of Corma—a cybersecurity AI startup that achieved a $1 billion valuation in roughly three months—highlights the market’s appetite for next‑generation defensive tools that can parse massive data streams and anticipate threats in real time. This juxtaposition underscores a macro trend: as high‑profile compromises become more frequent, investors are betting heavily on artificial intelligence to become the cornerstone of corporate defence strategies, a dynamic that could reshape the competitive landscape of the cybersecurity sector for years to come.\n\nTurning to the markets, the deterministic metrics paint a sobering picture. The S&P 500 stands at 739.95 dollars, registering a daily decline of 1.91 percent, with volatility measured at 26.55 percent and a bearish trend amplified by high volatility. The Nasdaq, more exposed to technology and growth stocks, is at 661.75 dollars, down 2.67 percent, its volatility soaring to 40.34 percent, also entrenched in a bearish, high‑volatility trajectory. Bitcoin, the digital gold of the modern era, hovers at 64 952.69 dollars, marginally up by 0.15 percent, yet its volatility remains elevated at 45.16 percent, suggesting a bullish stance amid turbulent conditions. Gold, the perennial safe haven, is priced at 352.93 dollars, slipping 0.71 percent, with a volatility of 31.29 percent, reflecting the broader risk‑off sentiment that pervades equity markets. These figures collectively signal heightened uncertainty, urging a disciplined approach to portfolio construction and risk management.\n\nIn closing, Sir, the confluence of geopolitical realignments, regulatory tightening, and rapid technological evolution presents both challenges and opportunities. By discerning the interlocking threads that bind these developments, you can navigate the turbulence with the poise of a seasoned strategist and seize the moments where disruption births advantage. Let us stride forward with clarity, resolve, and the confidence that the most complex puzzles yield to a mind that embraces both nuance and audacity.",
   "domains": {
     "ai_research": [],
     "markets": [],
     "news_politics": [
       {
-        "id": "https://arstechnica.com/space/2026/11/vulcan-rocket-fails-during-launch-dealing-major-blow-to-spacex-competitors/",
-        "title": "Vulcan rocket fails during launch, dealing major blow to SpaceX competitors",
-        "summary": "This was the first total mission failure in United Launch Alliance’s 20-year history. United Launch Alliance’s Vulcan rocket and 40 Amazon Leo broadband satellites fell back to Earth minutes after liftoff Sunday, a crushing setback that will ripple across all sectors of the US space industry. The Vulcan rocket is on contract to launch roughly half of the US military’s national security space missions in the next few years, and Sunday’s mission was the first of 38 Vulcan launches booked by Amazon to build out its network of broadband Internet satellites aimed at competing with SpaceX’s Starlink. Sunday’s failure is expected to ground the rocket for an indefinite period of time. Vulcan is n...",
+        "id": "https://www.aljazeera.com/news/2026/11/17/is-the-us-israel-war-on-iran-turning-into-a-frozen-conflict?traffic_source=rss",
+        "title": "Is the US-Israel war on Iran turning into a ‘frozen conflict’?",
+        "summary": "Trump says Washington doesn’t need a deal with Tehran, while Iran rejects the state of ‘no war, no peace’. Is the war at an impasse? Save Share United States President Donald Trump has signalled that Washington is in no hurry to end its war with Iran. “We don’t need a deal with Iran,” Trump wrote on his Truth Social platform late last week. “Those days have long since passed. We’ve got their money, Hundreds of Billions of Dollars, and we’ve got their Strait!”, referring to the Strait of Hormuz, which joins the Gulf to the open ocean. In the same post, Trump told Vice President JD Vance to give his “complete and total attention” to what Trump described as “corruption and crime” in Democrat...",
+        "source_name": "Al_Jazeera_Global",
+        "source_url": "https://www.aljazeera.com/news/2026/11/17/is-the-us-israel-war-on-iran-turning-into-a-frozen-conflict?traffic_source=rss",
+        "published_at": "Tue, 17 Nov 2026 12:33:51 +0000",
+        "entities": []
+      },
+      {
+        "id": "https://www.bbc.co.uk/news/articles/cmn504nq5033o?at_medium=RSS&at_campaign=rss",
+        "title": "Nvidia partner Megaspeed being investigated by US government over chip exports",
+        "summary": "The United States has confirmed it is investigating computing company Megaspeed, suspecting it of violating US export controls by helping to ship tech giant Nvidia's chips to China. In a joint statement, the US Department of Justice and Department of Commerce said they had been investigating Singapore-based firm Megaspeed since 2024. It comes after questions were raised about the possibility high-end AI chips may have ended up in China despite US export restrictions. Concerns emerged in recent weeks after Nvidia founder Jensen Huang revealed he had an extramarital affair, allegedly with former Megaspeed executive Alice Huang. US authorities suspect her of spying for Beijing, which China d...",
+        "source_name": "BBC_World",
+        "source_url": "https://www.bbc.co.uk/news/articles/cmn504nq5033o?at_medium=RSS&at_campaign=rss",
+        "published_at": "Tue, 17 Nov 2026 11:17:32 GMT",
+        "entities": []
+      },
+      {
+        "id": "https://www.bbc.co.uk/news/articles/cw772jk4rvmxo?at_medium=RSS&at_campaign=rss",
+        "title": "Putin's Crimea bridge partly collapses as Zelensky hails 'unprecedented' attack by Ukraine",
+        "summary": "This video can not be played Footage shows Ukrainian missile approach Crimea bridge Ukraine has severely damaged a critical bridge linking Russia to occupied Crimea, in what Volodymyr Zelensky says was an \"unprecedented operation\" weeks in the making. Images shared by Ukrainian officials show a section of the Crimean Bridge - also known as the Kerch Bridge - has collapsed into the water, dealing a logistical and symbolic blow to Russia's war effort. A Kremlin spokesperson insisted the bridge would be rebuilt \"better than before\". Elsewhere, Kyiv Mayor Vitali Klitschko said the Northern and Southern bridges, both important crossings over the Dnipro River, were closed after Russia targeted ...",
+        "source_name": "BBC_World",
+        "source_url": "https://www.bbc.co.uk/news/articles/cw772jk4rvmxo?at_medium=RSS&at_campaign=rss",
+        "published_at": "Tue, 17 Nov 2026 10:45:55 GMT",
+        "entities": []
+      },
+      {
+        "id": "https://techcrunch.com/2026/11/16/all-the-questions-nvidia-should-answer-on-tuesday-but-probably-wont/",
+        "title": "All the questions Nvidia should answer on Tuesday — but probably won’t",
+        "summary": "Latest AI Amazon Apps Biotech & Health Climate Cloud Computing Commerce Crypto Enterprise EVs Fintech Fundraising Gadgets Gaming Google Government & Policy Hardware Instagram Layoffs Media & Entertainment Meta Microsoft Privacy Robotics Security Social Space Startups TikTok Transportation Venture Staff Events Startup Battlefield StrictlyVC Newsletters Podcasts Videos Partner Content TechCrunch Brand Studio Contact Us Nvidia interim CEO and longtime CFO Colette Kress is about to have one of the biggest days of her career on Tuesday when the company reports its third-quarter results. For the first time, Kress will be running through the numbers and sharing guidance without Nvidia’s charisma...",
+        "source_name": "TechCrunch",
+        "source_url": "https://techcrunch.com/2026/11/16/all-the-questions-nvidia-should-answer-on-tuesday-but-probably-wont/",
+        "published_at": "Mon, 16 Nov 2026 22:03:02 +0000",
+        "entities": []
+      },
+      {
+        "id": "https://techcrunch.com/2026/11/16/cybersecurity-ai-startup-corma-reaches-1b-valuation-in-about-3-months/",
+        "title": "Cybersecurity AI startup Corma reaches $1B valuation in about 3 months",
+        "summary": "Latest AI Amazon Apps Biotech & Health Climate Cloud Computing Commerce Crypto Enterprise EVs Fintech Fundraising Gadgets Gaming Google Government & Policy Hardware Instagram Layoffs Media & Entertainment Meta Microsoft Privacy Robotics Security Social Space Startups TikTok Transportation Venture Staff Events Startup Battlefield StrictlyVC Newsletters Podcasts Videos Partner Content TechCrunch Brand Studio Contact Us Posted: Three months after introducing its product, AI cybersecurity startup Corma has raised a $125 million Series A round at a $1 billion valuation led by NEA, the company said. Corma offers AI models and agents trained for cybersecurity defense. It has now raised a total o...",
+        "source_name": "TechCrunch",
+        "source_url": "https://techcrunch.com/2026/11/16/cybersecurity-ai-startup-corma-reaches-1b-valuation-in-about-3-months/",
+        "published_at": "Mon, 16 Nov 2026 23:32:32 +0000",
+        "entities": []
+      },
+      {
+        "id": "https://www.bbc.co.uk/news/articles/c30rk8x5g80qo?at_medium=RSS&at_campaign=rss",
+        "title": "Ukraine accuses Russia of targeting rescue operation after 'double-tap' strike kills 72",
+        "summary": "Ukrainian officials have accused Russia of targeting rescue and recovery operations two weeks after a deadly \"double-tap\" strike at a village close to the front line killed at least 72 people. Ukraine says Russia carried out two attacks in succession on a humanitarian aid centre in the village of Komyshuvakha on 2 November - including the use of what it said was a 3,000kg (6,600lb) aerial bomb on a shelter where residents had fled for safety. Verified images posted in the days after the attack show damage to emergency vehicles and excavation equipment at the site. The State Emergency Service of Ukraine (DSNS) told BBC Verify there were multiple Russian strikes during the rescue. The DSNS ...",
+        "source_name": "BBC_World",
+        "source_url": "https://www.bbc.co.uk/news/articles/c30rk8x5g80qo?at_medium=RSS&at_campaign=rss",
+        "published_at": "Tue, 17 Nov 2026 05:59:01 GMT",
+        "entities": []
+      },
+      {
+        "id": "https://www.aljazeera.com/video/newsfeed/2026/11/17/trump-addresses-quad-leaders-at-first-summit-since-2024?traffic_source=rss",
+        "title": "Trump addresses Quad leaders at first summit since 2024",
+        "summary": "Trump addresses Quad leaders at first summit since 2024 US President Donald Trump spoke to leaders of the Quad security bloc at their first summit since 2024, held on the sidelines of the ASEAN meeting in Manila. He announced new cooperation on maritime security, AI and critical minerals. Save Share Follow Al Jazeera English:",
+        "source_name": "Al_Jazeera_Global",
+        "source_url": "https://www.aljazeera.com/video/newsfeed/2026/11/17/trump-addresses-quad-leaders-at-first-summit-since-2024?traffic_source=rss",
+        "published_at": "Tue, 17 Nov 2026 12:25:33 +0000",
+        "entities": []
+      },
+      {
+        "id": "https://techcrunch.com/2026/11/16/cyber-giant-infoblox-confirms-security-incident-after-hackers-access-company-information/",
+        "title": "Cyber giant Infoblox confirms security incident after hackers access ‘company information’",
+        "summary": "Latest AI Amazon Apps Biotech & Health Climate Cloud Computing Commerce Crypto Enterprise EVs Fintech Fundraising Gadgets Gaming Google Government & Policy Hardware Instagram Layoffs Media & Entertainment Meta Microsoft Privacy Robotics Security Social Space Startups TikTok Transportation Venture Staff Events Startup Battlefield StrictlyVC Newsletters Podcasts Videos Partner Content TechCrunch Brand Studio Contact Us Cybersecurity and automation giant Infoblox has confirmed a cybersecurity incident, during which hackers accessed company information through one of its technology vendors. Infoblox is a privately held cyber giant that provides companies cybersecurity and networking services,...",
+        "source_name": "TechCrunch",
+        "source_url": "https://techcrunch.com/2026/11/16/cyber-giant-infoblox-confirms-security-incident-after-hackers-access-company-information/",
+        "published_at": "Mon, 16 Nov 2026 22:12:31 +0000",
+        "entities": []
+      },
+      {
+        "id": "https://www.technologyreview.com/2026/11/16/1148624/the-open-source-movement-wants-jensen-huang-back/",
+        "title": "The open-source movement wants Jensen Huang back",
+        "summary": "Supporters are signing a petition to reinstate Huang. But findings on Nvidia chips in China and a new Commerce rule are threatening open-source AI’s reputation and progress regardless. This story originally appeared in The Algorithm, our weekly newsletter on AI. To get stories like this in your inbox first, sign up here. On Friday, a petition to reinstate Jensen Huang as CEO of Nvidia began circulating on social media, and by Monday it listed some notable signatories, including Elon Musk and several influential Nvidia researchers. But comb through the more than 115,000 names and you’ll notice a significant faction of Huang’s supporters—higher-ups from Hugging Face, a hub for sharing AI mo...",
+        "source_name": "MIT_Tech_Review",
+        "source_url": "https://www.technologyreview.com/2026/11/16/1148624/the-open-source-movement-wants-jensen-huang-back/",
+        "published_at": "Mon, 16 Nov 2026 18:38:47 +0000",
+        "entities": []
+      },
+      {
+        "id": "yfinance_NVDA_2026-11-16",
+        "title": "Abnormal movement for NVDA: -4.12%",
+        "summary": "Oops, something went wrong The above button links to Coinbase. Yahoo Finance is not a broker-dealer or investment adviser and does not offer securities or cryptocurrencies for sale or facilitate trading. Coinbase pays us for certain activity generated through this link. Prices displayed are informational. Nvidia faces its first earnings report since Jensen Huang’s reported resignation, with investors focused on leadership continuity, China-related export controls, and national-security oversight. The company has formed a board committee while industrial customers continue adopting Nvidia-powered edge-computing systems. NVIDIA Corporation operates as a data center scale AI infrastructure c...",
+        "source_name": "Yahoo Finance Data",
+        "source_url": "https://finance.yahoo.com/quote/NVDA",
+        "published_at": "2026-11-16",
+        "entities": []
+      },
+      {
+        "id": "yfinance_GOOGL_2026-11-16",
+        "title": "Abnormal movement for GOOGL: -4.07%",
+        "summary": "Oops, something went wrong The above button links to Coinbase. Yahoo Finance is not a broker-dealer or investment adviser and does not offer securities or cryptocurrencies for sale or facilitate trading. Coinbase pays us for certain activity generated through this link. Prices displayed are informational. Alphabet is tied to several major artificial-intelligence developments, including Isomorphic Labs’ $5 billion Series C financing and a potential 13.7% stake in Anthropic after its planned IPO. Coverage also highlights Alphabet’s heavy AI spending, Google Cloud growth, clean-energy procurement, and recent institutional buying. GOOGL was down 0.11% in pre-market trading against the prior c...",
+        "source_name": "Yahoo Finance Data",
+        "source_url": "https://finance.yahoo.com/quote/GOOGL",
+        "published_at": "2026-11-16",
+        "entities": []
+      },
+      {
+        "id": "https://www.aljazeera.com/news/2026/11/17/mozambiques-opposition-leader-stands-trial-over-deadly-2024-protests?traffic_source=rss",
+        "title": "Mozambique’s opposition leader stands trial over deadly 2024 protests",
+        "summary": "Venancio Mondlane faces five charges, the most serious being instigating ‘terrorism’. Save Share Mozambique’s opposition leader has arrived at the country’s Supreme Court to stand trial over his alleged role in deadly protests that followed 2024’s disputed election results. Venancio Mondlane addressed reporters outside the court in Maputo on Tuesday. He faces five charges, the most serious of which is instigating “terrorism”. If found guilty, he could be jailed for up to 24 years. “I arrive calm and confident in my legal team,” Mondlane said. Months of antigovernment protests broke out in Mozambique in 2024 after Mondlane came second in national elections. President Daniel Chapo and his F...",
+        "source_name": "Al_Jazeera_Global",
+        "source_url": "https://www.aljazeera.com/news/2026/11/17/mozambiques-opposition-leader-stands-trial-over-deadly-2024-protests?traffic_source=rss",
+        "published_at": "Tue, 17 Nov 2026 12:10:53 +0000",
+        "entities": []
+      },
+      {
+        "id": "https://www.economist.com/finance-and-economics/2026/11/16/america-does-not-produce-world-beating-statistics-who-does",
+        "title": "America does not produce world-beating statistics. Who does?",
+        "summary": "We search for the world’s worst—and best—economic data",
+        "source_name": "The_Economist",
+        "source_url": "https://www.economist.com/finance-and-economics/2026/11/16/america-does-not-produce-world-beating-statistics-who-does",
+        "published_at": "Mon, 16 Nov 2026 18:28:18 +0000",
+        "entities": []
+      },
+      {
+        "id": "https://arstechnica.com/space/2026/11/how-an-artist-gave-shape-to-a-space-shuttles-new-towering-exhibit/",
+        "title": "Artist brings old Space Shuttle tank back to life",
+        "summary": "“It’s definitely the largest art project I’ve ever worked on.” Natalie Rosen is not the type of specialist you immediately associate with being one of the key people behind the new exhibit of the space shuttle Endeavour. She is not a former NASA technician or engineer, as many of her colleagues have been for the past several years, nor is she a curator or conservator. Before this job, she had no experience working on any aircraft or spacecraft, as the new Samuel Oschin Air and Space Center, an extension of the California Science Center, opened in Los Angeles on November 13. Without her expertise and artistry, however, the largest component of Endeavour‘s “stack” would look nothing like it...",
         "source_name": "Ars_Technica",
-        "source_url": "https://arstechnica.com/space/2026/11/vulcan-rocket-fails-during-launch-dealing-major-blow-to-spacex-competitors/",
-        "published_at": "Sun, 15 Nov 2026 23:11:54 +0000",
-        "entities": []
-      },
-      {
-        "id": "https://techcrunch.com/2026/11/15/helsing-backer-plural-raises-1-1b-to-fund-europes-next-moonshots/",
-        "title": "Helsing backer Plural raises $1.1B to fund Europe’s next moonshots",
-        "summary": "Latest AI Amazon Apps Biotech & Health Climate Cloud Computing Commerce Crypto Enterprise EVs Fintech Fundraising Gadgets Gaming Google Government & Policy Hardware Instagram Layoffs Media & Entertainment Meta Microsoft Privacy Robotics Security Social Space Startups TikTok Transportation Venture Staff Events Startup Battlefield StrictlyVC Newsletters Podcasts Videos Partner Content TechCrunch Brand Studio Contact Us Operator-led VC firm Plural has raised €1 billion ($1.1 billion) in new capital, joining a growing cohort of larger European funds that also includes Mundi Ventures’ Kembara and EQT-managed Scaleup Europe Fund. Despite its size, Plural’s fundraise isn’t (only) for a growth fu...",
-        "source_name": "TechCrunch",
-        "source_url": "https://techcrunch.com/2026/11/15/helsing-backer-plural-raises-1-1b-to-fund-europes-next-moonshots/",
-        "published_at": "Mon, 16 Nov 2026 07:00:00 +0000",
-        "entities": []
-      },
-      {
-        "id": "https://www.aljazeera.com/news/2026/11/16/why-silicon-valley-is-backing-nvidia-ex-ceo-jensen-huang-after-his-ouster?traffic_source=rss",
-        "title": "Why Silicon Valley is backing Nvidia ex-CEO Jensen Huang after his ouster",
-        "summary": "Huang’s peers, including Elon Musk, have praised his business acumen and potential risks to the US’s AI goals. Save Share Some of the biggest names in the United States tech sector have launched a campaign to back former Nvidia CEO Jensen Huang, who stepped down last week after reports of an extramarital affair with a woman suspected by US intelligence of being a Chinese spy. Billionaire Elon Musk and several others praised Huang on social media and urged the Nvidia board to consider reinstating him. Failing to do that, they warned, could hurt US aspirations and business deals within the burgeoning artificial intelligence (AI) sector. Huang founded Nvidia, which manufactures advanced chip...",
-        "source_name": "Al_Jazeera_Global",
-        "source_url": "https://www.aljazeera.com/news/2026/11/16/why-silicon-valley-is-backing-nvidia-ex-ceo-jensen-huang-after-his-ouster?traffic_source=rss",
-        "published_at": "Mon, 16 Nov 2026 11:05:47 +0000",
-        "entities": []
-      },
-      {
-        "id": "https://techcrunch.com/2026/11/15/apple-launches-new-app-to-study-how-people-use-ai-for-health/",
-        "title": "Apple launches new app to study how people use AI for health",
-        "summary": "Latest AI Amazon Apps Biotech & Health Climate Cloud Computing Commerce Crypto Enterprise EVs Fintech Fundraising Gadgets Gaming Google Government & Policy Hardware Instagram Layoffs Media & Entertainment Meta Microsoft Privacy Robotics Security Social Space Startups TikTok Transportation Venture Staff Events Startup Battlefield StrictlyVC Newsletters Podcasts Videos Partner Content TechCrunch Brand Studio Contact Us Big AI labs like OpenAI and Anthropic have made their bets on offering chatbots that can answer health-related queries with specialized features. Apple is debuting a new study to understand how people use AI for health. But it isn’t quite following other AI startups just yet;...",
-        "source_name": "TechCrunch",
-        "source_url": "https://techcrunch.com/2026/11/15/apple-launches-new-app-to-study-how-people-use-ai-for-health/",
-        "published_at": "Mon, 16 Nov 2026 01:30:00 +0000",
-        "entities": []
-      },
-      {
-        "id": "https://techcrunch.com/2026/11/16/zoox-robotaxis-are-now-on-the-uber-app-in-las-vegas/",
-        "title": "Zoox robotaxis are now on the Uber app in Las Vegas",
-        "summary": "Latest AI Amazon Apps Biotech & Health Climate Cloud Computing Commerce Crypto Enterprise EVs Fintech Fundraising Gadgets Gaming Google Government & Policy Hardware Instagram Layoffs Media & Entertainment Meta Microsoft Privacy Robotics Security Social Space Startups TikTok Transportation Venture Staff Events Startup Battlefield StrictlyVC Newsletters Podcasts Videos Partner Content TechCrunch Brand Studio Contact Us Zoox robotaxis are officially available through the Uber app in Las Vegas, marking the Amazon-owned autonomous vehicle company’s first partnership with a third-party ride-hailing platform. The launch on Monday is a milestone for both companies. Uber gets to add another partne...",
-        "source_name": "TechCrunch",
-        "source_url": "https://techcrunch.com/2026/11/16/zoox-robotaxis-are-now-on-the-uber-app-in-las-vegas/",
-        "published_at": "Mon, 16 Nov 2026 12:00:00 +0000",
-        "entities": []
-      },
-      {
-        "id": "https://arxiv.org/abs/2611.17340",
-        "title": "LoRAWeaver: Directional Adapter Routing in LoRA Representation Space",
-        "summary": "arXiv:2611.17340v1 Announce Type: new Abstract: Large language models are expensive to update through full retraining. Parameter-efficient fine-tuning reduces the cost of adaptation, but repeated adaptation creates a growing pool of task-specific LoRA adapters. This pool complicates adapter selection during inference. Existing routing and encoder-based methods often require retraining when new adapters are added, which limits their use in dynamic settings. This paper treats adapter routing as a...",
-        "source_name": "ArXiv_AI",
-        "source_url": "https://arxiv.org/abs/2611.17340",
-        "published_at": "Mon, 16 Nov 2026 00:00:00 -0500",
-        "entities": []
-      },
-      {
-        "id": "https://arxiv.org/abs/2611.17339",
-        "title": "Does the Ranking Hold? A Practitioner-Facing Audit of Hallucination Detectors on Small, Quantized, On-Device LLMs",
-        "summary": "arXiv:2611.17339v1 Announce Type: new Abstract: Hallucination detection for large language models is dominated by methods evaluated on 7B-70B research models with abundant sampling budgets and exact-match or ROUGE correctness labels. The small models practitioners actually ship on-device, Phi-3-mini, Llama-3.2-3B-Instruct, Qwen2.5-3B-Instruct, and Gemma-2-2B-Instruct, typically at 4-bit precision, sit outside this evidence base. We present a reproducible one-GPU audit of four detectors spanning...",
-        "source_name": "ArXiv_AI",
-        "source_url": "https://arxiv.org/abs/2611.17339",
-        "published_at": "Mon, 16 Nov 2026 00:00:00 -0500",
-        "entities": []
-      },
-      {
-        "id": "https://arxiv.org/abs/2611.17338",
-        "title": "When Should LLM Agents Forget? Memory Filtering Under Query-Critical Resolver Errors",
-        "summary": "arXiv:2611.17338v1 Announce Type: new Abstract: LLM memory systems often delete facts classified as stale. We show that this hard-filtering step can reduce downstream accuracy when resolver errors delete query-critical facts. Across three models, a controlled sensitivity intervention moves hard-drop from gains of +0.186 to +0.230 at perfect resolution to losses of -0.176 to -0.181 at the lowest tested reliability. Paired targeted interventions show that false-drop causes significantly greater d...",
-        "source_name": "ArXiv_AI",
-        "source_url": "https://arxiv.org/abs/2611.17338",
-        "published_at": "Mon, 16 Nov 2026 00:00:00 -0500",
-        "entities": []
-      },
-      {
-        "id": "https://www.aljazeera.com/news/2026/11/16/jerichos-palestinian-residents-lay-in-wait-of-an-israeli-settler-takeover?traffic_source=rss",
-        "title": "As homes seized, Jericho’s Palestinian residents fear settler takeover",
-        "summary": "Palestinians are assaulted and their homes are levelled in pogrom in occupied West Bank. Save Share Jericho, occupied West Bank – On November 4, Israeli settlers seized eight Palestinian homes in Jericho after a months-long secretive operation spearheaded by the internationally sanctioned Nachala settler movement and with the support of the settlement council in the northern West Bank. As soon as we arrived at the area, known as Diyouk al-Tahta, we encountered Mustafa. Israeli settlers had barred him from his land, beating him and his elderly father, who had to be treated in hospital. His uncle and cousins faced the same abuse, and other Bedouin families who live in the area were also ass...",
-        "source_name": "Al_Jazeera_Global",
-        "source_url": "https://www.aljazeera.com/news/2026/11/16/jerichos-palestinian-residents-lay-in-wait-of-an-israeli-settler-takeover?traffic_source=rss",
-        "published_at": "Mon, 16 Nov 2026 11:23:43 +0000",
-        "entities": []
-      },
-      {
-        "id": "https://www.aljazeera.com/news/2026/11/16/who-is-ahmad-tibi-the-arab-mp-elected-israels-knesset-deputy-speaker?traffic_source=rss",
-        "title": "Who is Ahmad Tibi, the Arab MP elected deputy speaker of Israel’s Knesset?",
-        "summary": "Ahmad Tibi, a veteran Palestinian-Israeli politician and doctor, has built a career fiercely advocating for Arab rights while defying Israel’s right-wing establishment. Save Share Ahmad Tibi, chairman of the Arab Movement for Renewal (Ta’al) party, has been elected deputy speaker of the Israeli Knesset. The appointment marks a significant milestone for the seasoned lawmaker who has long represented Palestinian citizens of Israel. Speaking to Al Jazeera following his election, Tibi framed the moment as a victory against far-right parties that have led or been part of Israel’s government in recent years. “This is a rightful achievement for the Joint List, which secured 11 seats,” he said, r...",
-        "source_name": "Al_Jazeera_Global",
-        "source_url": "https://www.aljazeera.com/news/2026/11/16/who-is-ahmad-tibi-the-arab-mp-elected-israels-knesset-deputy-speaker?traffic_source=rss",
-        "published_at": "Mon, 16 Nov 2026 11:40:25 +0000",
-        "entities": []
-      },
-      {
-        "id": "https://arstechnica.com/gadgets/2026/11/the-drone-delivery-boom-could-be-a-nightmare-for-people-traumatized-by-war/",
-        "title": "Delivery drones are coming. For some with PTSD, that's a terrifying prospect.",
-        "summary": "For those who have lived under armed drones, the sound overhead can be distressing. In August, Amazon announced plans to expand its Prime Air delivery drone program to “nearly 500 cities and towns by the end of 2026.” Combined with similar uncrewed aerial delivery programs from DoorDash and Zipline (in partnership with Uber and Walmart), the expansion suggests that flying robots dropping their payloads onto suburban lawns will soon be commonplace. For many people, delivery drones will be little more than a novelty, occasionally good for a laugh when one does something ridiculous. For others, though, their growing use could be a nightmare. As the instant delivery industry clears the last F...",
-        "source_name": "Ars_Technica",
-        "source_url": "https://arstechnica.com/gadgets/2026/11/the-drone-delivery-boom-could-be-a-nightmare-for-people-traumatized-by-war/",
-        "published_at": "Mon, 16 Nov 2026 12:00:57 +0000",
-        "entities": []
-      },
-      {
-        "id": "https://www.nytimes.com/2026/11/16/us/new-orleans-cruise-ship-steering-failure.html",
-        "title": "‘Steering Failure’ Likely Caused Tanker’s Collision With Riverboat, N.T.S.B. Says",
-        "summary": "Advertisement Supported by A tanker struck a docked passenger ship in New Orleans on Friday, causing it to capsize. Investigators emphasized that their findings were preliminary. By Claire Moses The tanker that struck a docked riverboat carrying nearly 200 people on Friday in New Orleans appeared to have had a “steering failure,” according to initial findings from the National Transportation Safety Board. It was not immediately clear what that meant or what may have caused it, officials said, emphasizing that the findings were preliminary. “We purposefully worded it in that way,” Bart Barnum, a senior marine engineer in the N.T.S.B.’s Office of Marine Safety, said during a news conference...",
-        "source_name": "NYT_US_News",
-        "source_url": "https://www.nytimes.com/2026/11/16/us/new-orleans-cruise-ship-steering-failure.html",
-        "published_at": "Mon, 16 Nov 2026 11:38:58 +0000",
-        "entities": []
-      },
-      {
-        "id": "https://www.nytimes.com/2026/11/16/us/raman-la-mayor-priorities.html",
-        "title": "Raman Has Lots of Plans. Los Angeles Has Lots of Obstacles.",
-        "summary": "120th U.S. Congress Advertisement Supported by Mayor-elect Nithya Raman pledges to use metrics to deliver “a city that works” after a pandemic, wildfires and clashes with Trump. Budget constraints and more stand in the way. By Shawn Hubler A month before Nithya Raman swept to victory as Los Angeles’s next mayor, she announced what she would do in her first 100 days if she won. The audience was scant — the speech had somehow been scheduled outside during the dinner hour on a Sunday in searing heat with the Dodgers at home in the playoffs. Still, her most ardent fans gathered, sweltering, around her. If they expected a fire-breathing leftist manifesto from their candidate, a member of the D...",
-        "source_name": "NYT_US_News",
-        "source_url": "https://www.nytimes.com/2026/11/16/us/raman-la-mayor-priorities.html",
-        "published_at": "Mon, 16 Nov 2026 10:02:36 +0000",
-        "entities": []
-      },
-      {
-        "id": "https://www.nytimes.com/2026/11/16/us/lindsay-clancy-trial-hearing.html",
-        "title": "Judge Could Set New Trial Date for Lindsay Clancy",
-        "summary": "Lindsay Clancy Trial Advertisement Supported by The judge who oversaw Ms. Clancy’s first trial that ended in a deadlocked jury is holding a hearing on Monday to determine how to proceed. By Jenna Russell A judge could set a new trial date as soon as Monday for Lindsay Clancy, the Massachusetts woman whose first trial for the deaths of her three young children ended with a deadlocked jury. Prosecutors have not yet said whether they plan to retry Ms. Clancy on first-degree murder charges, lesser charges or at all. But Judge William Sullivan indicated at a hearing earlier this month that he intends to choose a tentative start date for a second trial, and that he may do so at a 10 a.m. hearin...",
-        "source_name": "NYT_US_News",
-        "source_url": "https://www.nytimes.com/2026/11/16/us/lindsay-clancy-trial-hearing.html",
-        "published_at": "Mon, 16 Nov 2026 10:03:40 +0000",
+        "source_url": "https://arstechnica.com/space/2026/11/how-an-artist-gave-shape-to-a-space-shuttles-new-towering-exhibit/",
+        "published_at": "Tue, 17 Nov 2026 12:15:54 +0000",
         "entities": []
       }
     ]
@@ -139,28 +139,44 @@
     {
       "id": "insight_1",
       "item_ids": [
-        "https://arstechnica.com/space/2026/11/vulcan-rocket-fails-during-launch-dealing-major-blow-to-spacex-competitors/",
-        "https://techcrunch.com/2026/11/15/helsing-backer-plural-raises-1-1b-to-fund-europes-next-moonshots/"
+        "https://www.aljazeera.com/news/2026/11/17/is-the-us-israel-war-on-iran-turning-into-a-frozen-conflict?traffic_source=rss",
+        "https://www.aljazeera.com/video/newsfeed/2026/11/17/trump-addresses-quad-leaders-at-first-summit-since-2024?traffic_source=rss"
       ],
-      "hypothesis": "The recent Vulcan launch failure highlights reliability gaps in U.S. heavy‑lift capabilities, prompting European investors to pour capital into home‑grown moonshot projects to capture market share.",
+      "hypothesis": "The United States is shifting diplomatic and security focus from a stalled US‑Israel‑Iran confrontation toward reinforcing the Quad alliance as a strategic counterweight to China in the Indo‑Pacific.",
       "domains": [
         "geopolitics",
-        "tech"
+        "security"
       ],
       "confidence": 0.88
     },
     {
       "id": "insight_2",
       "item_ids": [
-        "https://techcrunch.com/2026/11/15/apple-launches-new-app-to-study-how-people-use-ai-for-health/",
-        "https://arxiv.org/abs/2611.17339"
+        "https://www.bbc.co.uk/news/articles/cmn504nq5033o?at_medium=RSS&at_campaign=rss",
+        "yfinance_NVDA_2026-11-16",
+        "https://www.technologyreview.com/2026/11/16/1148624/the-open-source-movement-wants-jensen-huang-back/"
       ],
-      "hypothesis": "Apple's rollout of a consumer health‑AI app coincides with emerging research on hallucination detection for on‑device LLMs, indicating that commercial health AI now depends on advances that ensure safe, low‑error responses on small models.",
+      "hypothesis": "Intensified US export enforcement on Nvidia's AI chip supply chain is eroding investor confidence, reflected in Nvidia's stock decline and prompting open‑source community calls for leadership change.",
       "domains": [
         "tech",
-        "health"
+        "finance",
+        "geopolitics"
       ],
       "confidence": 0.84
+    },
+    {
+      "id": "insight_3",
+      "item_ids": [
+        "https://techcrunch.com/2026/11/16/cybersecurity-ai-startup-corma-reaches-1b-valuation-in-about-3-months/",
+        "https://techcrunch.com/2026/11/16/cyber-giant-infoblox-confirms-security-incident-after-hackers-access-company-information/"
+      ],
+      "hypothesis": "High‑profile security breaches are accelerating venture capital inflows into AI‑driven cybersecurity firms, signaling a macro trend where AI becomes central to corporate defense strategies.",
+      "domains": [
+        "tech",
+        "cybersecurity",
+        "finance"
+      ],
+      "confidence": 0.86
     }
   ]
 }
