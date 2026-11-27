@@ -1,37 +1,19 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-11-26T13:29:56.838556+00:00",
-  "date_label": "26 November 2026",
-  "narrative_briefing": "Good morning, Sir. I trust the dawn finds you in fine spirits and ready to navigate the intricate tapestry of today’s headlines. Allow me to lay out a nuanced portrait of the forces shaping our world, from the corridors of power to the vacuum of space, and to illuminate the subtle threads that bind them together.\n\nOn the macro‑geopolitical front, the collapse of China’s most trusted wealth manager reverberates far beyond the confines of Shanghai’s financial district, underscoring a lingering fragility in the nation’s private‑sector governance that could temper the optimism surrounding its broader economic resurgence. Meanwhile, Mexico’s export boom, though impressive in aggregate, has stumbled when it comes to high‑tech AI server shipments, a shortfall that hints at structural bottlenecks in its manufacturing ecosystem and raises questions about the sustainability of its growth narrative. Adding a climate‑centric dimension, recent research confirms that the drainage of peatlands contributes a modest yet non‑trivial slice of anthropogenic warming, a reminder that even seemingly peripheral environmental missteps can compound the fiscal and regulatory pressures facing emerging markets.\n\nTurning to the technology arena, the Federal Communications Commission’s green light for SpaceX’s orbital AI data centres marks a bold, if audacious, expansion of compute infrastructure beyond Earth’s atmosphere—a development that could reshape latency dynamics and data sovereignty debates for years to come. In stark contrast, the S&P’s contemplation of a credit downgrade for Nvidia, driven by governance concerns and the spectre of a “key man” risk, signals a tightening of financial oversight on the very chipmakers that underpin such futuristic ventures. The legislative arena is equally turbulent: bipartisan enthusiasm for AI regulation collides with procedural inertia, leaving a vacuum that firms like OpenAI are forced to fill by imposing their own usage caps as the demand for integrated Chat and Work services outstrips the pace of lawmaking. Finally, the cautionary tale of Anthropic, framed as a historical warning, serves as a sobering reminder that even the most promising AI start‑ups must heed the lessons of past hubris lest they repeat them.\n\nThe system correlations you requested reveal a striking dichotomy. Regulators are loosening the reins on novel AI infrastructure—exemplified by the FCC’s SpaceX approval—while simultaneously tightening the fiscal leash on established AI chip manufacturers, as evidenced by the potential Nvidia downgrade. This split reflects a broader strategic calculus: encouraging frontier innovation while imposing disciplined risk management on the incumbents that sustain the ecosystem. At the same time, the surge in user demand for seamless AI services is outpacing legislative response, compelling companies like OpenAI to self‑regulate through usage limits, a move that underscores the tension between market‑driven velocity and the slower cadence of democratic oversight. Moreover, the emergence of space‑based AI compute is siphoning demand away from traditional export‑driven hardware production, a shift that helps explain why Mexico’s AI‑server export figures lag behind its overall export momentum, despite the country’s broader trade expansion.\n\nNow, for the deterministic market metrics you asked for, the numbers are as follows: the S&P 500 stands at 716.7 dollars, registering a daily return of minus 0.29 percent, with volatility measured at 31.72 percent and a bearish trend amplified by high volatility. The Nasdaq is positioned at 633.93 dollars, down 0.65 percent on the day, its volatility even higher at 48.2 percent, also signalling a bearish trajectory under turbulent conditions. Bitcoin, by contrast, is perched at 60,786.45 dollars, up 0.68 percent, its volatility at 42.71 percent and a bullish trend despite the overall market unease. Gold is trading at 327.45 dollars, gaining 0.61 percent, volatility at 31.32 percent, and likewise exhibiting a bullish stance. These figures collectively paint a picture of risk‑averse equity markets, while alternative assets such as cryptocurrency and precious metals are finding modest refuge in the current climate.\n\nIn closing, Sir, the world is moving at a pace that rewards both audacious vision and disciplined prudence; let us stride forward with the confidence of a seasoned explorer, ever ready to turn today’s challenges into tomorrow’s triumphs.",
+  "generated_at": "2026-11-27T13:26:54.677785+00:00",
+  "date_label": "27 November 2026",
+  "narrative_briefing": "Good morning, Sir. As the sun climbs over the Atlantic, the world’s markets and geopolitics are already humming with a restless energy that warrants a measured yet incisive briefing. The United States has tightened export controls on advanced AI chips, a move that was intended to safeguard national security but is now throttling the anticipated surge in AI‑server demand across emerging economies. This regulatory drag dovetails with Mexico’s export boom, which, rather than soaring, has faltered under the weight of constrained semiconductor supplies. Simultaneously, the collapse of China’s most trusted wealth manager has sent ripples through Asian capital flows, underscoring a broader theme of financial fragility in regions heavily dependent on technology‑driven growth. The confluence of these forces paints a picture of a global economy where policy, technology, and finance are increasingly interlocked, each tugging at the other’s equilibrium.\n\nTurning to the semiconductor arena, the sector is experiencing a rare bout of turbulence. Nvidia has announced a pause on chip shipments to Southeast Asia, a decision that reverberates far beyond the region’s data‑center farms. The pause, coupled with Intel’s reported acquiescence to a 10 percent equity concession to the Trump administration—a stark illustration of political leverage over U.S. chipmakers—has amplified market volatility, as evidenced by Nvidia’s 3.91 percent decline to $149.30. In contrast, Meta’s shares have risen 3.40 percent to $609.89, buoyed perhaps by optimism surrounding its own AI initiatives and the broader narrative that the tech sector, while bruised, still offers pockets of resilience. These divergent moves underscore a market where geopolitical pressures and corporate strategies are in a delicate dance, each step capable of reshaping investor sentiment in real time.\n\nOn the frontier of artificial intelligence research, a new preprint titled “Context Scaling: A New Frontier of AI Scaling” (arXiv:2611.33160v1) has entered the discourse, proposing that many deployment failures stem not from weak inference but from a mismatch between the task’s required state and the context available at execution time. The authors formalise the problem as modelling the probability of data given context, \\(P_{\\theta}(d\\mid c)\\), and argue for a systematic expansion of contextual inputs—ranging from user state and repository revisions to sensor readings and environmental changes—to mitigate brittleness. This line of inquiry dovetails neatly with the cautionary tale being spun around Anthropic, where historical parallels to monopolistic overreach are invoked to warn against unchecked AI ambition. The emerging emphasis on embedding safety‑oriented context checks directly into deployment pipelines signals a macro‑trend: the industry is moving from raw performance metrics toward robust, context‑aware reliability, a shift that could redefine regulatory expectations and competitive advantage alike.\n\nNow, for the deterministic market metrics you requested. The S&P 500 stands at $716.7, registering a daily return of minus 0.29 percent and a volatility reading of 31.72 percent, firmly entrenched in a bearish trend marked by high volatility. The Nasdaq is at $633.93, down 0.65 percent for the day, with an even steeper volatility of 48.2 percent, also signalling a bearish trajectory. Bitcoin, meanwhile, has risen to $61,338.4, posting a positive daily return of 1.39 percent and a volatility of 40.93 percent, maintaining a bullish stance despite the broader market gloom. Gold has edged up to $327.45, up 0.61 percent with a volatility of 31.32 percent, likewise reflecting bullish momentum. These figures collectively illustrate a financial landscape where equity indices are under pressure, yet alternative assets such as cryptocurrency and precious metals are carving out modest gains, suggesting a diversification instinct among investors seeking shelter from equity turbulence.\n\nIn synthesis, the threads you see—export controls curbing AI hardware demand, political coercion of chipmakers inflating market swings, and a scholarly push toward context‑rich AI—are not isolated strands but interwoven strands of a single tapestry. The constraints on chip shipments feed directly into the bearish equity trends, while the heightened focus on contextual safety may soon become a regulatory prerequisite, reshaping the competitive calculus for firms like Nvidia, Intel, and Meta. As we navigate these intertwined currents, the imperative is clear: stay vigilant, adapt swiftly, and leverage the emerging safety paradigms to turn volatility into opportunity. Let us stride forward with resolve, Sir, and transform today’s challenges into tomorrow’s triumphs.",
   "domains": {
     "ai_research": [],
     "markets": [],
     "news_politics": [
       {
-        "id": "https://techcrunch.com/2026/11/25/fcc-approves-spacex-plan-to-put-ai-data-centers-in-space/",
-        "title": "FCC approves SpaceX plan to put AI data centers in space",
-        "summary": "Latest AI Amazon Apps Biotech & Health Climate Cloud Computing Commerce Crypto Enterprise EVs Fintech Fundraising Gadgets Gaming Google Government & Policy Hardware Instagram Layoffs Media & Entertainment Meta Microsoft Privacy Robotics Security Social Space Startups TikTok Transportation Venture Staff Events Startup Battlefield StrictlyVC Newsletters Podcasts Videos Partner Content TechCrunch Brand Studio Contact Us SpaceX was given conditional approval by the Federal Communications Commission on Wednesday to deploy and operate a constellation of up to 1 million satellites for its orbital data center business, a regulatory victory for Elon Musk and his bid to move AI data centers into sp...",
+        "id": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia/",
+        "title": "Nvidia hits pause on chip shipments to Southeast Asia",
+        "summary": "Latest AI Amazon Apps Biotech & Health Climate Cloud Computing Commerce Crypto Enterprise EVs Fintech Fundraising Gadgets Gaming Google Government & Policy Hardware Instagram Layoffs Media & Entertainment Meta Microsoft Privacy Robotics Security Social Space Startups TikTok Transportation Venture Staff Events Startup Battlefield StrictlyVC Newsletters Podcasts Videos Partner Content TechCrunch Brand Studio Contact Us Posted: Nvidia is under pressure to do things differently, and a new WSJ report shows how far that’s going. According to the Journal, Nvidia has told manufacturing partners, including Dell and Super Micro, to hit pause on server shipments to Malaysia, Singapore, Thailand, and...",
         "source_name": "TechCrunch",
-        "source_url": "https://techcrunch.com/2026/11/25/fcc-approves-spacex-plan-to-put-ai-data-centers-in-space/",
-        "published_at": "Wed, 25 Nov 2026 20:56:44 +0000",
-        "entities": []
-      },
-      {
-        "id": "https://techcrunch.com/2026/11/25/sp-considers-nvidia-credit-downgrade-over-governance-and-key-man-risks/",
-        "title": "S&P considers Nvidia credit downgrade over governance and ‘key man’ risks",
-        "summary": "Latest AI Amazon Apps Biotech & Health Climate Cloud Computing Commerce Crypto Enterprise EVs Fintech Fundraising Gadgets Gaming Google Government & Policy Hardware Instagram Layoffs Media & Entertainment Meta Microsoft Privacy Robotics Security Social Space Startups TikTok Transportation Venture Staff Events Startup Battlefield StrictlyVC Newsletters Podcasts Videos Partner Content TechCrunch Brand Studio Contact Us Posted: S&P Global Ratings, one of the three major credit rating agencies, is considering downgrading Nvidia’s rating, citing concerns about the company’s management and governance practices. Despite Nvidia’s strong financial performance, the ouster and reinstatement of CEO J...",
-        "source_name": "TechCrunch",
-        "source_url": "https://techcrunch.com/2026/11/25/sp-considers-nvidia-credit-downgrade-over-governance-and-key-man-risks/",
-        "published_at": "Wed, 25 Nov 2026 22:44:32 +0000",
-        "entities": []
-      },
-      {
-        "id": "https://www.nytimes.com/2026/11/26/us/politics/ai-regulation-congress-nvidia.html",
-        "title": "Bipartisan Desire to Regulate A.I. Faces Obstacles in Congress",
-        "summary": "Members of both parties say they want to tackle artificial intelligence policy, but the slow pace of legislating and turf battles could stand in the way.",
-        "source_name": "NYT_US_News",
-        "source_url": "https://www.nytimes.com/2026/11/26/us/politics/ai-regulation-congress-nvidia.html",
-        "published_at": "Thu, 26 Nov 2026 10:03:47 +0000",
+        "source_url": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia/",
+        "published_at": "Thu, 26 Nov 2026 20:03:54 +0000",
         "entities": []
       },
       {
@@ -53,12 +35,12 @@
         "entities": []
       },
       {
-        "id": "https://arstechnica.com/science/2026/11/draining-peatlands-is-responsible-for-a-few-percent-of-our-global-warming/",
-        "title": "Draining peatlands is responsible for a few percent of our global warming",
-        "summary": "Detailed estimate going back to 1800 shows how much carbon is being liberated. Much of the focus for human-caused climate change is on fossil fuels, which are creating most of our problems. But land use change is also a large component of the story, accounting for about one-third of total historical CO2 emissions. Deforestation plays a major role here, but practices like draining wetlands also factor in. Exactly how much of our history of eliminating wetlands has contributed to warming is challenging to figure out. But thanks to new sources of data that measure emissions from today’s surviving wetlands, it’s possible to put a better number on it. A new study led by Jevan Yu at MIT focuses...",
-        "source_name": "Ars_Technica",
-        "source_url": "https://arstechnica.com/science/2026/11/draining-peatlands-is-responsible-for-a-few-percent-of-our-global-warming/",
-        "published_at": "Thu, 26 Nov 2026 12:15:42 +0000",
+        "id": "yfinance_NVDA_2026-11-25",
+        "title": "Abnormal movement for NVDA: -3.91%",
+        "summary": "Oops, something went wrong The above button links to Coinbase. Yahoo Finance is not a broker-dealer or investment adviser and does not offer securities or cryptocurrencies for sale or facilitate trading. Coinbase pays us for certain activity generated through this link. Prices displayed are informational. Nvidia faces renewed scrutiny after Jensen Huang’s reported resignation and reinstatement, alongside investigations into alleged unauthorized chip shipments to China. New reports also describe Blackwell systems in a Shanghai data center and shipment pauses affecting four Asian countries, keeping regulatory and supply-chain risks central to the story. NVIDIA Corporation operates as a data...",
+        "source_name": "Yahoo Finance Data",
+        "source_url": "https://finance.yahoo.com/quote/NVDA",
+        "published_at": "2026-11-25",
         "entities": []
       },
       {
@@ -71,118 +53,140 @@
         "entities": []
       },
       {
-        "id": "https://techcrunch.com/2026/11/25/openai-says-heavy-chatgpt-users-may-hit-limits-sooner-as-it-merges-chat-and-work/",
-        "title": "OpenAI says heavy ChatGPT users may hit limits sooner as it merges Chat and Work",
-        "summary": "Latest AI Amazon Apps Biotech & Health Climate Cloud Computing Commerce Crypto Enterprise EVs Fintech Fundraising Gadgets Gaming Google Government & Policy Hardware Instagram Layoffs Media & Entertainment Meta Microsoft Privacy Robotics Security Social Space Startups TikTok Transportation Venture Staff Events Startup Battlefield StrictlyVC Newsletters Podcasts Videos Partner Content TechCrunch Brand Studio Contact Us OpenAI has started rolling out a unified Chat and Work experience in ChatGPT to a few of its users, amid criticism from some subscribers that the merger could restrict their usage. The ChatGPT maker began introducing the update to a small group of Pro subscribers, product lea...",
-        "source_name": "TechCrunch",
-        "source_url": "https://techcrunch.com/2026/11/25/openai-says-heavy-chatgpt-users-may-hit-limits-sooner-as-it-merges-chat-and-work/",
-        "published_at": "Wed, 25 Nov 2026 20:03:27 +0000",
-        "entities": []
-      },
-      {
-        "id": "yfinance_NVDA_2026-11-25",
-        "title": "Abnormal movement for NVDA: -3.91%",
-        "summary": "Oops, something went wrong The above button links to Coinbase. Yahoo Finance is not a broker-dealer or investment adviser and does not offer securities or cryptocurrencies for sale or facilitate trading. Coinbase pays us for certain activity generated through this link. Prices displayed are informational. Nvidia’s leadership crisis shifted after the board reinstated founder Jensen Huang as chief executive, while the company continues reporting exceptional artificial-intelligence demand. CreditWatch concerns about governance contrast with Nvidia’s strong balance sheet, record revenue, and continued orders for Blackwell GPUs, including planned Chinese purchases. The latest completed trading...",
-        "source_name": "Yahoo Finance Data",
-        "source_url": "https://finance.yahoo.com/quote/NVDA",
-        "published_at": "2026-11-25",
-        "entities": []
-      },
-      {
-        "id": "https://www.bbc.co.uk/news/articles/c61wr87wyg5wo?at_medium=RSS&at_campaign=rss",
-        "title": "Myanmar refuses to comply with parts of ICJ genocide ruling",
-        "summary": "Myanmar's president Min Aung Hlaing has led the country since he seized power in a 2021 military coup Myanmar will not comply with \"inappropriate\" parts of the genocide ruling by the International Court of Justice (ICJ), its leader Min Aung Hlaing has said in his first public comments since the court decision. The ICJ's landmark ruling last week found Myanmar guilty of committing genocide against its Rohingya minority in a 2017 military crackdown that killed thousands and forced more than 700,000 to flee. Myanmar denied committing genocide, saying its forces had responded to attacks by armed groups. It is the first state to have been found in violation of the 1948 Genocide Convention. Min...",
-        "source_name": "BBC_World",
-        "source_url": "https://www.bbc.co.uk/news/articles/c61wr87wyg5wo?at_medium=RSS&at_campaign=rss",
-        "published_at": "Thu, 26 Nov 2026 10:25:51 GMT",
-        "entities": []
-      },
-      {
-        "id": "https://arxiv.org/abs/2611.31284",
-        "title": "Irreducible Governance Structure for Autonomous Agent Systems: Fair Allocation, Strategy-Proofness, and Multi-Scale Composition",
-        "summary": "arXiv:2611.31284v1 Announce Type: new Abstract: Autonomous agent governance is commonly framed as a problem of enforcing correct execution. However, in multi-agent systems, an equally fundamental question precedes execution: which agents are allowed to act. In this paper, we show that allocation is not an auxiliary concern but a structural component of governance. When multiple agents compete for execution under constrained resources, any allocation mechanism introduces unavoidable trade-offs...",
-        "source_name": "ArXiv_AI",
-        "source_url": "https://arxiv.org/abs/2611.31284",
-        "published_at": "Thu, 26 Nov 2026 00:00:00 -0500",
-        "entities": []
-      },
-      {
         "id": "yfinance_META_2026-11-25",
         "title": "Abnormal movement for META: +3.40%",
-        "summary": "Oops, something went wrong The above button links to Coinbase. Yahoo Finance is not a broker-dealer or investment adviser and does not offer securities or cryptocurrencies for sale or facilitate trading. Coinbase pays us for certain activity generated through this link. Prices displayed are informational. Meta’s latest coverage centers on AI shopping, advertising monetization, and the large capital spending required to build supporting infrastructure. Management said Muse is improving advertiser conversions and accounted for 51% of AI-agent-placed orders last week, while analysts continued debating whether future AI revenue can offset rising costs. Meta’s most recent completed trading ses...",
+        "summary": "Oops, something went wrong The above button links to Coinbase. Yahoo Finance is not a broker-dealer or investment adviser and does not offer securities or cryptocurrencies for sale or facilitate trading. Coinbase pays us for certain activity generated through this link. Prices displayed are informational. Meta’s Muse shopping agent expanded into the UK and added major retail partners, including Walmart and Shopify merchants. Amazon is reportedly reconsidering access for Muse, creating a potential transaction-revenue channel beyond Meta’s advertising business. Investors are balancing that opportunity against heavy artificial-intelligence spending, weaker free cash flow, and rising financin...",
         "source_name": "Yahoo Finance Data",
         "source_url": "https://finance.yahoo.com/quote/META",
         "published_at": "2026-11-25",
         "entities": []
       },
       {
-        "id": "https://arxiv.org/abs/2611.31301",
-        "title": "MOZAIC: An Audio-Video Deepfake Benchmark for Telling What Is Fake",
-        "summary": "arXiv:2611.31301v2 Announce Type: new Abstract: Audio-video (AV) deepfakes can fake the face, the voice, or both. Most benchmarks only ask whether a clip is real or fake, so they cannot show whether a detector relies on the picture, the voice, or encoding traces. We present MOZAIC, a paired benchmark with a 4-way label in which every source clip is released in all four combinations of real or fake video and real or fake audio so each modality contribution can be measured directly. Fakes cover i...",
-        "source_name": "ArXiv_AI",
-        "source_url": "https://arxiv.org/abs/2611.31301",
-        "published_at": "Thu, 26 Nov 2026 00:00:00 -0500",
+        "id": "https://arstechnica.com/tech-policy/2026/11/intel-faced-a-choice-give-trump-10-or-face-the-consequences/",
+        "title": "Intel faced a choice: Give Trump 10% or face the consequences",
+        "summary": "Intel faced pressure to surrender a 10% stake to unlock billions in promised grants. The message from the Trump administration to one of the world’s leading semiconductor companies was clear: Give the US government a chunk of your company. Right now. Or else. Do not make the “mistake of thinking that this is a negotiation,” Commerce Department lawyer David Shapiro told the chief financial officer of the Intel Corporation in August 2025, according to internal notes from a company call contained in a federal lawsuit. “The President is expecting to announce a deal on these terms on Friday.” Shapiro acknowledged that “the Board could choose not to accept the offer,” according to a summary of ...",
+        "source_name": "Ars_Technica",
+        "source_url": "https://arstechnica.com/tech-policy/2026/11/intel-faced-a-choice-give-trump-10-or-face-the-consequences/",
+        "published_at": "Fri, 27 Nov 2026 12:05:01 +0000",
         "entities": []
       },
       {
-        "id": "https://arxiv.org/abs/2611.31329",
-        "title": "Conservative Overlap Fuzzy Rough Sets for Incomplete Data",
-        "summary": "arXiv:2611.31329v1 Announce Type: new Abstract: Attribute reduction in incomplete information systems is difficult because missing values break the equivalence-class structure of rough set theory. We propose the Conservative Overlap Fuzzy Rough Set (COFRS) model. Each object is described by its set of present attributes. The similarity of two objects is a weighted overlap on the attributes present in both, divided by the fixed number of attributes |A| instead of the size of their union, so miss...",
+        "id": "https://arxiv.org/abs/2611.33160",
+        "title": "Context Scaling: A New Frontier of AI Scaling",
+        "summary": "arXiv:2611.33160v1 Announce Type: new Abstract: Many failures of deployed AI arise not from weak inference but from a mismatch between the state a task depends on and the context available when the system acts. Relevant user state, repository revisions, tool traces, sensor readings, or environment changes may be unavailable, distorted, or poorly selected. We call the effort to reduce this bottleneck context scaling. We frame a model as $P_\\theta(d\\mid c)$ within a system governed by three budge...",
         "source_name": "ArXiv_AI",
-        "source_url": "https://arxiv.org/abs/2611.31329",
-        "published_at": "Thu, 26 Nov 2026 00:00:00 -0500",
+        "source_url": "https://arxiv.org/abs/2611.33160",
+        "published_at": "Fri, 27 Nov 2026 00:00:00 -0500",
         "entities": []
       },
       {
-        "id": "https://www.bbc.co.uk/news/articles/cqlymky8kpzjo?at_medium=RSS&at_campaign=rss",
-        "title": "German boat dealer suspected of supplying Channel smuggling gangs, BBC finds",
-        "summary": "This video can not be played Watch: BBC confronts German boat dealer Marvin Reuter A German boat dealer is suspected by European authorities of being a key supplier to migrant smugglers operating in the English Channel, the BBC can reveal. Nearly a third of small-boat crossings in the first four months of this year allegedly involved boats or engines from MaReBoote, a small firm in western Germany, according to files we have seen. The managing director, Marvin Reuter, is contesting extradition to France, where he could face smuggling, criminal conspiracy and involuntary manslaughter charges. His equipment is suspected of being linked to two fatal accidents, in which four men died. We conf...",
-        "source_name": "BBC_World",
-        "source_url": "https://www.bbc.co.uk/news/articles/cqlymky8kpzjo?at_medium=RSS&at_campaign=rss",
-        "published_at": "Thu, 26 Nov 2026 05:00:24 GMT",
+        "id": "https://arxiv.org/abs/2611.33161",
+        "title": "Constraint-Aware Test-Time Scoring for LLM and VLM Candidate Selection",
+        "summary": "arXiv:2611.33161v1 Announce Type: new Abstract: When an LLM or VLM produces several candidate answers, picking the best one usually relies on the model's own confidence, a learned judge model, or a domain check. Each has a known weakness: an answer can be fluent but insecure, mathematically plausible but physically infeasible, or rated highly by a judge while quietly breaking a task requirement. We propose a scoring framework that combines a small set of hard checks every answer must pass with ...",
+        "source_name": "ArXiv_AI",
+        "source_url": "https://arxiv.org/abs/2611.33161",
+        "published_at": "Fri, 27 Nov 2026 00:00:00 -0500",
+        "entities": []
+      },
+      {
+        "id": "https://arxiv.org/abs/2611.33165",
+        "title": "AutoformBench: A Lean Formalization Benchmark for Advanced Mathematics",
+        "summary": "arXiv:2611.33165v1 Announce Type: new Abstract: AI systems are increasingly capable of producing machine-checked Lean proofs of advanced mathematical results. Real mathematical formalization, however, is not isolated theorem proving: it requires building the definitions and intermediate lemmas that connect a result to a formal library. Existing evaluations often provide isolated theorem statements in settings where much of this supporting theory is already available in Mathlib. We introduce Aut...",
+        "source_name": "ArXiv_AI",
+        "source_url": "https://arxiv.org/abs/2611.33165",
+        "published_at": "Fri, 27 Nov 2026 00:00:00 -0500",
+        "entities": []
+      },
+      {
+        "id": "https://techcrunch.com/2026/11/26/x-finally-gets-parental-controls-after-20-years/",
+        "title": "X finally gets parental controls after 20 years",
+        "summary": "Latest AI Amazon Apps Biotech & Health Climate Cloud Computing Commerce Crypto Enterprise EVs Fintech Fundraising Gadgets Gaming Google Government & Policy Hardware Instagram Layoffs Media & Entertainment Meta Microsoft Privacy Robotics Security Social Space Startups TikTok Transportation Venture Staff Events Startup Battlefield StrictlyVC Newsletters Podcasts Videos Partner Content TechCrunch Brand Studio Contact Us After 20 years of existence, X, the social network formerly known as Twitter, has finally added parental controls for teenagers, giving parents and guardians a way to manage what their kids see and interact with on the platform. But unlike most platforms’ implementation of su...",
+        "source_name": "TechCrunch",
+        "source_url": "https://techcrunch.com/2026/11/26/x-finally-gets-parental-controls-after-20-years/",
+        "published_at": "Thu, 26 Nov 2026 19:31:50 +0000",
+        "entities": []
+      },
+      {
+        "id": "https://www.nytimes.com/2026/11/27/us/thanksgiving-weather-east-coast-storm.html",
+        "title": "Thanksgiving Storm Leaves Half a Million Without Power on the East Coast",
+        "summary": "The storm brought heavy rain and strong winds from Virginia to New York, disrupting travel during the holiday season. Conditions were expected to gradually improve on Friday.",
+        "source_name": "NYT_US_News",
+        "source_url": "https://www.nytimes.com/2026/11/27/us/thanksgiving-weather-east-coast-storm.html",
+        "published_at": "Fri, 27 Nov 2026 12:48:46 +0000",
+        "entities": []
+      },
+      {
+        "id": "https://www.npr.org/2026/11/27/g-s1-156004/up-first-newsletter-thanksgiving-storm-black-friday-shopping-asylum-supreme-court",
+        "title": "Thanksgiving storm batters East Coast. And, Black Friday sales to hit record levels",
+        "summary": "Suzanne Nuyen Good morning. You're reading the Up First newsletter. Subscribe here to get it delivered to your inbox, and listen to the Up First podcast for all the news you need to start your day. Pedestrians shield themselves with umbrellas as they walk in the rain on Thanksgiving Day in New York, Thursday, Nov. 26, 2026. Yuki Iwamura/AP hide caption Hundreds of thousands of people are without power after a powerful storm swept through much of the East Coast and Midwest on Thanksgiving. Hundreds of flights were canceled and thousands were delayed during one of the busiest travel times of the year. Despite inflation and concerns about the cost of living, Americans are expected to spend a...",
+        "source_name": "NPR_Top_Stories",
+        "source_url": "https://www.npr.org/2026/11/27/g-s1-156004/up-first-newsletter-thanksgiving-storm-black-friday-shopping-asylum-supreme-court",
+        "published_at": "Fri, 27 Nov 2026 06:59:02 -0500",
+        "entities": []
+      },
+      {
+        "id": "https://www.npr.org/2026/11/27/nx-s1-6054884/thanksgiving-weather-black-friday",
+        "title": "From Thanksgiving blackouts to Black Friday, a holiday hit by wild weather and economic woes",
+        "summary": "By NPR Staff Pedestrians shield themselves with umbrellas as they walk in the rain on Thanksgiving Day in New York, Thursday, Nov. 26, 2026. Yuki Iwamura/AP hide caption A massive storm that stretched from the Midwest to Manhattan left almost a million people without power by Thanksgiving evening and disrupted holiday travel. More than 400 flights were cancelled and more than two thousand were delayed around the country on Thursday during one of the busiest travel times of the year. Driving was also made difficult by either heavy rains or snow and ice. Some 81.5 million people were expected to travel for the holiday between Thursday and Monday, according to AAA. Power was partially restor...",
+        "source_name": "NPR_Top_Stories",
+        "source_url": "https://www.npr.org/2026/11/27/nx-s1-6054884/thanksgiving-weather-black-friday",
+        "published_at": "Fri, 27 Nov 2026 05:59:36 -0500",
+        "entities": []
+      },
+      {
+        "id": "https://www.nytimes.com/2026/11/27/us/australia-bondi-beach-shooting-wedding.html",
+        "title": "After Deadly Bondi Beach Shooting, Two Non-Jews Marry Under a Huppah",
+        "summary": "They treated victims of one of Australia’s worst mass shootings, which targeted a Hanukkah celebration. Last week an Orthodox rabbi married them, even though they’re not Jewish.",
+        "source_name": "NYT_US_News",
+        "source_url": "https://www.nytimes.com/2026/11/27/us/australia-bondi-beach-shooting-wedding.html",
+        "published_at": "Fri, 27 Nov 2026 10:02:55 +0000",
         "entities": []
       }
     ]
   },
   "connections": [
     {
-      "id": "insight_001",
+      "id": "insight_1",
       "item_ids": [
-        "https://techcrunch.com/2026/11/25/fcc-approves-spacex-plan-to-put-ai-data-centers-in-space/",
-        "https://techcrunch.com/2026/11/25/sp-considers-nvidia-credit-downgrade-over-governance-and-key-man-risks/"
+        "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia/",
+        "https://www.economist.com/finance-and-economics/2026/11/26/mexicos-export-boom-is-real-and-disappointing"
       ],
-      "hypothesis": "Regulators are easing sector‑specific constraints for novel AI infrastructure while financial overseers tighten governance standards for established AI chipmakers, highlighting a split between technological permissiveness and credit risk discipline.",
+      "hypothesis": "U.S. export controls on AI chips are curbing the anticipated surge in AI‑server demand in emerging markets, turning Mexico's export boom into a disappointment.",
       "domains": [
+        "geopolitics",
         "tech",
-        "finance"
+        "economics"
       ],
       "confidence": 0.88
     },
     {
-      "id": "insight_002",
+      "id": "insight_2",
       "item_ids": [
-        "https://techcrunch.com/2026/11/25/openai-says-heavy-chatgpt-users-may-hit-limits-sooner-as-it-merges-chat-and-work/",
-        "https://www.nytimes.com/2026/11/26/us/politics/ai-regulation-congress-nvidia.html"
+        "https://arstechnica.com/tech-policy/2026/11/intel-faced-a-choice-give-trump-10-or-face-the-consequences/",
+        "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia/",
+        "yfinance_NVDA_2026-11-25"
       ],
-      "hypothesis": "Accelerating user demand for integrated AI services is outpacing legislative action, forcing companies like OpenAI to self‑impose usage limits while Congress struggles with slow, contested AI regulation.",
+      "hypothesis": "Escalating political leverage over U.S. chipmakers—illustrated by Intel's forced 10% equity concession and Nvidia's shipment pause—is amplifying semiconductor market volatility, as seen in NVDA's 3.9% price drop.",
       "domains": [
-        "tech",
-        "politics"
-      ],
-      "confidence": 0.86
-    },
-    {
-      "id": "insight_003",
-      "item_ids": [
-        "https://www.economist.com/finance-and-economics/2026/11/26/mexicos-export-boom-is-real-and-disappointing",
-        "https://techcrunch.com/2026/11/25/fcc-approves-spacex-plan-to-put-ai-data-centers-in-space/"
-      ],
-      "hypothesis": "The rise of space‑based AI data centers is diverting demand away from traditional manufacturing export models, as evidenced by Mexico’s underwhelming AI‑server export performance despite a broader export boom.",
-      "domains": [
-        "economics",
+        "geopolitics",
+        "finance",
         "tech"
       ],
       "confidence": 0.84
+    },
+    {
+      "id": "insight_3",
+      "item_ids": [
+        "https://www.economist.com/finance-and-economics/2026/11/26/historys-warning-lesson-for-anthropic",
+        "https://arxiv.org/abs/2611.33160"
+      ],
+      "hypothesis": "The renewed cautionary narrative comparing Anthropic to historic monopolies aligns with emerging AI research on context scaling, signalling a macro‑trend toward embedding safety‑oriented context checks directly into model deployment pipelines.",
+      "domains": [
+        "tech",
+        "ethics",
+        "research"
+      ],
+      "confidence": 0.81
     }
   ]
 }
